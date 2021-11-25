@@ -1,6 +1,7 @@
 import React from 'react';
-
 import styled from 'styled-components';
+
+import { LinkButton } from './LinkButton';
 
 export function Header(): JSX.Element {
   return (
@@ -8,12 +9,14 @@ export function Header(): JSX.Element {
       <span>
         Suspended Soul
       </span>
-      <div>
-        <span>EN</span>
-        <span>|</span>
-        <span>ES</span>
-        <a href="">Get Soulyx</a>
-      </div>
+      <Actions>
+        <TraductionItems>
+          <span>EN</span>
+          <span>|</span>
+          <span>ES</span>
+        </TraductionItems>
+        <LinkButton href="https://miso.sushi.com/" text="Get Soulyx" />
+      </Actions>
     </Wrapper>
   )
 }
@@ -21,5 +24,20 @@ export function Header(): JSX.Element {
 const Wrapper = styled.header`
   display: flex;
   justify-content: space-between;
-  padding: 40px;
+  // TODO: use units
+  padding: 42px;
+`
+
+const Actions = styled.div`
+  display: flex;
+  align-items: center;
+`
+
+const TraductionItems = styled.div`
+  display: flex;
+  align-items: center;
+  margin-right: 18px;
+  > * {
+    margin: 0 3px;
+  }
 `

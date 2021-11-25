@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 
 import { Header } from '../components/Header'
+import { Container } from '../components/Container'
 
 const Home: NextPage = () => {
   return (
@@ -18,19 +19,19 @@ const Home: NextPage = () => {
 
       <Header />
 
-      <main>
+      <Container>
         <h1>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Soulyx Token
         </h1>
 
         <p>
-          Get started by editing{' '}
-          <code>pages/index.tsx</code>
+          By suspended soul
         </p>
-      </main>
+        <Image src="/logo.svg" alt="SoulX Logo" width={48} height={48} />
+      </Container>
 
       <footer>
-        <Image src="/logo.svg" alt="SoulX Logo" width={48} height={48} />
+        {/* create footer component */}
       </footer>
     </>
   )

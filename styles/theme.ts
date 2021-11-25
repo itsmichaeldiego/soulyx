@@ -1,8 +1,15 @@
 import { createGlobalStyle } from "styled-components"
 
+enum EHierarchies {
+  primary = 'primary',
+  secondary = 'secondary',
+  tertiary = 'tertiary',
+}
+
 export interface ITheme {
-  bg: { [key: string]: string },
-  font: { [key: string]: string }
+  bg: { [key in EHierarchies]?: string },
+  cta: { [key in EHierarchies]?: string }
+  font: { [key in EHierarchies]?: string }
 }
 
 // colors are named using name-that-color:
@@ -20,6 +27,9 @@ export const theme: ITheme = {
     primary: colors.mercury,
     secondary: colors.vermillion,
     tertiary: colors.gallery,
+  },
+  cta: {
+    primary: colors.vermillion,
   },
   font: {
     primary: colors.vermillion,

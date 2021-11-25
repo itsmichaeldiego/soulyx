@@ -5,11 +5,12 @@ import styled from 'styled-components';
 interface ILinkButtonProps {
   text: string;
   href: string;
+  target?: string;
 }
 
-export function LinkButton({ text, href }: ILinkButtonProps): JSX.Element {
+export function LinkButton({ text, href, ...props }: ILinkButtonProps): JSX.Element {
   return (
-    <Wrapper href={href}>
+    <Wrapper href={href} {...props}>
       {text}
     </Wrapper>
   )

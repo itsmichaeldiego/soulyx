@@ -15,7 +15,7 @@ export function Header(): JSX.Element {
           <span>|</span>
           <span>ES</span>
         </TraductionItems>
-        <LinkButton href="https://miso.sushi.com/" text="Get Soulyx" />
+        <LinkButton href="https://miso.sushi.com/" text="Get Soulyx" target="_blank" />
       </Actions>
     </Wrapper>
   )

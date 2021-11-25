@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const Home: NextPage = () => {
   return (
-    <div>
+    <>
       <Head>
         <title>Suspended Soul</title>
         <meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt." />
@@ -28,7 +28,7 @@ const Home: NextPage = () => {
       <footer>
         <Image src="/logo.svg" alt="SoulX Logo" width={48} height={48} />
       </footer>
-    </div>
+    </>
   )
 }
 

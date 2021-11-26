@@ -16,7 +16,7 @@ export function Layout({ children }: React.PropsWithChildren<{}>): JSX.Element {
 }
 
 const Wrapper = styled.main`
-  // TODO: use units + adapt to mobile layout
+  // TODO: adapt to mobile layout
   // padding: 0;
   padding: ${({ theme }) => theme.spacing(0, 7)};
 `

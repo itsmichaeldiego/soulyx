@@ -24,8 +24,8 @@ export function Header(): JSX.Element {
 const Wrapper = styled.header`
   display: flex;
   justify-content: space-between;
-  // TODO: use units
-  padding: 42px;
+  padding: ${({ theme }) => theme.spacing(7)};
+
 `
 
 const Actions = styled.div`
@@ -36,8 +36,8 @@ const Actions = styled.div`
 const TraductionItems = styled.div`
   display: flex;
   align-items: center;
-  margin-right: 18px;
+  margin-right: ${({ theme }) => theme.spacing(3)};
   > * {
-    margin: 0 3px;
+    margin: 0 ${({ theme }) => theme.spacing(0.5)};
   }
 `

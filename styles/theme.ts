@@ -1,4 +1,7 @@
 import { createGlobalStyle } from "styled-components"
+import { ISpacingFn, createSpacing } from "spacing-helper";
+
+export const spacingHelper = createSpacing({ factor: 6 });
 
 enum EHierarchies {
   primary = 'primary',
@@ -9,7 +12,8 @@ enum EHierarchies {
 export interface ITheme {
   bg: { [key in EHierarchies]?: string },
   cta: { [key in EHierarchies]?: string }
-  font: { [key in EHierarchies]?: string }
+  font: { [key in EHierarchies]?: string },
+  spacing: ISpacingFn;
 }
 
 // colors are named using name-that-color:
@@ -35,6 +39,7 @@ export const theme: ITheme = {
     primary: colors.vermillion,
     secondary: colors.black,
   },
+  spacing: spacingHelper,
 }
 
 export const GlobalStyles = createGlobalStyle`

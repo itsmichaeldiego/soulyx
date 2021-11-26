@@ -1,5 +1,6 @@
 // import original module declarations
 import 'styled-components';
+import { ISpacingFn } from "spacing-helper";
 
 enum EHierarchies {
   primary = 'primary',
@@ -13,5 +14,6 @@ declare module 'styled-components' {
     bg: { [key in EHierarchies]?: string },
     cta: { [key in EHierarchies]?: string }
     font: { [key in EHierarchies]?: string }
+    spacing: ISpacingFn;
   }
 }

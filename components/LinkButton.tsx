@@ -1,5 +1,4 @@
 import React from 'react';
-
 import styled from 'styled-components';
 
 interface ILinkButtonProps {
@@ -17,8 +16,7 @@ export function LinkButton({ text, href, ...props }: ILinkButtonProps): JSX.Elem
 }
 
 const Wrapper = styled.a`
-  // TODO: use units
-  padding: 12px 6px;
+  padding: ${({ theme }) => theme.spacing(2, 1)};
   border: 1px solid ${({ theme }) => theme.cta.primary};
   border-radius: 100%;
 `

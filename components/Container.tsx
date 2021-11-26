@@ -10,6 +10,6 @@ export function Container({ children }: React.PropsWithChildren<{}>): JSX.Elemen
 }
 
 const Wrapper = styled.main`
-  // TODO: use units
-  padding: 0 90px;
+  // TODO: use units + adapt to mobile layout
+  padding: 0;
 `

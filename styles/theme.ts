@@ -23,8 +23,8 @@ export const colors: { [key: string]: string } = {
   black: '#000000',
   white: '#FFFFFF',
   mercury: '#E5E5E5',
-  vermillion: "#FF3E12",
   gallery: '#ECECEC',
+  vermillion: '#FF3E12',
 };
 
 export const theme: ITheme = {

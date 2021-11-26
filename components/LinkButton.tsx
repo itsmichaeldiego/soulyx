@@ -16,7 +16,7 @@ export function LinkButton({ text, href, ...props }: ILinkButtonProps): JSX.Elem
 }
 
 const Wrapper = styled.a`
-  padding: ${({ theme }) => theme.spacing(2, 1)};
+  padding: ${({ theme }) => theme.spacing(2)};
   border: 1px solid ${({ theme }) => theme.cta.primary};
   border-radius: 100%;
   border: 1px solid ${({ theme }) => theme.cta.primary};

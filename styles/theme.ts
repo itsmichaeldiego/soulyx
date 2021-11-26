@@ -27,6 +27,11 @@ export const colors: { [key: string]: string } = {
   vermillion: '#FF3E12',
 };
 
+export const fonts: { [key: string]: string } = {
+  roboto: 'Roboto, sans-serif',
+  parabole: 'Parabole Trial',
+};
+
 export const theme: ITheme = {
   bg: {
     primary: colors.mercury,
@@ -41,8 +46,8 @@ export const theme: ITheme = {
     secondary: colors.black,
   },
   font: {
-    primary: 'Roboto, sans-serif',
-    secondary: 'Parabole Trial',
+    primary: fonts.roboto,
+    secondary: fonts.parabole,
   },
   spacing: spacingHelper,
 }

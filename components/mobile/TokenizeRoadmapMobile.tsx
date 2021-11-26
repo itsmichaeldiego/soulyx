@@ -96,7 +96,7 @@ const TableRow = styled.div`
     border-bottom: 1px solid ${({ theme }) => theme.cta.primary};
   }
 
-  ${({ height }: ITableRowProps) => `height: ${height}%`}
+  ${({ height }: ITableRowProps) => `height: ${height}%;`}
 `;
 
 const TableColorMarkers = styled.div`

@@ -86,7 +86,7 @@ const TableRow = styled.div`
     border-right: 1px solid ${({ theme }) => theme.cta.primary};
   }
 
-  ${({ width }: ITableRowProps) => `width: ${width}%`}
+  ${({ width }: ITableRowProps) => `width: ${width}%;`}
 `
 
 const TableRowText = styled.span`

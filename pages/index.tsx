@@ -2,8 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 
-import { Header } from '../components/Header'
-import { Container } from '../components/Container'
+import { Layout } from '../components/Layout'
 
 const Home: NextPage = () => {
   return (
@@ -16,23 +15,17 @@ const Home: NextPage = () => {
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
-
-      <Header />
-
-      <Container>
-        <h1>
-          Soulyx Token
-        </h1>
-
-        <p>
-          By suspended soul
-        </p>
-        <Image src="/logo.svg" alt="SoulX Logo" width={48} height={48} />
-      </Container>
-
-      <footer>
-        {/* create footer component */}
-      </footer>
+      <>
+        <Layout>
+          <h1>
+            Soulyx Token
+          </h1>
+          <p>
+            By suspended soul
+          </p>
+          <Image src="/logo.svg" alt="SoulX Logo" width={48} height={48} />
+        </Layout>
+      </>
     </>
   )
 }

@@ -9,6 +9,11 @@ const Home: NextPage = () => {
     <>
       <Head>
         <title>Suspended Soul</title>
+        <link
+          rel="preload"
+          href="/fonts/Parabole/ParaboleTrial-Regular.otf"
+          as="font"
+        />
         <meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt." />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />

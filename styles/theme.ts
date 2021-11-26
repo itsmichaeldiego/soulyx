@@ -12,6 +12,7 @@ enum EHierarchies {
 export interface ITheme {
   bg: { [key in EHierarchies]?: string },
   cta: { [key in EHierarchies]?: string }
+  text: { [key in EHierarchies]?: string },
   font: { [key in EHierarchies]?: string },
   spacing: ISpacingFn;
 }
@@ -35,9 +36,13 @@ export const theme: ITheme = {
   cta: {
     primary: colors.vermillion,
   },
-  font: {
+  text: {
     primary: colors.vermillion,
     secondary: colors.black,
+  },
+  font: {
+    primary: 'Roboto, sans-serif',
+    secondary: 'Parabole',
   },
   spacing: spacingHelper,
 }
@@ -47,10 +52,9 @@ export const GlobalStyles = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
-    color: ${({ theme }) => theme.font.primary};
+    color: ${({ theme }) => theme.text.primary};
     background: ${({ theme }) => theme.bg.primary};
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, 
-      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: ${({ theme }) => theme.font.primary};
   }
 
   a {

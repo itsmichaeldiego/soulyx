@@ -13,6 +13,7 @@ declare module 'styled-components' {
   export interface DefaultTheme {
     bg: { [key in EHierarchies]?: string },
     cta: { [key in EHierarchies]?: string }
+    text: { [key in EHierarchies]?: string }
     font: { [key in EHierarchies]?: string }
     spacing: ISpacingFn;
   }

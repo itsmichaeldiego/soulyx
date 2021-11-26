@@ -19,6 +19,5 @@ const Wrapper = styled.a`
   padding: ${({ theme }) => theme.spacing(2)};
   border: 1px solid ${({ theme }) => theme.cta.primary};
   border-radius: 100%;
-  border: 1px solid ${({ theme }) => theme.cta.primary};
   font-family: ${({ theme }) => theme.font.secondary};
 `

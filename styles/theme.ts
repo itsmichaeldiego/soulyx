@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components"
 import { ISpacingFn, createSpacing } from "spacing-helper";
 
-export const spacingHelper = createSpacing({ factor: 6 });
+export const spacingHelper = createSpacing({ factor: 8 });
 
 enum EHierarchies {
   primary = 'primary',

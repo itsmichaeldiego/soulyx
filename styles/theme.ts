@@ -42,7 +42,7 @@ export const theme: ITheme = {
   },
   font: {
     primary: 'Roboto, sans-serif',
-    secondary: 'Parabole',
+    secondary: 'Parabole Trial',
   },
   spacing: spacingHelper,
 }

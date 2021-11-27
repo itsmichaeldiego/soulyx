@@ -3,10 +3,10 @@ import Image from 'next/image'
 
 import { LogoSection } from './LogoSection'
 
-export function Banner() {
+export function Genesis() {
   return (
     <LogoSection>
-      <Image src="/images/soulyx.svg" alt="SoulX Banner" layout="fill" />
+      <Image src="/images/genesis.svg" alt="SoulX Genesis" layout="fill" />
     </LogoSection>
   )
 }

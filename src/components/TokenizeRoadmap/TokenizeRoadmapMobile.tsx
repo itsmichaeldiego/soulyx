@@ -64,7 +64,7 @@ const TableWrapper = styled.div`
   font-size: 12px;
   height: 545px;
   text-transform: uppercase;
-  width: 328px;
+  width: 100%;
 `;
 
 const TableHeader = styled.div`
@@ -74,7 +74,7 @@ const TableHeader = styled.div`
   flex-direction: column;
   font-weight: bold;
   padding-top: 40px;
-  width: 60px;
+  width: 18%;
 `;
 
 const TableBody = styled.div`
@@ -82,7 +82,7 @@ const TableBody = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
-  width: 194px;
+  width: 61%;
 `;
 
 const TableRow = styled.div`
@@ -102,7 +102,7 @@ const TableRow = styled.div`
 const TableColorMarkers = styled.div`
   display: flex;
   flex-direction: column;
-  width: 68px;
+  width: 21%;
 `;
 
 const ColorMarker = styled.div`

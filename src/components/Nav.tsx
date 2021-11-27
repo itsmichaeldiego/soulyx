@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
-import styled from 'styled-components';
-import { ThemeContext } from 'styled-components';
+import styled, { ThemeContext } from 'styled-components';
 
 import { Icon } from './Icon';
 
@@ -10,7 +9,7 @@ export function Nav(): JSX.Element {
   return (
     <Wrapper>
       <div>
-        X
+        <Icon icon="hamburger" color={theme.cta.primary} />
       </div>
       <Indicators>
         <span>LOREM</span>
@@ -30,7 +29,7 @@ const Wrapper = styled.nav`
   left: 0;
   width: ${({ theme }) => theme.sizes.nav};
   height: 100vh;
-  padding: ${({ theme }) => theme.spacing(2)};
+  padding: ${({ theme }) => theme.spacing(5, 0, 5, 2)};
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -60,6 +59,6 @@ const GoTopButton = styled.div`
 `
 
 const GoTopText = styled.div`
-  padding-top: ${({ theme }) => theme.spacing(0.5)};
+  padding-top: ${({ theme }) => theme.spacing(1)};
   white-space: nowrap;
 `

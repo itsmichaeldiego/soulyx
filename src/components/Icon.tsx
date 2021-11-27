@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ThemeContext } from 'styled-components';
 
 import { ICONS } from '../lib/iconsLib'
 
@@ -16,6 +17,7 @@ interface IIconProps {
 const defaultStyles = { display: "inline-block", verticalAlign: "middle" };
 
 export const Icon = ({ size, color, icon, className, style, viewBox }: IIconProps) => {
+  const theme = useContext(ThemeContext);
   const styles = { ...defaultStyles, ...style };
   return (
     <svg
@@ -27,14 +29,14 @@ export const Icon = ({ size, color, icon, className, style, viewBox }: IIconProp
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
     >
-      {ICONS[icon].map((path, idx) => <path key={`icon-${encodeURI(`${path},${idx}`)}`} fill={color} d={path} />)}
+      {ICONS[icon].map((path, idx) => <path key={`icon-${encodeURI(`${path},${idx}`)}`} fill={color || theme.cta.primary} d={path} />)}
     </svg>
   );
 };
 
 Icon.defaultProps = {
   size: 16,
-  color: "#000000",
+  color: undefined,
   viewBox: "0 0 16 16",
   style: {},
   className: "",

@@ -8,8 +8,8 @@ export function Layout({ children }: React.PropsWithChildren<{}>): JSX.Element {
   return (
     <>
       <Nav />
-      <Header />
       <Wrapper>
+        <Header />
         {children}
       </Wrapper>
       {/* TODO: create Footer component using footer semantic */}
@@ -23,4 +23,6 @@ const Wrapper = styled.main`
   // TODO: adapt to mobile layout
   // padding: 0;
   padding: ${({ theme }) => theme.spacing(0, 6)};
+  padding-left: ${({ theme }) => `calc(${theme.sizes.nav} + ${theme.spacing(2)})`};
+
 `

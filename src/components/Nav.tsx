@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import styled, { ThemeContext } from 'styled-components';
+import { animateScroll as scroll } from 'react-scroll'
 
 import { Icon } from './Icon';
 
@@ -16,7 +17,7 @@ export function Nav(): JSX.Element {
         <Separator />
         <span>INTRO</span>
       </Indicators>
-      <GoTopButton>
+      <GoTopButton onClick={() => scroll.scrollToTop()}>
         <Icon icon="chevrons-up" color={theme.cta.primary} />
         <GoTopText>ON TOP</GoTopText>
       </GoTopButton>
@@ -26,6 +27,7 @@ export function Nav(): JSX.Element {
 
 const Wrapper = styled.nav`
   position: fixed;
+  z-index: 1;
   left: 0;
   width: ${({ theme }) => theme.sizes.nav};
   height: 100vh;
@@ -51,11 +53,15 @@ const Separator = styled.div`
   background: ${({ theme }) => theme.bg.secondary};
 `
 
-const GoTopButton = styled.div`
+const GoTopButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  color: ${({ theme }) => theme.cta.primary};
+  background: none;
+  border: none;
+  cursor: pointer;
 `
 
 const GoTopText = styled.div`

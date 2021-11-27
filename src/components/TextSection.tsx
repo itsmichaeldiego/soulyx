@@ -3,19 +3,42 @@ import styled from 'styled-components';
 
 interface ITextSectionProps {
   title: string;
-  description: string;
+  text: string;
 }
 
-export function TextSection({ title, description }: ITextSectionProps): JSX.Element {
+export function TextSection({ title, text }: ITextSectionProps): JSX.Element {
   return (
     <Wrapper>
-      <h5>{title}</h5>
-      <p>{description}</p>
+      <Container>
+        <Title>{title}</Title>
+        <Text>{text}</Text>
+      </Container>
     </Wrapper>
   )
 }
 
 const Wrapper = styled.article`
   display: flex;
+  flex-direction: column;
   align-items: center;
+  padding: ${({ theme }) => theme.spacing(20, 0)}
+`
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  max-width: 340px;
+`
+
+const Title = styled.h5`
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 24px;
+  margin: ${({ theme }) => theme.spacing(1, 0)};
+`
+
+const Text = styled.p`
+  font-weight: 300;
+  font-size: 16px;
+  margin: ${({ theme }) => theme.spacing(1, 0)};
 `

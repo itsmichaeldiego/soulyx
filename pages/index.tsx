@@ -2,9 +2,8 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import React from 'react'
 
-import { Banner } from '../src/components/Banner'
 import { Layout } from '../src/components/Layout'
-import { TokenizeRoadmap } from '../src/components/TokenizeRoadmap/TokenizeRoadmapDesktop'
+import { HomePage } from '../src/components/HomePage'
 
 const Home: NextPage = () => {
   return (
@@ -23,8 +22,7 @@ const Home: NextPage = () => {
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
       <Layout>
-        <Banner />
-        <TokenizeRoadmap />
+        <HomePage />
       </Layout>
     </>
   )

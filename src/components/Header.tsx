@@ -26,7 +26,6 @@ const Wrapper = styled.header`
   align-items: center;
   justify-content: space-between;
   height: ${({ theme }) => theme.sizes.header};
-
 `
 
 const Actions = styled.div`

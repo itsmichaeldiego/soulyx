@@ -9,14 +9,14 @@ export function useOnClickOutside<T extends HTMLElement = HTMLElement>(
   handler: Handler,
 ): void {
   useEventListener('mousedown', event => {
-    const el = ref?.current
+    const el = ref?.current;
 
     // Do nothing if clicking ref's element or descendent elements
     if (!el || el.contains(event.target as Node)) {
-      return
+      return;
     }
 
     // Explicit type for "mousedown" event.
-    handler(event as unknown as MouseEvent)
+    handler(event as unknown as MouseEvent);
   })
 }

@@ -22,34 +22,43 @@ type IIconWrapperProps = {
 export function EntrySelect({ selected, options, onChange }: IEntrySelectProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuHeight = (options.length) * 40;
-  const menuRef = useRef(null);
+  const clickOutsideRef = useRef(null);
 
   const handleClickOutside = () => {
     setIsMenuOpen(false);
-  }
+  };
 
   const handleChange = useCallback((selected) => {
     onChange(selected)
   }, [onChange]);
 
-  const toggleMenu = (value: boolean) => setIsMenuOpen(value);
-  useOnClickOutside(menuRef, handleClickOutside);
+  const toggle = useCallback(() => {
+    setIsMenuOpen(v => !v);
+  }, []);
+
+  useOnClickOutside(clickOutsideRef, handleClickOutside);
 
   return <>
-    {/* TODO: Change icon + consume theme */}
-    <SelectToggle onClick={() => toggleMenu(!isMenuOpen)}>
-      {selected}
-      <IconWrapper open={isMenuOpen} icon="arrow-down" color="white" />
-    </SelectToggle>
-    {isMenuOpen && (
-      <MenuWrapper ref={menuRef} height={menuHeight}>
-        {options.map(option => (
-          <MenuOption onClick={() => handleChange(option)} key={option}>{option}</MenuOption>
-        ))}
-      </MenuWrapper>
-    )}
+    {/* TODO: Consume color from theme */}
+    <ClickOutsideWrapper ref={clickOutsideRef}>
+      <SelectToggle onClick={toggle}>
+        {selected}
+        <IconWrapper open={isMenuOpen} icon="arrow-down" color="white" />
+      </SelectToggle>
+      {isMenuOpen && (
+        <MenuWrapper height={menuHeight}>
+          {options.map(option => (
+            <MenuOption onClick={() => handleChange(option)} key={option}>{option}</MenuOption>
+          ))}
+        </MenuWrapper>
+      )}
+    </ClickOutsideWrapper>
   </>
 }
+
+const ClickOutsideWrapper = styled.div`
+  width: 100%;
+`;
 
 const SelectToggle = styled.div`
   align-items: center;
@@ -64,7 +73,13 @@ const SelectToggle = styled.div`
   justify-content: space-between;
   padding: 0 16px;
   position: relative;
-  width: 100%;
+`;
+
+const IconWrapper = styled(Icon)`
+  ${({ open }: IIconWrapperProps) =>
+    open && `
+      transform: rotate(-180deg);
+    `}
 `;
 
 const MenuWrapper = styled.div`
@@ -96,10 +111,3 @@ const MenuOption = styled.div`
     border-bottom: 1px solid ${({ theme }) => theme.cta.primary};
   }
 `;
-
-const IconWrapper = styled(Icon)`
-  ${({ open }: IIconWrapperProps) =>
-    open && `
-      transform: rotate(-90deg);
-    `}
-`

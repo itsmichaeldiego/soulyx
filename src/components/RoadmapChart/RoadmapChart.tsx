@@ -1,9 +1,11 @@
 import { useLayoutEffect, useState, useCallback, useContext } from 'react';
 import React from 'react';
 import styled from 'styled-components';
-import { CHART_DATA, Y_AXIS_LABELS } from './data';
+
 import { useDesktopMediaQuery } from '../../lib/mediaQueryHelper';
-import { Icon } from '../Icon';
+
+import { EntrySelect } from './EntrySelect';
+import { CHART_DATA, Y_AXIS_LABELS } from './data';
 
 type IStackedBarProps = {
   height: number;
@@ -35,39 +37,6 @@ type ChartEntry = {
   stacks: Stack[];
 }
 
-// TODO: Move this
-type IEntrySelectProps = {
-  active: string;
-  onChange: (selected: string) => void;
-};
-
-function EntrySelect({ active, onChange }: IEntrySelectProps) {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const handleChange = useCallback((selected) => {
-    onChange(selected)
-  }, [onChange]);
-
-  return <>
-    {/* TODO: Change icon + consume theme */}
-    <SelectToggle>{active}<Icon icon="chevrons-up" color="white" /></SelectToggle>
-    {isMenuOpen && (
-      // menu logic goes here
-      <></>
-    )}
-  </>
-}
-
-const SelectToggle = styled.div`
-  display: flex;
-  position: absolute;
-  bottom: -66px;
-  height: 66px;
-  justify-content: space-between;
-  width: 100%;
-  background-color: ${({ theme }) => theme.cta.primary};
-  color: white;
-`
-
 function ChartBar({ stacks }: IChartBarProps) {
   const [visible, setVisible] = useState(false);
   useLayoutEffect(() => {
@@ -77,9 +46,9 @@ function ChartBar({ stacks }: IChartBarProps) {
   }, []);
 
   return <Bar visible={visible}>
-    {stacks.map(({ label, color, value }: Stack) => (
+    {stacks.map(({ label, color, value }: Stack, index) => (
       <StackedBar
-        key={label}
+        key={`${label+index}`}
         color={color}
         height={value}
       >
@@ -172,14 +141,24 @@ const GridRow = styled.div`
   display: flex;
   flex-basis: 25%;
   padding-bottom: 20px;
+
   &:last-of-type {
     border-top: 1px dashed ${({ theme }) => theme.cta.primary};
+  }
+
+  @media (max-width: 767px) {
+    padding-bottom: 16px;
+    padding-left: 16px;
   }
 `;
 
 const YAxisTopLabel = styled.span`
   position: absolute;
-  top: -30px;
+  top: -28px;
+
+  @media (max-width: 767px) {
+    left: 16px;
+  }
 `;
 
 const BarWrapper = styled.div`

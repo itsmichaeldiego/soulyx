@@ -10,7 +10,7 @@ type ITableRowProps = {
   height: number;
 }
 
-export function TokenizeRoadmapMobile(): JSX.Element {
+export function TokenizeRoadmap(): JSX.Element {
   return (
     <TableWrapper>
       <TableColorMarkers>

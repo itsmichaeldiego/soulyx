@@ -52,6 +52,7 @@ export const theme: ITheme = {
   },
   spacing: spacingHelper,
   sizes: {
+    nav: spacingHelper(7),
     header: spacingHelper(12),
   },
 }

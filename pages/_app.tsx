@@ -1,8 +1,8 @@
 import type { AppProps } from 'next/app'
 import { ThemeProvider } from "styled-components";
 
-import { GlobalStyles, theme } from '../styles/theme'
-import { FontFace } from '../styles/fontface'
+import { GlobalStyles, theme } from '../src/styles/theme'
+import { FontFace } from '../src/styles/fontface'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

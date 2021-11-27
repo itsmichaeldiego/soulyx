@@ -1,8 +1,8 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 
-import { Banner } from '../components/Banner'
-import { Layout } from '../components/Layout'
+import { Banner } from '../src/components/Banner'
+import { Layout } from '../src/components/Layout'
 
 const Home: NextPage = () => {
   return (
@@ -20,11 +20,9 @@ const Home: NextPage = () => {
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
-      <>
-        <Layout>
-          <Banner />
-        </Layout>
-      </>
+      <Layout>
+        <Banner />
+      </Layout>
     </>
   )
 }

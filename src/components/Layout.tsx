@@ -1,11 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { Nav } from './Nav'
 import { Header } from './Header'
 
 export function Layout({ children }: React.PropsWithChildren<{}>): JSX.Element {
   return (
     <>
+      <Nav />
       <Header />
       <Wrapper>
         {children}

@@ -16,6 +16,8 @@ export function Layout({ children }: React.PropsWithChildren<{}>): JSX.Element {
 }
 
 const Wrapper = styled.main`
+  position: relative;
+  min-height: ${({ theme }) => `calc(100vh - ${theme.sizes.header})`};
   // TODO: adapt to mobile layout
   // padding: 0;
   padding: ${({ theme }) => theme.spacing(0, 6)};

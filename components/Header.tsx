@@ -23,8 +23,10 @@ export function Header(): JSX.Element {
 
 const Wrapper = styled.header`
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  padding: ${({ theme }) => theme.spacing(5)};
+  padding: ${({ theme }) => theme.spacing(0, 5)};
+  height: ${({ theme }) => theme.sizes.header};
 
 `
 

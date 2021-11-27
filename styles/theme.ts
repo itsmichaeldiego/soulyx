@@ -10,11 +10,12 @@ enum EHierarchies {
 }
 
 export interface ITheme {
-  bg: { [key in EHierarchies]?: string },
+  bg: { [key in EHierarchies]?: string }
   cta: { [key in EHierarchies]?: string }
-  text: { [key in EHierarchies]?: string },
-  font: { [key in EHierarchies]?: string },
-  spacing: ISpacingFn;
+  text: { [key in EHierarchies]?: string }
+  font: { [key in EHierarchies]?: string }
+  spacing: ISpacingFn
+  sizes: { [key: string]: string }
 }
 
 // colors are named using name-that-color:
@@ -50,6 +51,9 @@ export const theme: ITheme = {
     secondary: fonts.parabole,
   },
   spacing: spacingHelper,
+  sizes: {
+    header: spacingHelper(12),
+  },
 }
 
 export const GlobalStyles = createGlobalStyle`

@@ -3,11 +3,13 @@ import styled from 'styled-components';
 
 import { Nav } from './Nav'
 import { Header } from './Header'
+import { useDesktopMediaQuery } from '../lib/mediaQueryHelper';
 
 export function Layout({ children }: React.PropsWithChildren<{}>): JSX.Element {
+  const isDesktop = useDesktopMediaQuery();
   return (
     <>
-      <Nav />
+      {isDesktop && <Nav />}
       <Wrapper>
         <Header />
         {children}
@@ -24,4 +26,9 @@ const Wrapper = styled.main`
   // padding: 0;
   padding: ${({ theme }) => theme.spacing(0, 6, 6, 0)};
   padding-left: ${({ theme }) => `calc(${theme.sizes.nav} + ${theme.spacing(2)})`};
+
+  /* mobile queries */
+  @media (max-width: 767px) {
+    padding: ${({ theme }) => theme.spacing(6, 4, 6, 4)};
+  }
 `

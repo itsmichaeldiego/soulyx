@@ -1,6 +1,9 @@
-import { useLayoutEffect, useState } from 'react';
+import { useLayoutEffect, useState, useCallback, useContext } from 'react';
 import React from 'react';
 import styled from 'styled-components';
+import { CHART_DATA, Y_AXIS_LABELS } from './data';
+import { useDesktopMediaQuery } from '../../lib/mediaQueryHelper';
+import { Icon } from '../Icon';
 
 type IStackedBarProps = {
   height: number;
@@ -17,48 +20,6 @@ type IInnerLabelProps = {
   shouldPosition: boolean;
 };
 
-const calculateHeight = (value: number) => {
-  // Based on highest value (40%)
-  return value * 100 / 40;
-};
-
-const data = [
-  {
-    name: "2021",
-    stacks: [
-      { value: calculateHeight(2), label: "Airdrop", color: "#EEDBD6" },
-      { value: calculateHeight(10), label: "IDO + LP", color: "#F2B8AB" },
-      { value: calculateHeight(5), label: "Investors", color: "#E5E5E5" },
-    ]
-  },
-  {
-    name: "2022",
-    stacks: [
-      { value: calculateHeight(2), label: "Airdrop", color: "#EEDBD6" },
-      { value: calculateHeight(11), label: "Team", color: "#F2B8AB" },
-      { value: calculateHeight(12.5), label: "Partners", color: "#E5E5E5" },
-    ]
-  },
-  {
-    name: "2023",
-    stacks: [
-      { value: calculateHeight(10), label: "Community Treasure", color: "#EEDBD6" },
-      { value: calculateHeight(1.5), label: "Airdrop", color: "#F2B8AB" },
-      { value: calculateHeight(7.5), label: "Team", color: "#F6A897" },
-      { value: calculateHeight(9), label: "Partners", color: "#E5E5E5" },
-    ]
-  },
-  {
-    name: "2024",
-    stacks: [
-      { value: calculateHeight(30), label: "Community Treasure", color: "#F6A897" },
-      { value: calculateHeight(2.5), label: "Airdrop", color: "#E5E5E5" },
-    ]
-  },
-];
-
-const yAxis = ['0.0%', '10%', '20%', '30%'];
-
 type Stack = {
   label: string;
   color: string;
@@ -68,6 +29,44 @@ type Stack = {
 type IChartBarProps = {
   stacks: Stack[];
 }
+
+type ChartEntry = {
+  name: string;
+  stacks: Stack[];
+}
+
+// TODO: Move this
+type IEntrySelectProps = {
+  active: string;
+  onChange: (selected: string) => void;
+};
+
+function EntrySelect({ active, onChange }: IEntrySelectProps) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const handleChange = useCallback((selected) => {
+    onChange(selected)
+  }, [onChange]);
+
+  return <>
+    {/* TODO: Change icon + consume theme */}
+    <SelectToggle>{active}<Icon icon="chevrons-up" color="white" /></SelectToggle>
+    {isMenuOpen && (
+      // menu logic goes here
+      <></>
+    )}
+  </>
+}
+
+const SelectToggle = styled.div`
+  display: flex;
+  position: absolute;
+  bottom: -66px;
+  height: 66px;
+  justify-content: space-between;
+  width: 100%;
+  background-color: ${({ theme }) => theme.cta.primary};
+  color: white;
+`
 
 function ChartBar({ stacks }: IChartBarProps) {
   const [visible, setVisible] = useState(false);
@@ -91,12 +90,25 @@ function ChartBar({ stacks }: IChartBarProps) {
 }
 
 export function RoadmapChart() {
+  const isDesktop = useDesktopMediaQuery();
+  const [visible, setVisible] = useState(isDesktop ? 'all' : '2024');
+
+  const mappedData = (data: ChartEntry[]) => {
+    if (visible === 'all') {
+      return data;
+    } else {
+      return data.filter(entry => {
+        return entry.name === visible
+      });
+    }
+  }
+
 	return (
     <Wrapper>
       <ChartWrapper>
         <GridWrapper>
           {/* We use four rows to calculate bar heights up to 40% */}
-          {yAxis.map(label => (
+          {Y_AXIS_LABELS.map(label => (
             <GridRow key={label}>
               {label}
             </GridRow>
@@ -104,13 +116,14 @@ export function RoadmapChart() {
           {/* So 40% falls off, this is a way to display the label */}
           <YAxisTopLabel>40%</YAxisTopLabel>
         </GridWrapper>
-        {data.map((bar, index) => (
+        {mappedData(CHART_DATA)?.map((bar, index) => (
           <BarWrapper key={index}>
             <ChartBar stacks={bar.stacks} />
-            <BarLabel>{bar.name}</BarLabel>
+            {isDesktop && <BarLabel>{bar.name}</BarLabel>}
           </BarWrapper>
         ))}
       </ChartWrapper>
+      {!isDesktop && <EntrySelect active={visible} onChange={setVisible} />}
     </Wrapper>
 	);
 };
@@ -121,6 +134,11 @@ const Wrapper = styled.div`
   display: flex;
   height: 640px;
   text-transform: uppercase;
+
+  @media (max-width: 767px) {
+    position: relative;
+    align-items: flex-end;
+  }
 `;
 
 const ChartWrapper = styled.div`
@@ -132,6 +150,11 @@ const ChartWrapper = styled.div`
   padding-right: 2%;
   position: relative;
   width: 100%;
+
+  @media (max-width: 767px) {
+    padding-left: 69px;
+    padding-right: 0;
+  }
 `;
 
 const GridWrapper = styled.div`
@@ -179,6 +202,10 @@ const Bar = styled.div`
       height: 100%;
       transition: height 0.5s linear;
     `}
+
+  @media (max-width: 767px) {
+    width: 242px;
+  }
 `;
 
 const StackedBar = styled.div`

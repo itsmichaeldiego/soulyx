@@ -1,3 +1,7 @@
+import React from 'react';
+// suppress useLayoutEffect warnings when running outside a browser
+if (!process.browser) React.useLayoutEffect = React.useEffect;
+
 import type { AppProps } from 'next/app'
 import { ThemeProvider } from "styled-components";
 

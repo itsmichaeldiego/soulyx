@@ -1,13 +1,13 @@
-import { useMediaQuery } from 'react-responsive'
+import { useMediaQuery } from 'react-responsive';
 
-export const useDesktopMediaQuery = (): boolean => useMediaQuery({ minWidth: 992 })
+export const useDesktopMediaQuery = (): boolean => useMediaQuery({ minWidth: 992 });
 
-export const useTabletMediaQuery = (): boolean => useMediaQuery({ minWidth: 768, maxWidth: 991 })
+export const useTabletMediaQuery = (): boolean => useMediaQuery({ minWidth: 768, maxWidth: 991 });
 
-export const useMobileMediaQuery = (): boolean => useMediaQuery({ maxWidth: 767 })
+export const useMobileMediaQuery = (): boolean => useMediaQuery({ maxWidth: 767 });
 
 export function Desktop({ children }: React.PropsWithChildren<{}>): JSX.Element | null {
-  const isDesktop = useDesktopMediaQuery()
+  const isDesktop = useDesktopMediaQuery();
   if (!isDesktop) {
     return null;
   }
@@ -15,7 +15,7 @@ export function Desktop({ children }: React.PropsWithChildren<{}>): JSX.Element 
 }
 
 export function Tablet({ children }: React.PropsWithChildren<{}>): JSX.Element | null {
-  const isTablet = useTabletMediaQuery()
+  const isTablet = useTabletMediaQuery();
   if (!isTablet) {
     return null;
   }
@@ -23,7 +23,7 @@ export function Tablet({ children }: React.PropsWithChildren<{}>): JSX.Element |
 }
 
 export function Mobile({ children }: React.PropsWithChildren<{}>): JSX.Element | null {
-  const isMobile = useMobileMediaQuery()
+  const isMobile = useMobileMediaQuery();
   if (!isMobile) {
     return null;
   }
@@ -31,7 +31,7 @@ export function Mobile({ children }: React.PropsWithChildren<{}>): JSX.Element |
 }
 
 export function Default({ children }: React.PropsWithChildren<{}>): JSX.Element | null {
-  const isNotMobile = useMediaQuery({ minWidth: 768 })
+  const isNotMobile = useMediaQuery({ minWidth: 768 });
   if (!isNotMobile) {
     return null;
   }

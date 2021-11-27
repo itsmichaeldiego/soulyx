@@ -29,7 +29,7 @@ const Wrapper = styled.nav`
   left: 0;
   width: ${({ theme }) => theme.sizes.nav};
   height: 100vh;
-  padding: ${({ theme }) => theme.spacing(5, 0, 5, 2)};
+  padding: ${({ theme }) => theme.spacing(5, 0, 3, 2)};
   display: flex;
   flex-direction: column;
   justify-content: space-between;

@@ -1,12 +1,18 @@
+import { useLayoutEffect, useState } from 'react';
 import React from 'react';
 import styled from 'styled-components';
 
-type IInnerBarProps = {
+type IStackedBarProps = {
   height: number;
   color?: string;
 };
 
+type IBarProps = {
+  visible: boolean;
+};
+
 type IInnerLabelProps = {
+  visible: boolean;
   // God knows this shouldn't exist
   shouldPosition: boolean;
 };
@@ -19,7 +25,7 @@ const calculateHeight = (value: number) => {
 const data = [
   {
     name: "2021",
-    attributes: [
+    stacks: [
       { value: calculateHeight(2), label: "Airdrop", color: "#EEDBD6" },
       { value: calculateHeight(10), label: "IDO + LP", color: "#F2B8AB" },
       { value: calculateHeight(5), label: "Investors", color: "#E5E5E5" },
@@ -27,7 +33,7 @@ const data = [
   },
   {
     name: "2022",
-    attributes: [
+    stacks: [
       { value: calculateHeight(2), label: "Airdrop", color: "#EEDBD6" },
       { value: calculateHeight(11), label: "Team", color: "#F2B8AB" },
       { value: calculateHeight(12.5), label: "Partners", color: "#E5E5E5" },
@@ -35,7 +41,7 @@ const data = [
   },
   {
     name: "2023",
-    attributes: [
+    stacks: [
       { value: calculateHeight(10), label: "Community Treasure", color: "#EEDBD6" },
       { value: calculateHeight(1.5), label: "Airdrop", color: "#F2B8AB" },
       { value: calculateHeight(7.5), label: "Team", color: "#F6A897" },
@@ -44,7 +50,7 @@ const data = [
   },
   {
     name: "2024",
-    attributes: [
+    stacks: [
       { value: calculateHeight(30), label: "Community Treasure", color: "#F6A897" },
       { value: calculateHeight(2.5), label: "Airdrop", color: "#E5E5E5" },
     ]
@@ -52,6 +58,37 @@ const data = [
 ];
 
 const yAxis = ['0.0%', '10%', '20%', '30%'];
+
+type Stack = {
+  label: string;
+  color: string;
+  value: number;
+}
+
+type IChartBarProps = {
+  stacks: Stack[];
+}
+
+function ChartBar({ stacks }: IChartBarProps) {
+  const [visible, setVisible] = useState(false);
+  useLayoutEffect(() => {
+    requestAnimationFrame(() => {
+      setVisible(true);
+    })
+  }, []);
+
+  return <Bar visible={visible}>
+    {stacks.map(({ label, color, value }: Stack) => (
+      <StackedBar
+        key={label}
+        color={color}
+        height={value}
+      >
+        <InnerLabel visible={visible} shouldPosition={value > 6}>{label}</InnerLabel>
+      </StackedBar>
+    ))}
+  </Bar>
+}
 
 export function RoadmapChart() {
 	return (
@@ -69,17 +106,7 @@ export function RoadmapChart() {
         </GridWrapper>
         {data.map((bar, index) => (
           <BarWrapper key={index}>
-            <Bar>
-              {bar.attributes.map(attr => (
-                <InnerBar
-                  key={attr.label}
-                  color={attr.color}
-                  height={attr.value}
-                >
-                  <InnerLabel shouldPosition={attr.value > 6}>{attr.label}</InnerLabel>
-                </InnerBar>
-              ))}
-            </Bar>
+            <ChartBar stacks={bar.stacks} />
             <BarLabel>{bar.name}</BarLabel>
           </BarWrapper>
         ))}
@@ -142,25 +169,32 @@ const BarWrapper = styled.div`
 const Bar = styled.div`
   display: flex;
   flex-direction: column-reverse;
-  height: 100%;
+  height: 0%;
   justify-content: flex-start;
+  margin-top: auto;
   width: 220px;
+
+  ${({ visible }: IBarProps) =>
+    visible && `
+      height: 100%;
+      transition: height 0.5s linear;
+    `}
 `;
 
-const InnerBar = styled.div`
+const StackedBar = styled.div`
   align-items: center;
   display: flex;
   padding-left: 12px;
   position: relative;
 
-  ${({ height, color }: IInnerBarProps) => `
+  ${({ color, height }: IStackedBarProps) => `
     background-color: ${color};
     height: ${height}%;
   `}
 
   // borders (...)
-  border-right: 1px solid ${({ theme }) => theme.cta.primary};
   border-left: 1px solid ${({ theme }) => theme.cta.primary};
+  border-right: 1px solid ${({ theme }) => theme.cta.primary};
 
   &:not(:first-of-type) {
     border-bottom: 1px dashed ${({ theme }) => theme.cta.primary};
@@ -168,6 +202,8 @@ const InnerBar = styled.div`
 
   &:first-of-type {
     border-bottom: 1px solid ${({ theme }) => theme.cta.primary};
+    // Split 'Community Treasure' text into separate lines
+    word-spacing: 999px;
   }
 
   &:last-of-type {
@@ -182,6 +218,16 @@ const InnerLabel = styled.div`
     position: absolute;
     top: 8px;
   `}
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+  transition-delay: 0.5s;
+
+  ${({ visible }: IInnerLabelProps) =>
+    visible && `
+      opacity: 1;
+    `}
+
+  // TODO: figure out a way to reposition first 'community treasure' label
 `;
 
 const BarLabel = styled.div`

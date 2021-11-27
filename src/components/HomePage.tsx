@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Banner } from './Banner'
 import { TextSection } from './TextSection'
-import { TokenizeRoadmap } from './TokenizeRoadmap/TokenizeRoadmapDesktop'
+import { TokenizeRoadmap } from './TokenizeRoadmap'
 
 export function HomePage() {
   return (

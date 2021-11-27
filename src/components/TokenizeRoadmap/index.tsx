@@ -1,10 +1,18 @@
-import { TokenizeRoadmap as Mobile } from './TokenizeRoadmapMobile'
-import { TokenizeRoadmap as Desktop } from './TokenizeRoadmapDesktop'
+import React from 'react'
+import { TokenizeRoadmap as TokenizeRoadmapMobile } from './TokenizeRoadmapMobile'
+import { TokenizeRoadmap as TokenizeRoadmapDesktop } from './TokenizeRoadmapDesktop'
+
+import { Desktop, Mobile } from '../../lib/mediaQueryHelper'
 
 export function TokenizeRoadmap() {
-  const mobile = false;
-  if (mobile) {
-    return <Mobile />
-  }
-  return <Desktop />
+  return (
+    <>
+      <Desktop>
+        <TokenizeRoadmapDesktop />
+      </Desktop>
+      <Mobile>
+        <TokenizeRoadmapMobile />
+      </Mobile>
+    </>
+  )
 }

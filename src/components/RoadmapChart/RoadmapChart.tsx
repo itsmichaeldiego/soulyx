@@ -1,4 +1,4 @@
-import { useLayoutEffect, useState, useCallback, useContext } from 'react';
+import { useLayoutEffect, useState } from 'react';
 import React from 'react';
 import styled from 'styled-components';
 
@@ -60,7 +60,7 @@ function ChartBar({ stacks }: IChartBarProps) {
 
 export function RoadmapChart() {
   const isDesktop = useDesktopMediaQuery();
-  const [visible, setVisible] = useState(isDesktop ? 'all' : '2024');
+  const [visible, setVisible] = useState(isDesktop ? 'all' : '2021');
 
   const mappedData = (data: ChartEntry[]) => {
     if (visible === 'all') {
@@ -70,7 +70,10 @@ export function RoadmapChart() {
         return entry.name === visible
       });
     }
-  }
+  };
+
+  const chartData = mappedData(CHART_DATA);
+  const selectOptions = CHART_DATA.map(entry => entry.name);
 
 	return (
     <Wrapper>
@@ -85,14 +88,14 @@ export function RoadmapChart() {
           {/* So 40% falls off, this is a way to display the label */}
           <YAxisTopLabel>40%</YAxisTopLabel>
         </GridWrapper>
-        {mappedData(CHART_DATA)?.map((bar, index) => (
+        {chartData?.map((bar, index) => (
           <BarWrapper key={index}>
             <ChartBar stacks={bar.stacks} />
             {isDesktop && <BarLabel>{bar.name}</BarLabel>}
           </BarWrapper>
         ))}
       </ChartWrapper>
-      {!isDesktop && <EntrySelect active={visible} onChange={setVisible} />}
+      {!isDesktop && <EntrySelect options={selectOptions} selected={visible} onChange={setVisible} />}
     </Wrapper>
 	);
 };
@@ -101,8 +104,9 @@ const Wrapper = styled.div`
   align-items: center;
   background-color: #E5E5E5;
   display: flex;
-  height: 640px;
   text-transform: uppercase;
+  flex-direction: column;
+  margin: 64px 0;
 
   @media (max-width: 767px) {
     position: relative;

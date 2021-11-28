@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import { useDesktopMediaQuery } from '../../lib/mediaQueryHelper';
 
-import { RoadmapYearSelect } from './RoadmapYearSelect';
+import { YearSelect } from './YearSelect';
 import { CHART_DATA, Y_AXIS_LABELS } from './data';
 import { StackedBar } from './StackedBar';
 
@@ -73,7 +73,7 @@ export function RoadmapChart() {
           </BarWrapper>
         ))}
       </ChartWrapper>
-      {!isDesktop && <RoadmapYearSelect options={selectOptions} selected={visible} onChange={setVisible} />}
+      {!isDesktop && <YearSelect options={selectOptions} selected={visible} onChange={setVisible} />}
     </Wrapper>
 	);
 };

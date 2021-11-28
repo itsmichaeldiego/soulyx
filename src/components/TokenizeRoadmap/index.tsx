@@ -12,7 +12,11 @@ export function TokenizeRoadmap() {
     setMounted(true);
   }, []);
 
-  return mounted && (
+  if (!mounted) {
+    return null;
+  }
+
+  return (
     <>
       <Default>
         <TokenizeRoadmapDesktop />

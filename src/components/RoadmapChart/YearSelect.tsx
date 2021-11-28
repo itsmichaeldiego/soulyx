@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { Icon } from '../Icon';
 import { useOnClickOutside } from '../../hooks/useOnClickOutside';
 
-type IRoadmapYearSelectProps = {
+type IYearSelectProps = {
   selected: string;
   onChange: (selected: string) => void;
   options: string[];
@@ -19,7 +19,7 @@ type IIconWrapperProps = {
   open: boolean;
 }
 
-export function RoadmapYearSelect({ selected, options, onChange }: IRoadmapYearSelectProps) {
+export function YearSelect({ selected, options, onChange }: IYearSelectProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuHeight = (options.length) * 40;
   const clickOutsideRef = useRef(null);
@@ -114,5 +114,10 @@ const MenuOption = styled.li`
 
   &:not(:last-child) {
     border-bottom: 1px solid ${({ theme }) => theme.cta.primary};
+  }
+
+  &:focus, :active, :visited {
+    background-color: ${({ theme }) => theme.cta.primary};
+    color: white;
   }
 `;

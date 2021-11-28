@@ -1,11 +1,18 @@
-import React from 'react'
+import React, { useLayoutEffect, useState } from 'react'
 import { TokenizeRoadmap as TokenizeRoadmapMobile } from './TokenizeRoadmapMobile'
 import { TokenizeRoadmap as TokenizeRoadmapDesktop } from './TokenizeRoadmapDesktop'
 
 import { Default, Mobile } from '../../lib/mediaQueryHelper'
 
 export function TokenizeRoadmap() {
-  return (
+  const [mounted, setMounted] = useState(false);
+
+  useLayoutEffect(() => {
+    // This is to avoid SSR + useMedia issues
+    setMounted(true);
+  }, []);
+
+  return mounted && (
     <>
       <Default>
         <TokenizeRoadmapDesktop />
@@ -14,5 +21,5 @@ export function TokenizeRoadmap() {
         <TokenizeRoadmapMobile />
       </Mobile>
     </>
-  )
+  );
 }

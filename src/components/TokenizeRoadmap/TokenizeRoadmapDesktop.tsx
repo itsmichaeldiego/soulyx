@@ -73,7 +73,7 @@ const TableBody = styled.div`
   border-bottom: 1px solid ${({ theme }) => theme.cta.primary};
   display: flex;
   width: 100%;
-`
+`;
 
 const TableRow = styled.div`
   display: flex;
@@ -87,18 +87,18 @@ const TableRow = styled.div`
   }
 
   ${({ width }: ITableRowProps) => `width: ${width}%;`}
-`
+`;
 
 const TableRowText = styled.span`
   transform: rotate(-180deg);
   writing-mode: vertical-rl;
-`
+`;
 
 const TableFooter = styled.div`
   display: flex;
   height: 60px;
   width: 100%;
-`
+`;
 
 const ColorMarker = styled.div`
   ${({ width, color }: IColorMarkerProps) =>
@@ -106,4 +106,4 @@ const ColorMarker = styled.div`
     width: ${width}%;
     background: ${color};
   `}
-`
+`;

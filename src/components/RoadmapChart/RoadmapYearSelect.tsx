@@ -29,10 +29,11 @@ export function RoadmapYearSelect({ selected, options, onChange }: IRoadmapYearS
   };
 
   const handleChange = useCallback((selected) => {
-    onChange(selected)
+    onChange(selected);
+    setIsMenuOpen(false);
   }, [onChange]);
 
-  const toggle = useCallback(() => {
+  const toggleMenu = useCallback(() => {
     setIsMenuOpen(v => !v);
   }, []);
 
@@ -41,7 +42,7 @@ export function RoadmapYearSelect({ selected, options, onChange }: IRoadmapYearS
   return <>
     {/* TODO: Consume color from theme */}
     <ClickOutsideWrapper ref={clickOutsideRef}>
-      <SelectToggle onClick={toggle}>
+      <SelectToggle onClick={toggleMenu}>
         {selected}
         <IconWrapper open={isMenuOpen} icon="arrow-down" color="white" />
       </SelectToggle>
@@ -76,13 +77,14 @@ const SelectToggle = styled.div`
 `;
 
 const IconWrapper = styled(Icon)`
+  transition-duration: 0.1s;
   ${({ open }: IIconWrapperProps) =>
     open && `
-      transform: rotate(-180deg);
+      transform: rotate(180deg);
     `}
 `;
 
-const MenuWrapper = styled.div`
+const MenuWrapper = styled.ul`
   background-color: ${({ theme }) => theme.cta.secondary};
   border-radius: 4px;
   border: 1px solid ${({ theme }) => theme.cta.primary};
@@ -90,8 +92,11 @@ const MenuWrapper = styled.div`
   flex-direction: column;
   font-size: 12px;
   left: 0px;
+  margin: 0;
+  padding: 0;
   position: absolute;
   width: 100%;
+  transition: all 0.3s ease-in;
 
   ${({ height }: IMenuWrapperProps) =>
     height && `
@@ -100,7 +105,7 @@ const MenuWrapper = styled.div`
     `}
 `;
 
-const MenuOption = styled.div`
+const MenuOption = styled.li`
   align-items: center;
   color: ${({ theme }) => theme.cta.primary};
   display: flex;

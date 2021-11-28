@@ -6,54 +6,32 @@ import { useDesktopMediaQuery } from '../../lib/mediaQueryHelper';
 
 import { RoadmapYearSelect } from './RoadmapYearSelect';
 import { CHART_DATA, Y_AXIS_LABELS } from './data';
-
-type IStackedBarProps = {
-  height: number;
-  color?: string;
-};
-
-type IBarProps = {
-  visible: boolean;
-};
-
-type IInnerLabelProps = {
-  visible: boolean;
-  // God knows this shouldn't exist
-  shouldPosition: boolean;
-};
+import { StackedBar } from './StackedBar';
 
 type Stack = {
   label: string;
   color: string;
   value: number;
-}
+};
 
 type IChartBarProps = {
   stacks: Stack[];
-}
+};
 
 type ChartEntry = {
   name: string;
   stacks: Stack[];
-}
+};
 
 function ChartBar({ stacks }: IChartBarProps) {
-  const [visible, setVisible] = useState(false);
-  useLayoutEffect(() => {
-    requestAnimationFrame(() => {
-      setVisible(true);
-    })
-  }, []);
-
-  return <Bar visible={visible}>
+  return <Bar>
     {stacks.map(({ label, color, value }: Stack, index) => (
       <StackedBar
         key={`${label+index}`}
         color={color}
         height={value}
-      >
-        <InnerLabel visible={visible} shouldPosition={value > 6}>{label}</InnerLabel>
-      </StackedBar>
+        label={label}
+      />
     ))}
   </Bar>
 }
@@ -175,69 +153,14 @@ const BarWrapper = styled.div`
 const Bar = styled.div`
   display: flex;
   flex-direction: column-reverse;
-  height: 0%;
+  height: 100%;
   justify-content: flex-start;
   margin-top: auto;
   width: 220px;
 
-  ${({ visible }: IBarProps) =>
-    visible && `
-      height: 100%;
-      transition: height 0.5s linear;
-    `}
-
   @media (max-width: 767px) {
     width: 242px;
   }
-`;
-
-const StackedBar = styled.div`
-  align-items: center;
-  display: flex;
-  padding-left: 12px;
-  position: relative;
-
-  ${({ color, height }: IStackedBarProps) => `
-    background-color: ${color};
-    height: ${height}%;
-  `}
-
-  // borders (...)
-  border-left: 1px solid ${({ theme }) => theme.cta.primary};
-  border-right: 1px solid ${({ theme }) => theme.cta.primary};
-
-  &:not(:first-of-type) {
-    border-bottom: 1px dashed ${({ theme }) => theme.cta.primary};
-  }
-
-  &:first-of-type {
-    border-bottom: 1px solid ${({ theme }) => theme.cta.primary};
-    // Split 'Community Treasure' text into separate lines
-    word-spacing: 999px;
-  }
-
-  &:last-of-type {
-    border-top: 1px solid ${({ theme }) => theme.cta.primary};
-  }
-`;
-
-const InnerLabel = styled.div`
-  ${({ shouldPosition }: IInnerLabelProps) =>
-   shouldPosition && `
-    left: 12px;
-    position: absolute;
-    top: 8px;
-  `}
-  opacity: 0;
-  transition: opacity 0.5s ease-in;
-  transition-delay: 0.5s;
-
-  ${({ visible }: IInnerLabelProps) =>
-    visible && `
-      opacity: 1;
-    `}
-
-  // TODO: figure out a way to reposition first 'community treasure' label
 `;
 
 const BarLabel = styled.div`

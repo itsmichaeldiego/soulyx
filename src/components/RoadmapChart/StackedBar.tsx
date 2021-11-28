@@ -5,6 +5,7 @@ type IStackedBarProps = {
   label: string;
   color: string;
   height: number;
+  fixedLabel?: boolean;
 };
 
 type IStackedBarWrapperProps = {
@@ -17,14 +18,15 @@ type IInnerLabelProps = {
   visible: boolean;
   // God knows this shouldn't exist
   shouldPosition: boolean;
+  fixedLabel?: boolean;
 };
 
-export function StackedBar( { label, color, height }: IStackedBarProps) {
+export function StackedBar( { label, color, height, fixedLabel }: IStackedBarProps) {
   const [visible, setVisible] = useState(false);
   useLayoutEffect(() => {
     requestAnimationFrame(() => {
       setVisible(true);
-    })
+    });
   }, []);
 
   return <StackedBarWrapper
@@ -32,7 +34,7 @@ export function StackedBar( { label, color, height }: IStackedBarProps) {
     height={height}
     visible={visible}
   >
-    <InnerLabel visible={visible} shouldPosition={height > 6}>{label}</InnerLabel>
+    <InnerLabel visible={visible} shouldPosition={height > 6} fixedLabel={fixedLabel}>{label}</InnerLabel>
   </StackedBarWrapper>
 }
 
@@ -71,20 +73,26 @@ const StackedBarWrapper = styled.div`
 
 
 const InnerLabel = styled.div`
-  ${({ shouldPosition }: IInnerLabelProps) =>
-   shouldPosition && `
-    left: 12px;
-    position: absolute;
-    top: 8px;
-  `}
+  line-height: 17px;
   opacity: 0;
   transition: opacity 0.5s ease-in;
   transition-delay: 0.5s;
+
+  ${({ shouldPosition, fixedLabel }: IInnerLabelProps) =>
+   shouldPosition && !fixedLabel && `
+      left: 12px;
+      position: absolute;
+      top: 8px;
+    `}
+
+  ${({ fixedLabel }: IInnerLabelProps) =>
+    fixedLabel && `
+      align-self: flex-end;
+      padding-bottom: 8px;
+    `}
 
   ${({ visible }: IInnerLabelProps) =>
     visible && `
       opacity: 1;
     `}
-
-  // TODO: figure out a way to reposition first 'community treasure' label
 `;

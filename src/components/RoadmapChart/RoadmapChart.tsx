@@ -12,6 +12,7 @@ type Stack = {
   label: string;
   color: string;
   value: number;
+  fixedLabel?: boolean;
 };
 
 type IChartBarProps = {
@@ -25,12 +26,13 @@ type ChartEntry = {
 
 function ChartBar({ stacks }: IChartBarProps) {
   return <Bar>
-    {stacks.map(({ label, color, value }: Stack, index) => (
+    {stacks.map(({ label, color, value, fixedLabel }: Stack, index) => (
       <StackedBar
         key={`${label+index}`}
         color={color}
         height={value}
         label={label}
+        fixedLabel={fixedLabel}
       />
     ))}
   </Bar>

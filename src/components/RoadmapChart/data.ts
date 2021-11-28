@@ -20,7 +20,9 @@ export const CHART_DATA = [
   {
     name: "2023",
     stacks: [
-      { value: calculateHeight(10), label: "Community Treasure", color: "#EEDBD6" },
+      // NOTE: `fixedLabel` attribute shouldn't legally exist
+      // it's only purpose is to match first 'Community Treasure' position with design
+      { value: calculateHeight(10), label: "Community Treasure", color: "#EEDBD6", fixedLabel: true },
       { value: calculateHeight(1.5), label: "Airdrop", color: "#F2B8AB" },
       { value: calculateHeight(7.5), label: "Team", color: "#F6A897" },
       { value: calculateHeight(9), label: "Partners", color: "#E5E5E5" },

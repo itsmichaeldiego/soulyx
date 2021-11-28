@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import { useDesktopMediaQuery } from '../../lib/mediaQueryHelper';
 
-import { EntrySelect } from './EntrySelect';
+import { RoadmapYearSelect } from './RoadmapYearSelect';
 import { CHART_DATA, Y_AXIS_LABELS } from './data';
 
 type IStackedBarProps = {
@@ -95,7 +95,7 @@ export function RoadmapChart() {
           </BarWrapper>
         ))}
       </ChartWrapper>
-      {!isDesktop && <EntrySelect options={selectOptions} selected={visible} onChange={setVisible} />}
+      {!isDesktop && <RoadmapYearSelect options={selectOptions} selected={visible} onChange={setVisible} />}
     </Wrapper>
 	);
 };

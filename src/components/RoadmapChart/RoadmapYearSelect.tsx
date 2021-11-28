@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { Icon } from '../Icon';
 import { useOnClickOutside } from '../../hooks/useOnClickOutside';
 
-type IEntrySelectProps = {
+type IRoadmapYearSelectProps = {
   selected: string;
   onChange: (selected: string) => void;
   options: string[];
@@ -19,7 +19,7 @@ type IIconWrapperProps = {
   open: boolean;
 }
 
-export function EntrySelect({ selected, options, onChange }: IEntrySelectProps) {
+export function RoadmapYearSelect({ selected, options, onChange }: IRoadmapYearSelectProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuHeight = (options.length) * 40;
   const clickOutsideRef = useRef(null);

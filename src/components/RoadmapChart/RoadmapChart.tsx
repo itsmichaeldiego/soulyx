@@ -16,6 +16,7 @@ type Stack = {
 };
 
 type IChartBarProps = {
+  name: string;
   stacks: Stack[];
 };
 
@@ -24,11 +25,11 @@ type ChartEntry = {
   stacks: Stack[];
 };
 
-function ChartBar({ stacks }: IChartBarProps) {
+function ChartBar({ name, stacks }: IChartBarProps) {
   return <Bar>
     {stacks.map(({ label, color, value, fixedLabel }: Stack, index) => (
       <StackedBar
-        key={`${label+index}`}
+        key={`${name+label+index}`}
         color={color}
         height={value}
         label={label}
@@ -70,7 +71,7 @@ export function RoadmapChart() {
         </GridWrapper>
         {chartData?.map((bar, index) => (
           <BarWrapper key={index}>
-            <ChartBar stacks={bar.stacks} />
+            <ChartBar name={bar.name} stacks={bar.stacks} />
             {isDesktop && <BarLabel>{bar.name}</BarLabel>}
           </BarWrapper>
         ))}

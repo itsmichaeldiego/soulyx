@@ -1,12 +1,12 @@
 import React from 'react';
+import Image from 'next/image'
 
-import { Title } from './Title'
 import { Section } from './Section'
 
 export function Decentralization() {
   return (
     <Section>
-      <Title>THRESHOLD OF DECEN-TRALIZATION</Title>
+      <Image src="/images/decentralization.svg" alt="Decentralization" layout="fill" />
     </Section>
   )
 }

@@ -1,17 +1,25 @@
 import React from 'react'
+import { Element } from 'react-scroll'
 
+import { NAV_ITEMS } from './Nav'
 import { Banner } from './Banner'
 import { Thanks } from './Thanks'
 import { Genesis } from './Genesis'
 import { TextSection } from './TextSection'
 import { TokenizeRoadmap } from './TokenizeRoadmap'
+import { Decentralization } from './Decentralization'
 import { RoadmapChart } from './RoadmapChart/RoadmapChart'
 import { RoadmapSection } from './RoadmapSection/RoadmapSection'
 
 export function HomePage() {
   return (
     <>
-      <Banner />
+      <Element name={NAV_ITEMS[0].name}> 
+        <Banner />
+      </Element>
+      <Element name={NAV_ITEMS[1].name}> 
+        <Decentralization />
+      </Element>
       <TextSection 
         title="Power in the hands of our community." 
         text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip" 

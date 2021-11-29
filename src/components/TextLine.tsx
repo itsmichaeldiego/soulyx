@@ -17,6 +17,10 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   padding: ${({ theme }) => theme.spacing(6, 6)};
+
+  @media (max-width: 767px) {
+    padding: ${({ theme }) => theme.spacing(4, 0)};
+  }
 `
 
 const Text = styled.span`

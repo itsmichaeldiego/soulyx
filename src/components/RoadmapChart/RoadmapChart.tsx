@@ -48,7 +48,7 @@ export function RoadmapChart() {
       return data;
     } else {
       return data.filter(entry => {
-        return entry.name === visible
+        return entry.name === visible;
       });
     }
   };

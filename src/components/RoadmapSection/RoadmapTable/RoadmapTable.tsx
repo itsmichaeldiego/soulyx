@@ -1,15 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
-import { ROADMAP_TABLE_DATA, TABLE_HEADERS } from './data';
+import { TABLE_HEADERS } from '../data';
+import { IRoadmapEntry } from '../types';
 
-export function RoadmapTable(): JSX.Element {
+type IRoadmapTableProps = {
+  data: IRoadmapEntry[];
+};
+
+export function RoadmapTable({ data }: IRoadmapTableProps): JSX.Element {
   return (
     <TableWrapper>
       <TableHeader>
         {TABLE_HEADERS.map(header => <HeaderCell key={header}>{header}</HeaderCell>)}
       </TableHeader>
       <TableBody>
-        {ROADMAP_TABLE_DATA.map((entry) => (
+        {data?.map((entry) => (
           <TableRow key={entry.name}>
             <TableCell>{entry.name}</TableCell>
             <TableCell>{entry.description}</TableCell>
@@ -21,7 +26,7 @@ export function RoadmapTable(): JSX.Element {
       </TableBody>
       <ViewMoreWrapper>
         {/* TODO: Add functionality */}
-        <ViewMoreButton>View More</ViewMoreButton>
+        <ViewMoreButton>View more</ViewMoreButton>
       </ViewMoreWrapper>
     </TableWrapper>
   );
@@ -29,26 +34,37 @@ export function RoadmapTable(): JSX.Element {
 
 const TableWrapper = styled.div`
   background-color: ${({ theme }) => theme.cta.primary};
-  color: white;
   border-radius: 20px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: white;
   display: grid;
   margin: 0 40px;
+
+  // TODO: useMedia instead (this doesn't look too bad tbh)
+  @media (max-width: 767px) {
+    display: none;
+  }
 `;
 
 const TableHeader = styled.div`
-  display: flex;
   align-items: center;
+  display: flex;
   font-size: 12px;
   height: 88px;
-  width: 100%;
   text-transform: uppercase;
+  width: 100%;
+`;
+
+const TableBody = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 `;
 
 const HeaderCell = styled.div`
   display: flex;
-  height: 100%;
   flex-basis: 15%;
+  height: 100%;
   justify-content: center;
   padding: 38px;
 
@@ -61,19 +77,13 @@ const HeaderCell = styled.div`
   }
 `;
 
-const TableBody = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-`;
-
 const TableRow = styled.div`
   align-items: center;
+  background-color: ${({ theme }) => theme.cta.primary};
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   display: flex;
   font-size: 14px;
   height: 78px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-  background-color: ${({ theme }) => theme.cta.primary};
 
   &:first-child {
     border-top: 1px solid rgba(255, 255, 255, 0.3);
@@ -83,12 +93,12 @@ const TableRow = styled.div`
 `;
 
 const TableCell = styled.div`
-  display: flex;
   align-items: center;
-  padding: 38px;
-  height: 100%;
+  display: flex;
   flex-basis: 15%;
+  height: 100%;
   justify-content: center;
+  padding: 38px;
 
   &:first-child, &:nth-child(2) {
     justify-content: flex-start;
@@ -108,20 +118,20 @@ const TableCell = styled.div`
 `;
 
 const ViewMoreWrapper = styled.div`
+  align-items: center;
   display: flex;
   flex: 1 1 100%;
-  align-items: center;
-  justify-content: center;
   height: 100px;
+  justify-content: center;
 `;
 
 const ViewMoreButton = styled.button`
+  background-color: ${({ theme }) => theme.cta.primary};
+  border: none;
+  color: white;
+  cursor: pointer;
   margin: 0;
   padding: 0;
-  color: white;
-  border: none;
-  background-color: ${({ theme }) => theme.cta.primary};
-  cursor: pointer;
 
   &:hover {
     text-decoration: underline;

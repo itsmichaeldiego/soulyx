@@ -6,7 +6,7 @@ import { Genesis } from './Genesis'
 import { TextSection } from './TextSection'
 import { TokenizeRoadmap } from './TokenizeRoadmap'
 import { RoadmapChart } from './RoadmapChart/RoadmapChart'
-import { RoadmapSection } from './RoadmapSection'
+import { RoadmapSection } from './RoadmapSection/RoadmapSection'
 
 export function HomePage() {
   return (

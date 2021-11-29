@@ -21,7 +21,7 @@ const Wrapper = styled.article`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: ${({ theme }) => theme.spacing(20, 0)}
+  padding: ${({ theme }) => theme.spacing(20, 0)};
 `
 
 const Container = styled.div`

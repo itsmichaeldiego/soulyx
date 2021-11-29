@@ -22,13 +22,11 @@ export function Layout({ children }: React.PropsWithChildren<{}>): JSX.Element {
 const Wrapper = styled.main`
   position: relative;
   min-height: ${({ theme }) => `calc(100vh - ${theme.sizes.header})`};
-  // TODO: adapt to mobile layout
-  // padding: 0;
   padding: ${({ theme }) => theme.spacing(0, 6, 6, 0)};
   padding-left: ${({ theme }) => `calc(${theme.sizes.nav} + ${theme.spacing(2)})`};
 
   /* mobile queries */
   @media (max-width: 767px) {
-    padding: ${({ theme }) => theme.spacing(6, 4, 6, 4)};
+    padding: ${({ theme }) => theme.spacing(6, 3, 6, 3)};
   }
 `

@@ -21,7 +21,7 @@ type IInnerLabelProps = {
   fixedLabel?: boolean;
 };
 
-export function StackedBar( { label, color, height, fixedLabel }: IStackedBarProps) {
+export function StackedBar({ label, color, height, fixedLabel }: IStackedBarProps) {
   const [visible, setVisible] = useState(false);
   useLayoutEffect(() => {
     requestAnimationFrame(() => {
@@ -29,13 +29,15 @@ export function StackedBar( { label, color, height, fixedLabel }: IStackedBarPro
     });
   }, []);
 
-  return <StackedBarWrapper
-    color={color}
-    height={height}
-    visible={visible}
-  >
-    <InnerLabel visible={visible} shouldPosition={height > 6} fixedLabel={fixedLabel}>{label}</InnerLabel>
-  </StackedBarWrapper>
+  return (
+    <StackedBarWrapper
+      color={color}
+      height={height}
+      visible={visible}
+    >
+      <InnerLabel visible={visible} shouldPosition={height > 6} fixedLabel={fixedLabel}>{label}</InnerLabel>
+    </StackedBarWrapper>
+  );
 }
 
 const StackedBarWrapper = styled.div`

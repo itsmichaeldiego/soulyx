@@ -25,7 +25,6 @@ const Wrapper = styled.main`
   padding: ${({ theme }) => theme.spacing(0, 6, 6, 0)};
   padding-left: ${({ theme }) => `calc(${theme.sizes.nav} + ${theme.spacing(2)})`};
 
-  /* mobile queries */
   @media (max-width: 767px) {
     padding: ${({ theme }) => theme.spacing(6, 3, 6, 3)};
   }

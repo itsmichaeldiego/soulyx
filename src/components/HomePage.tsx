@@ -6,6 +6,7 @@ import { Genesis } from './Genesis'
 import { TextSection } from './TextSection'
 import { TokenizeRoadmap } from './TokenizeRoadmap'
 import { RoadmapChart } from './RoadmapChart/RoadmapChart'
+import { RoadmapSection } from './RoadmapSection'
 
 export function HomePage() {
   return (
@@ -33,6 +34,11 @@ export function HomePage() {
       <TextSection
         title="Lorem ipsum dolor sit" 
         text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip" 
+      />
+      <RoadmapSection />
+      <TextSection
+        title="Lorem ipsum dolor sit"
+        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip"
       />
       <Thanks />
     </>

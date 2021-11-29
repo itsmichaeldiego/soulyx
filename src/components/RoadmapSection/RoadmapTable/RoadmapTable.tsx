@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { TABLE_HEADERS } from '../data';
 import { IRoadmapEntry } from '../types';
@@ -7,14 +7,32 @@ type IRoadmapTableProps = {
   data: IRoadmapEntry[];
 };
 
+const ROW_LIMIT = 5;
+const VIEW_MORE_AMOUNT = 3;
+
 export function RoadmapTable({ data }: IRoadmapTableProps): JSX.Element {
+  const [rowLimit, setRowLimit] = useState(ROW_LIMIT);
+  const [viewMore, setViewMore] = useState(true);
+
+  const handleViewMore = () => {
+    if (!viewMore) {
+      setRowLimit(ROW_LIMIT);
+      setViewMore(true);
+    } else {
+      setRowLimit(rowLimit + VIEW_MORE_AMOUNT);
+      setViewMore(false);
+    }
+  };
+
+  const visibleRows = data?.slice(0, rowLimit);
+
   return (
     <TableWrapper>
       <TableHeader>
         {TABLE_HEADERS.map(header => <HeaderCell key={header}>{header}</HeaderCell>)}
       </TableHeader>
       <TableBody>
-        {data?.map((entry) => (
+        {visibleRows.map((entry) => (
           <TableRow key={entry.name}>
             <TableCell>{entry.name}</TableCell>
             <TableCell>{entry.description}</TableCell>
@@ -25,8 +43,7 @@ export function RoadmapTable({ data }: IRoadmapTableProps): JSX.Element {
         ))}
       </TableBody>
       <ViewMoreWrapper>
-        {/* TODO: Add functionality */}
-        <ViewMoreButton>View more</ViewMoreButton>
+        <ViewMoreButton onClick={handleViewMore}>{viewMore ? 'View more' : 'View less'}</ViewMoreButton>
       </ViewMoreWrapper>
     </TableWrapper>
   );
@@ -38,6 +55,7 @@ const TableWrapper = styled.div`
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   color: white;
   display: grid;
+  font-weight: 300;
   margin: 0 40px;
 
   // TODO: useMedia instead (this doesn't look too bad tbh)

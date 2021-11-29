@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import styled from 'styled-components';
 
 import { IRoadmapEntry } from '../types';
@@ -8,16 +9,26 @@ type IRoadmapCardProps = {
   cards: IRoadmapEntry[];
 };
 
+const CARD_LIMIT = 2;
+
 export function RoadmapCards({ cards }: IRoadmapCardProps) {
+  const [rowLimit, setRowLimit] = useState(CARD_LIMIT);
+
+  const handleViewMore = () => {
+    setRowLimit(rowLimit + 1);
+  };
+
+  const visibleCards = cards.slice(0, rowLimit);
+  const showViewMore = visibleCards.length !== cards.length;
+
   return (
     <Wrapper>
-      {cards.slice(0, 2).map(card => (
+      {visibleCards.map(card => (
         <CardWrapper key={card.name}>
           <Card item={card} />
         </CardWrapper>
       ))}
-      {/* TODO: Implement functionality */}
-      <ViewMoreButton>View more</ViewMoreButton>
+      {showViewMore && <ViewMoreButton onClick={handleViewMore}>View more</ViewMoreButton>}
     </Wrapper>
   );
 }

@@ -31,7 +31,6 @@ export function FaqTable({ data }: IFaqTableProps): JSX.Element {
 
   const toggle = (e: React.SyntheticEvent, selectedQuestionId: string) => {
     e.stopPropagation();
-    console.log(selectedQuestionId);
     const selectedIds = [...selectedQuestionIds];
     if (selectedQuestionIds.includes(selectedQuestionId)) {
       const newSelected = selectedIds.filter(selectedId => selectedId !== selectedQuestionId);
@@ -48,12 +47,10 @@ export function FaqTable({ data }: IFaqTableProps): JSX.Element {
         {visibleRows.map((entry) => {
           const expanded = selectedQuestionIds.includes(entry.id);
           return (
-            <>
-              <TableRow key={entry.id} expanded={expanded}>
-                <Question onClick={(e) => toggle(e, entry.id)} expanded={expanded}>{entry.question}<ToggleIcon expanded={expanded}>+</ToggleIcon></Question>
-                <Answer expanded={expanded}>{entry.answer}</Answer>
-              </TableRow>  
-            </>
+            <TableRow key={entry.id} expanded={expanded}>
+              <Question onClick={(e) => toggle(e, entry.id)} expanded={expanded}>{entry.question}<ToggleIcon expanded={expanded}>+</ToggleIcon></Question>
+              <Answer expanded={expanded}>{entry.answer}</Answer>
+            </TableRow>
           )}
         )}
       </TableBody>
@@ -100,10 +97,6 @@ const TableRow = styled.div`
   border-bottom: 1px solid ${({ theme }) => theme.cta.primary};
   display: flex;
   flex-direction: column;
-
-  &:first-child {
-    border-top: 1px solid solid ${({ theme }) => theme.cta.primary};;
-  }
 
   &:nth-child(even) {
     background-color: rgba(255, 81, 40, 0.05);
@@ -163,7 +156,7 @@ const ViewMoreWrapper = styled.div`
   align-items: center;
   display: flex;
   flex: 1 1 100%;
-  height: 100px;
+  height: 88px;
   justify-content: center;
 `;
 

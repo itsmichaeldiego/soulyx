@@ -6,7 +6,7 @@ type IRightLogoSectionProps = {
   titleUrl: string;
 }
 
-// TODO: Overlap mobile padding with background image (!) - fix text size (consume different asset for mobile?)
+// TODO: Overlap mobile padding with background image (!)
 export function RightLogoSection({ titleUrl }: IRightLogoSectionProps) {
   return (
     <Wrapper>

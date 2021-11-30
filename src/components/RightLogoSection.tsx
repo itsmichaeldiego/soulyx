@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Image from 'next/image';
+import { SectionTitle } from './RoadmapSection/SectionTitle';
 
 type IRightLogoSectionProps = {
   titleUrl: string;
@@ -10,7 +10,7 @@ type IRightLogoSectionProps = {
 export function RightLogoSection({ titleUrl }: IRightLogoSectionProps) {
   return (
     <Wrapper>
-      <Image src={`/images/${titleUrl}.svg`} alt="SoulX Banner" layout="fill" />
+      <SectionTitle imageUrl={`/images/${titleUrl}.svg`} alt="SoulX Banner" />
     </Wrapper>
   );
 }

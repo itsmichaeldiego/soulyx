@@ -22,6 +22,11 @@ const Wrapper = styled.article`
   flex-direction: column;
   align-items: center;
   padding: ${({ theme }) => theme.spacing(20, 0)};
+
+  @media (max-width: 767px) {
+    padding: ${({ theme }) => theme.spacing(4, 0)};
+  }
+
 `
 
 const Container = styled.div`

@@ -7,10 +7,13 @@ import { RoadmapCards } from './RoadmapCards/RoadmapCards';
 import { ROADMAP_TABLE_DATA } from './data';
 import { RightLogoSection } from '../RightLogoSection';
 import { Section } from '../Section';
+import { SectionHeader } from '../SectionHeader';
 
 export function RoadmapSection() {
   return (
     <Section>
+      <SectionHeader number="05 - 09" name="Token Launchment Details" description="Community Treasure" />
+      {/* // TODO: Replace with correct svg asset? need to properly align */}
       <RightLogoSection titleUrl="roadmap-header" />
       <TextLine capitalize>Lorem Ipsum</TextLine>
       <RoadmapTable data={ROADMAP_TABLE_DATA} />

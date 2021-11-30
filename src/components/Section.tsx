@@ -9,7 +9,7 @@ export function Section({ children }: React.PropsWithChildren<{}>) {
   );
 }
 
-const Wrapper = styled.div`
+const Wrapper = styled.section`
   position: relative;
   min-height: ${({ theme }) => `calc(100vh - ${theme.sizes.header})`};
   height: 100%;

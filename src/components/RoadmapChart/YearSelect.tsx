@@ -9,7 +9,7 @@ type IYearSelectProps = {
   selected: string;
   onChange: (selected: string) => void;
   options: string[];
-};
+}
 
 type IMenuWrapperProps = {
   height: number;
@@ -19,9 +19,11 @@ type IIconWrapperProps = {
   open: boolean;
 }
 
+const OPTION_HEIGHT = 60;
+
 export function YearSelect({ selected, options, onChange }: IYearSelectProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const menuHeight = (options.length) * 40;
+  const menuHeight = (options.length) * OPTION_HEIGHT;
   const clickOutsideRef = useRef(null);
 
   const handleClickOutside = () => {
@@ -94,7 +96,6 @@ const MenuWrapper = styled.ul`
   left: 0px;
   margin: 0;
   padding: 0;
-  position: absolute;
   width: 100%;
   transition: all 0.3s ease-in;
 
@@ -109,7 +110,7 @@ const MenuOption = styled.li`
   align-items: center;
   color: ${({ theme }) => theme.cta.primary};
   display: flex;
-  height: 40px;
+  height: ${OPTION_HEIGHT}px;
   padding-left: 16px;
 
   &:not(:last-child) {

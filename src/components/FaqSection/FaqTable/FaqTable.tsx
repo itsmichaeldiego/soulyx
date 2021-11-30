@@ -67,8 +67,8 @@ export function FaqTable({ data }: IFaqTableProps): JSX.Element {
 const TableWrapper = styled.div`
   background-color: ${({ theme }) => theme.cta.secondary};
   border-radius: 20px;
-  color: ${({ theme }) => theme.cta.primary};
   border: 1px solid ${({ theme }) => theme.cta.primary};;
+  color: ${({ theme }) => theme.cta.primary};
   display: grid;
   margin: 0 40px;
 
@@ -77,33 +77,22 @@ const TableWrapper = styled.div`
   }
 `;
 
+
+const TableHeader = styled.div`
+  align-items: center;
+  border-bottom: 1px solid ${({ theme }) => theme.cta.primary};
+  display: flex;
+  font-size: 10px;
+  height: 88px;
+  padding: 38px;
+  text-transform: uppercase;
+  width: 100%;
+`;
+
 const TableBody = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-`;
-
-const Question = styled.div`
-  padding: 32px;
-  font-size: 14px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 2;
-  width: 100%;
-  line-height: 20px;
-
-  @media (max-width: 767px) {
-    width: 98%;
-    padding: 16px;
-  }
-
-  ${({ expanded }: IExpandedProps) =>
-    expanded &&
-      `
-        font-weight: bold;
-        border-bottom: none;
-      `}
 `;
 
 const TableRow = styled.div`
@@ -127,6 +116,49 @@ const TableRow = styled.div`
       `}
 `;
 
+const Question = styled.div`
+  align-items: center;
+  display: flex;
+  font-size: 14px;
+  justify-content: space-between;
+  line-height: 20px;
+  padding: 32px;
+  width: 100%;
+  z-index: 2;
+
+  @media (max-width: 767px) {
+    width: 98%;
+    padding: 16px;
+  }
+
+  ${({ expanded }: IExpandedProps) =>
+    expanded &&
+      `
+        font-weight: bold;
+        border-bottom: none;
+      `}
+`;
+
+
+const Answer = styled.div`
+  border-bottom: 1px solid ${({ theme }) => theme.cta.primary};
+  color: ${({ theme }) => theme.cta.primary};
+  display: flex;
+  height: 0px;
+  opacity: ${props => (props.expanded ? "1" : "0")};
+  transition: height 0.2s, opacity 0.2s, padding 0.3s ease-out;
+  z-index: -1;
+
+  ${({ expanded }: IExpandedProps) =>
+    expanded &&
+      `
+        padding: 32px;
+        padding-top: 8px;
+        height: 100%;
+        z-index: 1;
+      `}
+`;
+
 const ViewMoreWrapper = styled.div`
   align-items: center;
   display: flex;
@@ -146,36 +178,6 @@ const ViewMoreButton = styled.button`
   &:hover {
     text-decoration: underline;
   }
-`;
-
-const TableHeader = styled.div`
-  align-items: center;
-  display: flex;
-  font-size: 10px;
-  height: 88px;
-  text-transform: uppercase;
-  width: 100%;
-  padding: 38px;
-  border-bottom: 1px solid ${({ theme }) => theme.cta.primary};
-`;
-
-const Answer = styled.div`
-  color: ${({ theme }) => theme.cta.primary};
-  opacity: ${props => (props.expanded ? "1" : "0")};
-  height: 0px;
-  border-bottom: 1px solid ${({ theme }) => theme.cta.primary};
-  transition: height 0.2s, opacity 0.2s, padding 0.3s ease-out;
-  display: flex;
-  z-index: -1;
-
-  ${({ expanded }: IExpandedProps) =>
-    expanded &&
-      `
-        padding: 32px;
-        padding-top: 8px;
-        height: 100%;
-        z-index: 1;
-      `}
 `;
 
 const ToggleIcon = styled.span`

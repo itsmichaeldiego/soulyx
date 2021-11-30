@@ -10,6 +10,7 @@ import { TokenizeRoadmap } from './TokenizeRoadmap'
 import { Decentralization } from './Decentralization'
 import { RoadmapChart } from './RoadmapChart/RoadmapChart'
 import { RoadmapSection } from './RoadmapSection/RoadmapSection'
+import { FaqSection } from './FaqSection/FaqSection'
 
 export function HomePage() {
   return (
@@ -48,6 +49,7 @@ export function HomePage() {
         title="Lorem ipsum dolor sit"
         text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip"
       />
+      <FaqSection />
       <Thanks />
     </>
   )

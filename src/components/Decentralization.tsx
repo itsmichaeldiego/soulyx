@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { SectionHeader } from './SectionHeader';
-import { SectionTitle } from './RoadmapSection/SectionTitle';
+import { SectionTitle } from './SectionTitle';
 
 export function Decentralization() {
   return (

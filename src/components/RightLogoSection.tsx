@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { SectionTitle } from './RoadmapSection/SectionTitle';
+import { SectionTitle } from './SectionTitle';
 
 type IRightLogoSectionProps = {
   titleUrl: string;

@@ -13,9 +13,9 @@ export function RoadmapSection() {
   return (
     <Section>
       <SectionHeader number="05 - 09" name="Token Launchment Details" description="Community Treasure" />
-      {/* // TODO: Replace with correct svg asset? need to properly align */}
       <RightLogoSection titleUrl="roadmap-header" />
       <TextLine capitalize>Lorem Ipsum</TextLine>
+      <TextLine style={{ maxWidth: 240 }} capitalize>Frequently asked questions</TextLine>
       <RoadmapTable data={ROADMAP_TABLE_DATA} />
       <RoadmapCards cards={ROADMAP_TABLE_DATA} />
       {/* // TODO: scroll to FAQ */}

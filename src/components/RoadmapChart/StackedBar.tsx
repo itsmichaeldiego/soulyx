@@ -46,7 +46,7 @@ const StackedBarWrapper = styled.div`
   height: 0%;
   padding-left: 12px;
   position: relative;
-  transition: height 0.5s linear;
+  transition: height 0.5s ease-in-out;
 
   ${({ color, height, visible }: IStackedBarWrapperProps) =>
     visible && `

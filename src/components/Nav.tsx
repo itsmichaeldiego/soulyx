@@ -36,7 +36,7 @@ export function Nav(): JSX.Element {
   return (
     <Wrapper>
       <div>
-        <Icon icon="hamburger" color={theme.cta.primary} />
+        <Icon icon="hamburger" color={theme.cta.primary} size={30} />
       </div>
       <Indicators>
         <AnchorButton onClick={() => handleScroll(nextStep)}>{nextStep.name.toUpperCase()}</AnchorButton>
@@ -44,7 +44,7 @@ export function Nav(): JSX.Element {
         <AnchorButton onClick={() => handleScroll(currentStep)}>{currentStep.name.toUpperCase()}</AnchorButton>
       </Indicators>
       <GoTopButton onClick={() => scroll.scrollToTop()}>
-        <Icon icon="chevrons-up" color={theme.cta.primary} />
+        <Icon icon="chevrons-up" color={theme.cta.primary} size={12} />
         <GoTopText>ON TOP</GoTopText>
       </GoTopButton>
     </Wrapper>
@@ -57,13 +57,11 @@ const Wrapper = styled.nav`
   left: 0;
   width: ${({ theme }) => theme.sizes.nav};
   height: 100vh;
-  padding: ${({ theme }) => theme.spacing(5, 0, 3, 2)};
+  padding: ${({ theme }) => theme.spacing(4, 0, 3, 2)};
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  font-size: 10px;
-  line-height: 12px;
 `
 
 const Indicators = styled.div`
@@ -93,6 +91,8 @@ const GoTopButton = styled.button`
 const GoTopText = styled.div`
   padding-top: ${({ theme }) => theme.spacing(1)};
   white-space: nowrap;
+  font-size: 10px;
+  line-height: 12px;
 `
 
 const AnchorButton = styled.button`
@@ -100,4 +100,6 @@ const AnchorButton = styled.button`
   background: none;
   border: none;
   cursor: pointer;
+  font-size: 10px;
+  line-height: 12px;
 `

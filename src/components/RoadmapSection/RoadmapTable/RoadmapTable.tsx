@@ -52,7 +52,6 @@ export function RoadmapTable({ data }: IRoadmapTableProps): JSX.Element {
 const TableWrapper = styled.div`
   background-color: ${({ theme }) => theme.cta.primary};
   border-radius: 20px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   color: white;
   display: grid;
   font-weight: 300;

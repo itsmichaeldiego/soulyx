@@ -12,6 +12,7 @@ import { RoadmapChart } from './RoadmapChart/RoadmapChart'
 import { RoadmapSection } from './RoadmapSection/RoadmapSection'
 import { FaqSection } from './FaqSection/FaqSection'
 import { LaunchDetailsSection } from './LaunchDetails/LaunchDetailsSection'
+import { GetSoulyx } from './GetSoulyx'
 
 export function HomePage() {
   return (
@@ -52,6 +53,7 @@ export function HomePage() {
         text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip"
       />
       <FaqSection />
+      <GetSoulyx />
       <Thanks />
     </>
   )

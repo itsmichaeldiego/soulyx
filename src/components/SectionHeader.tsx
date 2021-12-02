@@ -47,6 +47,7 @@ const HeaderRow = styled.div`
   }
 
   @media (max-width: 767px) {
+    font-size: 10px;
     &:nth-child(1) {
       flex-basis: 20%;
     }

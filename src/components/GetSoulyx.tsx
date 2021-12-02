@@ -33,6 +33,14 @@ const SectionWrapper = styled.div`
   height: 1816px;
   padding: 158px 80px;
   position: relative;
+
+  @media (max-width: 767px) {
+    // TODO: Review this once we remove side paddings
+    background-position: 32% 0%;
+    background-size: cover;
+    height: 624px;
+    padding: 48px 28px;
+  }
 `;
 
 const ImageWrapper = styled.div`
@@ -41,8 +49,8 @@ const ImageWrapper = styled.div`
   position: relative;
 
   @media (max-width: 767px) {
-    min-height: 56px;
-    max-width: 340px;
+    min-height: 96px;
+    max-width: 329px;
   }
 `;
 
@@ -50,12 +58,22 @@ const ButtonWrapper = styled.div`
   display: flex;
   margin-bottom: 332px;
   margin-top: 42px;
+
+  @media (max-width: 767px) {
+    margin-top: 20px;
+    margin-bottom: 160px;
+  }
 `;
 
 const GetButton = styled(LinkButton)`
   font-size: 22px;
   margin: 0 auto;
   padding: 20px 26px;
+
+  @media (max-width: 767px) {
+    font-size: 16px;
+    padding: 16px 22px;
+  }
 `;
 
 const SuspendedSoulWrapper = styled.div`
@@ -67,6 +85,8 @@ const SuspendedSoulWrapper = styled.div`
 
   @media (max-width: 767px) {
     max-width: 340px;
-    min-height: 56px;
+    min-height: 96px;
+    margin: 0;
+    margin-top: -18px;
   }
 `;

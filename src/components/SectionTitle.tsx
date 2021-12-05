@@ -5,12 +5,13 @@ import styled from 'styled-components';
 type ISectionTitleProps = {
   imageUrl: string;
   alt: string;
+  style: React.CSSProperties;
 }
 
 
-export function SectionTitle({ imageUrl, alt }: ISectionTitleProps) {
+export function SectionTitle({ imageUrl, alt, ...props }: ISectionTitleProps) {
   return (
-    <Wrapper>
+    <Wrapper {...props}>
       <Image src={imageUrl} alt={alt} layout="fill" />
     </Wrapper>
   );

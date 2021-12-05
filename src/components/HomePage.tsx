@@ -2,7 +2,7 @@ import React from 'react'
 import { Element } from 'react-scroll'
 
 import { NAV_ITEMS } from './Nav'
-import { Banner } from './Banner'
+import { Intro } from './Intro'
 import { Thanks } from './Thanks'
 import { Genesis } from './Genesis'
 import { TextSection } from './TextSection'
@@ -13,14 +13,12 @@ import { RoadmapSection } from './RoadmapSection/RoadmapSection'
 import { FaqSection } from './FaqSection/FaqSection'
 import { LaunchDetailsSection } from './LaunchDetails/LaunchDetailsSection'
 import { GetSoulyx } from './GetSoulyx'
-import { DiscoverSection } from './DiscoverSection'
 
 export function HomePage() {
   return (
     <>
       <Element name={NAV_ITEMS[0].name}>
-        <Banner />
-        <DiscoverSection text="DISCOVER THE NEW TOKE BY SUSPENDED SOUL" />
+        <Intro />
       </Element>
       <Element name={NAV_ITEMS[1].name}>
         <Decentralization />

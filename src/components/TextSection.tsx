@@ -21,10 +21,10 @@ const Wrapper = styled.article`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: ${({ theme }) => theme.spacing(20, 0)};
+  margin: ${({ theme }) => theme.spacing(20, 0)};
 
   @media (max-width: 767px) {
-    padding: ${({ theme }) => theme.spacing(4, 0)};
+    margin: ${({ theme }) => theme.spacing(4, 0)};
   }
 
 `
@@ -32,7 +32,7 @@ const Wrapper = styled.article`
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 340px;
+  max-width: 440px;
 `
 
 const Title = styled.h5`

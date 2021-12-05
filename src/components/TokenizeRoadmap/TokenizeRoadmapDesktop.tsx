@@ -16,22 +16,22 @@ export function TokenizeRoadmap(): JSX.Element {
       <TableHeader><span>Virtual Tokenize</span><span>2021</span></TableHeader>
       <TableBody>
         <TableRow width={40}>
-          <span>40%</span><TableRowText>Community Treasure</TableRowText>
+          <span>40%</span><TableRowText>COMMUNITY TREASURE</TableRowText>
         </TableRow>
         <TableRow width={20}>
-          <span>20%</span><TableRowText>Community Treasure</TableRowText>
+          <span>20%</span><TableRowText>COMMUNITY TREASURE</TableRowText>
         </TableRow>
         <TableRow width={20}>
-          <span>20%</span><TableRowText>Community Treasure</TableRowText>
+          <span>20%</span><TableRowText>COMMUNITY TREASURE</TableRowText>
         </TableRow>
         <TableRow width={10}>
-          <span>10%</span><TableRowText>Community Treasure</TableRowText>
+          <span>10%</span><TableRowText>COMMUNITY TREASURE</TableRowText>
         </TableRow>
         <TableRow width={5}>
-          <span>5%</span><TableRowText>Airdrop</TableRowText>
+          <span>5%</span><TableRowText>AIRDROP</TableRowText>
         </TableRow>
         <TableRow width={5}>
-          <span>5%</span><TableRowText>Investors</TableRowText>
+          <span>5%</span><TableRowText>INVESTORS</TableRowText>
         </TableRow>
       </TableBody>
       <TableFooter>

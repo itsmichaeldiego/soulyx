@@ -24,36 +24,32 @@ export function TokenizeRoadmap(): JSX.Element {
       <TableBody>
         <TableRow height={40}>
           <span>
-            {`Community
-            Treasure`}
+            COMMUNITY TREASURE
           </span><span>40%</span>
         </TableRow>
         <TableRow height={20}>
           <span>
-            {`Community
-            Treasure`}
+            COMMUNITY TREASURE
           </span><span>20%</span>
         </TableRow>
         <TableRow height={20}>
           <span>
-            {`Community
-            Treasure`}
+            COMMUNITY TREASURE
           </span><span>20%</span>
         </TableRow>
         <TableRow height={10}>
           <span>
-            {`Community
-            Treasure`}
+            COMMUNITY TREASURE
           </span><span>10%</span>
         </TableRow>
         <TableRow height={5}>
-          <span>Airdrop</span><span>5%</span>
+          <span>AIRDROP</span><span>5%</span>
         </TableRow>
         <TableRow height={5}>
-          <span>Investors</span><span>5%</span>
+          <span>INVESTORS</span><span>5%</span>
         </TableRow>
       </TableBody>
-      <TableHeader><TableHeaderText>Virtual Tokenize</TableHeaderText><TableHeaderText>&nbsp; &nbsp; &nbsp; &nbsp;2021</TableHeaderText></TableHeader>
+      <TableHeader><TableHeaderText>VIRTUAL TOKENIZE</TableHeaderText><TableHeaderText>&nbsp; &nbsp; &nbsp; &nbsp;2021</TableHeaderText></TableHeader>
     </TableWrapper>
   );
 }

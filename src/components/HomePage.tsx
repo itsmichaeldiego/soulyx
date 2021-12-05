@@ -17,44 +17,54 @@ import { GetSoulyx } from './GetSoulyx'
 export function HomePage() {
   return (
     <>
-      <Element name={NAV_ITEMS[0].name}> 
+      <Element name={NAV_ITEMS[0].name}>
         <Banner />
       </Element>
-      <Element name={NAV_ITEMS[1].name}> 
+      <Element name={NAV_ITEMS[1].name}>
         <Decentralization />
       </Element>
-      <TextSection 
-        title="Power in the hands of our community." 
-        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip" 
-      />
-      <TextSection 
-        title="A universe of possibilities." 
-        text="$SOULYx opens a door to the future and provides options for the economic destiny of investors and holders. A whole system of virtual economy of the Suspended Soul ecosystem, with multiple diversification alternatives:" 
-      />
-      <Genesis />
-      <TextSection 
-        title="$SOULYx supply unlock." 
-        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip" 
-      />
-      <TokenizeRoadmap />
-      <TextSection 
-        title="Lorem ipsum dolor sit" 
-        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip" 
-      />
-      <RoadmapChart />
-      <TextSection
-        title="Lorem ipsum dolor sit" 
-        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip" 
-      />
-      <RoadmapSection />
-      <LaunchDetailsSection />
-      <GetSoulyx />
-      <TextSection
-        title="Lorem ipsum dolor sit"
-        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip"
-      />
-      <FaqSection />
-      <Thanks />
+      <Element name={NAV_ITEMS[2].name}>
+        <TextSection
+          title="Power in the hands of our community."
+          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip"
+        />
+        <TextSection
+          title="A universe of possibilities."
+          text="$SOULYx opens a door to the future and provides options for the economic destiny of investors and holders. A whole system of virtual economy of the Suspended Soul ecosystem, with multiple diversification alternatives:"
+        />
+      </Element>
+      <Element name={NAV_ITEMS[3].name}>
+        <Genesis />
+        <TextSection
+          title="$SOULYx supply unlock."
+          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip"
+        />
+        <TokenizeRoadmap />
+        <TextSection
+          title="Lorem ipsum dolor sit"
+          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip"
+        />
+      </Element>
+      <Element name={NAV_ITEMS[4].name}>
+        <RoadmapChart />
+        <TextSection
+          title="Lorem ipsum dolor sit"
+          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip"
+        />
+        <RoadmapSection />
+        <LaunchDetailsSection />
+      </Element>
+      <Element name={NAV_ITEMS[5].name}>
+        <GetSoulyx />
+        <TextSection
+          title="Lorem ipsum dolor sit"
+          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip"
+        />
+        <FaqSection />
+      </Element>
+      <Element name={NAV_ITEMS[6].name}>
+        <Thanks />
+      </Element>
     </>
   )
 }

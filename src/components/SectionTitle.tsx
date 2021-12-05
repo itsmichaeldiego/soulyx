@@ -5,7 +5,7 @@ import styled from 'styled-components';
 type ISectionTitleProps = {
   imageUrl: string;
   alt: string;
-  style: React.CSSProperties;
+  style?: React.CSSProperties;
 }
 
 

@@ -5,14 +5,15 @@ import { NAV_ITEMS } from './Nav'
 import { Intro } from './Intro'
 import { Thanks } from './Thanks'
 import { Genesis } from './Genesis'
+import { Community } from './Community'
+import { GetSoulyx } from './GetSoulyx'
 import { TextSection } from './TextSection'
 import { TokenizeRoadmap } from './TokenizeRoadmap'
 import { Decentralization } from './Decentralization'
+import { FaqSection } from './FaqSection/FaqSection'
 import { RoadmapChart } from './RoadmapChart/RoadmapChart'
 import { RoadmapSection } from './RoadmapSection/RoadmapSection'
-import { FaqSection } from './FaqSection/FaqSection'
 import { LaunchDetailsSection } from './LaunchDetails/LaunchDetailsSection'
-import { GetSoulyx } from './GetSoulyx'
 
 export function HomePage() {
   return (
@@ -24,14 +25,7 @@ export function HomePage() {
         <Decentralization />
       </Element>
       <Element name={NAV_ITEMS[2].name}>
-        <TextSection
-          title="POWER IN THE HANDS OF OUR COMMUNITY."
-          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip"
-        />
-        <TextSection
-          title="A UNIVERSE OF POSSIBILITIES."
-          text="$SOULYx opens a door to the future and provides options for the economic destiny of investors and holders. A whole system of virtual economy of the Suspended Soul ecosystem, with multiple diversification alternatives:"
-        />
+        <Community />
       </Element>
       <Element name={NAV_ITEMS[3].name}>
         <Genesis />

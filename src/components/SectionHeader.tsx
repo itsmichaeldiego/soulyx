@@ -25,12 +25,8 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: ${({ theme }) => theme.spacing(1, 0)};
   margin-bottom: ${({ theme }) => theme.spacing(10)};
-
-  @media (max-width: 767px) {
-    padding: ${({ theme }) => theme.spacing(1, 0)};
-  }
+  padding: ${({ theme }) => theme.spacing(0.5, 0)};
 `;
 
 const HeaderRow = styled.div`

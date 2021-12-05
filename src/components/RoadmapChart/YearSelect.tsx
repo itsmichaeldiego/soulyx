@@ -46,7 +46,7 @@ export function YearSelect({ selected, options, onChange }: IYearSelectProps) {
     <ClickOutsideWrapper ref={clickOutsideRef}>
       <SelectToggle onClick={toggleMenu}>
         {selected}
-        <IconWrapper open={isMenuOpen} icon="arrow-down" color="white" />
+        <IconWrapper open={isMenuOpen} icon="chevron-down" color="white" />
       </SelectToggle>
       {isMenuOpen && (
         <MenuWrapper height={menuHeight}>

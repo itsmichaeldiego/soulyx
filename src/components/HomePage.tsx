@@ -13,12 +13,14 @@ import { RoadmapSection } from './RoadmapSection/RoadmapSection'
 import { FaqSection } from './FaqSection/FaqSection'
 import { LaunchDetailsSection } from './LaunchDetails/LaunchDetailsSection'
 import { GetSoulyx } from './GetSoulyx'
+import { DiscoverSection } from './DiscoverSection'
 
 export function HomePage() {
   return (
     <>
       <Element name={NAV_ITEMS[0].name}>
         <Banner />
+        <DiscoverSection text="DISCOVER THE new Token by Suspended Soul" />
       </Element>
       <Element name={NAV_ITEMS[1].name}>
         <Decentralization />
@@ -44,13 +46,13 @@ export function HomePage() {
           title="Lorem ipsum dolor sit"
           text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip"
         />
-      </Element>
-      <Element name={NAV_ITEMS[4].name}>
         <RoadmapChart />
         <TextSection
           title="Lorem ipsum dolor sit"
           text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip"
         />
+      </Element>
+      <Element name={NAV_ITEMS[4].name}>
         <RoadmapSection />
         <LaunchDetailsSection />
       </Element>

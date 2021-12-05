@@ -4,11 +4,12 @@ import styled from 'styled-components';
 interface ITextSectionProps {
   title: string;
   text: string;
+  align?: string;
 }
 
-export function TextSection({ title, text }: ITextSectionProps): JSX.Element {
+export function TextSection({ title, text, align }: ITextSectionProps): JSX.Element {
   return (
-    <Wrapper>
+    <Wrapper align={align || 'center'}>
       <Container>
         <Title>{title}</Title>
         <Text>{text}</Text>
@@ -17,16 +18,19 @@ export function TextSection({ title, text }: ITextSectionProps): JSX.Element {
   )
 }
 
-const Wrapper = styled.article`
+TextSection.defaultProps = {
+  align: 'center',
+}
+
+const Wrapper= styled.div<{ align: string }>`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin: ${({ theme }) => theme.spacing(20, 0)};
+  ${({ align }) => `align-items: ${align};`}
+  padding: ${({ theme }) => theme.spacing(10, 24)};
 
   @media (max-width: 767px) {
-    margin: ${({ theme }) => theme.spacing(4, 0)};
+    padding: ${({ theme }) => theme.spacing(4, 8)};
   }
-
 `
 
 const Container = styled.div`

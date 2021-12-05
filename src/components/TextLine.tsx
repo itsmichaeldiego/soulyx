@@ -1,15 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 
-type ITextLineProps = React.PropsWithChildren<{
-  capitalize?: boolean;
-}> &
+type ITextLineProps = React.PropsWithChildren<{}> &
   React.HTMLAttributes<HTMLElement>;
 
-export function TextLine({ capitalize, children, style }: React.PropsWithChildren<ITextLineProps>): JSX.Element {
+export function TextLine({ children, style }: React.PropsWithChildren<ITextLineProps>): JSX.Element {
   return (
     <Wrapper style={style}>
-      <Text capitalize={capitalize}>{children}</Text>
+      <Text>{children}</Text>
     </Wrapper>
   )
 }
@@ -27,9 +25,4 @@ const Wrapper = styled.div`
 const Text = styled.span`
   font-weight: 300;
   font-size: 12px;
-
-  ${({ capitalize }: ITextLineProps) =>
-    capitalize && `
-      text-transform: uppercase;
-    `}
 `

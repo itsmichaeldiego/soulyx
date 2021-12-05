@@ -60,7 +60,6 @@ const HalfCard = styled.div`
 const CardTitle = styled.div`
   font-size: 10px;
   margin-bottom: 8px;
-  text-transform: uppercase;
 `;
 
 const CardValue = styled.div`

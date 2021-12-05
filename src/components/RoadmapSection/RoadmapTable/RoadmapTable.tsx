@@ -68,7 +68,6 @@ const TableHeader = styled.div`
   display: flex;
   font-size: 12px;
   height: 88px;
-  text-transform: uppercase;
   width: 100%;
 `;
 

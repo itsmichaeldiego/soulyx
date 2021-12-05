@@ -38,7 +38,6 @@ const HeaderRow = styled.div`
   flex-basis: 15%;
   font-size: 12px;
   height: 100%;
-  text-transform: uppercase;
 
   &:nth-child(2) {
     flex-basis: 40%;

@@ -20,7 +20,7 @@ export function HomePage() {
     <>
       <Element name={NAV_ITEMS[0].name}>
         <Banner />
-        <DiscoverSection text="DISCOVER THE new Token by Suspended Soul" />
+        <DiscoverSection text="DISCOVER THE NEW TOKE BY SUSPENDED SOUL" />
       </Element>
       <Element name={NAV_ITEMS[1].name}>
         <Decentralization />

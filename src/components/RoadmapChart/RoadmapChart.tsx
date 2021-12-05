@@ -85,7 +85,6 @@ const Wrapper = styled.div`
   align-items: center;
   background-color: #E5E5E5;
   display: flex;
-  text-transform: uppercase;
   flex-direction: column;
   margin: 64px 0;
 

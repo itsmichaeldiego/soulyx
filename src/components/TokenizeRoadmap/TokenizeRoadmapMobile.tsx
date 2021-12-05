@@ -63,7 +63,6 @@ const TableWrapper = styled.div`
   display: flex;
   font-size: 12px;
   height: 545px;
-  text-transform: uppercase;
   width: 100%;
 `;
 

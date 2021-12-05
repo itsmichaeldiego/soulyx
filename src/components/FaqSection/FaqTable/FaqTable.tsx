@@ -82,7 +82,6 @@ const TableHeader = styled.div`
   font-size: 10px;
   height: 88px;
   padding: 38px;
-  text-transform: uppercase;
   width: 100%;
 `;
 

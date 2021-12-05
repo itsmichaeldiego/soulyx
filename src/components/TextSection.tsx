@@ -39,7 +39,6 @@ const Title = styled.h5`
   font-weight: bold;
   font-size: 14px;
   line-height: 24px;
-  text-transform: uppercase;
   margin: ${({ theme }) => theme.spacing(1, 0)};
 `
 

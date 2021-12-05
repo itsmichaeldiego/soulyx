@@ -66,7 +66,6 @@ const TableHeader = styled.div`
   font-size: 10px;
   height: 88px;
   padding: 28px;
-  text-transform: uppercase;
   width: 100%;
 `;
 
@@ -118,7 +117,6 @@ const TableCell = styled.div`
       font-size: 10px;
       font-weight: 500;
       margin-bottom: 8px;
-      text-transform: uppercase;
     }
 
     &:not(:last-child) {

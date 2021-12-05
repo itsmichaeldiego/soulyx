@@ -10,11 +10,11 @@ export function Header(): JSX.Element {
         Suspended Soul
       </span>
       <Actions>
-        <TraductionItems>
+        {/* <TraductionItems>
           <span>En</span>
           <span>|</span>
           <span>Es</span>
-        </TraductionItems>
+        </TraductionItems> */}
         <LinkButton href="https://miso.sushi.com/" text="Get Soulyx" target="_blank" />
       </Actions>
     </Wrapper>
@@ -33,11 +33,11 @@ const Actions = styled.div`
   align-items: center;
 `
 
-const TraductionItems = styled.div`
-  display: flex;
-  align-items: center;
-  margin-right: ${({ theme }) => theme.spacing(2.5)};
-  > * {
-    margin: 0 ${({ theme }) => theme.spacing(0.5)};
-  }
-`
+// const TraductionItems = styled.div`
+//   display: flex;
+//   align-items: center;
+//   margin-right: ${({ theme }) => theme.spacing(2.5)};
+//   > * {
+//     margin: 0 ${({ theme }) => theme.spacing(0.5)};
+//   }
+// `

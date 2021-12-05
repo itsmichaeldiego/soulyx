@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import styled, { ThemeContext } from 'styled-components';
-import { theme } from '../styles/theme';
 
 import { Icon } from './Icon';
 

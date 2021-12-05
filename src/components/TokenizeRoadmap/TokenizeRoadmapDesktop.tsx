@@ -53,7 +53,6 @@ const TableWrapper = styled.div`
   flex-direction: column;
   font-size: 12px;
   justify-content: center;
-  text-transform: uppercase;
 `;
 
 const TableHeader = styled.div`

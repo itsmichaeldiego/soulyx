@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import Image from 'next/image';
 
 import { TextLine } from '../TextLine';
-import { RightLogoSection } from '../RightLogoSection';
 import { Section } from '../Section';
 import { SectionHeader } from '../SectionHeader';
 import { LAUNCH_DETAILS_DATA } from './data';

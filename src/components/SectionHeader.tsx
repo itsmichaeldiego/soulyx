@@ -1,4 +1,7 @@
+import React from 'react';
 import styled from 'styled-components';
+
+import { Icon } from './Icon';
 
 type ISectionHeaderProps = {
   number: string;
@@ -13,7 +16,7 @@ export function SectionHeader({ number, name, description }: ISectionHeaderProps
       <HeaderRow><RowText>{name}</RowText></HeaderRow>
       <HeaderRow><RowText>{description}</RowText></HeaderRow>
       {/* // TODO: Consume SVG - Figma export is currently broken */}
-      <HeaderRow><img src="/images/section-header-icon.png" /></HeaderRow>
+      <HeaderRow><Icon icon="star" size={88} /></HeaderRow>
     </Wrapper>
   );
 }

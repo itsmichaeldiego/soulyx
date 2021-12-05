@@ -12,11 +12,11 @@ import { FAQ_DATA } from './data';
 export function FaqSection() {
   return (
     <Section>
-      <SectionHeader number="08 - 09" name="Token Launchment Details" description="Community Treasure" />
+      <SectionHeader number="08 - 09" name="TOKEN LAUNCHMENT DETAILS" description="COMMUNITY TREASURE" />
       <ImageWrapper>
         <Image src="/images/questions.svg" alt="SoulX Banner" layout="fill" />
       </ImageWrapper>
-      <TextLine style={{ maxWidth: 240 }} capitalize>Frequently asked questions</TextLine>
+      <TextLine style={{ maxWidth: 240 }}>FREQUENTLY ASKED QUESTIONS</TextLine>
       <FaqTable data={FAQ_DATA} />
     </Section>
   );

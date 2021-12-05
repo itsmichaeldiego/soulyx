@@ -12,9 +12,9 @@ import { SectionHeader } from '../SectionHeader';
 export function RoadmapSection() {
   return (
     <Section>
-      <SectionHeader number="05 - 09" name="Token Launchment Details" description="Community Treasure" />
+      <SectionHeader number="05 - 09" name="TOKEN LAUNCHMENT DETAILS" description="COMMUNITY TREASURE" />
       <RightLogoSection titleUrl="roadmap-header" />
-      <TextLine capitalize>Lorem Ipsum</TextLine>
+      <TextLine>LOREM IPSUM</TextLine>
       <RoadmapTable data={ROADMAP_TABLE_DATA} />
       <RoadmapCards cards={ROADMAP_TABLE_DATA} />
       {/* // TODO: scroll to FAQ */}

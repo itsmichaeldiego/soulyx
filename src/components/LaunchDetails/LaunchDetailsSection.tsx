@@ -12,13 +12,13 @@ import { LaunchDetailsTable } from './LaunchDetailsTable/LaunchDetailsTable';
 export function LaunchDetailsSection() {
   return (
     <Section>
-      <SectionHeader number="06 - 09" name="Token Launch Details" description="Community Treasury" />
+      <SectionHeader number="06 - 09" name="TOKEN LAUNCH DETAILS" description="COMMUNITY TREASURY" />
       <BackgroundWrapper>
         <ImageWrapper>
           <Image src="/images/token-launch-details.svg" alt="Token launch details" layout="fill" />
         </ImageWrapper>
       </BackgroundWrapper>
-      <TextLine style={{ maxWidth: 240 }} capitalize>Our community&apos;s intrinsic value</TextLine>
+      <TextLine style={{ maxWidth: 240 }}>OUR COMMUNITY&apos;S INTRINSIC VALUE</TextLine>
       <LaunchDetailsTable data={LAUNCH_DETAILS_DATA} />
       <TextLine>If you have any questions, you can check out our FAQ&apos;s <a href="#faq">here</a></TextLine>
     </Section>

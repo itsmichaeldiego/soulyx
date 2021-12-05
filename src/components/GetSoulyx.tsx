@@ -16,7 +16,7 @@ export function GetSoulyx() {
           <ButtonWrapper>
             <GetButton href="https://miso.sushi.com/" text="Get Soulyx" target="_blank" />
           </ButtonWrapper>
-          <SectionHeader number="07 - 09" name="Token Launchment Details" description="Community treasure" />
+          <SectionHeader number="07 - 09" name="TOKEN LAUNCHMENT DETAILS" description="COMMUNITY TREASURE" />
           <SuspendedSoulWrapper>
             <Image src="/images/suspended-soul.svg" alt="Suspended Soul" layout="fill" />
           </SuspendedSoulWrapper>

@@ -8,7 +8,7 @@ import { SectionHeader } from '../SectionHeader';
 import { LAUNCH_DETAILS_DATA } from './data';
 import { LaunchDetailsTable } from './LaunchDetailsTable/LaunchDetailsTable';
 
-export function LaunchDetailsSection() {
+export function LaunchDetails() {
   return (
     <Section>
       <SectionHeader number="06 - 09" name="TOKEN LAUNCH DETAILS" description="COMMUNITY TREASURY" />

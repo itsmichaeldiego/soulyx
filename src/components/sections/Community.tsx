@@ -1,7 +1,8 @@
 import React from 'react';
-import { TextSection } from './TextSection'
-import { SectionTitle } from './SectionTitle';
-import { SectionHeader } from './SectionHeader';
+
+import { TextSection } from '../TextSection'
+import { SectionTitle } from '../SectionTitle';
+import { SectionHeader } from '../SectionHeader';
 
 export function Community() {
   return (

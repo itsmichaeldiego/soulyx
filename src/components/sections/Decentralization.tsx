@@ -2,9 +2,9 @@ import React from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
 
-import { TextSection } from './TextSection'
-import { SectionTitle } from './SectionTitle';
-import { SectionHeader } from './SectionHeader';
+import { TextSection } from '../TextSection'
+import { SectionTitle } from '../SectionTitle';
+import { SectionHeader } from '../SectionHeader';
 
 export function Decentralization() {
   return (

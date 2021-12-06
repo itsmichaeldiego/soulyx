@@ -1,46 +1,9 @@
-import React, { useState, useContext, useMemo } from 'react';
+import React, { useState, useContext } from 'react';
 import styled, { ThemeContext } from 'styled-components';
-import { Link, animateScroll as scroll, scroller } from 'react-scroll'
+import { Link, animateScroll as scroll } from 'react-scroll'
 
 import { Icon } from './Icon';
-
-interface INavItem {
-  name: string;
-  text: string;
-  offset?: number;
-}
-
-export const NAV_ITEMS: INavItem[] = [
-  {
-    name: 'intro',
-    text: 'Intro',
-    offset: -96,
-  },
-  {
-    name: 'decentralization',
-    text: 'Decentralization',
-  },
-  {
-    name: 'community',
-    text: 'Community',
-  },
-  {
-    name: 'genesis',
-    text: 'Genesis',
-  },
-  {
-    name: 'roadmap',
-    text: 'Roadmap',
-  },
-  {
-    name: 'about',
-    text: 'About',
-  },
-  {
-    name: 'thanks',
-    text: 'Thanks',
-  }
-]
+import { NAV_ITEMS , INavItem} from '../lib/navigation';
 
 const getStepIndex = (steps: INavItem[], stepName: string): number => steps.findIndex((step: INavItem) => step.name === stepName)
 
@@ -49,23 +12,13 @@ export function Nav(): JSX.Element {
   const [_currentStep, _setCurrentStep] = useState<INavItem>(NAV_ITEMS[0])
   const [_nextStep, _setNextStep] = useState<INavItem>(NAV_ITEMS[1])
 
-  const currentStep = NAV_ITEMS[0]
-  const nextStep = NAV_ITEMS[1]
-
-  const handleScroll = (step: INavItem): void => {
-    scroller.scrollTo(step.name, {
-      duration: 800,
-      delay: 0,
-      smooth: "easeInOutQuart",
-      offset: step.offset || 0,
-    });
-  }
-
   const handleSetActive = (to: string): void => {
     const stepIndex = getStepIndex(NAV_ITEMS, to);
     if (stepIndex >= 0) {
-      _setCurrentStep(NAV_ITEMS[stepIndex])
-      _setNextStep(NAV_ITEMS[stepIndex + 1])
+      if (stepIndex + 1 < NAV_ITEMS.length) {
+        _setCurrentStep(NAV_ITEMS[stepIndex])
+        _setNextStep(NAV_ITEMS[stepIndex + 1])
+      }
     }
   }
   return (
@@ -87,7 +40,7 @@ export function Nav(): JSX.Element {
               onSetActive={handleSetActive}
               style={{ display: 'none' }}
             >
-              {navItem.text}
+              {navItem.displayName}
             </Link>
           )
         }
@@ -101,7 +54,7 @@ export function Nav(): JSX.Element {
           offset={_nextStep.offset || 0}
           style={{ cursor: 'pointer' }}
         >
-          {_nextStep.text}
+          {_nextStep.displayName}
         </Link>
         <Separator />
         <Link
@@ -113,10 +66,8 @@ export function Nav(): JSX.Element {
           offset={_currentStep.offset || 0}
           style={{ cursor: 'pointer' }}
         >
-          {_currentStep.text}
+          {_currentStep.displayName}
         </Link>
-        {/* <AnchorButton onClick={() => handleScroll(nextStep)}>{nextStep.name.toUpperCase()}</AnchorButton>
-        <AnchorButton onClick={() => handleScroll(currentStep)}>{currentStep.name.toUpperCase()}</AnchorButton> */}
       </Indicators>
       <GoTopButton onClick={() => scroll.scrollToTop()}>
         <Icon icon="chevrons-up" color={theme.cta.primary} size={12} />

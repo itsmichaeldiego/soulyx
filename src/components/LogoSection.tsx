@@ -11,7 +11,7 @@ export function LogoSection({ children }: React.PropsWithChildren<{}>) {
 
 const Wrapper = styled.div`
   position: relative;
-  height: ${({ theme }) => `calc(100vh - ${theme.sizes.header})`};
+  height: ${({ theme }) => `calc(100vh - ${theme.sizes.header} - ${theme.spacing(12)})`};
   background-image: url('/images/logo.png');
   background-repeat: no-repeat;
   background-position: center center;

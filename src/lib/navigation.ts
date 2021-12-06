@@ -5,6 +5,7 @@ import { Genesis } from '../components/sections/Genesis'
 import { Roadmap } from '../components/sections/Roadmap'
 import { About } from '../components/sections/About'
 import { Thanks } from '../components/sections/Thanks'
+import { FAQ } from '../components/sections/FAQ'
 
 
 export  interface INavItem {
@@ -61,6 +62,13 @@ export const NAV_ITEMS: INavItem[] = [
     headerName: 'ABOUT US',
     headerDescription: 'SUSPENDED SOUL',
     component: About,
+  },
+  {
+    name: 'faq',
+    displayName: 'FAQ',
+    headerName: 'FREQUENTLY ASKED QUESTIONS',
+    headerDescription: 'ABOUT SOULYX',
+    component: FAQ,
   },
   {
     name: 'thanks',

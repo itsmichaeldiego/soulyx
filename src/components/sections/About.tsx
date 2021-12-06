@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { GetSoulyx } from '../GetSoulyx'
-import { FaqSection } from '../FaqSection'
+import { FaqSection } from './FAQ'
 import { TextSection } from '../TextSection'
 
 export function About() {
@@ -12,7 +12,6 @@ export function About() {
         title="LOREM IPSUM DOLOR SIT."
         text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip"
       />
-      <FaqSection />
     </>
   )
 }

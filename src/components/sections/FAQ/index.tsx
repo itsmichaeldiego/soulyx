@@ -2,13 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
 
-import { TextLine } from '../TextLine';
-import { Section } from '../Section';
+import { TextLine } from '../../TextLine';
+import { Section } from '../../Section';
 import { FaqTable } from './FaqTable/FaqTable';
 import { FAQ_DATA } from './data';
 
 
-export function FaqSection() {
+export function FAQ() {
   return (
     <Section>
       <ImageWrapper>

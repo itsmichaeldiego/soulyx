@@ -22,7 +22,7 @@ export function Layout({ children }: React.PropsWithChildren<{}>): JSX.Element {
 const Wrapper = styled.main`
   position: relative;
   min-height: ${({ theme }) => `calc(100vh - ${theme.sizes.header})`};
-  padding: ${({ theme }) => theme.spacing(0, 6, 6, 0)};
+  padding: ${({ theme }) => theme.spacing(0, 3, 6, 0)};
   padding-left: ${({ theme }) => `calc(${theme.sizes.nav} + ${theme.spacing(2)})`};
 
   @media (max-width: 767px) {

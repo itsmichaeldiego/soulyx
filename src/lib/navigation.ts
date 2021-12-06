@@ -6,6 +6,8 @@ import { Roadmap } from '../components/sections/Roadmap'
 import { About } from '../components/sections/About'
 import { Thanks } from '../components/sections/Thanks'
 import { FAQ } from '../components/sections/FAQ'
+import { Virtual } from '../components/sections/Virtual'
+import { LastNews } from '../components/sections/LastNews'
 
 
 export  interface INavItem {
@@ -21,7 +23,7 @@ export  interface INavItem {
 export const NAV_ITEMS: INavItem[] = [
   {
     name: 'intro',
-    displayName: 'Intro',
+    displayName: 'INTRO',
     headerName: 'Intro',
     headerDescription: 'Intro',
     offset: -96,
@@ -30,35 +32,42 @@ export const NAV_ITEMS: INavItem[] = [
   },
   {
     name: 'decentralization',
-    displayName: 'Decentralization',
+    displayName: 'DECENTRALIZATION',
     headerName: 'SOULYX NEW TOKEN',
     headerDescription: 'THRESHOLD OF DESCENTRALIZATION',
     component: Decentralization,
   },
   {
+    name: 'virtual',
+    displayName: 'VIRTUAL',
+    headerName: 'TOKEN VIRTUAL ECONOMY',
+    headerDescription: 'A UNIVERSE OF POSSIBILITIES',
+    component: Virtual,
+  },
+  {
     name: 'community',
-    displayName: 'Community',
+    displayName: 'COMMUNITY',
     headerName: 'OUR MISSION"',
     headerDescription: 'Power in the hands of the community',
     component: Community,
   },
   {
     name: 'genesis',
-    displayName: 'Genesis',
+    displayName: 'GENESIS',
     headerName: 'SOULYX GENESIS DISTRIBUTION',
     headerDescription: 'SUPPLY & DAO',
     component: Genesis,
   },
   {
     name: 'roadmap',
-    displayName: 'Roadmap',
+    displayName: 'ROADMAP',
     headerName: 'OUR NEXT STEPS',
     headerDescription: 'SUSPENDED SOUL´S ROADMAP',
     component: Roadmap,
   },
   {
     name: 'about',
-    displayName: 'About',
+    displayName: 'ABOUT',
     headerName: 'ABOUT US',
     headerDescription: 'SUSPENDED SOUL',
     component: About,
@@ -71,8 +80,15 @@ export const NAV_ITEMS: INavItem[] = [
     component: FAQ,
   },
   {
+    name: 'lastNews',
+    displayName: 'LAST NEWS',
+    headerName: 'LASTEST NEWS',
+    headerDescription: 'ABOUT SOULYX',
+    component: LastNews,
+  },
+  {
     name: 'thanks',
-    displayName: 'Thanks',
+    displayName: 'THANKS',
     headerName: 'YOU HAVE WITNESSED OUR SOUL EXPOSED.',
     headerDescription: 'THANKS',
     component: Thanks,

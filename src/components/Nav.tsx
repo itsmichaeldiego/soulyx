@@ -94,6 +94,9 @@ const Indicators = styled.div`
   display: flex;
   align-items: center;
   transform: rotate(-90deg);
+  white-space: nowrap;
+  font-size: 10px;
+  line-height: 12px;
 `
 
 const Separator = styled.div`

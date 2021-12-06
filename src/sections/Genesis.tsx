@@ -1,10 +1,10 @@
 import React from 'react';
 import Image from 'next/image'
 
-import { LogoSection } from '../LogoSection'
-import { TextSection } from '../TextSection';
-import { TokenizeRoadmap } from '../TokenizeRoadmap';
-import { RoadmapChart } from '../RoadmapChart/RoadmapChart';
+import { LogoSection } from '../components/LogoSection'
+import { TextSection } from '../components/TextSection';
+import { TokenizeRoadmap } from '../components/TokenizeRoadmap';
+import { RoadmapChart } from '../components/RoadmapChart/RoadmapChart';
 
 export function Genesis() {
   return (

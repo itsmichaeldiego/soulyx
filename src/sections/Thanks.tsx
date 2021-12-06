@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image'
 
-import { LogoSection } from '../LogoSection'
+import { LogoSection } from '../components/LogoSection'
 
 export function Thanks() {
   return (

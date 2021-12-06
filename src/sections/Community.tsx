@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { TextSection } from '../TextSection'
-import { SectionTitle } from '../SectionTitle';
+import { TextSection } from '../components/TextSection'
+import { SectionTitle } from '../components/SectionTitle';
 
 export function Community() {
   return (

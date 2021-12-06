@@ -1,8 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
 
-import { LogoSection } from '../LogoSection'
-import { DiscoverSection } from '../DiscoverSection'
+import { LogoSection } from '../components/LogoSection'
+import { DiscoverSection } from '../components/DiscoverSection'
 
 export function Intro() {
   return (

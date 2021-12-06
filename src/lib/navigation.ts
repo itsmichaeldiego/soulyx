@@ -1,13 +1,13 @@
-import { Intro } from '../components/sections/Intro'
-import { Community } from '../components/sections/Community'
-import { Decentralization } from '../components/sections/Decentralization'
-import { Genesis } from '../components/sections/Genesis'
-import { Roadmap } from '../components/sections/Roadmap'
-import { About } from '../components/sections/About'
-import { Thanks } from '../components/sections/Thanks'
-import { FAQ } from '../components/sections/FAQ'
-import { Virtual } from '../components/sections/Virtual'
-import { LastNews } from '../components/sections/LastNews'
+import { Intro } from '../sections/Intro'
+import { Community } from '../sections/Community'
+import { Decentralization } from '../sections/Decentralization'
+import { Genesis } from '../sections/Genesis'
+import { Roadmap } from '../sections/Roadmap'
+import { About } from '../sections/About'
+import { Thanks } from '../sections/Thanks'
+import { FAQ } from '../sections/FAQ'
+import { Virtual } from '../sections/Virtual'
+import { LastNews } from '../sections/LastNews'
 
 
 export  interface INavItem {

@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
 
-import { TextLine } from '../../TextLine';
-import { Section } from '../../Section';
+import { TextLine } from '../../components/TextLine';
+import { Section } from '../../components/Section';
 import { FaqTable } from './FaqTable/FaqTable';
 import { FAQ_DATA } from './data';
 

@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { GetSoulyx } from '../GetSoulyx'
-import { TextSection } from '../TextSection'
+import { GetSoulyx } from '../components/GetSoulyx'
+import { TextSection } from '../components/TextSection'
 
 export function About() {
   return (

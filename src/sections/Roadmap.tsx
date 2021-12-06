@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { LaunchDetails } from '../LaunchDetails';
-import { RoadmapSection } from '../RoadmapSection'
+import { LaunchDetails } from '../components/LaunchDetails';
+import { RoadmapSection } from '../components/RoadmapSection'
 
 export function Roadmap() {
   return (

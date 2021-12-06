@@ -10,7 +10,7 @@ export function Decentralization() {
   return (
     <>
       <SectionHeader number="01 - 09" name="SOULYX NEW TOKEN" description="THRESHOLD OF DESCENTRALIZATION" />
-      <SectionTitle imageUrl="/images/decentralization.svg" alt="THRESHOLD OF DESCENTRALIZATION" style={{ zIndex: 1 }} />
+      <SectionTitle imageUrl="/images/decentralization.svg" alt="THRESHOLD OF DESCENTRALIZATION" />
       <Content>
         <TextWrapper>
           <Text>
@@ -49,7 +49,7 @@ export function Decentralization() {
 const Content = styled.div`
   display: flex;
   align-items: center;
-  margin-top: ${({ theme }) => theme.spacing(-20)};
+  margin-top: ${({ theme }) => theme.spacing(-30)};
   > * {
     flex: 1 1 50%;
   }

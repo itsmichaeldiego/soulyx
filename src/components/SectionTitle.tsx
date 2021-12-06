@@ -9,10 +9,10 @@ type ISectionTitleProps = {
 }
 
 
-export function SectionTitle({ imageUrl, alt, ...props }: ISectionTitleProps) {
+export function SectionTitle({ imageUrl, alt }: ISectionTitleProps) {
   return (
-    <Wrapper {...props}>
-      <Image src={imageUrl} alt={alt} layout="fill" />
+    <Wrapper>
+      <Image src={imageUrl} alt={alt} layout="fill" objectFit="scale-down" objectPosition="top" />
     </Wrapper>
   );
 }
@@ -22,6 +22,7 @@ const Wrapper = styled.div`
   height: 100%;
   max-width: 1228px;
   position: relative;
+  z-index: 1;
 
   @media (max-width: 767px) {
     min-height: 168px;

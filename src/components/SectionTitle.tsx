@@ -12,7 +12,7 @@ type ISectionTitleProps = {
 export function SectionTitle({ imageUrl, alt }: ISectionTitleProps) {
   return (
     <Wrapper>
-      <Image src={imageUrl} alt={alt} layout="fill" objectFit="scale-down" objectPosition="top" />
+      <Image src={imageUrl} alt={alt} layout="fill" objectFit="contain" objectPosition="top" />
     </Wrapper>
   );
 }
@@ -25,7 +25,6 @@ const Wrapper = styled.div`
   z-index: 1;
 
   @media (max-width: 767px) {
-    min-height: 168px;
-    max-width: 340px;
+    min-height: 280px;
   }
 `;

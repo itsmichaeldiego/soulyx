@@ -1,8 +1,9 @@
 import React, { useLayoutEffect, useState } from 'react'
-import { TokenizeRoadmap as TokenizeRoadmapMobile } from './TokenizeRoadmapMobile'
-import { TokenizeRoadmap as TokenizeRoadmapDesktop } from './TokenizeRoadmapDesktop'
 
 import { Default, Mobile } from '../../lib/mediaQueryHelper'
+
+import { TokenizeRoadmap as TokenizeRoadmapMobile } from './TokenizeRoadmapMobile'
+import { TokenizeRoadmap as TokenizeRoadmapDesktop } from './TokenizeRoadmapDesktop'
 
 export function TokenizeRoadmap() {
   const [mounted, setMounted] = useState(false);

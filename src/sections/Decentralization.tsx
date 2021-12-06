@@ -2,6 +2,8 @@ import React from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
 
+import { Default, Mobile } from '../lib/mediaQueryHelper'
+
 import { TextSection } from '../components/TextSection'
 import { SectionTitle } from '../components/SectionTitle';
 
@@ -10,6 +12,14 @@ export function Decentralization() {
     <>
       <SectionTitle imageUrl="/images/decentralization.svg" alt="THRESHOLD OF DESCENTRALIZATION" />
       <Content>
+        <ImageWrapper>
+          <Default>
+            <Image src="/images/face-asian-low-light.png" alt="Decentralization" width="400" height="631" />
+          </Default>
+          <Mobile>
+            <Image src="/images/face-asian-low-light.png" alt="Decentralization" layout="fill" objectFit="cover" />
+          </Mobile>
+        </ImageWrapper>
         <TextWrapper>
           <Text>
             TAKING SUSPENDED SOUL
@@ -19,9 +29,6 @@ export function Decentralization() {
             A TOTAL EXPERIENCE.
           </Text>
         </TextWrapper>
-        <ImageWrapper>
-          <Image src="/images/face-asian-low-light.png" alt="Decentralization" width="400" height="631" />
-        </ImageWrapper>
       </Content>
       <HandSection>
         <TextSection
@@ -47,16 +54,28 @@ export function Decentralization() {
 const Content = styled.div`
   display: flex;
   align-items: center;
+  flex-direction: row-reverse;
   margin-top: ${({ theme }) => theme.spacing(-30)};
   > * {
     flex: 1 1 50%;
   }
+  @media (max-width: 767px) {
+    display: block;
+    margin-top: ${({ theme }) => theme.spacing(-8)};
+    > * {
+      flex: 1;
+    }
+  }
 `
 const TextWrapper = styled.div`
-  flex: 1 1 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+`
+
+const ImageWrapper = styled.div`
+  min-height: 100vh;
+  position: relative;
 `
 
 const Text = styled.p`
@@ -64,10 +83,6 @@ const Text = styled.p`
   font-weight: normal;
   font-size: 12px;
   line-height: 16px;
-`
-
-const ImageWrapper = styled.div`
-  flex: 1 1 50%;
 `
 
 const HandSection = styled.div`

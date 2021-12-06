@@ -10,7 +10,7 @@ export function Intro() {
       <LogoSection>
         <Image src="/images/soulyx.svg" alt="SoulX Banner" layout="fill" />
       </LogoSection>
-      <DiscoverSection text="DISCOVER THE NEW TOKE BY SUSPENDED SOUL" />
+      <DiscoverSection text="DISCOVER THE NEW TOKEN BY SUSPENDED SOUL" />
     </>
   )
 }

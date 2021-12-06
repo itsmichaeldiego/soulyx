@@ -8,7 +8,7 @@ import { ROADMAP_TABLE_DATA } from './data';
 import { RightLogoSection } from '../../components/RightLogoSection';
 import { Section } from '../../components/Section';
 
-export function RoadmapSection() {
+export function Roadmap() {
   return (
     <Section>
       <RightLogoSection titleUrl="roadmap-header" />

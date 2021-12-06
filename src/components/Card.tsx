@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { IRoadmapEntry } from '../types';
+import { IRoadmapEntry } from '../sections/Roadmap/types';
 
 type ICardProps = {
   item: IRoadmapEntry;

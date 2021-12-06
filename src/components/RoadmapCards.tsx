@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 
-import { IRoadmapEntry } from '../types';
+import { IRoadmapEntry } from '../sections/Roadmap/types';
 
 import { Card } from './Card';
 

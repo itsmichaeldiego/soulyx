@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { LogoSection } from '../components/LogoSection'
 import { TextSection } from '../components/TextSection';
 import { TokenizeRoadmap } from '../components/TokenizeRoadmap';
-import { RoadmapChart } from '../components/RoadmapChart/RoadmapChart';
+import { RoadmapChart } from '../components/RoadmapChart';
 
 export function Genesis() {
   return (

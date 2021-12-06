@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { RoadmapTable } from './RoadmapTable/RoadmapTable';
-import { TextLine } from '../TextLine';
-import { RoadmapCards } from './RoadmapCards/RoadmapCards';
+import { RoadmapTable } from '../../components/RoadmapTable';
+import { TextLine } from '../../components/TextLine';
+import { RoadmapCards } from '../../components/RoadmapCards';
 
 import { ROADMAP_TABLE_DATA } from './data';
-import { RightLogoSection } from '../RightLogoSection';
-import { Section } from '../Section';
+import { RightLogoSection } from '../../components/RightLogoSection';
+import { Section } from '../../components/Section';
 
 export function RoadmapSection() {
   return (

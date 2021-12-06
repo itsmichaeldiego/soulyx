@@ -2,10 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
 
-import { TextLine } from '../TextLine';
-import { Section } from '../Section';
+import { TextLine } from '../../components/TextLine';
+import { Section } from '../../components/Section';
 import { LAUNCH_DETAILS_DATA } from './data';
-import { LaunchDetailsTable } from './LaunchDetailsTable/LaunchDetailsTable';
+import { LaunchDetailsTable } from '../../components/LaunchDetailsTable';
 
 export function LaunchDetails() {
   return (

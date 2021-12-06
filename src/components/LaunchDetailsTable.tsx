@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { useMobileMediaQuery } from '../../../lib/mediaQueryHelper';
+import { useMobileMediaQuery } from '../lib/mediaQueryHelper';
 
 type ILaunchDetailsTableProps = {
   data: any[];

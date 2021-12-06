@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { TABLE_HEADERS } from '../data';
-import { IRoadmapEntry } from '../types';
+import { TABLE_HEADERS } from '../sections/Roadmap/data';
+import { IRoadmapEntry } from '../sections/Roadmap/types';
 
 type IRoadmapTableProps = {
   data: IRoadmapEntry[];

@@ -4,7 +4,6 @@ import Image from 'next/image';
 
 import { TextLine } from '../TextLine';
 import { Section } from '../Section';
-import { SectionHeader } from '../SectionHeader';
 import { FaqTable } from './FaqTable/FaqTable';
 import { FAQ_DATA } from './data';
 
@@ -12,7 +11,6 @@ import { FAQ_DATA } from './data';
 export function FaqSection() {
   return (
     <Section>
-      <SectionHeader number="08 - 09" name="TOKEN LAUNCHMENT DETAILS" description="COMMUNITY TREASURE" />
       <ImageWrapper>
         <Image src="/images/questions.svg" alt="SoulX Banner" layout="fill" />
       </ImageWrapper>

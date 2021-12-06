@@ -7,12 +7,10 @@ import { RoadmapCards } from './RoadmapCards/RoadmapCards';
 import { ROADMAP_TABLE_DATA } from './data';
 import { RightLogoSection } from '../RightLogoSection';
 import { Section } from '../Section';
-import { SectionHeader } from '../SectionHeader';
 
 export function RoadmapSection() {
   return (
     <>
-      <SectionHeader number="05 - 09" name="OUR NEXT STEPS" description="SUSPENDED SOUL´S ROADMAP" />
       <Section>
         <RightLogoSection titleUrl="roadmap-header" />
         <TextLine>LOREM IPSUM</TextLine>

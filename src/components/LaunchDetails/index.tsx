@@ -4,14 +4,12 @@ import Image from 'next/image';
 
 import { TextLine } from '../TextLine';
 import { Section } from '../Section';
-import { SectionHeader } from '../SectionHeader';
 import { LAUNCH_DETAILS_DATA } from './data';
 import { LaunchDetailsTable } from './LaunchDetailsTable/LaunchDetailsTable';
 
 export function LaunchDetails() {
   return (
     <Section>
-      <SectionHeader number="06 - 09" name="TOKEN LAUNCH DETAILS" description="COMMUNITY TREASURY" />
       <BackgroundWrapper>
         <ImageWrapper>
           <Image src="/images/token-launch-details.svg" alt="Token launch details" layout="fill" />

@@ -4,12 +4,10 @@ import styled from 'styled-components';
 
 import { TextSection } from '../TextSection'
 import { SectionTitle } from '../SectionTitle';
-import { SectionHeader } from '../SectionHeader';
 
 export function Decentralization() {
   return (
     <>
-      <SectionHeader number="01 - 09" name="SOULYX NEW TOKEN" description="THRESHOLD OF DESCENTRALIZATION" />
       <SectionTitle imageUrl="/images/decentralization.svg" alt="THRESHOLD OF DESCENTRALIZATION" />
       <Content>
         <TextWrapper>

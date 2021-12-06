@@ -10,61 +10,63 @@ import { Thanks } from '../components/sections/Thanks'
 export  interface INavItem {
   name: string;
   displayName: string;
-  navTitle: string;
-  navSubtitle: string;
-  offset?: number;
+  headerName: string;
+  headerDescription: string;
   component: any;
+  offset?: number;
+  hideHeader?: boolean;
 }
 
 export const NAV_ITEMS: INavItem[] = [
   {
     name: 'intro',
     displayName: 'Intro',
-    navTitle: '',
-    navSubtitle: '',
+    headerName: 'Intro',
+    headerDescription: 'Intro',
     offset: -96,
     component: Intro,
+    hideHeader: true,
   },
   {
     name: 'decentralization',
     displayName: 'Decentralization',
-    navTitle: '',
-    navSubtitle: '',
+    headerName: 'SOULYX NEW TOKEN',
+    headerDescription: 'THRESHOLD OF DESCENTRALIZATION',
     component: Decentralization,
   },
   {
     name: 'community',
     displayName: 'Community',
-    navTitle: '',
-    navSubtitle: '',
+    headerName: 'OUR MISSION"',
+    headerDescription: 'Power in the hands of the community',
     component: Community,
   },
   {
     name: 'genesis',
     displayName: 'Genesis',
-    navTitle: '',
-    navSubtitle: '',
+    headerName: 'SOULYX GENESIS DISTRIBUTION',
+    headerDescription: 'SUPPLY & DAO',
     component: Genesis,
   },
   {
     name: 'roadmap',
     displayName: 'Roadmap',
-    navTitle: '',
-    navSubtitle: '',
+    headerName: 'OUR NEXT STEPS',
+    headerDescription: 'SUSPENDED SOUL´S ROADMAP',
     component: Roadmap,
   },
   {
     name: 'about',
     displayName: 'About',
-    navTitle: '',
-    navSubtitle: '',
+    headerName: 'ABOUT US',
+    headerDescription: 'SUSPENDED SOUL',
     component: About,
   },
   {
     name: 'thanks',
     displayName: 'Thanks',
-    navTitle: '',
-    navSubtitle: '',
+    headerName: 'YOU HAVE WITNESSED OUR SOUL EXPOSED.',
+    headerDescription: 'THANKS',
     component: Thanks,
   }
 ]

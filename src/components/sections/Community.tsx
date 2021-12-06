@@ -2,12 +2,10 @@ import React from 'react';
 
 import { TextSection } from '../TextSection'
 import { SectionTitle } from '../SectionTitle';
-import { SectionHeader } from '../SectionHeader';
 
 export function Community() {
   return (
     <>
-      <SectionHeader number="02 - 09" name="OUR MISSION" description="Power in the hands of the community" />
       <SectionTitle imageUrl="/images/community.svg" alt="COMMUNITY" />
       <TextSection
         title="INCLUSION AND PLURALITY: OUR FUNDAMENTAL TOOLS"

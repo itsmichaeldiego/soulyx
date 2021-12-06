@@ -56,29 +56,29 @@ const ImageWrapper = styled.div`
 
 const ButtonWrapper = styled.div`
   display: flex;
-  margin-bottom: 332px;
-  margin-top: 42px;
+  margin-top: ${({ theme }) => theme.spacing(5)};
+  margin-bottom: ${({ theme }) => theme.spacing(40)};
 
   @media (max-width: 767px) {
-    margin-top: 20px;
-    margin-bottom: 160px;
+    margin-top: ${({ theme }) => theme.spacing(2.5)};
+    margin-bottom: ${({ theme }) => theme.spacing(20)};
   }
 `;
 
 const GetButton = styled(LinkButton)`
   font-size: 22px;
   margin: 0 auto;
-  padding: 20px 26px;
+  padding: ${({ theme }) => theme.spacing(2.5, 3)};
 
   @media (max-width: 767px) {
     font-size: 16px;
-    padding: 16px 22px;
+    padding: ${({ theme }) => theme.spacing(2, 2.5)};
   }
 `;
 
 const SuspendedSoulWrapper = styled.div`
-  margin-left: 44px;
-  margin-top: 120px;
+  margin-left: ${({ theme }) => theme.spacing(6)};
+  margin-top: ${({ theme }) => theme.spacing(15)};
   max-width: 1420px;
   min-height: 300px;
   position: relative;

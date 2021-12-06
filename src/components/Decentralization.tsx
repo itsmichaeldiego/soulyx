@@ -49,7 +49,7 @@ export function Decentralization() {
 const Content = styled.div`
   display: flex;
   align-items: center;
-  margin-top: ${({ theme }) => theme.spacing(-8)};
+  margin-top: ${({ theme }) => theme.spacing(-20)};
   > * {
     flex: 1 1 50%;
   }

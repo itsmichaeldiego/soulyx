@@ -3,6 +3,7 @@ import styled, { ThemeContext } from 'styled-components';
 import { Link } from 'react-scroll'
 
 import { Icon } from './Icon';
+import { NAV_ITEMS } from '../lib/navigation';
 
 export function DiscoverSection({ text }: { text: string }) {
   const theme = useContext(ThemeContext);
@@ -10,7 +11,7 @@ export function DiscoverSection({ text }: { text: string }) {
     <Wrapper>
       <Item>
         <CustomLink 
-          to="decentralization" 
+          to={NAV_ITEMS[1].name} 
           spy={true}
           smooth={true}
           hashSpy={true}

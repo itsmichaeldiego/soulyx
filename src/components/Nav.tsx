@@ -3,7 +3,7 @@ import styled, { ThemeContext } from 'styled-components';
 import { Link, animateScroll as scroll } from 'react-scroll'
 
 import { Icon } from './Icon';
-import { NAV_ITEMS , INavItem} from '../lib/navigation';
+import { NAV_ITEMS , INavItem } from '../lib/navigation';
 
 const getStepIndex = (steps: INavItem[], stepName: string): number => steps.findIndex((step: INavItem) => step.name === stepName)
 

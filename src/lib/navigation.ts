@@ -38,18 +38,18 @@ export const NAV_ITEMS: INavItem[] = [
     component: Decentralization,
   },
   {
-    name: 'virtual',
-    displayName: 'VIRTUAL',
-    headerName: 'TOKEN VIRTUAL ECONOMY',
-    headerDescription: 'A UNIVERSE OF POSSIBILITIES',
-    component: Virtual,
-  },
-  {
     name: 'community',
     displayName: 'COMMUNITY',
     headerName: 'OUR MISSION"',
     headerDescription: 'Power in the hands of the community',
     component: Community,
+  },
+  {
+    name: 'virtual',
+    displayName: 'VIRTUAL',
+    headerName: 'TOKEN VIRTUAL ECONOMY',
+    headerDescription: 'A UNIVERSE OF POSSIBILITIES',
+    component: Virtual,
   },
   {
     name: 'genesis',

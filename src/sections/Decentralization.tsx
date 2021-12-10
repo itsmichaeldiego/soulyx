@@ -63,6 +63,8 @@ const Content = styled.div`
   @media (max-width: 767px) {
     display: block;
     margin-top: ${({ theme }) => theme.spacing(-8)};
+    margin-left: ${({ theme }) => theme.spacing(-3)};
+    margin-right: ${({ theme }) => theme.spacing(-3)};
     > * {
       flex: 1;
     }
@@ -76,8 +78,11 @@ const TextWrapper = styled.div`
 `
 
 const ImageWrapper = styled.div`
-  min-height: 100vh;
+  min-height: 631px;
   position: relative;
+  @media (max-width: 767px) {
+    min-height: 520px;
+  }
 `
 
 const Text = styled.p`
@@ -93,4 +98,10 @@ const HandSection = styled.div`
   background-repeat: no-repeat;
   background-image: url('/images/glass-hand.png');
   background-position: 0 400px;
+  @media (max-width: 767px) {
+    background-size: cover;
+    background-position: 0 0;
+    margin-left: ${({ theme }) => theme.spacing(-3)};
+    margin-right: ${({ theme }) => theme.spacing(-3)};
+  }
 `

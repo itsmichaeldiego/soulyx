@@ -22,7 +22,7 @@ TextSection.defaultProps = {
   align: 'center',
 }
 
-const Wrapper= styled.div<{ align: string }>`
+const Wrapper = styled.div<{ align: string }>`
   display: flex;
   flex-direction: column;
   ${({ align }) => `align-items: ${align};`}

@@ -2,38 +2,37 @@ import React from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
 
-import { Section } from './Section';
 import { LinkButton } from './LinkButton';
 
 export function GetSoulyx() {
   return (
-    <Section>
-      <SectionWrapper>
-        <ImageWrapper>
-          <Image src="/images/get-soulyx.svg" alt="Get Soulyx" layout="fill" />
-        </ImageWrapper>
-          <ButtonWrapper>
-            <GetButton href="https://miso.sushi.com/" text="Get Soulyx" target="_blank" />
-          </ButtonWrapper>
-          <SuspendedSoulWrapper>
-            <Image src="/images/suspended-soul.svg" alt="Suspended Soul" layout="fill" />
-          </SuspendedSoulWrapper>
-      </SectionWrapper>
-    </Section>
+    <Wrapper>
+      <ImageWrapper>
+        <Image src="/images/get-soulyx.svg" alt="Get Soulyx" layout="fill" />
+      </ImageWrapper>
+        <ButtonWrapper>
+          <GetButton href="https://miso.sushi.com/" text="Get Soulyx" target="_blank" />
+        </ButtonWrapper>
+        <SuspendedSoulWrapper>
+          <Image src="/images/suspended-soul.svg" alt="Suspended Soul" layout="fill" />
+        </SuspendedSoulWrapper>
+    </Wrapper>
   );
 }
 
-const SectionWrapper = styled.div`
+const Wrapper = styled.div`
   background-image: url('/images/space-man-suspended-soul.png');
   background-position: 0% 0%;
   background-repeat: no-repeat;
   background-size: 100%;
   height: 1816px;
-  padding: 158px 80px;
+  padding: ${({ theme }) => theme.spacing(20, 0)};
   position: relative;
+  margin-right: -24px;
 
   @media (max-width: 767px) {
     // TODO: Review this once we remove side paddings
+    margin-left: -24px;
     background-position: 32% 0%;
     background-size: cover;
     height: 624px;
@@ -59,7 +58,7 @@ const ButtonWrapper = styled.div`
 
   @media (max-width: 767px) {
     margin-top: ${({ theme }) => theme.spacing(2.5)};
-    margin-bottom: ${({ theme }) => theme.spacing(20)};
+    margin-bottom: ${({ theme }) => theme.spacing(34)};
   }
 `;
 

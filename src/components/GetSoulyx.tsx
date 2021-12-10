@@ -55,7 +55,7 @@ const ImageWrapper = styled.div`
 const ButtonWrapper = styled.div`
   display: flex;
   margin-top: ${({ theme }) => theme.spacing(5)};
-  margin-bottom: ${({ theme }) => theme.spacing(40)};
+  margin-bottom: ${({ theme }) => theme.spacing(65)};
 
   @media (max-width: 767px) {
     margin-top: ${({ theme }) => theme.spacing(2.5)};
@@ -75,7 +75,7 @@ const GetButton = styled(LinkButton)`
 `;
 
 const SuspendedSoulWrapper = styled.div`
-  margin-left: ${({ theme }) => theme.spacing(6)};
+  margin-left: ${({ theme }) => theme.spacing(5)};
   margin-top: ${({ theme }) => theme.spacing(15)};
   max-width: 1420px;
   min-height: 300px;

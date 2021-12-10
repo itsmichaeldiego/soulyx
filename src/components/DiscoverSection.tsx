@@ -7,7 +7,6 @@ export function DiscoverSection({ text }: {text: string}) {
   const theme = useContext(ThemeContext);
   return (
     <Wrapper>
-      <Item />
       <Item>
         <Icon icon="arrow-down" color={theme.cta.primary} size={26} />
         <Text>{text}</Text>
@@ -18,6 +17,7 @@ export function DiscoverSection({ text }: {text: string}) {
 
 const Wrapper = styled.section`
   display: flex;
+  justify-content: flex-end;
   min-height: 50vh;
   height: 100%;
 `;
@@ -25,8 +25,7 @@ const Wrapper = styled.section`
 const Item = styled.div`
   display: flex;
   align-items: center;
-  flex: 1 1 100%;
-  padding: ${({ theme }) => theme.spacing(12)};
+  flex: 1 1 50%;
 `
 
 const Text = styled.div`

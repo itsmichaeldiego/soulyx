@@ -25,7 +25,13 @@ const Wrapper = styled.section`
 const Item = styled.div`
   display: flex;
   align-items: center;
-  flex: 1 1 50%;
+  padding: ${({ theme }) => theme.spacing(4)}; 
+  
+  flex: 0 0 50%;
+  @media (max-width: 767px) {
+    flex: 1 1 100%;
+    justify-content: center;
+  }
 `
 
 const Text = styled.div`

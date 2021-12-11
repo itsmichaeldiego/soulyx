@@ -22,7 +22,7 @@ const Wrapper = styled.div`
   @media (max-width: 767px) {
     background-image: url('/images/logo.png');
     background-repeat: no-repeat;
-    background-position: right -38px top 0px;
+    background-position: right -38px top 0;
     background-size: 35%;
     height: 168px;
   }

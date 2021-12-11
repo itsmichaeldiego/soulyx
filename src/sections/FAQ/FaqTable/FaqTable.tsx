@@ -142,9 +142,9 @@ const Answer = styled.div`
   border-bottom: 1px solid ${({ theme }) => theme.cta.primary};
   color: ${({ theme }) => theme.cta.primary};
   display: flex;
-  height: 0px;
+  height: 0;
   opacity: ${props => (props.expanded ? "1" : "0")};
-  transition: height 0.2s, opacity 0.2s, padding 0.3s ease-out;
+  transition: height 0.2s, opacity 0.2s ease-out;
   z-index: -1;
   white-space: pre-line;
   font-weight: 300;

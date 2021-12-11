@@ -64,7 +64,7 @@ const ImagesWrapper = styled.div`
   width: 100%;
   height: 1420px;
   position: relative;
-  padding: 20px 0px;
+  padding: 20px 0;
 `;
 
 const ImageWrapper = styled.div`
@@ -130,14 +130,14 @@ const SideImageWrapper = styled.div`
   min-height: 417px;
   position: absolute;
   top: -80px;
-  left: 0px;
+  left: 0;
 `;
 
 const AlphaLogoWrapper = styled.div`
   width: 967px;
   min-height: 520px;
   position: absolute;
-  bottom: 0px;
+  bottom: 0;
   right: 100px;
   z-index: 2;
 `;

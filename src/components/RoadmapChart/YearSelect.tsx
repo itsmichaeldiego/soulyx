@@ -93,7 +93,7 @@ const MenuWrapper = styled.ul`
   display: flex;
   flex-direction: column;
   font-size: 12px;
-  left: 0px;
+  left: 0;
   margin: 0;
   padding: 0;
   width: 100%;

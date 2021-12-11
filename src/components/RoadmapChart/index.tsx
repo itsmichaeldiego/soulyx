@@ -114,7 +114,7 @@ const GridWrapper = styled.div`
   display: flex;
   flex-direction: column-reverse;
   height: 100%;
-  left: 0px;
+  left: 0;
   position: absolute;
   width: 100%;
 `;

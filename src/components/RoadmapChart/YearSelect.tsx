@@ -87,7 +87,7 @@ const IconWrapper = styled(Icon)`
 `;
 
 const MenuWrapper = styled.ul`
-  background-color: ${({ theme }) => theme.cta.secondary};
+  background-color: ${({ theme }) => theme.bg.primary};
   border-radius: 4px;
   border: 1px solid ${({ theme }) => theme.cta.primary};
   display: flex;

@@ -45,9 +45,9 @@ export function LaunchDetailsTable({ data }: ILaunchDetailsTableProps): JSX.Elem
 }
 
 const TableWrapper = styled.div`
-  background-color: ${({ theme }) => theme.cta.secondary};
+  background-color: ${({ theme }) => theme.bg.primary};
   border-radius: 20px;
-  border: 1px solid ${({ theme }) => theme.cta.primary};;
+  border: 1px solid ${({ theme }) => theme.cta.primary};
   color: ${({ theme }) => theme.cta.primary};
   display: grid;
   font-size: 16px;
@@ -76,7 +76,7 @@ const TableBody = styled.div`
 `;
 
 const TableRow = styled.div`
-  background-color: ${({ theme }) => theme.cta.secondary};
+  background-color: ${({ theme }) => theme.bg.primary};
   border-bottom: 1px solid ${({ theme }) => theme.cta.primary};
   display: flex;
 

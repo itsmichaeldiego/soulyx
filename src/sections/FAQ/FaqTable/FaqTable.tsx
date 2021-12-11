@@ -62,7 +62,7 @@ export function FaqTable({ data }: IFaqTableProps): JSX.Element {
 }
 
 const TableWrapper = styled.div`
-  background-color: ${({ theme }) => theme.cta.secondary};
+  background-color: ${({ theme }) => theme.bg.primary};
   border-radius: 20px;
   border: 1px solid ${({ theme }) => theme.cta.primary};;
   color: ${({ theme }) => theme.cta.primary};
@@ -92,7 +92,7 @@ const TableBody = styled.div`
 `;
 
 const TableRow = styled.div`
-  background-color: ${({ theme }) => theme.cta.secondary};
+  background-color: ${({ theme }) => theme.bg.primary};
   border-bottom: 1px solid ${({ theme }) => theme.cta.primary};
   display: flex;
   flex-direction: column;

@@ -37,7 +37,7 @@ export const theme: ITheme = {
   bg: {
     primary: colors.gallery,
     secondary: colors.vermillion,
-    tertiary: colors.gallery,
+    tertiary: colors.white,
   },
   cta: {
     primary: colors.vermillion,

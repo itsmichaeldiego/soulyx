@@ -11,7 +11,7 @@ type IContainerProps = {
 
 export function FlipCard() {
   const theme = useContext(ThemeContext);
-  const [flipped, setFlipped] = useState(true)
+  const [flipped, setFlipped] = useState(false)
 
   const handleFlip = useCallback(() => setFlipped(!flipped), [flipped]);
 
@@ -64,6 +64,7 @@ const Wrapper = styled.div`
   // flip properties:
   background-color: transparent;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  margin-right: ${({ theme }) => theme.spacing(4)};
 `;
 
 const Container = styled.div`

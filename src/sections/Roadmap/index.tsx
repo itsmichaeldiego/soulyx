@@ -13,7 +13,7 @@ export function Roadmap() {
   return (
     <Section>
       <RightLogoSection titleUrl="roadmap-header" />
-      <TextLine>LOREM IPSUM</TextLine>
+      <TextLine>A groundbreaking  paradigm shift</TextLine>
       <RoadmapTable data={ROADMAP_TABLE_DATA} />
       <RoadmapCards cards={ROADMAP_TABLE_DATA} />
       {/* // TODO: scroll to FAQ */}

@@ -14,13 +14,13 @@ export function Genesis() {
         <Image src="/images/genesis.svg" alt="SoulX Genesis" layout="fill" />
       </LogoSection>
       <TextSection
-        title="SOULx SUPPLY UNLOCK."
-        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip"
+        title="SOULx SUPPLY"
+        text="Our total token supply consists of 235.000.000 SOULx, those of which will be divided into different percentages and destined into different holders according to our mission, as stated below."
       />
       <TokenizeRoadmap />
       <TextSection
-        title="LOREM IPSUM DOLOR SIT."
-        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip"
+        title="Suspended Soul’s ecosystem"
+        text="The main monetary entrance of the project are the honoraries and commision fees of the sales completed through all its verticals. The net earning of each vertical will be destined to a stabilization fund with the goal of recovering SOULx from the market, so that it can easily come back to the community treasury and, from there, keep reinvesting it into artistic endeavours. This mechanism will allow a permanent valuation of the token and a continuous development of the Suspended Soul ecosystem.  "
       />
       <RoadmapChart />
       <TextSection

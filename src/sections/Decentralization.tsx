@@ -35,17 +35,17 @@ export function Decentralization() {
         <TextSection
           align={isMobile ? 'center' : 'flex-start'}
           title="SUSPENDED SOUL’S COMMUNITY GOVERNANCE"
-          text="We bring both creators and collectors the chance of proposing and voting the platform's actualizations, making sure that it becomes a public asset that directly responds to their community members. If you have an idea you’d like to see implemented, you can make yourself heard. Your voice matters. It's this community's right to decide their own ways of governance. According to an equity principle, the token holders will make decisions chasing their economic, social and cultural development, building a solid, inclusive and diverse community driven space."
+          text="Our roadmap takes us into the democratization of decision making on every step of the platform. The SOULx tokens holders will conform and collectively govern Suspended Soul's DAO,, bringing both creators and collectors the chance of proposing and voting the platform's actualizations, making sure that it becomes a public asset that directly responds to their community members. If you have an idea you’d like to see implemented, you can make yourself heard. Your voice matters. It's this community's right to decide their own ways of governance. According to an equity principle, the token holders will make decisions chasing their economic, social and cultural development, building a solid, inclusive, transparent and diverse community driven space."
         />
         <TextSection
           align={isMobile ? 'center' : 'flex-end'}
-          title="THE ADMINISTRATION OF THE COMMUNITY IN THE HANDS OF THE DAO"
-          text="Our roadmap takes us into the democratization of decision making on every step of the platform. A great tool for participative governance at the hands of members of the community, building a collective destiny full of transparency and inclusivity for the benefit of the artistic community. The SOULx tokens holders will conform and collectively govern Suspended Soul's DAO, a decentralized organization that will oversee the key parameters of the platform, allocate funds from the Community Treasury, and vote on proposed improvements to the network and protocol."
+          title="SOULx utility"
+          text={`NFT Access Pass: you will be able to swap SOULx for NFTs that serve as access tickets for your favorite artistic and social events. Token holders can simply buy their SOULx for all the commodities it provides, which includes: access to total experience and immersive art events happening all around the world & on different metaverses, and access to virtual and physical galleries from all around the globe, as well as access to exclusive auctions. SOULx tokens can be also used for tipping creatives in the same way as the famous "tip jars" that are being used by some websites today through apps like Venmo or Paypal. In this way, fans will be able to donate tokens as a means of compensating or rewarding their favorite creators.`}
         />
         <TextSection
           align={isMobile ? 'center' : 'flex-start'}
-          title="SOULx TOKEN: A NEW VIRTUAL ECONOMY"
-          text={`A fixed emision of tokens from the start generates a scarcity effect. With time, this takes the investment into a growing curve and, as the platform expands and the interest around SOULx rises, the coin offer remains unaltered. SOULx tokens can also be used as a means of exchange. Instead of the "tip jar" that's used by some websites through apps like Venmo or Paypal, fans can donate tokens to compensate the creator. At the same time, art lovers can simply buy their SOULx for all the commodities it provides, which includes: access to total experience and immersive art events happening all around the globe on physical galleries and online on different metaverses, as well as access to exclusive art auctions.`}
+          title="Scarcity effect: our roadmap and vision"
+          text={`A fixed emision of tokens from the start generates a scarcity effect. With time, this takes the investment into a growing curve and, as the platform expands and the interest around SOULx rises, the coin offer remains unaltered. This mechanism will allow a permanent valuation of the token and a continuous development of the Suspended Soul ecosystem.`}
         />
       </HandSection>
     </>

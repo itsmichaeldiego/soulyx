@@ -32,6 +32,6 @@ const ImageWrapper = styled.div`
     // TODO: Review this once we remove side paddings
     height: 394px;
     width: 302px;
-    padding: 48px 28px;
+    padding: ${({ theme }) => theme.spacing(28, 0)};
   }
 `;

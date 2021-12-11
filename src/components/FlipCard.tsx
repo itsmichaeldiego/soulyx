@@ -31,7 +31,7 @@ export function FlipCard() {
               <Icon icon="arrow-right" color={theme.cta.secondary} size={46} />
             </IconWrapper>
             <Title>
-              KNOW OUR LOREM IPSUM FORM SUSPENDED SOUL LOREM
+              SUSPENDED SOUL´S CO-FOUNDER & COO
             </Title>
           </Footer>
         </Front>

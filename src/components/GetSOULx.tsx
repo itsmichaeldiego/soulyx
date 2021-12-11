@@ -8,7 +8,7 @@ export function GetSOULx() {
   return (
     <Wrapper>
       <ImageWrapper>
-        <Image src="/images/get-SOULx.svg" alt="Get SOULx" layout="fill" />
+        <Image src="/images/get-soulx.svg" alt="Get SOULx" layout="fill" />
       </ImageWrapper>
         <ButtonWrapper>
           <GetButton href="https://miso.sushi.com/" text="Get SOULx" target="_blank" />

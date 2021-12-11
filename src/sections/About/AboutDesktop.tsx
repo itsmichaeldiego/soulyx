@@ -14,10 +14,10 @@ export function About() {
       <SectionContainer>
         <ImagesWrapper>
           <ImageWrapper>
-            <Image src="/images/SOULx-transparent.svg" alt="SOULx" layout="fill" />
+            <Image src="/images/soulx-transparent.svg" alt="SOULx" layout="fill" />
           </ImageWrapper>
           <OverlappingImageWrapper>
-            <Image src="/images/image-22.png" alt="Image 22" layout="fill" />
+            <Image src="/images/astronaut-open-helmet.png" alt="Astronaut" layout="fill" />
           </OverlappingImageWrapper>
         </ImagesWrapper>
         <TextBlockWrapper>

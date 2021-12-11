@@ -33,7 +33,7 @@ export const NAV_ITEMS: INavItem[] = [
   {
     name: 'decentralization',
     displayName: 'DECENTRALIZATION',
-    headerName: 'SOULYX NEW TOKEN',
+    headerName: 'SOULx NEW TOKEN',
     headerDescription: 'THRESHOLD OF DESCENTRALIZATION',
     component: Decentralization,
   },
@@ -54,7 +54,7 @@ export const NAV_ITEMS: INavItem[] = [
   {
     name: 'genesis',
     displayName: 'GENESIS',
-    headerName: 'SOULYX GENESIS DISTRIBUTION',
+    headerName: 'SOULx GENESIS DISTRIBUTION',
     headerDescription: 'SUPPLY & DAO',
     component: Genesis,
   },
@@ -76,14 +76,14 @@ export const NAV_ITEMS: INavItem[] = [
     name: 'faq',
     displayName: 'FAQ',
     headerName: 'FREQUENTLY ASKED QUESTIONS',
-    headerDescription: 'ABOUT SOULYX',
+    headerDescription: 'ABOUT SOULx',
     component: FAQ,
   },
   {
     name: 'lastNews',
     displayName: 'LAST NEWS',
     headerName: 'LASTEST NEWS',
-    headerDescription: 'ABOUT SOULYX',
+    headerDescription: 'ABOUT SOULx',
     component: LastNews,
   },
   {

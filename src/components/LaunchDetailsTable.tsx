@@ -28,7 +28,7 @@ export function LaunchDetailsTable({ data }: ILaunchDetailsTableProps): JSX.Elem
 
   return (
     <TableWrapper>
-      <TableHeader>Soulyx Launchment</TableHeader>
+      <TableHeader>SOULx Launchment</TableHeader>
       <TableBody>
         {visibleRows.map((entry) => (
           <TableRow key={entry.name}>

@@ -1,12 +1,12 @@
 export const FAQ_DATA = [
   {
-    question: "How can I purchase a $SOULYx?",
+    question: "How can I purchase a SOULx?",
     answer: "1 - On the auction start date you must connect your ethereum wallet at https://miso.sushi.com/auctions/live.\n 2 - Indicate on the tab the amount of tokens you want to buy. \n3 - Sign the transaction in your ethereum wallet.\n 4 - Once the auction ends, you must make the claim to get your tokens in your wallet.",
     id: 1,
   },
   {
     question: "What are the start and end dates of the auction?",
-    answer: "The $SOULYx IDO will run for 3 days, starting on December 15, 2021 and ending on December 18, 2021.",
+    answer: "The SOULx IDO will run for 3 days, starting on December 15, 2021 and ending on December 18, 2021.",
     id: 2,
   },
   {
@@ -31,21 +31,21 @@ export const FAQ_DATA = [
   },
   {
     question: "What is the Supply & Genesis Distribution scheme like?",
-    answer: "Total supply: 235.000.000 $SOULYx \n\n\u2022 Community treasury 40% 94.0M $SOULYx \n\u2022 IDO + Liquidity Pool 10% 23.5M $SOULYx \n\u2022 Airdrop 5% 11.8M $SOULYx \n\u2022 Team 30 % 70.5 M $SOULYx \n\u2022 Seed investors 15% 35.3M $SOULYx",
+    answer: "Total supply: 235.000.000 SOULx \n\n\u2022 Community treasury 40% 94.0M SOULx \n\u2022 IDO + Liquidity Pool 10% 23.5M SOULx \n\u2022 Airdrop 5% 11.8M SOULx \n\u2022 Team 30 % 70.5 M SOULx \n\u2022 Seed investors 15% 35.3M SOULx",
     id: 7,
   },  {
     question: "How many tokens will be offered for sale in the IDO?",
-    answer: "There will be 23.5 Million $SOULYx available to purchase during the IDO auction, representing 10% of the total supply.",
+    answer: "There will be 23.5 Million SOULx available to purchase during the IDO auction, representing 10% of the total supply.",
     id: 8,
   },
   {
     question: "Will there be liquidity following the token launch?",
-    answer: "After our public auction, the tokens will be available to trade on SushiSwap at the price that resulted from the Dutch auction. 50% of the proceeds will be used to provide liquidity of $SOULYx tokens to our SushiSwap liquidity pool. In this way this pool will become our long-term liquidity venue.",
+    answer: "After our public auction, the tokens will be available to trade on SushiSwap at the price that resulted from the Dutch auction. 50% of the proceeds will be used to provide liquidity of SOULx tokens to our SushiSwap liquidity pool. In this way this pool will become our long-term liquidity venue.",
     id: 9,
   },
   {
     question: "When and at what price will the tokens be launched in the market?",
-    answer: "The final price of the tokens will be revealed at the end of the Dutch auction, which is the price with which $SOULYx will be released to the market directly after the auction is completed.",
+    answer: "The final price of the tokens will be revealed at the end of the Dutch auction, which is the price with which SOULx will be released to the market directly after the auction is completed.",
     id: 10,
   },
 ]

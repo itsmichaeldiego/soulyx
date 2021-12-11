@@ -7,7 +7,7 @@ import { RoadmapCards } from '../../components/RoadmapCards';
 import { ROADMAP_TABLE_DATA } from './data';
 import { RightLogoSection } from '../../components/RightLogoSection';
 import { Section } from '../../components/Section';
-import { GetSoulyx } from '../../components/GetSoulyx';
+import { GetSOULx } from '../../components/GetSOULx';
 
 export function Roadmap() {
   return (
@@ -18,7 +18,7 @@ export function Roadmap() {
       <RoadmapCards cards={ROADMAP_TABLE_DATA} />
       {/* // TODO: scroll to FAQ */}
       <TextLine>If you have any questions, you can check out our FAQ&apos;s <a href="#faq">here</a></TextLine>
-      <GetSoulyx />
+      <GetSOULx />
     </Section>
   );
 }

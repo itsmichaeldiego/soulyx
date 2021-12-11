@@ -4,14 +4,14 @@ import styled from 'styled-components';
 
 import { LinkButton } from './LinkButton';
 
-export function GetSoulyx() {
+export function GetSOULx() {
   return (
     <Wrapper>
       <ImageWrapper>
-        <Image src="/images/get-soulyx.svg" alt="Get Soulyx" layout="fill" />
+        <Image src="/images/get-SOULx.svg" alt="Get SOULx" layout="fill" />
       </ImageWrapper>
         <ButtonWrapper>
-          <GetButton href="https://miso.sushi.com/" text="Get Soulyx" target="_blank" />
+          <GetButton href="https://miso.sushi.com/" text="Get SOULx" target="_blank" />
         </ButtonWrapper>
         <SuspendedSoulWrapper>
           <Image src="/images/suspended-soul.svg" alt="Suspended Soul" layout="fill" />

@@ -43,14 +43,14 @@ export const ROADMAP_TABLE_DATA = [
   },
   {
     name: "Fase 7",
-    description: "$ 4.2M ($ 0.2 x 21M $SOULYx)",
+    description: "$ 4.2M ($ 0.2 x 21M SOULx)",
     status: "Developing",
     year: 2020,
     quarter: "Q4",
   },
   {
     name: "Fase 8",
-    description: "$ 2.5M ($ 0.12 x 21M $SOULYx)",
+    description: "$ 2.5M ($ 0.12 x 21M SOULx)",
     status: "Done",
     year: 2020,
     quarter: "Q4",

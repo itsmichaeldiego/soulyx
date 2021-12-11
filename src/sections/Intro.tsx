@@ -8,7 +8,7 @@ export function Intro() {
   return (
     <>
       <LogoSection>
-        <Image src="/images/soulyx.svg" alt="SoulX Banner" layout="fill" objectFit="scale-down" />
+        <Image src="/images/SOULx.svg" alt="SoulX Banner" layout="fill" objectFit="scale-down" />
       </LogoSection>
       <DiscoverSection text="DISCOVER THE NEW TOKEN BY SUSPENDED SOUL" />
     </>

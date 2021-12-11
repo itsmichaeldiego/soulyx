@@ -14,7 +14,7 @@ export function Genesis() {
         <Image src="/images/genesis.svg" alt="SoulX Genesis" layout="fill" />
       </LogoSection>
       <TextSection
-        title="$SOULYX SUPPLY UNLOCK."
+        title="SOULx SUPPLY UNLOCK."
         text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip"
       />
       <TokenizeRoadmap />
@@ -25,7 +25,7 @@ export function Genesis() {
       <RoadmapChart />
       <TextSection
         title="A UNIVERSE OF POSSIBILITIES"
-        text="$SOULx opens a door for the future and provides options for the economic destiny of its investors. A new virtual economy created through Suspended Soul’s ecosystem, with multiple diversification alternatives."
+        text="SOULx opens a door for the future and provides options for the economic destiny of its investors. A new virtual economy created through Suspended Soul’s ecosystem, with multiple diversification alternatives."
       />
       <Diagram />
     </>

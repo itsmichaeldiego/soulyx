@@ -40,12 +40,12 @@ export function Decentralization() {
         <TextSection
           align={isMobile ? 'center' : 'flex-end'}
           title="THE ADMINISTRATION OF THE COMMUNITY IN THE HANDS OF THE DAO"
-          text="Our roadmap takes us into the democratization of decision making on every step of the platform. A great tool for participative governance at the hands of members of the community, building a collective destiny full of transparency and inclusivity for the benefit of the artistic community. The $SOULYx tokens holders will conform and collectively govern Suspended Soul's DAO, a decentralized organization that will oversee the key parameters of the platform, allocate funds from the Community Treasury, and vote on proposed improvements to the network and protocol."
+          text="Our roadmap takes us into the democratization of decision making on every step of the platform. A great tool for participative governance at the hands of members of the community, building a collective destiny full of transparency and inclusivity for the benefit of the artistic community. The SOULx tokens holders will conform and collectively govern Suspended Soul's DAO, a decentralized organization that will oversee the key parameters of the platform, allocate funds from the Community Treasury, and vote on proposed improvements to the network and protocol."
         />
         <TextSection
           align={isMobile ? 'center' : 'flex-start'}
-          title="$SOULYX TOKEN: A NEW VIRTUAL ECONOMY"
-          text={`A fixed emision of tokens from the start generates a scarcity effect. With time, this takes the investment into a growing curve and, as the platform expands and the interest around $SOULYx rises, the coin offer remains unaltered. $SOULYx tokens can also be used as a means of exchange. Instead of the "tip jar" that's used by some websites through apps like Venmo or Paypal, fans can donate tokens to compensate the creator. At the same time, art lovers can simply buy their $SOULYx for all the commodities it provides, which includes: access to total experience and immersive art events happening all around the globe on physical galleries and online on different metaverses, as well as access to exclusive art auctions.`}
+          title="SOULx TOKEN: A NEW VIRTUAL ECONOMY"
+          text={`A fixed emision of tokens from the start generates a scarcity effect. With time, this takes the investment into a growing curve and, as the platform expands and the interest around SOULx rises, the coin offer remains unaltered. SOULx tokens can also be used as a means of exchange. Instead of the "tip jar" that's used by some websites through apps like Venmo or Paypal, fans can donate tokens to compensate the creator. At the same time, art lovers can simply buy their SOULx for all the commodities it provides, which includes: access to total experience and immersive art events happening all around the globe on physical galleries and online on different metaverses, as well as access to exclusive art auctions.`}
         />
       </HandSection>
     </>

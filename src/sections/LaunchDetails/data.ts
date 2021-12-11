@@ -5,7 +5,7 @@ export const LAUNCH_DETAILS_DATA = [
   },
   {
     name: "Suministro",
-    description: "23.000.000 $Soulyx (10% del suministro total)",
+    description: "23.000.000 SOULx (10% del suministro total)",
   },
   {
     name: "Moneda de oferta",
@@ -25,14 +25,14 @@ export const LAUNCH_DETAILS_DATA = [
   },
   {
     name: "Maxima capitalizacion de mercado inicial",
-    description: "$ 4.2M ($ 0.2 x 21M $SOULYx)",
+    description: "$ 4.2M ($ 0.2 x 21M SOULx)",
     status: "Developing",
     year: 2020,
     quarter: "Q4",
   },
   {
     name: "Min. capitalizacion de mercado inicial",
-    description: "$ 2.5M ($ 0.12 x 21M $SOULYx)",
+    description: "$ 2.5M ($ 0.12 x 21M SOULx)",
   },
   {
     name: "Enlace",

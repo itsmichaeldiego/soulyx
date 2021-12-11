@@ -14,7 +14,7 @@ export function About() {
       <SectionContainer>
         <ImagesWrapper>
           <ImageWrapper>
-            <Image src="/images/soulyx-transparent.svg" alt="Soulyx" layout="fill" />
+            <Image src="/images/SOULx-transparent.svg" alt="SOULx" layout="fill" />
           </ImageWrapper>
           <OverlappingImageWrapper>
             <Image src="/images/image-22.png" alt="Image 22" layout="fill" />
@@ -35,7 +35,7 @@ export function About() {
             <Image src="/images/image-52.png" alt="Image 52" layout="fill" />
           </SideImageWrapper>
           <AlphaLogoWrapper>
-            <Image src="/images/souly-logo-alpha.svg" alt="Image 52" layout="fill" />
+            <Image src="/images/soulx-logo-alpha.svg" alt="Image 52" layout="fill" />
           </AlphaLogoWrapper>
           <PlusBackground>
             <Image src="/images/+++++.svg" alt="+ background" layout="fill" />
@@ -44,14 +44,14 @@ export function About() {
         <TextBlockWrapper style={{ marginTop: -36, marginRight: 460, paddingBottom: 0 }}>
           <TextBlockContainer maxWidth={340}>
             <Title>SUSPENDED SOUL FOUNDATION</Title>
-            <Text>Suspended Soul Foundation was created with the aim of putting into motion a strategic plan for the crafting of the website, and to start our collective journey towards total decentralization. Among its initial governance functions are: developing the initial website setup, moving forward with the actions needed to execute the strategic plan of the site, taking care of the community treasury and creating optimal conditions to establish good functioning decentralized mechanisms. The launch of the $SOULx token and our Decentralized Governance long term vision is the cornerstone towards decentralization.
+            <Text>Suspended Soul Foundation was created with the aim of putting into motion a strategic plan for the crafting of the website, and to start our collective journey towards total decentralization. Among its initial governance functions are: developing the initial website setup, moving forward with the actions needed to execute the strategic plan of the site, taking care of the community treasury and creating optimal conditions to establish good functioning decentralized mechanisms. The launch of the SOULx token and our Decentralized Governance long term vision is the cornerstone towards decentralization.
             </Text>
           </TextBlockContainer>
         </TextBlockWrapper>
         <TextBlockWrapper style={{ marginLeft: 680, paddingTop: '0 !important' }}>
           <TextBlockContainer maxWidth={524}>
             <Title>SUSPENDED SOUL DAO</Title>
-            <Text>We are standing at the threshold of a new era. In the near future, it will be the users themselves who will govern the platforms in which they participate. The self-determination of this community is the intrinsic value of this project. This process of property transfer starts with a slow decentralization dynamic which we are proposing. That&apos;s the step that we have been dreaming about since the beginning of it all, not only for our community, but for the entire world. Suspended Soul will be then run by a collective governance led by the $SOULx token holders, a decentralized organization with the authority of taking fundamental decisions for the platform like, among other things, the community treasury&apos;s funds distribution and the voting process surrounding adjustments for the platform. Welcome to Suspended Soul DAO.
+            <Text>We are standing at the threshold of a new era. In the near future, it will be the users themselves who will govern the platforms in which they participate. The self-determination of this community is the intrinsic value of this project. This process of property transfer starts with a slow decentralization dynamic which we are proposing. That&apos;s the step that we have been dreaming about since the beginning of it all, not only for our community, but for the entire world. Suspended Soul will be then run by a collective governance led by the SOULx token holders, a decentralized organization with the authority of taking fundamental decisions for the platform like, among other things, the community treasury&apos;s funds distribution and the voting process surrounding adjustments for the platform. Welcome to Suspended Soul DAO.
             </Text>
           </TextBlockContainer>
         </TextBlockWrapper>

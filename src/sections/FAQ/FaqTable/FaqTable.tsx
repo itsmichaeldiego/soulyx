@@ -110,13 +110,19 @@ const TableRow = styled.div`
 
 const Question = styled.div`
   align-items: center;
+  cursor: pointer;
   display: flex;
   font-size: 14px;
   justify-content: space-between;
   line-height: 20px;
-  padding: 32px;
+  padding: 26px;
   width: 100%;
   z-index: 2;
+
+  &:focus, :active, :visited {
+    background-color: ${({ theme }) => theme.cta.primary};
+    color: white;
+  }
 
   @media (max-width: 767px) {
     width: 98%;
@@ -140,11 +146,13 @@ const Answer = styled.div`
   opacity: ${props => (props.expanded ? "1" : "0")};
   transition: height 0.2s, opacity 0.2s, padding 0.3s ease-out;
   z-index: -1;
+  white-space: pre-line;
+  font-weight: 300;
 
   ${({ expanded }: IExpandedProps) =>
     expanded &&
       `
-        padding: 32px;
+        padding: 18px;
         padding-top: 8px;
         height: 100%;
         z-index: 1;

@@ -32,10 +32,10 @@ export function About() {
         </TextBlockWrapper>
         <DAOWrapper>
           <SideImageWrapper>
-            <Image src="/images/image-52.png" alt="Image 52" layout="fill" />
+            <Image src="/images/astronaut-open-helmet-smoke.png" alt="Astronaut with Smoke" layout="fill" />
           </SideImageWrapper>
           <AlphaLogoWrapper>
-            <Image src="/images/soulx-logo-alpha.svg" alt="Image 52" layout="fill" />
+            <Image src="/images/soulx-logo-alpha.svg" alt="SOULx Logo" layout="fill" />
           </AlphaLogoWrapper>
           <PlusBackground>
             <Image src="/images/+++++.svg" alt="+ background" layout="fill" />

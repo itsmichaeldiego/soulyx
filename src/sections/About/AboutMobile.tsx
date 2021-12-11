@@ -29,7 +29,7 @@ export function About() {
           </Text>
         </TextBlockWrapper>
         <ImageWrapper>
-          <Image src="/images/image-52.png" alt="Image 52" layout="fill" />
+          <Image src="/images/astronaut-open-helmet-smoke.png" alt="Astronaut with Smoke" layout="fill" />
         </ImageWrapper>
         <TextBlockWrapper>
           <Title>SUSPENDED SOUL FOUNDATION</Title>

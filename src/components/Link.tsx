@@ -4,6 +4,7 @@ import styled from 'styled-components';
 type ILinkProps =  React.PropsWithChildren<{
   href: string;
   target?: string;
+  onClick?: (ev: Event) => void;
 }>
 
 export function Link({ href, children, ...props }: ILinkProps): JSX.Element {

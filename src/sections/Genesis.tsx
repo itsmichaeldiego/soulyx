@@ -5,6 +5,7 @@ import { LogoSection } from '../components/LogoSection'
 import { TextSection } from '../components/TextSection';
 import { TokenizeRoadmap } from '../components/TokenizeRoadmap';
 import { RoadmapChart } from '../components/RoadmapChart';
+import { Diagram } from '../components/Diagram';
 
 export function Genesis() {
   return (
@@ -26,6 +27,7 @@ export function Genesis() {
         title="LOREM IPSUM DOLOR SIT."
         text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip"
       />
+      <Diagram />
     </>
   )
 }

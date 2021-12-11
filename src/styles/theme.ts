@@ -35,7 +35,7 @@ export const fonts: { [key: string]: string } = {
 
 export const theme: ITheme = {
   bg: {
-    primary: colors.mercury,
+    primary: colors.gallery,
     secondary: colors.vermillion,
     tertiary: colors.gallery,
   },

@@ -8,6 +8,7 @@ import { Thanks } from '../sections/Thanks'
 import { FAQ } from '../sections/FAQ'
 import { Virtual } from '../sections/Virtual'
 import { LastNews } from '../sections/LastNews'
+import { Team } from '../sections/Team'
 
 
 export  interface INavItem {
@@ -73,6 +74,13 @@ export const NAV_ITEMS: INavItem[] = [
     component: About,
   },
   {
+    name: 'team',
+    displayName: 'TEAM',
+    headerName: 'KNOW THE TEAM',
+    headerDescription: 'SUSPENDED SOUL',
+    component: Team,
+  },
+  {
     name: 'faq',
     displayName: 'FAQ',
     headerName: 'FREQUENTLY ASKED QUESTIONS',
@@ -82,7 +90,7 @@ export const NAV_ITEMS: INavItem[] = [
   {
     name: 'lastNews',
     displayName: 'LAST NEWS',
-    headerName: 'LASTEST NEWS',
+    headerName: 'LATEST NEWS',
     headerDescription: 'ABOUT SOULx',
     component: LastNews,
   },

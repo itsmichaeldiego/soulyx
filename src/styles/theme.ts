@@ -41,6 +41,7 @@ export const theme: ITheme = {
   },
   cta: {
     primary: colors.vermillion,
+    secondary: colors.black,
   },
   text: {
     primary: colors.vermillion,

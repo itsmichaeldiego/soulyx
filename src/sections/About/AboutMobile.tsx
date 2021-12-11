@@ -13,11 +13,11 @@ export function About() {
             <Image src="/images/soul-background.svg" alt="Soul background" layout="fill" />
           </LogoImageWrapper>
           <LogoImageWrapper>
-            <Image src="/images/SOULx-background.svg" alt="SOULx background" layout="fill" />
+            <Image src="/images/soulx-background.svg" alt="SOULx background" layout="fill" />
           </LogoImageWrapper>
         </ImagesWrapper>
         <ImageWrapper style={{ marginTop: -70 }}>
-          <Image src="/images/image-22.png" alt="Image 22" layout="fill" />
+          <Image src="/images/astronaut-open-helmet.png" alt="Astronaut open helmet" layout="fill" />
         </ImageWrapper>
         <TextBlockWrapper>
           <Title>About Us</Title>

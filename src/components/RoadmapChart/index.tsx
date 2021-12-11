@@ -83,7 +83,7 @@ export function RoadmapChart() {
 
 const Wrapper = styled.div`
   align-items: center;
-  background-color: #E5E5E5;
+  background-color: ${({ theme }) => theme.bg.primary};
   display: flex;
   flex-direction: column;
   margin: 64px 0;

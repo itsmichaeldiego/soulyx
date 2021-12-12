@@ -122,6 +122,7 @@ const DAOWrapper = styled.div`
   display: flex;
   position: relative;
   height: 544px;
+  overflow: hidden;
 `;
 
 const SideImageWrapper = styled.div`

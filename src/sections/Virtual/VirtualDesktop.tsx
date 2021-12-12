@@ -181,6 +181,7 @@ const TokenVirtualWrapper = styled.div`
   margin-bottom: 140px;
   margin-top: 60px;
   position: relative;
+  overflow: hidden;
 `;
 
 const LogoImageWrapper = styled.div`

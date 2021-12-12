@@ -8,7 +8,6 @@ export function Footer(): JSX.Element {
         <FooterLink href="https://miso.sushi.com/">LEGAL ADVICE</FooterLink>
         <FooterLink href="https://miso.sushi.com/">COOKIES</FooterLink>
         <FooterLink href="https://miso.sushi.com/">PRIVACITY</FooterLink>
-        <FooterLink href="https://miso.sushi.com/">DESIGNED BY</FooterLink>
         <FooterLink href="https://miso.sushi.com/">CREDITS</FooterLink>
       </FooterLinks>
       <MediaLinks>

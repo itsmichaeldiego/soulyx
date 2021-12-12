@@ -47,8 +47,6 @@ export function MobileSwiper({ cards }: IMobileSwiperProps) {
       <Swiper
         spaceBetween={50}
         slidesPerView={1.2}
-        onSlideChange={() => console.log('slide change')}
-        onSwiper={(swiper) => console.log(swiper)}
         pagination={{ clickable: true }}
       >
         {cards?.map(card => (

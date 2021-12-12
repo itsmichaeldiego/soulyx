@@ -25,13 +25,11 @@ export function Diagram() {
 
 const ImageWrapper = styled.div`
   height: 414px;
-  padding: ${({ theme }) => theme.spacing(8, 0)};
   position: relative;
-  margin-bottom: ${({ theme }) => theme.spacing(12)};
+  margin: ${({ theme }) => theme.spacing(2, 0, 12, 0)};
 
   @media (max-width: 767px) {
     height: 394px;
     width: 302px;
-    padding: ${({ theme }) => theme.spacing(28, 0)};
   }
 `;

@@ -41,4 +41,9 @@ const LogoWrapper = styled.div`
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 35%;
+
+  @media (max-width: 767px) {
+    max-width: 396px;
+    min-height: 296px;
+  }
 `;

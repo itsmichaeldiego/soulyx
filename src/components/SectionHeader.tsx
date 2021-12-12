@@ -26,6 +26,10 @@ const Wrapper = styled.div`
   justify-content: center;
   margin: ${({ theme }) => theme.spacing(6, 0)};
   padding: ${({ theme }) => theme.spacing(0.5, 0)};
+
+  @media (max-width: 767px) {
+    margin: ${({ theme }) => theme.spacing(3, 0)};
+  }
 `;
 
 const HeaderRow = styled.div`

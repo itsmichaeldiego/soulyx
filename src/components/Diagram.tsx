@@ -27,6 +27,7 @@ const ImageWrapper = styled.div`
   height: 414px;
   padding: ${({ theme }) => theme.spacing(8, 0)};
   position: relative;
+  margin-bottom: ${({ theme }) => theme.spacing(12)};
 
   @media (max-width: 767px) {
     // TODO: Review this once we remove side paddings

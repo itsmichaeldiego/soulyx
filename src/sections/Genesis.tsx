@@ -20,7 +20,7 @@ export function Genesis() {
       />
       <TokenizeRoadmap />
       <TextSection
-        title="SUSPENDED SOUL’S ECOSYSTEM"
+        title="SUSPENDED SOUL'S ECOSYSTEM"
         text="The main monetary entrance of the project are the honoraries and commision fees of the sales completed through all its verticals. The net earning of each vertical will be destined to a stabilization fund with the goal of recovering SOULx from the market, so that it can easily come back to the community treasury and, from there, keep reinvesting it into artistic endeavours. This mechanism will allow a permanent valuation of the token and a continuous development of the Suspended Soul ecosystem.  "
       />
       <RoadmapChart />
@@ -45,5 +45,6 @@ const LogoWrapper = styled.div`
   @media (max-width: 767px) {
     max-width: 396px;
     min-height: 296px;
+    background-size: 45%;
   }
 `;

@@ -86,7 +86,7 @@ const Wrapper = styled.div`
   background-color: ${({ theme }) => theme.bg.primary};
   display: flex;
   flex-direction: column;
-  margin: 64px 0;
+  margin: ${({ theme }) => theme.spacing(4, 0)};
 
   @media (max-width: 767px) {
     position: relative;

@@ -33,6 +33,7 @@ const Wrapper = styled.div`
   @media (max-width: 767px) {
     // TODO: Review this once we remove side paddings
     margin-left: -24px;
+    margin-right: 0;
     background-position: 32% 0%;
     background-size: cover;
     height: 628px;

@@ -42,7 +42,7 @@ export const NAV_ITEMS: INavItem[] = [
     name: 'community',
     displayName: 'COMMUNITY',
     headerName: 'OUR MISSION',
-    headerDescription: 'Power in the hands of the community',
+    headerDescription: 'POWER IN THE HANDS OF THE COMMUNITY',
     component: Community,
   },
   {

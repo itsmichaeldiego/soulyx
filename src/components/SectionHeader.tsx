@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState, useLayoutEffect } from 'react';
 import styled from 'styled-components';
+import { useMobileMediaQuery } from '../lib/mediaQueryHelper';
 
 import { Icon } from './Icon';
 
@@ -10,12 +11,24 @@ type ISectionHeaderProps = {
 }
 
 export function SectionHeader({ number, name, description }: ISectionHeaderProps) {
+  const [mounted, setMounted] = useState(false);
+  const isMobile = useMobileMediaQuery();
+
+  useLayoutEffect(() => {
+    // This is to avoid SSR + useMedia issues
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
+
   return (
     <Wrapper>
       <HeaderRow><RowText>{number}</RowText></HeaderRow>
       <HeaderRow><RowText>{name}</RowText></HeaderRow>
       <HeaderRow><RowText>{description}</RowText></HeaderRow>
-      <HeaderRow><Icon icon="star" size={88} /></HeaderRow>
+      <HeaderRow><Icon icon="star" size={isMobile ? 32 : 88} /></HeaderRow>
     </Wrapper>
   );
 }
@@ -67,4 +80,8 @@ const HeaderRow = styled.div`
 const RowText = styled.span`
   display: block;
   max-width: 100%;
+
+  @media (max-width: 767px) {
+    max-width: 100px;
+  }
 `;

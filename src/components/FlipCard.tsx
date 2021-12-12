@@ -2,6 +2,8 @@ import React, { useState, useCallback, useContext } from 'react';
 import styled, { ThemeContext } from 'styled-components';
 import Image from 'next/image';
 
+import { getPad } from '../lib/utils'
+
 import { Icon } from '../components/Icon'
 import { Link } from '../components/Link'
 
@@ -34,8 +36,7 @@ export function FlipCard({ card, index }: IFlipCardProps) {
         <Front>
           <TopSection>
             <Aside>
-              {/* TODO: add 0 before number 01, 02, 03 for index */}
-              <span>{index}</span>
+              <span>{getPad(index)}</span>
               <span>{card.name}</span>
             </Aside>
             <Image src={card.imageUrl} alt={card.name} width="240" height="360" />
@@ -50,7 +51,7 @@ export function FlipCard({ card, index }: IFlipCardProps) {
         <Back>
           <TopSection>
             <BackAside>
-              <span>{'01'}</span>
+              <span>{getPad(index)}</span>
               <Icon icon="arrow-left" size={46} />
             </BackAside>
             <Details>

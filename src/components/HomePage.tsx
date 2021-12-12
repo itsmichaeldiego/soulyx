@@ -20,7 +20,7 @@ export function HomePage() {
           {item.component()}
         </Element>
       ))}
-    </>
+    </> 
   )
 }
 

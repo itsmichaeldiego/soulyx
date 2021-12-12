@@ -13,7 +13,7 @@ export function Virtual() {
   return (
     <>
       <Jumbotron>
-        <FloatingText>$SOULx OPENS UP A BIG DOOR INTO THE FUTURE AND NURTURES THE ECONOMIC DESTINY OF ARTISTS, HOLDERS AND COLLECTORS WITH MULTIPLE OPTIONS.</FloatingText>
+        <FloatingText>SOULX OPENS UP A BIG DOOR INTO THE FUTURE AND NURTURES THE ECONOMIC DESTINY OF ARTISTS, HOLDERS AND COLLECTORS WITH MULTIPLE OPTIONS.</FloatingText>
         <ImageWrapper>
           <Image src="/images/soulx-jumbotron.svg" alt="SoulX Jumbotron" layout="fill" />
         </ImageWrapper>
@@ -23,7 +23,7 @@ export function Virtual() {
           A UNIVERSE OF POSSIBILITIES
         </Title>
         <Text>
-          $SOULx it&apos;s a ticket straight towards artistic empowerment. It&apos;s the act of sharing and bonding through art, while also celebrating it for what it is and what it could (sooner rather than later) become. It’s a whole virtual economy system built inside Suspended Soul’s own universe, with multiple and alluring diversification alternatives:
+          SOULX it&apos;s a ticket straight towards artistic empowerment. It&apos;s the act of sharing and bonding through art, while also celebrating it for what it is and what it could (sooner rather than later) become. It’s a whole virtual economy system built inside Suspended Soul’s own universe, with multiple and alluring diversification alternatives:
         </Text>
       </TextBlockWrapper>
       <ImageColumnsWrapper>

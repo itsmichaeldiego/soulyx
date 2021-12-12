@@ -1,18 +1,19 @@
 import React from 'react';
-import Image from 'next/image'
+import Image from 'next/image';
+import styled from 'styled-components';
 
-import { LogoSection } from '../components/LogoSection'
 import { TextSection } from '../components/TextSection';
 import { TokenizeRoadmap } from '../components/TokenizeRoadmap';
 import { RoadmapChart } from '../components/RoadmapChart';
 import { Diagram } from '../components/Diagram';
+import { Section } from '../components/Section';
 
 export function Genesis() {
   return (
-    <>
-      <LogoSection>
+    <Section>
+      <LogoWrapper>
         <Image src="/images/genesis.svg" alt="SoulX Genesis" layout="fill" />
-      </LogoSection>
+      </LogoWrapper>
       <TextSection
         title="SOULx SUPPLY"
         text="Our total token supply consists of 235.000.000 SOULx, those of which will be divided into different percentages and destined into different holders according to our mission, as stated below."
@@ -28,6 +29,16 @@ export function Genesis() {
         text="SOULx opens a door for the future and provides options for the economic destiny of its investors. A new virtual economy created through Suspended Soul’s ecosystem, with multiple diversification alternatives."
       />
       <Diagram />
-    </>
-  )
+    </Section>
+  );
 }
+
+const LogoWrapper = styled.div`
+  max-width: 1510px;
+  min-height: 1126px;
+  position: relative;
+  background-image: url('/images/logo.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 35%;
+`;

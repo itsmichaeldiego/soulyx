@@ -1,10 +1,12 @@
+import { MouseEventHandler } from 'react';
+
 import React from 'react';
 import styled from 'styled-components';
 
 type ILinkProps =  React.PropsWithChildren<{
   href: string;
   target?: string;
-  onClick?: (ev: Event) => void;
+  onClick?: MouseEventHandler<HTMLAnchorElement>;
 }>
 
 export function Link({ href, children, ...props }: ILinkProps): JSX.Element {

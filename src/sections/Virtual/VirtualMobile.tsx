@@ -3,6 +3,8 @@ import Image from 'next/image';
 import styled from 'styled-components';
 
 import { Section } from '../../components/Section';
+import { MobileSwiper } from '../../components/Carousel/MobileSwiper';
+import { VIRTUAL_CARDS } from './data';
 
 export function Virtual() {
   return (
@@ -20,15 +22,8 @@ export function Virtual() {
             $SOULx it&apos;s a ticket straight towards artistic empowerment. It&apos;s the act of sharing and bonding through art, while also celebrating it for what it is and what it could (sooner rather than later) become. It’s a whole virtual economy system built inside Suspended Soul’s own universe, with multiple and alluring diversification alternatives:
           </Text>
         </TextBlockWrapper>
-        {/* // TODO: Figure this out */}
-        {/* <TokenVirtualWrapper>
-          <LogoImageWrapper>
-            <Image src="/images/token-background-text.svg" alt="Token background text" layout="fill" />
-          </LogoImageWrapper>
-          <LogoImageWrapper>
-            <Image src="/images/virtual-background-text.svg" alt="Virtual background text" layout="fill" />
-          </LogoImageWrapper>
-        </TokenVirtualWrapper> */}
+        <TokenVirtualWrapper />
+        <MobileSwiper cards={VIRTUAL_CARDS} />
       </SectionContainer>
     </Section>
   );
@@ -46,6 +41,15 @@ const Jumbotron = styled.div`
   height: 488px;
   margin: 0 ${({ theme }) => theme.spacing(-3, 0)};
   padding: ${({ theme }) => theme.spacing(4, 0)};
+`;
+
+const TokenVirtualWrapper = styled.div`
+  background-image: url('/images/token-virtual-background.svg');
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 420px;
+  margin: 0 ${({ theme }) => theme.spacing(-3, 0)};
 `;
 
 const FloatingText = styled.div`
@@ -67,38 +71,20 @@ const ImageWrapper = styled.div`
 const TextBlockWrapper = styled.article`
   display: flex;
   flex-direction: column;
-  padding: ${({ theme }) => theme.spacing(8, 0)};
+  padding: ${({ theme }) => theme.spacing(6, 0)};
 `;
 
 const Title = styled.h5`
-  font-weight: bold;
   font-size: 14px;
+  font-weight: bold;
   line-height: 24px;
-  text-transform: uppercase;
   margin: ${({ theme }) => theme.spacing(1, 0)};
+  text-transform: uppercase;
 `;
 
 const Text = styled.p`
-  font-weight: 300;
   font-size: 16px;
+  font-weight: 300;
   line-height: 28px;
   margin: ${({ theme }) => theme.spacing(1, 0)};
-`;
-
-const TokenVirtualWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 140px;
-  margin-top: 60px;
-  position: relative;
-`;
-
-const LogoImageWrapper = styled.div`
-  // TODO: Figure this out
-  min-height: 235px;
-  position: relative;
-
-  &:first-of-type {
-    margin-bottom: -140px;
-  }
 `;

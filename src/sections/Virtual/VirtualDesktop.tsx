@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
 
+import { VIRTUAL_CARDS } from './data';
+
 type IColumnImageWrapperProps = {
   height: number;
   width: number;
@@ -27,27 +29,23 @@ export function Virtual() {
       <ImageColumnsWrapper>
         <ImageColumn>
           <ColumnTitle style={{ paddingLeft: 60 }}>
-            <TitleNumber>01</TitleNumber>
-            <TitleName>METAVERSE</TitleName>
+            <TitleNumber>{VIRTUAL_CARDS[0].number}</TitleNumber>
+            <TitleName>{VIRTUAL_CARDS[0].title}</TitleName>
           </ColumnTitle>
           <ColumnImageWrapper height={474} width={360} >
-            <Image src="/images/astronaut-helmet.png" alt="Astronaut helmet" width={360} height={474} />
+            <Image src={VIRTUAL_CARDS[0].imageUrl} alt="Astronaut helmet" width={360} height={474} />
           </ColumnImageWrapper>
-          <Text style={{ marginTop: 30, paddingLeft: 60, maxWidth: 350 }}>
-            $SOULx represents all of our efforts of integrating a wide prism of possible experiences into one single immersive artistic endeavour. One which will allow all its community members, eager to take part into an integral artistic EXPERIENCE, to dive deep into a project that will make their distant dreams a virtual reality. It is the entrance to a rich universe, full of multidisciplinary and transversal possibilities that mashes together individual and collective realities, formats and timezones.
-          </Text>
+          <Text style={{ marginTop: 30, paddingLeft: 60, maxWidth: 350 }}>{VIRTUAL_CARDS[0].description}</Text>
         </ImageColumn>
         <ImageColumn style={{ marginLeft: 300, marginTop: 120 }}>
           <ColumnTitle>
-            <TitleNumber>02</TitleNumber>
-            <TitleName>PHYSICAL MUSEUMS</TitleName>
+            <TitleNumber>{VIRTUAL_CARDS[1].number}</TitleNumber>
+            <TitleName>{VIRTUAL_CARDS[1].title}</TitleName>
           </ColumnTitle>
           <ColumnImageWrapper height={624} width={400} >
-            <Image src="/images/physical-museums.png" alt="Physical museums" width={400} height={624} />
+            <Image src={VIRTUAL_CARDS[1].imageUrl} alt="Physical museums" width={400} height={624} />
           </ColumnImageWrapper>
-          <Text style={{ marginTop: 30, maxWidth: 390 }}>
-            We firmly believe that the real change is not only to tear down walls in order to move forward, but to integrate our present experiences into those which are yet to come. We seek to take cryptoart into its next level, one that&apos;s lived as a TOTAL experience. A physical event, a social experience, artistic cycles, virtual encounters made of multiple artistic showcasing isles occupying space throughout our physical and virtual world. There&apos;s no limit to creativity.
-          </Text>
+          <Text style={{ marginTop: 30, maxWidth: 390 }}>{VIRTUAL_CARDS[1].description}</Text>
         </ImageColumn>
       </ImageColumnsWrapper>
       <TokenVirtualWrapper>
@@ -59,41 +57,35 @@ export function Virtual() {
         </LogoImageWrapper>
         <ImageColumn style={{ position: 'absolute', right: 46, top: 200 }}>
           <ColumnTitle>
-            <TitleNumber>03</TitleNumber>
-            <TitleName>ARTISTIC EVENTS</TitleName>
+            <TitleNumber>{VIRTUAL_CARDS[2].number}</TitleNumber>
+            <TitleName>{VIRTUAL_CARDS[2].title}</TitleName>
           </ColumnTitle>
           <ColumnImageWrapper height={572} width={390} >
-            <Image src="/images/artistic-events.png" alt="Artistic Events" width={390} height={572} />
+            <Image src={VIRTUAL_CARDS[2].imageUrl} alt="Artistic Events" width={390} height={572} />
           </ColumnImageWrapper>
-          <Text style={{ marginTop: 30, maxWidth: 454 }}>
-            This journey&apos;s final destination is to turn the tables and transform the ways in which physical, virtual or augmented reality art exhibitions nowadays work. It&apos;s to provide each artist with the economic resources needed for them to be able to exhibit their art in a groundbreaking way. It&apos;s the possibility of coming together and merging with new crowds present on the cryptoart multiverse.
-          </Text>
+          <Text style={{ marginTop: 30, maxWidth: 454 }}>{VIRTUAL_CARDS[2].description}</Text>
         </ImageColumn>
       </TokenVirtualWrapper>
       <ImageColumnsWrapper>
         <ImageColumn style={{ marginLeft: 220 }}>
           <ColumnTitle>
-            <TitleNumber>04</TitleNumber>
-            <TitleName>CUSTOMIZED PLATFORM FOR ALL ARTISTS</TitleName>
+            <TitleNumber>{VIRTUAL_CARDS[3].number}</TitleNumber>
+            <TitleName>{VIRTUAL_CARDS[3].title}</TitleName>
           </ColumnTitle>
           <ColumnImageWrapper height={624} width={400} >
-            <Image src="/images/face-asian-low-light.png" alt="Face low light" width={400} height={624} />
+            <Image src={VIRTUAL_CARDS[3].imageUrl} alt="Face low light" width={400} height={624} />
           </ColumnImageWrapper>
-          <Text style={{ marginTop: 30, maxWidth: 400 }}>
-            The site is an exhibition tool for all artists, no matter whether they have been selected by our curatorial team or not. Every artist who’s a token holder has the chance to upload their work, banner, curatorial comments, and be on every detail to really count with a 100% customized site, fully dedicated to their artistic vision.
-          </Text>
+          <Text style={{ marginTop: 30, maxWidth: 400 }}>{VIRTUAL_CARDS[3].description}</Text>
         </ImageColumn>
         <ImageColumn style={{ marginLeft: 218, marginTop: 300 }}>
           <ColumnTitle>
-            <TitleNumber>05</TitleNumber>
-            <TitleName>GAMIFICATION - LOTTERY</TitleName>
+            <TitleNumber>{VIRTUAL_CARDS[4].number}</TitleNumber>
+            <TitleName>{VIRTUAL_CARDS[4].title}</TitleName>
           </ColumnTitle>
           <ColumnImageWrapper height={464} width={390} >
-            <Image src="/images/gamification.png" alt="Gamification - Lottery" width={390} height={464} />
+            <Image src={VIRTUAL_CARDS[4].imageUrl} alt="Gamification - Lottery" width={390} height={464} />
           </ColumnImageWrapper>
-          <Text style={{ marginTop: 30, maxWidth: 390 }}>
-            The participation model based on the lottery. The winner gets a chance of purchasing high-priced art pieces making a significantly lower bet than stated.
-          </Text>
+          <Text style={{ marginTop: 30, maxWidth: 390 }}>{VIRTUAL_CARDS[4].description}</Text>
         </ImageColumn>
       </ImageColumnsWrapper>
     </>

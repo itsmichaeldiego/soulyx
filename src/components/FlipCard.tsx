@@ -63,7 +63,6 @@ const Wrapper = styled.div`
   cursor: pointer;
   // flip properties:
   background-color: transparent;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
   margin-right: ${({ theme }) => theme.spacing(4)};
 `;
 

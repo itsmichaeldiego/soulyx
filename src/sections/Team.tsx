@@ -6,12 +6,25 @@ import { FlipCard } from '../components/FlipCard'
 export function Team() {
   return (
     <Wrapper>
-      <FlipCard />
-      <FlipCard />
+      <Box>
+        <FlipCard />
+        <FlipCard />
+        <FlipCard />
+        <FlipCard />
+      </Box>
     </Wrapper>
   )
 }
 
 const Wrapper = styled.div`
+  flex: 1;
   display: flex;
+  overflow-y: visible;
+  overflow-x: auto;
+`
+
+const Box = styled.div`
+  display: flex;
+  overflow-y: visible;
+  min-width: min-content;
 `

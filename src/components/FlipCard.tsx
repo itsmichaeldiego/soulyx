@@ -112,7 +112,7 @@ const Aside = styled.div`
 `
 
 const BackAside = styled(Aside)`
-  padding-bottom: ${({ theme }) => theme.spacing(18)};
+  padding-bottom: ${({ theme }) => theme.spacing(16)};
 `
 
 const Footer = styled.div`

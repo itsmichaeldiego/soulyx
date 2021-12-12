@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import styled, { ThemeContext } from 'styled-components';
-import { Link } from 'react-scroll'
+import { Link } from 'react-scroll';
 
 import { Icon } from './Icon';
 import { NAV_ITEMS } from '../lib/navigation';
@@ -46,7 +46,7 @@ const Item = styled.div`
     flex: 1 1 100%;
     justify-content: center;
   }
-`
+`;
 
 
 const CustomLink = styled(Link)`

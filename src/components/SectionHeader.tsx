@@ -41,7 +41,7 @@ const Wrapper = styled.div`
   padding: ${({ theme }) => theme.spacing(0.5, 0)};
 
   @media (max-width: 767px) {
-    margin: ${({ theme }) => theme.spacing(3, 0)};
+    margin: ${({ theme }) => theme.spacing(4, 0)};
   }
 `;
 

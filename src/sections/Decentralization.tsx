@@ -5,13 +5,14 @@ import styled from 'styled-components';
 import { Default, Mobile, useMobileMediaQuery } from '../lib/mediaQueryHelper'
 
 import { TextSection } from '../components/TextSection'
-import { SectionTitle } from '../components/SectionTitle';
 
 export function Decentralization() {
   const isMobile = useMobileMediaQuery();
   return (
     <>
-      <SectionTitle imageUrl="/images/decentralization.svg" alt="THRESHOLD OF DESCENTRALIZATION" />
+      <HeaderImage>
+        <Image src="/images/decentralization.svg" alt="THRESHOLD OF DESCENTRALIZATION" layout="fill" />
+      </HeaderImage>
       <Content>
         <ImageWrapper>
           <Default>
@@ -52,30 +53,43 @@ export function Decentralization() {
   );
 }
 
+const HeaderImage = styled.div`
+  min-height: 512px;
+  position: relative;
+  z-index: 2;
+
+  @media (max-width: 767px) {
+    min-height: 168px;
+  }
+`;
+
 const Content = styled.div`
   display: flex;
   align-items: center;
   flex-direction: row-reverse;
-  margin-top: ${({ theme }) => theme.spacing(-30)};
+  margin-top: ${({ theme }) => theme.spacing(-11)};
+  margin-right: -24px;
+
   > * {
     flex: 1 1 50%;
   }
   @media (max-width: 767px) {
     display: block;
-    margin-top: ${({ theme }) => theme.spacing(-8)};
+    margin-top: ${({ theme }) => theme.spacing(-4)};
     margin-left: ${({ theme }) => theme.spacing(-3)};
     margin-right: ${({ theme }) => theme.spacing(-3)};
     > * {
       flex: 1;
     }
   }
-`
+`;
+
 const TextWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   padding: ${({ theme }) => theme.spacing(6)};
-`
+`;
 
 const ImageWrapper = styled.div`
   min-height: 631px;
@@ -83,14 +97,14 @@ const ImageWrapper = styled.div`
   @media (max-width: 767px) {
     min-height: 520px;
   }
-`
+`;
 
 const Text = styled.p`
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
   line-height: 16px;
-`
+`;
 
 const HandSection = styled.div`
   position: relative;
@@ -104,4 +118,4 @@ const HandSection = styled.div`
     margin-left: ${({ theme }) => theme.spacing(-3)};
     margin-right: ${({ theme }) => theme.spacing(-3)};
   }
-`
+`;

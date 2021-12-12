@@ -15,7 +15,7 @@ export function TextLine({ children, style }: React.PropsWithChildren<ITextLineP
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  padding: ${({ theme }) => theme.spacing(6, 6)};
+  padding: ${({ theme }) => theme.spacing(8, 6)};
 
   @media (max-width: 767px) {
     padding: ${({ theme }) => theme.spacing(4, 0)};

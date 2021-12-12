@@ -56,6 +56,7 @@ const TableWrapper = styled.div`
   @media (max-width: 767px) {
     font-size: 14px;
     margin: 0;
+    margin-right: 24px;
   }
 `;
 

@@ -9,6 +9,7 @@ import { FAQ } from '../sections/FAQ'
 import { Virtual } from '../sections/Virtual'
 import { LastNews } from '../sections/LastNews'
 import { Team } from '../sections/Team'
+import { LaunchDetails } from '../sections/LaunchDetails'
 
 
 export  interface INavItem {
@@ -65,6 +66,13 @@ export const NAV_ITEMS: INavItem[] = [
     headerName: 'OUR NEXT STEPS',
     headerDescription: 'SUSPENDED SOUL´S ROADMAP',
     component: Roadmap,
+  },
+  {
+    name: 'launch',
+    displayName: 'LAUNCH',
+    headerName: 'TOKEN LAUNCHING DETAILS',
+    headerDescription: 'SUSPENDED SOUL´S ROADMAP',
+    component: LaunchDetails,
   },
   {
     name: 'about',

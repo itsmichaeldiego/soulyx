@@ -15,7 +15,6 @@ export function SectionHeader({ number, name, description }: ISectionHeaderProps
       <HeaderRow><RowText>{number}</RowText></HeaderRow>
       <HeaderRow><RowText>{name}</RowText></HeaderRow>
       <HeaderRow><RowText>{description}</RowText></HeaderRow>
-      {/* // TODO: Consume SVG - Figma export is currently broken */}
       <HeaderRow><Icon icon="star" size={88} /></HeaderRow>
     </Wrapper>
   );

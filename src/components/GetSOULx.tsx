@@ -24,8 +24,8 @@ const Wrapper = styled.div`
   background-image: url('/images/space-man-suspended-soul.png');
   background-position: 0% 0%;
   background-repeat: no-repeat;
-  background-size: 100%;
-  height: 1816px;
+  background-size: cover;
+  height: 1820px;
   padding: ${({ theme }) => theme.spacing(20, 0)};
   position: relative;
   margin-right: -24px;
@@ -35,7 +35,7 @@ const Wrapper = styled.div`
     margin-left: -24px;
     background-position: 32% 0%;
     background-size: cover;
-    height: 624px;
+    height: 628px;
     padding: 48px 28px;
   }
 `;
@@ -54,7 +54,7 @@ const ImageWrapper = styled.div`
 const ButtonWrapper = styled.div`
   display: flex;
   margin-top: ${({ theme }) => theme.spacing(5)};
-  margin-bottom: ${({ theme }) => theme.spacing(65)};
+  margin-bottom: ${({ theme }) => theme.spacing(105)};
 
   @media (max-width: 767px) {
     margin-top: ${({ theme }) => theme.spacing(2.5)};

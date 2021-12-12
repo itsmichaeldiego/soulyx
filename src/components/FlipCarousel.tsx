@@ -1,16 +1,17 @@
 import React from 'react';
 import styled from 'styled-components'
 
-import { FlipCard } from '../components/FlipCard'
+import { FlipCard, IFlipCard } from '../components/FlipCard'
 
-export function FlipCarousel() {
+type IFlipCarouselProps = {
+  cards: IFlipCard[];
+}
+
+export function FlipCarousel({ cards }: IFlipCarouselProps) {
   return (
     <Wrapper>
       <Box>
-        <FlipCard />
-        <FlipCard />
-        <FlipCard />
-        <FlipCard />
+        {cards.map((card, index) => <FlipCard key={card.name} card={card} index={index} />)}
       </Box>
     </Wrapper>
   )

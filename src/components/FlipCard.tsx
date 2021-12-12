@@ -5,11 +5,24 @@ import Image from 'next/image';
 import { Icon } from '../components/Icon'
 import { Link } from '../components/Link'
 
+export interface IFlipCard {
+  name: string;
+  title: string;
+  description: string;
+  imageUrl: string;
+  viewmoreUrl?: string;
+}
+
+type IFlipCardProps = {
+  index: number;
+  card: IFlipCard;
+}
+
 type IContainerProps = {
   flipped: boolean;
 }
 
-export function FlipCard() {
+export function FlipCard({ card, index }: IFlipCardProps) {
   const theme = useContext(ThemeContext);
   const [flipped, setFlipped] = useState(false)
 
@@ -21,18 +34,17 @@ export function FlipCard() {
         <Front>
           <TopSection>
             <Aside>
-              <span>{'01'}</span>
-              <span>QUINTO</span>
+              {/* TODO: add 0 before number 01, 02, 03 for index */}
+              <span>{index}</span>
+              <span>{card.name}</span>
             </Aside>
-            <Image src="/images/quinto.png" alt="Quinto" width="240" height="360" />
+            <Image src={card.imageUrl} alt={card.name} width="240" height="360" />
           </TopSection>
           <Footer>
             <IconWrapper>
               <Icon icon="arrow-right" color={theme.cta.secondary} size={46} />
             </IconWrapper>
-            <Title>
-              SUSPENDED SOUL´S CO-FOUNDER & COO
-            </Title>
+            <Title>{card.title}</Title>
           </Footer>
         </Front>
         <Back>
@@ -42,13 +54,12 @@ export function FlipCard() {
               <Icon icon="arrow-left" size={46} />
             </BackAside>
             <Details>
-              <Description>
-                Citizen of Citydao, Influenced by Vitalik, Cyberpunk, Collector, and ETH community member, Quinto paired up his avant-garde vision, his professional skills, and his solidity & knowledge of the web3 ecosystem to envision and create Suspended Soul, a boutique worldwide NFT gallery on the rise. 
-                He understands the power that community holds, and how to make a project grow into its next phase. Focusing on moving forward step by step is key for him, and that’s the way he leads his team. With his capacity to clearly visualize future scenarios and bring them into fruition, he’s all about long term and outwitting issues that may come up with skill, creativity, patience and drive, always reminding his core team about the heart and soul of the project, which remains intact: power in the hands of the community. 
-              </Description>
-              <Link href="https://miso.sushi.com/" target="_blank" onClick={ev => ev.stopPropagation()}>
-                View more
-              </Link>
+              <Description>{card.description}</Description>
+              {card.viewmoreUrl && (
+                <Link href={card.viewmoreUrl} target="_blank" onClick={ev => ev.stopPropagation()}>
+                  View more
+                </Link>
+              )}
             </Details>
           </TopSection>
         </Back>
@@ -140,7 +151,7 @@ const Description = styled.div`
   line-height: 26px;
   font-weight: 300;
   `
-  
+
 const Details = styled.div`
   display: flex;
   flex-direction: column;

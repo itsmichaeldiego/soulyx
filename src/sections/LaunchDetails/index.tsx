@@ -17,7 +17,7 @@ export function LaunchDetails() {
       </BackgroundWrapper>
       <TextLine style={{ maxWidth: 240 }}>OUR COMMUNITY&apos;S INTRINSIC VALUE</TextLine>
       <LaunchDetailsTable data={LAUNCH_DETAILS_DATA} />
-      <TextLine>If you have any questions, you can check out our FAQ&apos;s <a href="#faq">here</a></TextLine>
+      <TextLine>If you have any questions, you can check out our FAQ&apos;s <FaqLink href="#faq">here</FaqLink></TextLine>
     </Section>
   );
 }
@@ -41,3 +41,7 @@ const BackgroundWrapper = styled.div`
   background-position: right -38px top 0;
   background-size: 35%;
 `
+
+const FaqLink = styled.a`
+  text-decoration: underline;
+`;

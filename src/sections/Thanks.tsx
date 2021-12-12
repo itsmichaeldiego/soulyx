@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
+import { Footer } from '../components/Footer';
 
 export function Thanks() {
   return (
@@ -9,6 +10,7 @@ export function Thanks() {
         <Image src="/images/thanks.svg" alt="SoulX Thannks" layout="fill" />
       </LogoWrapper>
       <Text>THANK YOU FOR COMING THIS FAR DOWN THE ROAD WITH US. HOPE YOUR DESIRE TO GROW TOGETHER MATCHES OURS, AND WE CAN WRITE THE NEXT CHAPTER TOGETHER.</Text>
+      <Footer />
     </SectionWrapper>
   );
 }

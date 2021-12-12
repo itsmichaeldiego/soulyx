@@ -28,8 +28,12 @@ export function DiscoverSection({ text }: { text: string }) {
 const Wrapper = styled.section`
   display: flex;
   justify-content: flex-end;
-  min-height: 50vh;
+  min-height: 40vh;
   height: 100%;
+
+  @media (max-width: 767px) {
+    min-height: 18vh;
+  }
 `;
 
 const Item = styled.div`
@@ -58,4 +62,8 @@ const Text = styled.div`
   line-height: 16px;
   margin-left: ${({ theme }) => theme.spacing(2)};
   max-width: 210px;
+
+  @media (max-width: 767px) {
+    display: none;
+  }
 `

@@ -28,10 +28,9 @@ const Wrapper = styled.div`
   height: 1820px;
   padding: ${({ theme }) => theme.spacing(20, 0)};
   position: relative;
-  margin-right: -24px;
+  margin-left: -72px;
 
   @media (max-width: 767px) {
-    // TODO: Review this once we remove side paddings
     margin-left: -24px;
     margin-right: 0;
     background-position: 32% 0%;

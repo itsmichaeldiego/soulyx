@@ -3,7 +3,7 @@ import styled, { ThemeContext } from 'styled-components';
 import Image from 'next/image';
 
 import { getPad } from '../lib/utils'
-import { useMobileMediaQuery } from '../lib/mediaQueryHelper';
+import { Mobile, Desktop, useMobileMediaQuery } from '../lib/mediaQueryHelper';
 
 import { Icon } from '../components/Icon'
 import { Link } from '../components/Link'
@@ -41,11 +41,21 @@ export function FlipCard({ card, index }: IFlipCardProps) {
               <span>{getPad(index)}</span>
               <span>{card.name}</span>
             </Aside>
-            <Image src={card.imageUrl} alt={card.name} width={isMobile ? 150 : 240} height={isMobile ? 231 : 360} />
+            <Mobile>
+              <Image src={card.imageUrl} alt={card.name} width={150} height={231} />
+            </Mobile>
+            <Desktop>
+              <Image src={card.imageUrl} alt={card.name} width={240} height={360} />
+            </Desktop>
           </TopSection>
           <Footer>
             <IconWrapper>
-              <Icon icon="arrow-right" color={theme.cta.secondary} size={isMobile ? 24 : 46} />
+              <Mobile>
+                <Icon icon="arrow-right" color={theme.cta.secondary} size={24} />
+              </Mobile>
+              <Desktop>
+                <Icon icon="arrow-right" color={theme.cta.secondary} size={46} />
+              </Desktop>
             </IconWrapper>
             <Title>{card.title}</Title>
           </Footer>
@@ -54,14 +64,19 @@ export function FlipCard({ card, index }: IFlipCardProps) {
           <TopSection>
             <BackAside>
               <span>{getPad(index)}</span>
-              <Icon icon="arrow-left" size={isMobile ? 24 : 46} />
+              <Mobile>
+                <Icon icon="arrow-left" size={24} />
+              </Mobile>
+              <Desktop>
+                <Icon icon="arrow-left" size={46} />
+              </Desktop>
             </BackAside>
             <Details>
               <Description>{card.description}</Description>
               {card.viewmoreUrl && (
-                <Link href={card.viewmoreUrl} target="_blank" onClick={ev => ev.stopPropagation()}>
+                <ViewMoreLink href={card.viewmoreUrl} target="_blank" onClick={ev => ev.stopPropagation()}>
                   View more
-                </Link>
+                </ViewMoreLink>
               )}
             </Details>
           </TopSection>
@@ -170,12 +185,22 @@ const Description = styled.div`
   }
 `
 
+const ViewMoreLink = styled(Link)`
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 300;
+  @media (max-width: 767px) {
+    font-size: 12px;
+    line-height: 14px;
+  }
+`
+
 const Details = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: ${({ theme }) => theme.spacing(10, 3, 3, 6)};
   @media (max-width: 767px) {
-    padding: ${({ theme }) => theme.spacing(0, 2, 0, 2)};
+    padding: ${({ theme }) => theme.spacing(2, 0, 2, 2)};
   }
 `

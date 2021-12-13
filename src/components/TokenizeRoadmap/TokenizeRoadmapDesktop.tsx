@@ -13,7 +13,7 @@ type ITableRowProps = {
 export function TokenizeRoadmap(): JSX.Element {
   return (
     <TableWrapper>
-      <TableHeader><span>VIRTUAL TOKENIZE</span><span>2021</span></TableHeader>
+      <TableHeader><span>GENESIS DISTRIBUTION</span><span>2021</span></TableHeader>
       <TableBody>
         <TableRow width={40}>
           <span>40%</span><TableRowText>COMMUNITY TREASURY</TableRowText>

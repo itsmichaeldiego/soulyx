@@ -45,7 +45,7 @@ export function TokenizeRoadmap(): JSX.Element {
           <span>AIRDROP</span><span>5%</span>
         </TableRow>
       </TableBody>
-      <TableHeader><TableHeaderText>VIRTUAL TOKENIZE</TableHeaderText><TableHeaderText>&nbsp; &nbsp; &nbsp; &nbsp;2021</TableHeaderText></TableHeader>
+      <TableHeader><TableHeaderText>GENESIS DISTRIBUTION</TableHeaderText><TableHeaderText>&nbsp; &nbsp; &nbsp; &nbsp;2021</TableHeaderText></TableHeader>
     </TableWrapper>
   );
 }

@@ -15,38 +15,34 @@ export function TokenizeRoadmap(): JSX.Element {
     <TableWrapper>
       <TableColorMarkers>
         <ColorMarker height={40} color="#FF3E12"></ColorMarker>
-        <ColorMarker height={20} color="rgba(255, 62, 18, 0.8)"></ColorMarker>
-        <ColorMarker height={20} color="rgba(255, 62, 18, 0.6)"></ColorMarker>
+        <ColorMarker height={30} color="rgba(255, 62, 18, 0.8)"></ColorMarker>
+        <ColorMarker height={15} color="rgba(255, 62, 18, 0.6)"></ColorMarker>
         <ColorMarker height={10} color="rgba(255, 62, 18, 0.3)"></ColorMarker>
-        <ColorMarker height={5} color="rgba(255, 62, 18, 0.2)"></ColorMarker>
         <ColorMarker height={5} color="rgba(255, 62, 18, 0.1)"></ColorMarker>
       </TableColorMarkers>
       <TableBody>
         <TableRow height={40}>
           <span>
-            COMMUNITY TREASURE
+            COMMUNITY TREASURY
           </span><span>40%</span>
         </TableRow>
-        <TableRow height={20}>
+        <TableRow height={30}>
           <span>
-            COMMUNITY TREASURE
-          </span><span>20%</span>
+            TEAM
+          </span><span>30%</span>
         </TableRow>
-        <TableRow height={20}>
+        <TableRow height={15}>
           <span>
-            COMMUNITY TREASURE
-          </span><span>20%</span>
+            SEED INVESTORS
+          </span><span>15%</span>
         </TableRow>
         <TableRow height={10}>
           <span>
-            COMMUNITY TREASURE
+            IDO+LP
           </span><span>10%</span>
         </TableRow>
         <TableRow height={5}>
           <span>AIRDROP</span><span>5%</span>
-        </TableRow>
-        <TableRow height={5}>
-          <span>INVESTORS</span><span>5%</span>
         </TableRow>
       </TableBody>
       <TableHeader><TableHeaderText>VIRTUAL TOKENIZE</TableHeaderText><TableHeaderText>&nbsp; &nbsp; &nbsp; &nbsp;2021</TableHeaderText></TableHeader>

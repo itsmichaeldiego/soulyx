@@ -90,9 +90,10 @@ const Wrapper = styled.div`
   width: 527px;
   height: 640px;
   cursor: pointer;
-  // flip properties:
   background-color: transparent;
-  margin-right: ${({ theme }) => theme.spacing(4)};
+  margin: ${({ theme }) => theme.spacing(12, 4, 12, 0)};
+  // flip properties:
+  perspective: 1000px;
   @media (max-width: 767px) {
     width: 350px;
     height: 400px;

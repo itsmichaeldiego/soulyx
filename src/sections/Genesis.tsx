@@ -34,7 +34,6 @@ export function Genesis() {
 }
 
 const LogoWrapper = styled.div`
-  max-width: 1510px;
   min-height: 1126px;
   position: relative;
   background-image: url('/images/logo.png');

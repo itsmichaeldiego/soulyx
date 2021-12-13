@@ -51,7 +51,12 @@ const TableWrapper = styled.div`
   color: ${({ theme }) => theme.cta.primary};
   display: grid;
   font-size: 16px;
-  margin: 0 40px;
+  margin: ${({ theme }) => theme.spacing(0, 5)};
+  max-width: 1440px;
+
+  @media (min-width: 1440px) {
+    margin: 0 auto;
+  }
 
   @media (max-width: 767px) {
     font-size: 14px;

@@ -20,7 +20,6 @@ export function SectionTitle({ imageUrl, alt }: ISectionTitleProps) {
 const Wrapper = styled.div`
   min-height: ${({ theme }) => `calc(100vh - ${theme.sizes.header})`};
   height: 100%;
-  max-width: 1228px;
   position: relative;
   z-index: 1;
 

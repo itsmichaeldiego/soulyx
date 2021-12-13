@@ -13,7 +13,7 @@ export function Roadmap() {
     <SectionWrapper>
       <BackgroundWrapper>
         <ImageWrapper>
-          <Image src="/images/roadmap-header.svg" alt="Know our roadmap" layout="fill" />
+          <Image src="/images/roadmap-header.svg" alt="Know our roadmap" layout="fill" objectPosition="left" />
         </ImageWrapper>
       </BackgroundWrapper>
       <SectionContent>
@@ -41,7 +41,6 @@ const SectionContent = styled.div`
 
 const ImageWrapper = styled.div`
   min-height: 624px;
-  max-width: 1280px;
   position: relative;
 
   @media (max-width: 767px) {

@@ -25,7 +25,7 @@ const Wrapper = styled.div`
   background-image: url('/images/community-faces.png');
   background-repeat: no-repeat;
   background-size: contain;
-  height: 1838px;
+  height: 150vh;
   position: relative;
 
   @media (max-width: 767px) {

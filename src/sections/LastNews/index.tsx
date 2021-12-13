@@ -6,12 +6,15 @@ import { FlipCarousel } from '../../components/FlipCarousel'
 
 import { CARDS } from './data';
 import { LinkButton } from '../../components/LinkButton';
+import { ITheme } from '../../styles/theme';
 
 type ICardProps = {
+  theme: ITheme;
   variant: string;
 }
 
 type IButtonWrapperProps = {
+  theme: ITheme;
   variant: string;
 }
 
@@ -46,8 +49,8 @@ export function LastNews() {
 }
 
 const Title = styled.div`
-  font-size: 16vw;
-  line-height: 16vw;
+  font-size: 15vw;
+  line-height: 15vw;
   font-family: ${({ theme }) => theme.font.secondary};
 `
 
@@ -91,7 +94,7 @@ const LogosWrapper = styled.div`
 
 const CardsWrapper = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   // TODO: extra bottom padding is added because logos svg is not centered - remove this once fixed
   padding-bottom: ${({ theme }) => theme.spacing(3)};
 
@@ -105,42 +108,22 @@ const Card = styled.div`
   height: 464px;
   width: 640px;
   padding: ${({ theme }) => theme.spacing(6)};
+  margin: ${({ theme }) => theme.spacing(0, 6)};
   display: flex;
   flex-direction: column;
-  border-radius: 24px;
+  border-radius: ${({ theme }) => theme.spacing(3)};
 
-  ${({ variant }: ICardProps) =>
-    variant === 'primary' &&
-    `
-      // TODO: consume from theme? for some reason it doesn't work here
-      background-color: #FF3E12;
+  ${({ theme, variant }: ICardProps) =>
+    variant === 'primary' && `
+      background-color: ${theme.bg.secondary};
       color: white;
-      &:hover {
-        border: 1px solid #FF3E12;
-        background-color: #ECECEC;
-        color: #FF3E12;
-        ${ButtonWrapper} {
-          color: #FF3E12;
-          border-color: #FF3E12;
-        }
-      }
     `}
 
-  ${({ variant }: ICardProps) =>
+  ${({ theme, variant }: ICardProps) =>
     variant === 'secondary' &&
     `
-      border: 1px solid #FF3E12;
-      background-color: #ECECEC;
-
-      &:hover {
-        border: none;
-        background-color: #FF3E12;
-        color: white;
-        ${ButtonWrapper} {
-          color: white;
-          border-color: white;
-        }
-      }
+      border: 1px solid ${theme.border.primary};
+      background-color: ${theme.bg.primary};
   `}
 
   @media (max-width: 767px) {
@@ -184,18 +167,18 @@ const ButtonWrapper = styled(LinkButton)`
   margin-top: auto;
   padding: ${({ theme }) => theme.spacing(4)};
 
-  ${({ variant }: IButtonWrapperProps) =>
+  ${({ theme, variant }: IButtonWrapperProps) =>
     variant === 'primary' &&
     `
-      color: white;
-      border-color: white;
+      color: ${theme.text.tertiary};
+      border-color: ${theme.border.secondary};
     `}
 
-  ${({ variant }: IButtonWrapperProps) =>
+  ${({ theme, variant }: IButtonWrapperProps) =>
     variant === 'secondary' &&
     `
-      color: #FF3E12;
-      border-color: #FF3E12;
+      color: ${theme.text.primary};
+      border-color: ${theme.border.primary};
     `}
 
   @media (max-width: 767px) {

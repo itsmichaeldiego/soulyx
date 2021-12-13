@@ -22,7 +22,7 @@ export function GetSOULx() {
 
 const Wrapper = styled.div`
   background-image: url('/images/space-man-suspended-soul.png');
-  background-position: 0% 0%;
+  background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 1820px;
@@ -76,7 +76,6 @@ const GetButton = styled(LinkButton)`
 const SuspendedSoulWrapper = styled.div`
   margin-left: ${({ theme }) => theme.spacing(5)};
   margin-top: ${({ theme }) => theme.spacing(15)};
-  max-width: 1420px;
   min-height: 300px;
   position: relative;
 

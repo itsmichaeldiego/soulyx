@@ -8,7 +8,7 @@ export function Intro() {
   return (
     <>
       <LogoWrapper>
-        <Image src="/images/soulx.svg" alt="SoulX Banner" layout="fill" objectFit="scale-down" />
+        <Image src="/images/soulx.svg" alt="SoulX Banner" layout="fill" />
       </LogoWrapper>
       <DiscoverSection text="DISCOVER THE NEW TOKEN BY SUSPENDED SOUL" />
     </>
@@ -16,7 +16,7 @@ export function Intro() {
 }
 
 const LogoWrapper = styled.div`
-  min-height: 584px;
+  min-height: ${({ theme }) => `calc(100vh - ${theme.sizes.header} - ${theme.spacing(12)})`};
   position: relative;
   background-image: url('/images/logo.png');
   background-repeat: no-repeat;

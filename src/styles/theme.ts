@@ -13,6 +13,7 @@ export interface ITheme {
   bg: { [key in EHierarchies]?: string }
   cta: { [key in EHierarchies]?: string }
   text: { [key in EHierarchies]?: string }
+  border: { [key in EHierarchies]?: string }
   font: { [key in EHierarchies]?: string }
   spacing: ISpacingFn
   sizes: { [key: string]: string }
@@ -43,9 +44,14 @@ export const theme: ITheme = {
     primary: colors.vermillion,
     secondary: colors.black,
   },
+  border: {
+    primary: colors.vermillion,
+    secondary: colors.white,
+  },
   text: {
     primary: colors.vermillion,
     secondary: colors.black,
+    tertiary: colors.white,
   },
   font: {
     primary: fonts.roboto,

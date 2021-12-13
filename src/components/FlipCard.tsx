@@ -3,6 +3,7 @@ import styled, { ThemeContext } from 'styled-components';
 import Image from 'next/image';
 
 import { getPad } from '../lib/utils'
+import { useMobileMediaQuery } from '../lib/mediaQueryHelper';
 
 import { Icon } from '../components/Icon'
 import { Link } from '../components/Link'
@@ -27,6 +28,7 @@ type IContainerProps = {
 export function FlipCard({ card, index }: IFlipCardProps) {
   const theme = useContext(ThemeContext);
   const [flipped, setFlipped] = useState(false)
+  const isMobile = useMobileMediaQuery();
 
   const handleFlip = useCallback(() => setFlipped(!flipped), [flipped]);
 
@@ -39,11 +41,11 @@ export function FlipCard({ card, index }: IFlipCardProps) {
               <span>{getPad(index)}</span>
               <span>{card.name}</span>
             </Aside>
-            <Image src={card.imageUrl} alt={card.name} width="240" height="360" />
+            <Image src={card.imageUrl} alt={card.name} width={isMobile ? 154 : 240} height={isMobile ? 231 : 360} />
           </TopSection>
           <Footer>
             <IconWrapper>
-              <Icon icon="arrow-right" color={theme.cta.secondary} size={46} />
+              <Icon icon="arrow-right" color={theme.cta.secondary} size={isMobile ? 24 : 46} />
             </IconWrapper>
             <Title>{card.title}</Title>
           </Footer>
@@ -52,7 +54,7 @@ export function FlipCard({ card, index }: IFlipCardProps) {
           <TopSection>
             <BackAside>
               <span>{getPad(index)}</span>
-              <Icon icon="arrow-left" size={46} />
+              <Icon icon="arrow-left" size={isMobile ? 24 : 46} />
             </BackAside>
             <Details>
               <Description>{card.description}</Description>
@@ -76,6 +78,10 @@ const Wrapper = styled.div`
   // flip properties:
   background-color: transparent;
   margin-right: ${({ theme }) => theme.spacing(4)};
+  @media (max-width: 767px) {
+    width: 330px;
+    height: 400px;
+  }
 `;
 
 const Container = styled.div`
@@ -124,6 +130,9 @@ const Aside = styled.div`
 
 const BackAside = styled(Aside)`
   padding-bottom: ${({ theme }) => theme.spacing(16)};
+  @media (max-width: 767px) {
+    padding-bottom: ${({ theme }) => theme.spacing(8)};
+  }
 `
 
 const Footer = styled.div`
@@ -138,6 +147,10 @@ const Title = styled.h5`
   font-style: normal;
   font-weight: normal;
   font-size: 32px;
+  @media (max-width: 767px) {
+    font-size: 16px;
+    line-height: 16px;
+  }
 `
 
 const IconWrapper = styled.div`
@@ -151,11 +164,18 @@ const Description = styled.div`
   font-size: 14px;
   line-height: 26px;
   font-weight: 300;
-  `
+  @media (max-width: 767px) {
+    font-size: 12px;
+    line-height: 14px;
+  }
+`
 
 const Details = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: ${({ theme }) => theme.spacing(10, 3, 3, 6)};
+  @media (max-width: 767px) {
+    padding: ${({ theme }) => theme.spacing(0, 2, 0, 2)};
+  }
 `

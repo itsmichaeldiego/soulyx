@@ -49,6 +49,10 @@ const ImageWrapper = styled.div`
     min-height: 96px;
     max-width: 329px;
   }
+
+  @media (min-width: 1441px) {
+    transform: scale(1.2);
+  }
 `;
 
 const ButtonWrapper = styled.div`
@@ -84,5 +88,9 @@ const SuspendedSoulWrapper = styled.div`
     min-height: 96px;
     margin: 0;
     margin-top: -18px;
+  }
+
+  @media (min-width: 1441px) {
+    transform: scale(1.2);
   }
 `;

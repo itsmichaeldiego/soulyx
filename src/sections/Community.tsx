@@ -32,6 +32,10 @@ const Wrapper = styled.div`
     background-size: contain;
     height: 624px;
   }
+
+  @media (min-width: 1441px) {
+    // background-size: cover;
+  }
 `;
 
 const FloatingText = styled.div`

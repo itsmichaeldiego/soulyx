@@ -61,6 +61,10 @@ const HeaderImage = styled.div`
   @media (max-width: 767px) {
     min-height: 168px;
   }
+
+  @media (min-width: 1441px) {
+    transform: scale(1.2);
+  }
 `;
 
 const Content = styled.div`
@@ -116,6 +120,12 @@ const HandSection = styled.div`
     background-size: cover;
     background-position: 0 0;
     margin-left: ${({ theme }) => theme.spacing(-3)};
+    margin-right: ${({ theme }) => theme.spacing(-3)};
+  }
+
+  @media (min-width: 1441px) {
+    background-size: cover;
+    margin-left: ${({ theme }) => theme.spacing(-9)};
     margin-right: ${({ theme }) => theme.spacing(-3)};
   }
 `;

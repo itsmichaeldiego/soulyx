@@ -50,7 +50,7 @@ const BackgroundWrapper = styled.div`
     background-size: 35%;
     background-position: right -16% top 60%;
   }
-`
+`;
 
 const FaqLink = styled.a`
   text-decoration: underline;

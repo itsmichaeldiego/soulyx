@@ -64,8 +64,6 @@ const StackedBarWrapper = styled.div`
 
   &:first-of-type {
     border-bottom: 1px solid ${({ theme }) => theme.cta.primary};
-    // Split 'Community Treasure' text into separate lines
-    word-spacing: 999px;
   }
 
   &:last-of-type {
@@ -79,6 +77,7 @@ const InnerLabel = styled.div`
   opacity: 0;
   transition: opacity 0.5s ease-in;
   transition-delay: 0.5s;
+  white-space: pre-line;
 
   ${({ shouldPosition, fixedLabel }: IInnerLabelProps) =>
    shouldPosition && !fixedLabel && `

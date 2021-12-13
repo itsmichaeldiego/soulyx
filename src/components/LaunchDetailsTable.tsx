@@ -7,7 +7,7 @@ type ILaunchDetailsTableProps = {
 };
 
 const ROW_LIMIT = 5;
-const VIEW_MORE_AMOUNT = 3;
+const VIEW_MORE_AMOUNT = 5;
 
 export function LaunchDetailsTable({ data }: ILaunchDetailsTableProps): JSX.Element {
   const isMobile = useMobileMediaQuery();

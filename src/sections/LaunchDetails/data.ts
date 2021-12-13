@@ -1,41 +1,38 @@
 export const LAUNCH_DETAILS_DATA = [
   {
-    name: "Fecha",
-    description: "1 de Noviembre 18hs UTC durante 48 horas",
+    name: "Date",
+    description: "December 15 at 18 UTC, during for 48 hours",
   },
   {
-    name: "Suministro",
-    description: "23.000.000 SOULx (10% del suministro total)",
+    name: "Supply",
+    description: "23.500.000 $SOULx (10% of the total supply)",
   },
   {
-    name: "Moneda de oferta",
+    name: "Offer currency",
     description: "ETH",
   },
   {
-    name: "Modelo de subasta",
-    description: "Subasta holandesa",
+    name: "Auction model",
+    description: "Dutch auction",
   },
   {
-    name: "Oferta inicial",
-    description: "$ 0.000400",
+    name: "Starting price",
+    description: "0.000140 ETH",
   },
   {
-    name: "Oferta minima",
-    description: "$ 0.000014",
+    name: "Minimum offer",
+    description: "0.000023 ETH",
   },
   {
-    name: "Maxima capitalizacion de mercado inicial",
-    description: "$ 4.2M ($ 0.2 x 21M SOULx)",
-    status: "Developing",
-    year: 2020,
-    quarter: "Q4",
+    name: "Maximum initial market capitalization",
+    description: "3290.00 ETH",
   },
   {
-    name: "Min. capitalizacion de mercado inicial",
-    description: "$ 2.5M ($ 0.12 x 21M SOULx)",
+    name: "Minimum initial market capitalization",
+    description: "540.50 ETH",
   },
   {
-    name: "Enlace",
+    name: "Link",
     description: "https://miso.sushi.com/",
   },
 ];

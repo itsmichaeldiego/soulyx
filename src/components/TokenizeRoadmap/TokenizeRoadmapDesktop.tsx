@@ -16,30 +16,26 @@ export function TokenizeRoadmap(): JSX.Element {
       <TableHeader><span>VIRTUAL TOKENIZE</span><span>2021</span></TableHeader>
       <TableBody>
         <TableRow width={40}>
-          <span>40%</span><TableRowText>COMMUNITY TREASURE</TableRowText>
+          <span>40%</span><TableRowText>COMMUNITY TREASURY</TableRowText>
         </TableRow>
-        <TableRow width={20}>
-          <span>20%</span><TableRowText>COMMUNITY TREASURE</TableRowText>
+        <TableRow width={30}>
+          <span>30%</span><TableRowText>TEAM</TableRowText>
         </TableRow>
-        <TableRow width={20}>
-          <span>20%</span><TableRowText>COMMUNITY TREASURE</TableRowText>
+        <TableRow width={15}>
+          <span>15%</span><TableRowText>SEED INVESTORS</TableRowText>
         </TableRow>
         <TableRow width={10}>
-          <span>10%</span><TableRowText>COMMUNITY TREASURE</TableRowText>
+          <span>10%</span><TableRowText>IDO+LP</TableRowText>
         </TableRow>
         <TableRow width={5}>
           <span>5%</span><TableRowText>AIRDROP</TableRowText>
         </TableRow>
-        <TableRow width={5}>
-          <span>5%</span><TableRowText>INVESTORS</TableRowText>
-        </TableRow>
       </TableBody>
       <TableFooter>
         <ColorMarker width={40} color="#FF3E12"></ColorMarker>
-        <ColorMarker width={20} color="rgba(255, 62, 18, 0.8)"></ColorMarker>
-        <ColorMarker width={20} color="rgba(255, 62, 18, 0.6)"></ColorMarker>
+        <ColorMarker width={30} color="rgba(255, 62, 18, 0.8)"></ColorMarker>
+        <ColorMarker width={15} color="rgba(255, 62, 18, 0.6)"></ColorMarker>
         <ColorMarker width={10} color="rgba(255, 62, 18, 0.3)"></ColorMarker>
-        <ColorMarker width={5} color="rgba(255, 62, 18, 0.2)"></ColorMarker>
         <ColorMarker width={5} color="rgba(255, 62, 18, 0.1)"></ColorMarker>
       </TableFooter>
     </TableWrapper>

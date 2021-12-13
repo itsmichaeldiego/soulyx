@@ -4,17 +4,15 @@ export const CHART_DATA = [
   {
     name: "2021",
     stacks: [
-      { value: calculateHeight(2), label: "AIRDROP", color: "#EEDBD6" },
       { value: calculateHeight(10), label: "IDO + LP", color: "#F2B8AB" },
-      { value: calculateHeight(5), label: "INVESTORS", color: "#ECECEC" },
+      { value: calculateHeight(5), label: "SEED INVESTORS", color: "#ECECEC" },
     ]
   },
   {
     name: "2022",
     stacks: [
-      { value: calculateHeight(2), label: "AIRDROP", color: "#EEDBD6" },
-      { value: calculateHeight(11), label: "TEAM", color: "#F2B8AB" },
-      { value: calculateHeight(12.5), label: "PARTNERS", color: "#ECECEC" },
+      { value: calculateHeight(10), label: "SEED INVESTORS", color: "#F2B8AB" },
+      { value: calculateHeight(15), label: "TEAM", color: "#ECECEC" },
     ]
   },
   {
@@ -22,16 +20,15 @@ export const CHART_DATA = [
     stacks: [
       // NOTE: `fixedLabel` attribute shouldn't legally exist
       // it's only purpose is to match first 'Community Treasure' position with design
-      { value: calculateHeight(10), label: "COMMUNITY TREASURE", color: "#EEDBD6", fixedLabel: true },
-      { value: calculateHeight(1.5), label: "AIRDROP", color: "#F2B8AB" },
-      { value: calculateHeight(7.5), label: "TEAM", color: "#F6A897" },
-      { value: calculateHeight(9), label: "PARTNERS", color: "#ECECEC" },
+      { value: calculateHeight(10), label: "COMMUNITY\nTREASURY", color: "#EEDBD6", fixedLabel: true },
+      { value: calculateHeight(5), label: "AIRDROP", color: "#F2B8AB" },
+      { value: calculateHeight(13), label: "TEAM", color: "#ECECEC" },
     ]
   },
   {
     name: "2024",
     stacks: [
-      { value: calculateHeight(30), label: "COMMUNITY TREASURE", color: "#F6A897" },
+      { value: calculateHeight(30), label: "COMMUNITY\nTREASURY", color: "#F6A897" },
       { value: calculateHeight(2.5), label: "AIRDROP", color: "#ECECEC" },
     ]
   },

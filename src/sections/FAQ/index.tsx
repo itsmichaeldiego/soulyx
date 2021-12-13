@@ -12,7 +12,7 @@ export function FAQ() {
   return (
     <Section>
       <ImageWrapper>
-        <Image src="/images/questions.svg" alt="SoulX Banner" layout="fill" />
+        <Image src="/images/faq.svg" alt="SoulX Banner" layout="fill" />
       </ImageWrapper>
       <TextLine style={{ maxWidth: 240 }}>FREQUENTLY ASKED QUESTIONS</TextLine>
       <FaqTable data={FAQ_DATA} />

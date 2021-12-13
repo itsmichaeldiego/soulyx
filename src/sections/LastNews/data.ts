@@ -3,8 +3,8 @@ import { IFlipCard } from '../../components/FlipCard'
 export const CARDS: IFlipCard[] = [
   {
     name: '',
-    title: 'THE SOULX SITE APPLIED FOR THE AWWWARDS 2021',
-    description: `The new and acclaimed SOULX project applied with its landing page for the awwwards 2021. Awwwards are the Website Awards that recognize and promote the talent and effort of the leading thinkers in tech & digital talent on design, creativity and innovation on the Internet. Our team has been working passionately on this website, which represents a big leap into our project’s new phase: a digital space where we all poured our hearts and souls into, created solely for the community to dive deep into and get to know us better. Transparency and fairness are our core values, and that is why we want to share our roadmap with all of you. Suspended SOUL's developers, graphic designers and creative copywriters, led by the creative, marketing and operative directors, are the great minds behind this major step, and it would be a dream to have this collective creation recognized by such a prestigious award.`,
+    title: 'THE SOULx SITE APPLIED FOR THE AWWWARDS 2021',
+    description: `The new and acclaimed SOULx project applied with its landing page for the awwwards 2021. Awwwards are the Website Awards that recognize and promote the talent and effort of the leading thinkers in tech & digital talent on design, creativity and innovation on the Internet. Our team has been working passionately on this website, which represents a big leap into our project’s new phase: a digital space where we all poured our hearts and souls into, created solely for the community to dive deep into and get to know us better. Transparency and fairness are our core values, and that is why we want to share our roadmap with all of you. Suspended SOUL's developers, graphic designers and creative copywriters, led by the creative, marketing and operative directors, are the great minds behind this major step, and it would be a dream to have this collective creation recognized by such a prestigious award.`,
     imageUrl: '/images/astronaut-news-1.png',
   },
   {
@@ -16,7 +16,7 @@ export const CARDS: IFlipCard[] = [
   {
     name: '',
     title: `HOW TO PARTICIPATE IN THE IDO NEXT DECEMBER 15`,
-    description: `Suspended Soul is launching an IDO via a decentralized liquidity exchange on December 15th, 2021, presenting SOULX. Our token sales will distribute 10% of the total supply through a Dutch auction via https://miso.sushi.com/. A Dutch auction is a type of auction in which the token's starting price is launched higher, and starts decreasing with time. The eventual price offered is determined once all the tokens are sold. What do you need to know to get ready?`,
+    description: `Suspended Soul is launching an IDO via a decentralized liquidity exchange on December 15th, 2021, presenting SOULx. Our token sales will distribute 10% of the total supply through a Dutch auction via https://miso.sushi.com/. A Dutch auction is a type of auction in which the token's starting price is launched higher, and starts decreasing with time. The eventual price offered is determined once all the tokens are sold. What do you need to know to get ready?`,
     imageUrl: '/images/astronaut-news-3.png',
   },
 ]

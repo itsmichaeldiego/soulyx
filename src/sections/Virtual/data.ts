@@ -3,8 +3,8 @@ export const VIRTUAL_CARDS = [
     number: "01",
     title: "METAVERSE",
     imageUrl: "/images/astronaut-helmet.png",
-    description: "SOULX represents all of our efforts of integrating a wide prism of possible experiences into one single immersive artistic endeavour. One which will allow all its community members, eager to take part into an integral artistic EXPERIENCE, to dive deep into a project that will make their distant dreams a virtual reality. It is the entrance to a rich universe, full of multidisciplinary and transversal possibilities that mashes together individual and collective realities, formats and timezones.",
-    descriptionShort: "SOULX represents all of our efforts of integrating a wide prism of possible experiences into one single immersive artistic endeavour. It is the entrance to a rich universe, full of multidisciplinary and transversal possibilities that mashes together individual and collective realities, formats and timezones.",
+    description: "SOULx represents all of our efforts of integrating a wide prism of possible experiences into one single immersive artistic endeavour. One which will allow all its community members, eager to take part into an integral artistic EXPERIENCE, to dive deep into a project that will make their distant dreams a virtual reality. It is the entrance to a rich universe, full of multidisciplinary and transversal possibilities that mashes together individual and collective realities, formats and timezones.",
+    descriptionShort: "SOULx represents all of our efforts of integrating a wide prism of possible experiences into one single immersive artistic endeavour. It is the entrance to a rich universe, full of multidisciplinary and transversal possibilities that mashes together individual and collective realities, formats and timezones.",
   },
   {
     number: "02",

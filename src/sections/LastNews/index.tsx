@@ -36,9 +36,9 @@ export function LastNews() {
           <ButtonWrapper variant="primary" text="DOWNLOAD PDF" href="https://miso.sushi.com/" />
         </Card>
         <Card variant="secondary">
-          <CardTitle short>GET SOULX</CardTitle>
+          <CardTitle short>GET SOULx</CardTitle>
           <CardText>Open up a big door into the future and start investing on $SOULx now, a new virtual economy.</CardText>
-          <ButtonWrapper variant="secondary" text="GET SOULX" href="https://miso.sushi.com/" />
+          <ButtonWrapper variant="secondary" text="GET SOULx" href="https://miso.sushi.com/" />
         </Card>
       </CardsWrapper>
     </>

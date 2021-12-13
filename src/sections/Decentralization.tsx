@@ -40,7 +40,7 @@ export function Decentralization() {
         />
         <TextSection
           align={isMobile ? 'center' : 'flex-end'}
-          title="SOULX UTILITY"
+          title="SOULx UTILITY"
           text={`NFT Access Pass: you will be able to swap SOULx for NFTs that serve as access tickets for your favorite artistic and social events. Token holders can simply buy their SOULx for all the commodities it provides, which includes: access to total experience and immersive art events happening all around the world & on different metaverses, and access to virtual and physical galleries from all around the globe, as well as access to exclusive auctions. SOULx tokens can be also used for tipping creatives in the same way as the famous "tip jars" that are being used by some websites today through apps like Venmo or Paypal. In this way, fans will be able to donate tokens as a means of compensating or rewarding their favorite creators.`}
         />
         <TextSection

@@ -11,7 +11,7 @@ type IExpandedProps = {
 }
 
 const ROW_LIMIT = 5;
-const VIEW_MORE_AMOUNT = 3;
+const VIEW_MORE_AMOUNT = 5;
 
 export function FaqTable({ data }: IFaqTableProps): JSX.Element {
   const isDesktop = useDesktopMediaQuery();

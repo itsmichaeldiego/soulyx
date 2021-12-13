@@ -21,9 +21,10 @@ export function FAQ() {
 }
 
 const ImageWrapper = styled.div`
-  min-height: 216px;
   height: 100%;
-  max-width: 1420px;
+  margin-left: ${({ theme }) => theme.spacing(6)};
+  max-width: 600px;
+  min-height: 216px;
   position: relative;
 
   @media (max-width: 767px) {

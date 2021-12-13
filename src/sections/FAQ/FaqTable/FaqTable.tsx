@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { useDesktopMediaQuery } from '../../../lib/mediaQueryHelper';
 
 type IFaqTableProps = {
   data: any[];
@@ -13,7 +14,8 @@ const ROW_LIMIT = 5;
 const VIEW_MORE_AMOUNT = 3;
 
 export function FaqTable({ data }: IFaqTableProps): JSX.Element {
-  const [rowLimit, setRowLimit] = useState(ROW_LIMIT);
+  const isDesktop = useDesktopMediaQuery();
+  const [rowLimit, setRowLimit] = useState(isDesktop ? 10 : ROW_LIMIT);
   const [viewMore, setViewMore] = useState(true);
   const [selectedQuestionIds, setSelectedQuestionIds] = useState<any[]>([]);
 
@@ -55,7 +57,7 @@ export function FaqTable({ data }: IFaqTableProps): JSX.Element {
         )}
       </TableBody>
       <ViewMoreWrapper>
-        <ViewMoreButton onClick={handleViewMore}>{viewMore ? 'View more' : 'View less'}</ViewMoreButton>
+        {!isDesktop && <ViewMoreButton onClick={handleViewMore}>{viewMore ? 'View more' : 'View less'}</ViewMoreButton>}
       </ViewMoreWrapper>
     </TableWrapper>
   );

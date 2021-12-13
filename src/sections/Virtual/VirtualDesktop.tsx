@@ -37,7 +37,7 @@ export function Virtual() {
           </ColumnImageWrapper>
           <Text style={{ marginTop: 30, paddingLeft: 60, maxWidth: 350 }}>{VIRTUAL_CARDS[0].description}</Text>
         </ImageColumn>
-        <ImageColumn style={{ marginLeft: 300, marginTop: 120 }}>
+        <ImageColumn style={{ marginLeft: '20%', marginTop: 120 }}>
           <ColumnTitle>
             <TitleNumber>{VIRTUAL_CARDS[1].number}</TitleNumber>
             <TitleName>{VIRTUAL_CARDS[1].title}</TitleName>
@@ -55,7 +55,7 @@ export function Virtual() {
         <LogoImageWrapper style={{ marginLeft: -520, marginRight: -150, marginTop: -80 }}>
           <Image src="/images/virtual-background-text.svg" alt="Virtual background text" layout="fill" />
         </LogoImageWrapper>
-        <ImageColumn style={{ position: 'absolute', right: 80, top: 210 }}>
+        <ImageColumn style={{ position: 'absolute', right: '8%', top: '19%' }}>
           <ColumnTitle>
             <TitleNumber>{VIRTUAL_CARDS[2].number}</TitleNumber>
             <TitleName>{VIRTUAL_CARDS[2].title}</TitleName>
@@ -77,7 +77,7 @@ export function Virtual() {
           </ColumnImageWrapper>
           <Text style={{ marginTop: 30, maxWidth: 400 }}>{VIRTUAL_CARDS[3].description}</Text>
         </ImageColumn>
-        <ImageColumn style={{ marginLeft: 218, marginTop: 300 }}>
+        <ImageColumn style={{ marginLeft: '15%', marginTop: 300 }}>
           <ColumnTitle>
             <TitleNumber>{VIRTUAL_CARDS[4].number}</TitleNumber>
             <TitleName>{VIRTUAL_CARDS[4].title}</TitleName>
@@ -101,6 +101,12 @@ const Jumbotron = styled.div`
   margin-right: -24px;
   padding: ${({ theme }) => theme.spacing(8, 6)};
   position: relative;
+
+
+  @media (min-width: 1441px) {
+    background-size: cover;
+    padding: ${({ theme }) => theme.spacing(8, 6)};
+  }
 `;
 
 const FloatingText = styled.div`
@@ -123,8 +129,12 @@ const ImageWrapper = styled.div`
 const TextBlockWrapper = styled.article`
   display: flex;
   flex-direction: column;
-  margin-left: 800px;
+  margin-left: 60%;
   max-width: 346px;
+  
+  @media (min-width: 1441px) {
+    margin-top: ${({ theme }) => theme.spacing(10)};
+  }
 `;
 
 const Title = styled.h5`
@@ -141,14 +151,14 @@ const Text = styled.p`
   margin: ${({ theme }) => theme.spacing(1, 0)};
 `;
 
-const ImageColumnsWrapper = styled.div`
-  display: flex;
-  padding-bottom: ${({ theme }) => theme.spacing(8)};
-`;
-
 const ImageColumn = styled.div`
   display: flex;
   flex-direction: column;
+`;
+
+const ImageColumnsWrapper = styled.div`
+  display: flex;
+  padding-bottom: ${({ theme }) => theme.spacing(8)};
 `;
 
 const ColumnTitle = styled.div`
@@ -184,9 +194,20 @@ const TokenVirtualWrapper = styled.div`
   overflow: hidden;
   margin-left: -72px;
   margin-right: -24px;
+
+  @media (min-width: 1441px) {
+    ${ImageColumn} {
+      top: 30% !important;
+      right: 4% !important;
+    }
+  }
 `;
 
 const LogoImageWrapper = styled.div`
   height: 515px;
   position: relative;
+
+  @media (min-width: 1441px) {
+    height: 615px;
+  }
 `;

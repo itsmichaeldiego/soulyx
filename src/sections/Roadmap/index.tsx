@@ -12,9 +12,9 @@ export function Roadmap() {
   return (
     <SectionWrapper>
       <BackgroundWrapper>
-        <ImageWrapper>
+        <HeaderWrapper>
           <Image src="/images/roadmap-header.svg" alt="Know our roadmap" layout="fill" objectPosition="left" />
-        </ImageWrapper>
+        </HeaderWrapper>
       </BackgroundWrapper>
       <SectionContent>
         <TextLine>A GROUNDBREAKING PARADIGM SHIFT</TextLine>
@@ -39,13 +39,17 @@ const SectionContent = styled.div`
   }
 `;
 
-const ImageWrapper = styled.div`
+const HeaderWrapper = styled.div`
   min-height: 624px;
   position: relative;
 
   @media (max-width: 767px) {
     min-height: 168px;
     max-width: 240px;
+  }
+
+  @media (min-width: 1441px) {
+    max-width: 1268px;
   }
 `;
 

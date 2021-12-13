@@ -28,7 +28,8 @@ const ImageWrapper = styled.div`
   position: relative;
 
   @media (max-width: 767px) {
+    margin-left: 0;
     min-height: 56px;
-    max-width: 340px;
+    max-width: 200px;
   }
 `;

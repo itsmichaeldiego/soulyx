@@ -52,11 +52,17 @@ const Title = styled.div`
 `
 
 const Wrapper = styled.div`
-  padding: ${({ theme }) => theme.spacing(20, 0, 20, 5)};
+  padding: ${({ theme }) => theme.spacing(20, 5, 20, 10)};
   position: relative;
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url('/images/news-door.png');
+  margin-left: ${({ theme }) => theme.spacing(-9)};
+  margin-right: ${({ theme }) => theme.spacing(-3)};
+
+  @media (max-width: 767px) {
+    margin-left: ${({ theme }) => theme.spacing(-3)};
+  }
 `;
 
 const LogosWrapper = styled.div`

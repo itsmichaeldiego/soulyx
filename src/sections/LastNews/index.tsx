@@ -71,6 +71,8 @@ const LogosWrapper = styled.div`
   height: 104px;
 
   @media (max-width: 767px) {
+    // TODO: remove when adding animated svg
+    display: none;
     margin: ${({ theme }) => theme.spacing(4)};
     height: 72px;
     width: 666px;

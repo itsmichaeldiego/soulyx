@@ -55,7 +55,7 @@ export function Virtual() {
         <LogoImageWrapper style={{ marginLeft: -520, marginRight: -150, marginTop: -80 }}>
           <Image src="/images/virtual-background-text.svg" alt="Virtual background text" layout="fill" />
         </LogoImageWrapper>
-        <ImageColumn style={{ position: 'absolute', right: 46, top: 200 }}>
+        <ImageColumn style={{ position: 'absolute', right: 80, top: 210 }}>
           <ColumnTitle>
             <TitleNumber>{VIRTUAL_CARDS[2].number}</TitleNumber>
             <TitleName>{VIRTUAL_CARDS[2].title}</TitleName>
@@ -178,12 +178,15 @@ const ColumnImageWrapper = styled.div`
 const TokenVirtualWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  margin-bottom: 140px;
+  padding-bottom: 160px;
   margin-top: 60px;
   position: relative;
+  overflow: hidden;
+  margin-left: -72px;
+  margin-right: -24px;
 `;
 
 const LogoImageWrapper = styled.div`
-  min-height: 515px;
+  height: 515px;
   position: relative;
 `;

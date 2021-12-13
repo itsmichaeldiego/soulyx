@@ -15,8 +15,8 @@ export function LastNews() {
 }
 
 const Title = styled.div`
-  font-size: 238px;
-  line-height: 215px;
+  font-size: 16vw;
+  line-height: 16vw;
   font-family: ${({ theme }) => theme.font.secondary};
 `
 

@@ -41,7 +41,7 @@ export function FlipCard({ card, index }: IFlipCardProps) {
               <span>{getPad(index)}</span>
               <span>{card.name}</span>
             </Aside>
-            <Image src={card.imageUrl} alt={card.name} width={isMobile ? 154 : 240} height={isMobile ? 231 : 360} />
+            <Image src={card.imageUrl} alt={card.name} width={isMobile ? 150 : 240} height={isMobile ? 231 : 360} />
           </TopSection>
           <Footer>
             <IconWrapper>
@@ -79,7 +79,7 @@ const Wrapper = styled.div`
   background-color: transparent;
   margin-right: ${({ theme }) => theme.spacing(4)};
   @media (max-width: 767px) {
-    width: 330px;
+    width: 350px;
     height: 400px;
   }
 `;

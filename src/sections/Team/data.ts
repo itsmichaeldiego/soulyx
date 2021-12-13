@@ -23,7 +23,7 @@ export const CARDS: IFlipCard[] = [
     viewmoreUrl: 'https://twitter.com/nachoalthabe',
   },
   {
-    name: 'JOS @LOOKATTHEPARKINGLOT',
+    name: 'JOS',
     title: 'SUSPENDED SOUL´S CHIEF CURATOR',
     description: 'Jos is a digital artist and art curator from Buenos Aires, Argentina. His main interests when creating new artworks are surreal scenarios, dystopian imagery and the representation of our link to the cosmos. He started his journey in the NFT community as a digital artist in October 2020, and his works are already in the hands of prestigious collectors from all over the world. As a curator, his focus lies upon the pursuit of artistic excellence with the goal of amplifying new generations of creators’ voices in the community. He is the curatorial mastermind and the heart of Suspended Soul: through his analysis and dissemination of artworks made by starring emerging figures, he brings to life the conceptual ideas behind every collection, as well as crafting the broadly acclaimed Suspended Soul‘s curatorial reviews, which add value to the experience for both artists and collectors.',
     imageUrl: '/images/jos.png',

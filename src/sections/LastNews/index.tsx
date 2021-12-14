@@ -94,13 +94,19 @@ const LogosWrapper = styled.div`
 
 const CardsWrapper = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   // TODO: extra bottom padding is added because logos svg is not centered - remove this once fixed
   padding-bottom: ${({ theme }) => theme.spacing(3)};
 
   @media (max-width: 767px) {
     flex-direction: column;
     padding-bottom: ${({ theme }) => theme.spacing(3)};
+    // TODO: remove this margin when adding back logos
+    margin-top: ${({ theme }) => theme.spacing(8)};
+  }
+
+  @media (min-width: 1441px) {
+    justify-content: center;
   }
 `;
 
@@ -108,7 +114,6 @@ const Card = styled.div`
   height: 464px;
   width: 640px;
   padding: ${({ theme }) => theme.spacing(6)};
-  margin: ${({ theme }) => theme.spacing(0, 6)};
   display: flex;
   flex-direction: column;
   border-radius: ${({ theme }) => theme.spacing(3)};
@@ -134,6 +139,10 @@ const Card = styled.div`
     &:first-of-type {
       margin-bottom: ${({ theme }) => theme.spacing(4)};
     }
+  }
+
+  @media (min-width: 1441px) {
+    margin: ${({ theme }) => theme.spacing(0, 6)};
   }
 `;
 

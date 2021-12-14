@@ -13,15 +13,15 @@ export function About() {
     <Section>
       <SectionContainer>
         <ImagesWrapper>
-          <ImageWrapper>
+          <SoulxWrapper>
             <Image src="/images/soulx-transparent.svg" alt="SOULx" layout="fill" />
-          </ImageWrapper>
+          </SoulxWrapper>
           <OverlappingImageWrapper>
             <Image src="/images/astronaut-open-helmet.png" alt="Astronaut" layout="fill" />
           </OverlappingImageWrapper>
         </ImagesWrapper>
         <TextBlockWrapper>
-          <TextBlockContainer style={{ marginLeft: 114 }} maxWidth={514}>
+          <TextBlockContainer style={{ marginLeft: '10%' }} maxWidth={514}>
             <Title>About Us</Title>
             <Text>Suspended Soul made its blockchain debut at the height of the NFT revolution. With the firm conviction of being protagonists of a historic paradigm shift in the way art is created, shared and collected, as founders of Suspended Soul we decided to offer the community a boutique alternative in a market overloaded with volume. 
               Each artist leaves their soul in their work. Suspended Soul came to honor that creative act. 
@@ -42,7 +42,7 @@ export function About() {
           </PlusBackground>
         </DAOWrapper>
         <TextBlockWrapper style={{ marginTop: -36, marginRight: 460, paddingBottom: 0 }}>
-          <TextBlockContainer maxWidth={340}>
+          <TextBlockContainer maxWidth={380}>
             <Title>SUSPENDED SOUL FOUNDATION</Title>
             <Text>Suspended Soul Foundation was created with the aim of putting into motion a strategic plan for the crafting of the website, and to start our collective journey towards total decentralization. Among its initial governance functions are: developing the initial website setup, moving forward with the actions needed to execute the strategic plan of the site, taking care of the community treasury and creating optimal conditions to establish good functioning decentralized mechanisms. The launch of the SOULx token and our Decentralized Governance long term vision is the cornerstone towards decentralization.
             </Text>
@@ -65,12 +65,21 @@ const ImagesWrapper = styled.div`
   height: 1420px;
   position: relative;
   padding: 20px 0;
+
+  @media (min-width: 1441px) {
+    height: 1620px;
+  }
 `;
 
-const ImageWrapper = styled.div`
+const SoulxWrapper = styled.div`
   max-width: 1160px;
   min-height: 960px;
   position: relative;
+
+  @media (min-width: 1441px) {
+    max-width: unset;
+    height: 1520px;
+  }
 `;
 
 const OverlappingImageWrapper = styled.div`
@@ -79,10 +88,11 @@ const OverlappingImageWrapper = styled.div`
   position: absolute;
   top: 240px;
   right: 80px;
-`;
 
-const SectionContainer = styled.div`
-  position: relative;
+  @media (min-width: 1441px) {
+    width: 920px;
+    min-height: 1380px;
+  }
 `;
 
 const TextBlockWrapper = styled.article`
@@ -90,6 +100,19 @@ const TextBlockWrapper = styled.article`
   flex-direction: column;
   align-items: center;
   padding: ${({ theme }) => theme.spacing(8, 0)};
+`;
+
+const SectionContainer = styled.div`
+  position: relative;
+
+  @media (min-width: 1441px) {
+    & ${TextBlockWrapper}:first-of-type {
+      margin-left: 15% !important;
+    }
+    & ${TextBlockWrapper}:nth-of-type(2) {
+      margin-left: -16% !important;
+    }
+  }
 `;
 
 const TextBlockContainer = styled.div`
@@ -101,6 +124,10 @@ const TextBlockContainer = styled.div`
     maxWidth && `
       max-width: ${maxWidth}px;
     `}
+
+  @media (min-width: 1441px) {
+    max-width: 540px;
+  }
 `;
 
 const Title = styled.h5`
@@ -121,8 +148,12 @@ const Text = styled.p`
 const DAOWrapper = styled.div`
   display: flex;
   position: relative;
-  height: 544px;
+  height: 644px;
   overflow: hidden;
+
+  @media (min-width: 1441px) {
+    height: 500px;
+  }
 `;
 
 const SideImageWrapper = styled.div`
@@ -135,11 +166,15 @@ const SideImageWrapper = styled.div`
 
 const AlphaLogoWrapper = styled.div`
   width: 967px;
-  min-height: 520px;
+  min-height: 460px;
   position: absolute;
-  bottom: 0;
+  bottom: 120px;
   right: 100px;
   z-index: 2;
+
+  @media (min-width: 1441px) {
+    width: 1360px;
+  }
 `;
 
 const PlusBackground = styled.div`
@@ -149,4 +184,9 @@ const PlusBackground = styled.div`
   top: 232px;
   left: 704px;
   z-index: 1;
+
+  @media (min-width: 1441px) {
+    top: 100px;
+    left: 860px;
+  }
 `;

@@ -63,7 +63,7 @@ const HeaderImage = styled.div`
   }
 
   @media (min-width: 1441px) {
-    transform: scale(1.2);
+    min-height: 660px;
   }
 `;
 

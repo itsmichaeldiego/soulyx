@@ -38,6 +38,10 @@ const Wrapper = styled.div`
     height: 628px;
     padding: 48px 28px;
   }
+
+  @media (min-width: 1441px) {
+    padding: ${({ theme }) => theme.spacing(10)};
+  }
 `;
 
 const ImageWrapper = styled.div`
@@ -51,7 +55,7 @@ const ImageWrapper = styled.div`
   }
 
   @media (min-width: 1441px) {
-    transform: scale(1.2);
+    min-height: 260px;
   }
 `;
 
@@ -91,6 +95,6 @@ const SuspendedSoulWrapper = styled.div`
   }
 
   @media (min-width: 1441px) {
-    transform: scale(1.2);
+    min-height: 400px;
   }
 `;

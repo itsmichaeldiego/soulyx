@@ -52,7 +52,7 @@ export const ROADMAP_TABLE_DATA = [
   },
   {
     name: "", // "Phase 1"
-    description: "Creation of the first SOULx token",
+    description: "Creation of the first Souly token",
     status: "DONE",
     year: 2021,
     quarter: "Q1",

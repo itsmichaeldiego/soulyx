@@ -48,4 +48,8 @@ const Text = styled.div`
     padding: ${({ theme }) => theme.spacing(6, 0)};
     max-width: 200px;
   }
+
+  @media (min-width: 1441px) {
+    margin: ${({ theme }) => theme.spacing(8, 28)};
+  }
 `;

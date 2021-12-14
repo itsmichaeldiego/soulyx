@@ -86,11 +86,11 @@ const Wrapper = styled.div`
   background-color: ${({ theme }) => theme.bg.primary};
   display: flex;
   flex-direction: column;
-  margin: ${({ theme }) => theme.spacing(4)};
+  margin: ${({ theme }) => theme.spacing(4, 0)};
   max-width: 1440px;
 
   @media (min-width: 1440px) {
-    margin: ${({ theme }) => `${theme.spacing(4)} auto`};
+    margin: 0 auto;
   }
 
   @media (max-width: 767px) {
@@ -110,7 +110,7 @@ const ChartWrapper = styled.div`
   width: 100%;
 
   @media (max-width: 767px) {
-    padding-left: 69px;
+    padding-left: 26%;
     padding-right: 0;
   }
 `;

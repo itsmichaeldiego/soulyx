@@ -107,7 +107,7 @@ const SectionContainer = styled.div`
 
   @media (min-width: 1441px) {
     & ${TextBlockWrapper}:first-of-type {
-      margin-left: 15% !important;
+      margin-left: 11% !important;
     }
     & ${TextBlockWrapper}:nth-of-type(2) {
       margin-left: -16% !important;
@@ -173,7 +173,7 @@ const AlphaLogoWrapper = styled.div`
   z-index: 2;
 
   @media (min-width: 1441px) {
-    width: 1360px;
+    width: 1340px;
   }
 `;
 

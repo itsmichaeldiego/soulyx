@@ -72,10 +72,6 @@ const TableWrapper = styled.div`
 
   margin: ${({ theme }) => theme.spacing(0, 5)};
 
-  @media (min-width: 1440px) {
-    margin: 0 auto;
-  }
-
   @media (max-width: 767px) {
     margin: 0;
   }

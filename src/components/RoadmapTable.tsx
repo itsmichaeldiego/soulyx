@@ -8,7 +8,6 @@ type IRoadmapTableProps = {
 };
 
 const ROW_LIMIT = 5;
-const VIEW_MORE_AMOUNT = 3;
 
 export function RoadmapTable({ data }: IRoadmapTableProps): JSX.Element {
   const [rowLimit, setRowLimit] = useState(ROW_LIMIT);
@@ -19,7 +18,7 @@ export function RoadmapTable({ data }: IRoadmapTableProps): JSX.Element {
       setRowLimit(ROW_LIMIT);
       setViewMore(true);
     } else {
-      setRowLimit(rowLimit + VIEW_MORE_AMOUNT);
+      setRowLimit(data.length);
       setViewMore(false);
     }
   };

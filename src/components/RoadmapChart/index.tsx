@@ -87,7 +87,6 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin: ${({ theme }) => theme.spacing(4, 0)};
-  max-width: 1440px;
 
   @media (min-width: 1440px) {
     margin: 0 auto;

@@ -56,7 +56,6 @@ const TableWrapper = styled.div`
   display: grid;
   font-weight: 300;
   margin: ${({ theme }) => theme.spacing(0, 5)};
-  max-width: 1440px;
 
   @media (min-width: 1440px) {
     margin: 0 auto;

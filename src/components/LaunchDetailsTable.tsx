@@ -7,7 +7,6 @@ type ILaunchDetailsTableProps = {
 };
 
 const ROW_LIMIT = 5;
-const VIEW_MORE_AMOUNT = 5;
 
 export function LaunchDetailsTable({ data }: ILaunchDetailsTableProps): JSX.Element {
   const isMobile = useMobileMediaQuery();
@@ -19,7 +18,7 @@ export function LaunchDetailsTable({ data }: ILaunchDetailsTableProps): JSX.Elem
       setRowLimit(ROW_LIMIT);
       setViewMore(true);
     } else {
-      setRowLimit(rowLimit + VIEW_MORE_AMOUNT);
+      setRowLimit(data.length);
       setViewMore(false);
     }
   };

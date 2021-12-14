@@ -30,7 +30,6 @@ const LogoWrapper = styled.div`
   margin-bottom: ${({ theme }) => theme.spacing(2)};
 
   @media (max-width: 767px) {
-    max-width: 384px;
     min-height: 254px;
     background-size: 45%;
   }

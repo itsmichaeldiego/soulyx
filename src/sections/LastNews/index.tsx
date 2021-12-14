@@ -65,6 +65,7 @@ const Wrapper = styled.div`
 
   @media (max-width: 767px) {
     margin-left: ${({ theme }) => theme.spacing(-3)};
+    padding: ${({ theme }) => theme.spacing(10, 2, 10, 2)};
   }
 `;
 

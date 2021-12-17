@@ -29,7 +29,7 @@ const Wrapper = styled.div<{ align: string }>`
   padding: ${({ theme }) => theme.spacing(10, 24)};
 
   @media (max-width: 767px) {
-    padding: ${({ theme }) => theme.spacing(6, 8)};
+    padding: ${({ theme }) => theme.spacing(6, 0)};
   }
 `
 

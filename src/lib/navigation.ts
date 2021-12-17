@@ -28,7 +28,6 @@ export const NAV_ITEMS: INavItem[] = [
     displayName: 'INTRO',
     headerName: 'INTRO',
     headerDescription: 'INTRO',
-    offset: -96,
     component: Intro,
     hideHeader: true,
   },

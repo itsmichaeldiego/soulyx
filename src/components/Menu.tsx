@@ -28,7 +28,6 @@ export function Menu({ onClose }: IMenuProps) {
         </Title>
       </Header>
       {NAV_ITEMS.map((item, index) => {
-        const offset = item.offset || 0;
         return (
           <Link
             key={item.name}
@@ -37,7 +36,7 @@ export function Menu({ onClose }: IMenuProps) {
             spy={true}
             smooth={true}
             hashSpy={true}
-            offset={isMobile ? -100 : offset}
+            offset={isMobile ? -96 : 0}
             onClick={onClose}
           >
             <CustomSectionHeader

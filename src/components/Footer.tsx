@@ -5,10 +5,14 @@ export function Footer(): JSX.Element {
   return (
     <Wrapper>
       <FooterLinks>
-        <FooterLink href="https://miso.sushi.com/">LEGAL ADVICE</FooterLink>
-        <FooterLink href="https://miso.sushi.com/">COOKIES</FooterLink>
-        <FooterLink href="https://miso.sushi.com/">PRIVACY</FooterLink>
-        <FooterLink href="https://miso.sushi.com/">CREDITS</FooterLink>
+        <FooterLink href="https://www.notion.so/suspendedsoul/TERMS-CONDITIONS-f484b21c8122490496ea64babb500d1e">
+          TERMS
+        </FooterLink>
+        {/* <FooterLink href="https://miso.sushi.com/">COOKIES</FooterLink> */}
+        <FooterLink href="https://www.notion.so/suspendedsoul/PRIVACY-POLICY-TREATMENT-OF-PERSONAL-DATA-82c8865284d94bd7ada2bcb9cb795277">
+          PRIVACY
+        </FooterLink>
+        {/* <FooterLink href="https://miso.sushi.com/">CREDITS</FooterLink> */}
       </FooterLinks>
       <MediaLinks>
         <FooterLink href="https://twitter.com/suspendedsoul_">TWITTER</FooterLink>

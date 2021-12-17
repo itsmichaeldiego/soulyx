@@ -32,7 +32,7 @@ export function Nav(): JSX.Element {
       document.body.style.overflow = 'unset';
     }
   }, [menuOpen]);
-  
+
 
   return (
     <>
@@ -40,7 +40,7 @@ export function Nav(): JSX.Element {
         <Menu onClose={() => setMenuOpen(false)} />
       )}
       <Wrapper>
-        <div onClick={() => setMenuOpen(true)}>
+        <div onClick={() => setMenuOpen(true)} role="button" style={{ cursor: 'pointer' }}>
           <Icon icon="hamburger" color={theme.cta.primary} size={30} />
         </div>
         <Indicators>
@@ -86,7 +86,7 @@ export function Nav(): JSX.Element {
             {_currentStep.displayName}
           </Link>
         </Indicators>
-        <GoTopButton onClick={() => scroll.scrollToTop()}>
+        <GoTopButton onClick={() => scroll.scrollToTop()} role="button">
           <Icon icon="chevrons-up" color={theme.cta.primary} size={12} />
           <GoTopText>ON TOP</GoTopText>
         </GoTopButton>

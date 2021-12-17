@@ -18,7 +18,7 @@ export function Menu({ onClose }: IMenuProps) {
   return (
     <Wrapper>
       <Header>
-        <div onClick={onClose} role="button">
+        <div onClick={onClose} role="button" style={{ cursor: 'pointer' }}>
           <Icon icon="arrow-left" size={26} color={theme.text.tertiary} />
         </div>
         <Title>

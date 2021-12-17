@@ -11,8 +11,8 @@ export function HomePage() {
       {NAV_ITEMS.map((item, index) => (
         <Element key={item.name} name={item.name}>
           {!item.hideHeader && (
-            <SectionHeader 
-              number={`${getPad(index + 1)} - ${getPad(NAV_ITEMS.length)}`} 
+            <SectionHeader
+              number={`${getPad(index)} - ${getPad(NAV_ITEMS.length - 1)}`}
               name={item.headerName}
               description={item.headerDescription}
             />
@@ -20,7 +20,7 @@ export function HomePage() {
           {item.component()}
         </Element>
       ))}
-    </> 
+    </>
   )
 }
 

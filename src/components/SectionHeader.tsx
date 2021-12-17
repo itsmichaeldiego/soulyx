@@ -8,9 +8,11 @@ type ISectionHeaderProps = {
   number: string;
   name: string;
   description: string;
+  hideStar?: boolean;
+  onClick?: () => void;
 }
 
-export function SectionHeader({ number, name, description }: ISectionHeaderProps) {
+export function SectionHeader({ number, name, description, hideStar, ...props }: ISectionHeaderProps) {
   const [mounted, setMounted] = useState(false);
   const isMobile = useMobileMediaQuery();
 
@@ -24,13 +26,21 @@ export function SectionHeader({ number, name, description }: ISectionHeaderProps
   }
 
   return (
-    <Wrapper>
+    <Wrapper {...props}>
       <HeaderRow><RowText>{number}</RowText></HeaderRow>
       <HeaderRow><RowText>{name}</RowText></HeaderRow>
       <HeaderRow><RowText>{description}</RowText></HeaderRow>
-      <HeaderRow><Icon icon="star" size={isMobile ? 32 : 88} /></HeaderRow>
+      <HeaderRow>
+        {!hideStar && (
+          <Icon icon="star" size={isMobile ? 32 : 88} />
+        )}
+      </HeaderRow>
     </Wrapper>
   );
+}
+
+SectionHeader.defaultProps = {
+  hideStar: false,
 }
 
 const Wrapper = styled.div`

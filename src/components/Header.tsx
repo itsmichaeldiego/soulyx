@@ -6,9 +6,9 @@ import { LinkButton } from './LinkButton';
 export function Header(): JSX.Element {
   return (
     <Wrapper>
-      <span>
+      <Title>
         Suspended Soul
-      </span>
+      </Title>
       <Actions>
         {/* <TraductionItems>
           <span>En</span>
@@ -27,6 +27,12 @@ const Wrapper = styled.header`
   justify-content: space-between;
   height: ${({ theme }) => theme.sizes.header};
   margin-bottom: ${({ theme }) => theme.spacing(6)};
+`
+
+const Title = styled.span`
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
 `
 
 const Actions = styled.div`

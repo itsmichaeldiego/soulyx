@@ -7,13 +7,13 @@ export function Footer(): JSX.Element {
       <FooterLinks>
         <FooterLink href="https://miso.sushi.com/">LEGAL ADVICE</FooterLink>
         <FooterLink href="https://miso.sushi.com/">COOKIES</FooterLink>
-        <FooterLink href="https://miso.sushi.com/">PRIVACITY</FooterLink>
+        <FooterLink href="https://miso.sushi.com/">PRIVACY</FooterLink>
         <FooterLink href="https://miso.sushi.com/">CREDITS</FooterLink>
       </FooterLinks>
       <MediaLinks>
-        <FooterLink href="https://miso.sushi.com/">TWITTER</FooterLink>
-        <FooterLink href="https://miso.sushi.com/">DISCORD</FooterLink>
-        <FooterLink href="https://miso.sushi.com/">INSTAGRAM</FooterLink>
+        <FooterLink href="https://twitter.com/suspendedsoul_">TWITTER</FooterLink>
+        <FooterLink href="https://discord.com/invite/D4EpbKBkpA">DISCORD</FooterLink>
+        <FooterLink href="https://instagram.com/suspendedsoul_">INSTAGRAM</FooterLink>
       </MediaLinks>
     </Wrapper>
   );

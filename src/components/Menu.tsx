@@ -4,8 +4,9 @@ import { Link } from 'react-scroll'
 
 import { NAV_ITEMS } from '../lib/navigation';
 import { getPad } from '../lib/utils';
-import { Icon } from './Icon';
+import { useMobileMediaQuery } from '../lib/mediaQueryHelper';
 
+import { Icon } from './Icon';
 import { SectionHeader } from './SectionHeader';
 
 type IMenuProps = {
@@ -14,6 +15,7 @@ type IMenuProps = {
 
 export function Menu({ onClose }: IMenuProps) {
   const theme = useContext(ThemeContext);
+  const isMobile = useMobileMediaQuery();
 
   return (
     <Wrapper>
@@ -25,34 +27,37 @@ export function Menu({ onClose }: IMenuProps) {
           Suspended Soul
         </Title>
       </Header>
-      {NAV_ITEMS.map((item, index) => (
-        <Link
-          key={item.name}
-          activeClass="active"
-          to={item.name}
-          spy={true}
-          smooth={true}
-          hashSpy={true}
-          offset={0}
-          onClick={onClose}
-        >
-          <CustomSectionHeader
+      {NAV_ITEMS.map((item, index) => {
+        const offset = item.offset || 0;
+        return (
+          <Link
             key={item.name}
-            number={`${getPad(index)} - ${getPad(NAV_ITEMS.length - 1)}`}
-            name={item.headerName}
-            description={item.headerDescription}
-            hideStar
-          />
-        </Link>
-
-      ))}
+            activeClass="active"
+            to={item.name}
+            spy={true}
+            smooth={true}
+            hashSpy={true}
+            offset={isMobile ? -100 : offset}
+            onClick={onClose}
+          >
+            <CustomSectionHeader
+              key={item.name}
+              number={`${getPad(index)} - ${getPad(NAV_ITEMS.length - 1)}`}
+              name={item.headerName}
+              description={item.headerDescription}
+              hideStar
+            />
+          </Link>
+  
+        )
+      })}
     </Wrapper>
   )
 }
 
 const Wrapper = styled.div`
   position: fixed;
-  z-index: 999;
+  z-index: 99999;
   top: 0;
   left: 0;
   width: 100vw;
@@ -90,5 +95,8 @@ const CustomSectionHeader = styled(SectionHeader)`
   &:hover {
     color: ${({ theme }) => theme.text.primary};
     background: transparent;
+  }
+  @media (max-width: 767px) {
+    padding: ${({ theme }) => theme.spacing(4)};
   }
 `

@@ -47,7 +47,6 @@ export function Menu({ onClose }: IMenuProps) {
               hideStar
             />
           </Link>
-  
         )
       })}
     </Wrapper>
@@ -66,6 +65,7 @@ const Wrapper = styled.div`
   overflow: auto;
   background-size: cover;
   background-repeat: no-repeat;
+  background-color: ${({ theme }) => theme.bg.primary};
   background-image: url('/images/glass-hand.png');
 `
 

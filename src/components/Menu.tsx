@@ -1,6 +1,6 @@
-import React, { useCallback, useContext } from 'react';
+import React, { useContext } from 'react';
 import styled, { ThemeContext } from 'styled-components';
-import { animateScroll as scroll } from 'react-scroll'
+import { Link } from 'react-scroll'
 
 import { NAV_ITEMS } from '../lib/navigation';
 import { getPad } from '../lib/utils';
@@ -14,14 +14,6 @@ type IMenuProps = {
 
 export function Menu({ onClose }: IMenuProps) {
   const theme = useContext(ThemeContext);
-  
-  const handleNav = useCallback((name) => {
-    scroll.scrollTo(name, {
-      duration: 1500,
-      delay: 100,
-    })
-    onClose();
-  }, [onClose]);
 
   return (
     <Wrapper>
@@ -34,14 +26,25 @@ export function Menu({ onClose }: IMenuProps) {
         </Title>
       </Header>
       {NAV_ITEMS.map((item, index) => (
-        <CustomSectionHeader
+        <Link
           key={item.name}
-          number={`${getPad(index)} - ${getPad(NAV_ITEMS.length - 1)}`}
-          name={item.headerName}
-          description={item.headerDescription}
-          hideStar
-          onClick={() => handleNav(item.name)}
-        />
+          activeClass="active"
+          to={item.name}
+          spy={true}
+          smooth={true}
+          hashSpy={true}
+          offset={0}
+          onClick={onClose}
+        >
+          <CustomSectionHeader
+            key={item.name}
+            number={`${getPad(index)} - ${getPad(NAV_ITEMS.length - 1)}`}
+            name={item.headerName}
+            description={item.headerDescription}
+            hideStar
+          />
+        </Link>
+
       ))}
     </Wrapper>
   )

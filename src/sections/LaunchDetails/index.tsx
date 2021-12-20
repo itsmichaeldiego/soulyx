@@ -15,16 +15,22 @@ export function LaunchDetails() {
           <Image src="/images/token-launch-details.svg" alt="Token launch details" layout="fill" />
         </ImageWrapper>
       </BackgroundWrapper>
-      <TextLine style={{ maxWidth: 240 }}>OUR COMMUNITY&apos;S INTRINSIC VALUE</TextLine>
-      <LaunchDetailsTable data={LAUNCH_DETAILS_DATA} />
-      <TextLine>If you have any questions, you can check out our FAQ&apos;s <FaqLink href="#faq">here</FaqLink></TextLine>
+      <ContentWrapper>
+        <TextLine style={{ maxWidth: 240 }}>OUR COMMUNITY&apos;S INTRINSIC VALUE</TextLine>
+        <LaunchDetailsTable data={LAUNCH_DETAILS_DATA} />
+        <TextLine>If you have any questions, you can check out our FAQ&apos;s <FaqLink href="#faq">here</FaqLink></TextLine>
+      </ContentWrapper>
       <GetSOULx />
     </SectionWrapper>
   );
 }
 
 const SectionWrapper = styled.div`
-  margin-right: -24px;
+  margin-right: ${({ theme }) => theme.spacing(-3)};
+`;
+
+const ContentWrapper = styled.div`
+  padding-right: ${({ theme }) => theme.spacing(3)};
 `;
 
 const ImageWrapper = styled.div`

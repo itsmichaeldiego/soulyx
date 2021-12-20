@@ -38,7 +38,7 @@ const Jumbotron = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 488px;
+  height: height: ${({ theme }) => theme.spacing(61)};
   margin: 0 ${({ theme }) => theme.spacing(-3, 0)};
   padding: ${({ theme }) => theme.spacing(4, 0)};
 `;

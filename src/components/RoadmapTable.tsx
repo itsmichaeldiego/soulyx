@@ -70,7 +70,7 @@ const TableHeader = styled.div`
   align-items: center;
   display: flex;
   font-size: 12px;
-  height: 88px;
+  height: ${({ theme }) => theme.spacing(11)};
   width: 100%;
 `;
 

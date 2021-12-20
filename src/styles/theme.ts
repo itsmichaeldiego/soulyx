@@ -61,6 +61,7 @@ export const theme: ITheme = {
   sizes: {
     nav: spacingHelper(7),
     header: spacingHelper(12),
+    headerMobile: spacingHelper(8),
   },
 }
 

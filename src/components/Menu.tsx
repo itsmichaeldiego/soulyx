@@ -76,6 +76,10 @@ const Header = styled.header`
   padding: ${({ theme }) => theme.spacing(4, 3)};
   color: ${({ theme }) => theme.text.tertiary};
   background-color: ${({ theme }) => theme.bg.secondary};
+  @media (max-width: 767px) {
+    padding: ${({ theme }) => theme.spacing(4, 2)};
+    height: ${({ theme }) => theme.sizes.headerMobile};
+  }
 `
 
 const Title = styled.span`
@@ -83,6 +87,12 @@ const Title = styled.span`
   line-height: 24px;
   font-weight: normal;
   margin-left: ${({ theme }) => theme.spacing(3)};
+  @media (max-width: 767px) {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0;
+  }
 `
 
 const CustomSectionHeader = styled(SectionHeader)`

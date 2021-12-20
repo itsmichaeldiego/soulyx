@@ -57,7 +57,8 @@ const Wrapper = styled.header`
     left: 0;
     margin: 0;
     width: 100vw;
-    padding: ${({ theme }) => theme.spacing(0, 4)};
+    height: ${({ theme }) => theme.sizes.headerMobile};
+    padding: ${({ theme }) => theme.spacing(0, 2)};
     background-color: ${({ theme }) => theme.bg.primary};
     z-index: 9999;
   }

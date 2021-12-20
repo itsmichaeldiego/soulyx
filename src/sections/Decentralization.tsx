@@ -121,6 +121,7 @@ const HandSection = styled.div`
     background-position: 0 0;
     margin-left: ${({ theme }) => theme.spacing(-3)};
     margin-right: ${({ theme }) => theme.spacing(-3)};
+    padding: ${({ theme }) => theme.spacing(0, 3)};
   }
 
   @media (min-width: 1441px) {

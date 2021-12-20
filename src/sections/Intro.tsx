@@ -16,10 +16,13 @@ export function Intro() {
 }
 
 const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
 `
 
 const LogoWrapper = styled.div`
+  flex: 1;
   min-height: ${({ theme }) => `calc(100vh - ${theme.sizes.header} - ${theme.spacing(12)})`};
   position: relative;
   background-image: url('/images/logo.png');

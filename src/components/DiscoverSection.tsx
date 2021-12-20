@@ -4,9 +4,12 @@ import { Link } from 'react-scroll';
 
 import { Icon } from './Icon';
 import { NAV_ITEMS } from '../lib/navigation';
+import { useMobileMediaQuery } from '../lib/mediaQueryHelper';
 
 export function DiscoverSection({ text }: { text: string }) {
   const theme = useContext(ThemeContext);
+  const isMobile = useMobileMediaQuery();
+
   return (
     <Wrapper>
       <Item>
@@ -15,7 +18,7 @@ export function DiscoverSection({ text }: { text: string }) {
           spy={true}
           smooth={true}
           hashSpy={true}
-          offset={0}
+          offset={isMobile ? -96 : 0}
         >
           <Icon icon="arrow-down" color={theme.cta.primary} size={26} />
           <Text>{text}</Text>

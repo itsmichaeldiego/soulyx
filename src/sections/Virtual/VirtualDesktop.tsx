@@ -213,9 +213,9 @@ const MarqueeBackground = styled.div`
 `;
 
 const MarqueeBackgroundLeft = styled(MarqueeBackground)`
-  animation: ${marqueeLeft} 5s linear infinite;
+  animation: ${marqueeLeft} 3s linear infinite;
 `
 
 const MarqueeBackgroundRight = styled(MarqueeBackground)`
-  animation: ${marqueeRight} 5s linear infinite;
+  animation: ${marqueeRight} 3s linear infinite;
 `

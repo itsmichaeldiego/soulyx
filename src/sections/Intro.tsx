@@ -6,14 +6,18 @@ import { DiscoverSection } from '../components/DiscoverSection'
 
 export function Intro() {
   return (
-    <>
+    <Wrapper>
       <LogoWrapper>
         <Image src="/images/soulx.svg" alt="SoulX Banner" layout="fill" />
       </LogoWrapper>
       <DiscoverSection text="DISCOVER THE NEW TOKEN BY SUSPENDED SOUL" />
-    </>
+    </Wrapper>
   )
 }
+
+const Wrapper = styled.div`
+  min-height: 100vh;
+`
 
 const LogoWrapper = styled.div`
   min-height: ${({ theme }) => `calc(100vh - ${theme.sizes.header} - ${theme.spacing(12)})`};

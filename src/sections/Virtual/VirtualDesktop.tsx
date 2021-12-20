@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Image from 'next/image';
 
 import { VIRTUAL_CARDS } from './data';
+import { marqueeLeft, marqueeRight } from '../../styles/animations';
 
 type IColumnImageWrapperProps = {
   height: number;
@@ -49,12 +50,8 @@ export function Virtual() {
         </ImageColumn>
       </ImageColumnsWrapper>
       <TokenVirtualWrapper>
-        <LogoImageWrapper style={{ marginLeft: -64, marginRight: -200 }}>
-          <Image src="/images/token-background-text.svg" alt="Token background text" layout="fill" />
-        </LogoImageWrapper>
-        <LogoImageWrapper style={{ marginLeft: -520, marginRight: -150, marginTop: -80 }}>
-          <Image src="/images/virtual-background-text.svg" alt="Virtual background text" layout="fill" />
-        </LogoImageWrapper>
+        <MarqueeBackgroundLeft url="/images/token-background-text.svg" />
+        <MarqueeBackgroundRight url="/images/virtual-background-text.svg" />
         <ImageColumn style={{ position: 'absolute', right: '8%', top: '19%' }}>
           <ColumnTitle>
             <TitleNumber>{VIRTUAL_CARDS[2].number}</TitleNumber>
@@ -203,11 +200,22 @@ const TokenVirtualWrapper = styled.div`
   }
 `;
 
-const LogoImageWrapper = styled.div`
+const MarqueeBackground = styled.div`
   height: 515px;
   position: relative;
+  background-image: url(${({ url }: { url: string }) => url});
+  background-repeat: no-repeat;
+  animation: ${marqueeLeft} 5s linear infinite;
 
   @media (min-width: 1441px) {
     height: 615px;
   }
 `;
+
+const MarqueeBackgroundLeft = styled(MarqueeBackground)`
+  animation: ${marqueeLeft} 5s linear infinite;
+`
+
+const MarqueeBackgroundRight = styled(MarqueeBackground)`
+  animation: ${marqueeRight} 5s linear infinite;
+`

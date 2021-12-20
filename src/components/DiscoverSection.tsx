@@ -32,7 +32,6 @@ const Wrapper = styled.section`
   display: flex;
   justify-content: flex-end;
   min-height: 40vh;
-  height: 100%;
 
   @media (max-width: 767px) {
     min-height: 18vh;

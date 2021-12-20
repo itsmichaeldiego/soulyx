@@ -6,24 +6,25 @@ import { DiscoverSection } from '../components/DiscoverSection'
 
 export function Intro() {
   return (
-    <Wrapper>
-      <LogoWrapper>
-        <Image src="/images/soulx.svg" alt="SoulX Banner" layout="fill" />
-      </LogoWrapper>
+    <>
+      <Wrapper>
+        <LogoWrapper>
+          <Image src="/images/soulx.svg" alt="SoulX Banner" layout="fill" />
+        </LogoWrapper>
+      </Wrapper>
       <DiscoverSection text="DISCOVER THE NEW TOKEN BY SUSPENDED SOUL" />
-    </Wrapper>
+    </>
   )
 }
 
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: ${({ theme }) => `calc(100vh - ${theme.sizes.header} - ${theme.spacing(12)})`};
 `
 
 const LogoWrapper = styled.div`
   flex: 1;
-  min-height: ${({ theme }) => `calc(100vh - ${theme.sizes.header} - ${theme.spacing(12)})`};
   position: relative;
   background-image: url('/images/logo.png');
   background-repeat: no-repeat;

@@ -13,7 +13,7 @@ export function Roadmap() {
     <SectionWrapper>
       <BackgroundWrapper>
         <HeaderWrapper>
-          <Image src="/images/roadmap-header.svg" alt="Know our roadmap" layout="fill" objectPosition="left" />
+          <Image src="/images/roadmap-header.svg" alt="Know our roadmap" layout="fill" objectPosition="top left" />
         </HeaderWrapper>
       </BackgroundWrapper>
       <SectionContent>

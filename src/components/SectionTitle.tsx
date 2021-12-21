@@ -12,7 +12,7 @@ type ISectionTitleProps = {
 export function SectionTitle({ imageUrl, alt }: ISectionTitleProps) {
   return (
     <Wrapper>
-      <Image src={imageUrl} alt={alt} layout="fill" objectFit="contain" objectPosition="top" />
+      <Image src={imageUrl} alt={alt} layout="fill" objectFit="contain" objectPosition="top left" />
     </Wrapper>
   );
 }

@@ -20,12 +20,11 @@ export function FlipCarousel({ cards }: IFlipCarouselProps) {
 const Wrapper = styled.div`
   flex: 1;
   display: flex;
-  overflow-y: visible;
   overflow-x: auto;
+  padding: ${({ theme }) => theme.spacing(12, 0)};
 `
 
 const Box = styled.div`
   display: flex;
-  overflow-y: visible;
   min-width: min-content;
 `

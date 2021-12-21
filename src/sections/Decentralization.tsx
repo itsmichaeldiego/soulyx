@@ -11,7 +11,7 @@ export function Decentralization() {
   return (
     <>
       <HeaderImage>
-        <Image src="/images/decentralization.svg" alt="THRESHOLD OF DESCENTRALIZATION" layout="fill" />
+        <Image src="/images/decentralization.svg" alt="THRESHOLD OF DESCENTRALIZATION" layout="fill" objectPosition="top left" />
       </HeaderImage>
       <Content>
         <ImageWrapper>
@@ -54,7 +54,7 @@ export function Decentralization() {
 }
 
 const HeaderImage = styled.div`
-  min-height: 512px;
+  min-height: 50vw;
   position: relative;
   z-index: 2;
 

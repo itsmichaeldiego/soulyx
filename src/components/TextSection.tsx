@@ -26,8 +26,7 @@ const Wrapper = styled.div<{ align: string }>`
   display: flex;
   flex-direction: column;
   ${({ align }) => `align-items: ${align};`}
-  margin: 0 auto;
-  padding: ${({ theme }) => theme.spacing(12, 0)};
+  padding: 10vw 12vw;
 
   @media (max-width: 767px) {
     padding: ${({ theme }) => theme.spacing(6, 0)};

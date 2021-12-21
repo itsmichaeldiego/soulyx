@@ -21,7 +21,7 @@ const SectionWrapper = styled.div`
 `;
 
 const LogoWrapper = styled.div`
-  min-height: 1028px;
+  min-height: 100vw;
   position: relative;
   background-image: url('/images/logo.png');
   background-repeat: no-repeat;

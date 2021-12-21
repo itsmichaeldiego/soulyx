@@ -12,7 +12,7 @@ export function Genesis() {
   return (
     <Section>
       <LogoWrapper>
-        <Image src="/images/genesis.svg" alt="SoulX Genesis" layout="fill" />
+        <Image src="/images/genesis.svg" alt="SoulX Genesis" layout="fill" objectFit="contain" />
       </LogoWrapper>
       <TextSection
         title="SOULx SUPPLY"
@@ -34,12 +34,12 @@ export function Genesis() {
 }
 
 const LogoWrapper = styled.div`
-  min-height: 1126px;
+  min-height: 100vw;
   position: relative;
   background-image: url('/images/logo.png');
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 35%;
+  background-size: 40vw;
 
   @media (max-width: 767px) {
     min-height: 296px;

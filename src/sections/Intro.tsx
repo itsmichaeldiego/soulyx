@@ -36,7 +36,7 @@ const LogoWrapper = styled.div`
     background-size: 45%;
   }
 
-  @media (min-width: 1441px) {
+  @media (min-width: 1440px) {
     min-height: 660px;
   }
 `;

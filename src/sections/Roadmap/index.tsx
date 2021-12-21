@@ -48,7 +48,7 @@ const HeaderWrapper = styled.div`
     max-width: 240px;
   }
 
-  @media (min-width: 1441px) {
+  @media (min-width: 1440px) {
     max-width: 1268px;
   }
 `;

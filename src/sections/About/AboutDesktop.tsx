@@ -66,7 +66,7 @@ const ImagesWrapper = styled.div`
   position: relative;
   padding: 20px 0;
 
-  @media (min-width: 1441px) {
+  @media (min-width: 1440px) {
     height: 1620px;
   }
 `;
@@ -76,7 +76,7 @@ const SoulxWrapper = styled.div`
   min-height: 960px;
   position: relative;
 
-  @media (min-width: 1441px) {
+  @media (min-width: 1440px) {
     max-width: unset;
     height: 1520px;
   }
@@ -89,7 +89,7 @@ const OverlappingImageWrapper = styled.div`
   top: 240px;
   right: 80px;
 
-  @media (min-width: 1441px) {
+  @media (min-width: 1440px) {
     width: 920px;
     min-height: 1380px;
   }
@@ -105,7 +105,7 @@ const TextBlockWrapper = styled.article`
 const SectionContainer = styled.div`
   position: relative;
 
-  @media (min-width: 1441px) {
+  @media (min-width: 1440px) {
     & ${TextBlockWrapper}:first-of-type {
       margin-left: 11% !important;
     }
@@ -125,7 +125,7 @@ const TextBlockContainer = styled.div`
       max-width: ${maxWidth}px;
     `}
 
-  @media (min-width: 1441px) {
+  @media (min-width: 1440px) {
     max-width: 540px;
   }
 `;
@@ -151,7 +151,7 @@ const DAOWrapper = styled.div`
   height: 644px;
   overflow: hidden;
 
-  @media (min-width: 1441px) {
+  @media (min-width: 1440px) {
     height: 500px;
   }
 `;
@@ -172,7 +172,7 @@ const AlphaLogoWrapper = styled.div`
   right: 100px;
   z-index: 2;
 
-  @media (min-width: 1441px) {
+  @media (min-width: 1440px) {
     width: 1340px;
   }
 `;
@@ -185,7 +185,7 @@ const PlusBackground = styled.div`
   left: 704px;
   z-index: 1;
 
-  @media (min-width: 1441px) {
+  @media (min-width: 1440px) {
     top: 100px;
     left: 860px;
   }

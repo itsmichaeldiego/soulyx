@@ -62,7 +62,7 @@ const HeaderImage = styled.div`
     min-height: 168px;
   }
 
-  @media (min-width: 1441px) {
+  @media (min-width: 1440px) {
     min-height: 660px;
   }
 `;
@@ -124,7 +124,7 @@ const HandSection = styled.div`
     padding: ${({ theme }) => theme.spacing(0, 3)};
   }
 
-  @media (min-width: 1441px) {
+  @media (min-width: 1440px) {
     background-size: cover;
     margin-left: ${({ theme }) => theme.spacing(-9)};
     margin-right: ${({ theme }) => theme.spacing(-3)};

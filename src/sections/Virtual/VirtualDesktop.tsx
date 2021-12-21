@@ -100,7 +100,7 @@ const Jumbotron = styled.div`
   position: relative;
 
 
-  @media (min-width: 1441px) {
+  @media (min-width: 1440px) {
     background-size: cover;
     padding: ${({ theme }) => theme.spacing(8, 6)};
   }
@@ -129,7 +129,7 @@ const TextBlockWrapper = styled.article`
   margin-left: 60%;
   max-width: 346px;
   
-  @media (min-width: 1441px) {
+  @media (min-width: 1440px) {
     margin-top: ${({ theme }) => theme.spacing(10)};
   }
 `;
@@ -192,7 +192,7 @@ const TokenVirtualWrapper = styled.div`
   margin-left: -72px;
   margin-right: -24px;
 
-  @media (min-width: 1441px) {
+  @media (min-width: 1440px) {
     ${ImageColumn} {
       top: 30% !important;
       right: 4% !important;
@@ -207,7 +207,7 @@ const MarqueeBackground = styled.div`
   background-repeat: no-repeat;
   animation: ${marqueeLeft} 5s linear infinite;
 
-  @media (min-width: 1441px) {
+  @media (min-width: 1440px) {
     height: 615px;
   }
 `;

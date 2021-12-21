@@ -48,7 +48,7 @@ const Text = styled.div`
     max-width: 200px;
   }
 
-  @media (min-width: 1441px) {
+  @media (min-width: 1440px) {
     margin: ${({ theme }) => theme.spacing(8, 28)};
   }
 `;

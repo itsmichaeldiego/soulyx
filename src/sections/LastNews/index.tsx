@@ -33,26 +33,29 @@ export function LastNews() {
         <Image src="/images/partner-logos.svg" alt="Partner logos" layout="fill" />
       </LogosWrapper>
       <CardsWrapper>
-        <Card variant="primary">
-          <CardTitle>DOWNLOAD PDF FOR INVESTORS</CardTitle>
-          <CardText>Click here to read our extended roadmap, our mission and our project explained in detail.</CardText>
-          <ButtonWrapper variant="primary" text="DOWNLOAD PDF" href="https://miso.sushi.com/" />
-        </Card>
-        <Card variant="secondary">
-          <CardTitle short>GET SOULx</CardTitle>
-          <CardText>Open up a big door into the future and start investing on $SOULx now, a new virtual economy.</CardText>
-          <ButtonWrapper variant="secondary" text="GET SOULx" href="https://miso.sushi.com/" />
-        </Card>
+        <CardItem>
+          <Card variant="primary">
+            <div>
+              <CardTitle>DOWNLOAD PDF FOR INVESTORS</CardTitle>
+              <CardText>Click here to read our extended roadmap, our mission and our project explained in detail.</CardText>
+            </div>
+            <ButtonWrapper variant="primary" text="DOWNLOAD PDF" href="https://miso.sushi.com/" />
+          </Card>
+        </CardItem>
+        <CardItem>
+          <Card variant="secondary">
+            <div>
+              <CardTitle short>GET SOULx</CardTitle>
+              <CardText>Open up a big door into the future and start investing on $SOULx now, a new virtual economy.</CardText>
+            </div>
+            <ButtonWrapper variant="secondary" text="GET SOULx" href="https://miso.sushi.com/" />
+          </Card>
+        </CardItem>
       </CardsWrapper>
     </>
   )
 }
 
-const Title = styled.div`
-  font-size: 15vw;
-  line-height: 15vw;
-  font-family: ${({ theme }) => theme.font.secondary};
-`
 
 const Wrapper = styled.div`
   padding: ${({ theme }) => theme.spacing(20, 5, 20, 10)};
@@ -95,28 +98,43 @@ const LogosWrapper = styled.div`
 
 const CardsWrapper = styled.div`
   display: flex;
-  justify-content: space-between;
-  // TODO: extra bottom padding is added because logos svg is not centered - remove this once fixed
-  padding-bottom: ${({ theme }) => theme.spacing(3)};
-
+  padding: ${({ theme }) => theme.spacing(4, 0)};
+  
   @media (max-width: 767px) {
     flex-direction: column;
-    padding-bottom: ${({ theme }) => theme.spacing(3)};
-    // TODO: remove this margin when adding back logos
-    margin-top: ${({ theme }) => theme.spacing(8)};
-  }
-
-  @media (min-width: 1441px) {
-    justify-content: center;
   }
 `;
 
+const CardItem = styled.div`
+  display: flex;
+  flex: 1 1 50%;
+  padding: 1vw;
+  &:first-of-type {
+    justify-content: flex-end;
+  }
+  &:last-of-type {
+    justify-content: flex-start;
+  }
+  @media (max-width: 767px) {
+    justify-content: flex-start !important;
+  }
+`
+
+const Title = styled.div`
+  font-size: 15vw;
+  line-height: 15vw;
+  font-family: ${({ theme }) => theme.font.secondary};
+`
+
 const Card = styled.div`
-  height: 464px;
-  width: 640px;
+  max-height: 464px;
+  width: 32vw;
+  max-width: 640px;
+  width: 44vw;
   padding: ${({ theme }) => theme.spacing(6)};
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   border-radius: ${({ theme }) => theme.spacing(3)};
 
   ${({ theme, variant }: ICardProps) =>
@@ -134,22 +152,19 @@ const Card = styled.div`
 
   @media (max-width: 767px) {
     padding: ${({ theme }) => theme.spacing(4)};
-    height: 360px;
+    min-height: 348px;
+    min-width: 480px;
     width: 100%;
 
     &:first-of-type {
       margin-bottom: ${({ theme }) => theme.spacing(4)};
     }
   }
-
-  @media (min-width: 1441px) {
-    margin: ${({ theme }) => theme.spacing(0, 6)};
-  }
 `;
 
 const CardTitle = styled.span`
   font-family: ${({ theme }) => theme.font.secondary};
-  font-size: 66px;
+  font-size: 3vw;
   ${({ short }: ICardTitleProps) => short && `max-width: 224px`};
 
   @media (max-width: 767px) {
@@ -160,11 +175,12 @@ const CardTitle = styled.span`
 `;
 
 const CardText = styled.div`
-  max-width: 296px;
-  margin: ${({ theme }) => theme.spacing(2, 0)};
+  max-width: 15vw;
   font-weight: 300;
+  font-size: 1vw;
   opacity: 0.9;
   line-height: 24px;
+  margin-top: ${({ theme }) => theme.spacing(2)};
 
   @media (max-width: 767px) {
     font-size: 12px;
@@ -174,7 +190,6 @@ const CardText = styled.div`
 
 const ButtonWrapper = styled(LinkButton)`
   align-self: flex-end;
-  margin-top: auto;
   padding: ${({ theme }) => theme.spacing(4)};
 
   ${({ theme, variant }: IButtonWrapperProps) =>

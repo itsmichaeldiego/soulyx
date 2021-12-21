@@ -27,25 +27,17 @@ const Wrapper = styled.div`
   background-image: url('/images/community-faces.png');
   background-repeat: no-repeat;
   background-size: contain;
-  height: 300vh;
+  height: 200vw;
   position: relative;
-
-  @media (max-width: 767px) {
-    background-size: contain;
-    height: 624px;
-  }
-
-  @media (min-width: 1441px) {
-    // background-size: cover;
-  }
 `;
 
 const FloatingContent = styled.div`
-  margin-left: ${({ theme }) => theme.spacing(10)};
-  margin-top: ${({ theme }) => theme.spacing(-80)};
+  margin-top: -85vw;
 `
 
 
 const Text = styled.div`
-  max-width: ${({ theme }) => theme.spacing(27)};
+  margin-left: 5vw;
+  width: 30vw;
+  max-width: ${({ theme }) => theme.spacing(30)};
 `

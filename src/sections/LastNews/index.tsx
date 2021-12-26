@@ -66,7 +66,7 @@ const Wrapper = styled.div`
   margin-left: ${({ theme }) => theme.spacing(-9)};
   margin-right: ${({ theme }) => theme.spacing(-3)};
 
-  @media (max-width: 767px) {
+  @media (max-width: 991px) {
     margin-left: ${({ theme }) => theme.spacing(-3)};
     padding: ${({ theme }) => theme.spacing(10, 2, 10, 2)};
   }
@@ -77,7 +77,7 @@ const LogosWrapper = styled.div`
   position: relative;
   height: 104px;
 
-  @media (max-width: 767px) {
+  @media (max-width: 991px) {
     // TODO: remove when adding animated svg
     display: none;
     margin: ${({ theme }) => theme.spacing(4)};
@@ -100,7 +100,7 @@ const CardsWrapper = styled.div`
   display: flex;
   padding: ${({ theme }) => theme.spacing(4, 0)};
   
-  @media (max-width: 767px) {
+  @media (max-width: 991px) {
     flex-direction: column;
   }
 `;
@@ -115,8 +115,8 @@ const CardItem = styled.div`
   &:last-of-type {
     justify-content: flex-start;
   }
-  @media (max-width: 767px) {
-    justify-content: flex-start !important;
+  @media (max-width: 991px) {
+    justify-content: center !important;
   }
 `
 
@@ -150,11 +150,11 @@ const Card = styled.div`
       background-color: ${theme.bg.primary};
   `}
 
-  @media (max-width: 767px) {
+  @media (max-width: 991px) {
     padding: ${({ theme }) => theme.spacing(4)};
-    min-height: 348px;
-    min-width: 480px;
-    width: 100%;
+    height: 348px;
+    width: 480px;
+    max-width: 100%;
 
     &:first-of-type {
       margin-bottom: ${({ theme }) => theme.spacing(4)};
@@ -167,7 +167,7 @@ const CardTitle = styled.span`
   font-size: 3vw;
   ${({ short }: ICardTitleProps) => short && `max-width: 224px`};
 
-  @media (max-width: 767px) {
+  @media (max-width: 991px) {
     font-size: 36px;
 
     ${({ short }: ICardTitleProps) => short && `max-width: 150px`};
@@ -182,7 +182,7 @@ const CardText = styled.div`
   line-height: 24px;
   margin-top: ${({ theme }) => theme.spacing(2)};
 
-  @media (max-width: 767px) {
+  @media (max-width: 991px) {
     font-size: 12px;
     max-width: 180px;
   }
@@ -206,7 +206,7 @@ const ButtonWrapper = styled(LinkButton)`
       border-color: ${theme.border.primary};
     `}
 
-  @media (max-width: 767px) {
+  @media (max-width: 991px) {
     padding: ${({ theme }) => theme.spacing(2)};
     font-size: 14px;
   }

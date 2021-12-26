@@ -2,7 +2,7 @@ import { useState } from 'react';
 import React from 'react';
 import styled from 'styled-components';
 
-import { useDesktopMediaQuery } from '../../lib/mediaQueryHelper';
+import { useMobileMediaQuery } from '../../lib/mediaQueryHelper';
 
 import { YearSelect } from './YearSelect';
 import { CHART_DATA, Y_AXIS_LABELS } from './data';
@@ -40,8 +40,8 @@ function ChartBar({ name, stacks }: IChartBarProps) {
 }
 
 export function RoadmapChart() {
-  const isDesktop = useDesktopMediaQuery();
-  const [visible, setVisible] = useState(isDesktop ? 'all' : '2021');
+  const isMobile = useMobileMediaQuery();
+  const [visible, setVisible] = useState(!isMobile ? 'all' : '2021');
 
   const mappedData = (data: ChartEntry[]) => {
     if (visible === 'all') {
@@ -72,11 +72,11 @@ export function RoadmapChart() {
         {chartData?.map((bar, index) => (
           <BarWrapper key={index}>
             <ChartBar name={bar.name} stacks={bar.stacks} />
-            {isDesktop && <BarLabel>{bar.name}</BarLabel>}
+            {!isMobile && <BarLabel>{bar.name}</BarLabel>}
           </BarWrapper>
         ))}
       </ChartWrapper>
-      {!isDesktop && <YearSelect options={selectOptions} selected={visible} onChange={setVisible} />}
+      {isMobile && <YearSelect options={selectOptions} selected={visible} onChange={setVisible} />}
     </Wrapper>
 	);
 };
@@ -103,15 +103,9 @@ const ChartWrapper = styled.div`
   font-size: 12px;
   height: 520px;
   justify-content: space-between;
-  padding-left: 10%;
-  padding-right: 2%;
   position: relative;
   width: 100%;
-
-  @media (max-width: 767px) {
-    padding-left: 26%;
-    padding-right: 0;
-  }
+  padding-left: 32px;
 `;
 
 const GridWrapper = styled.div`

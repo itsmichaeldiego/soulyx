@@ -26,12 +26,12 @@ const LogoWrapper = styled.div`
   background-image: url('/images/logo.png');
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 35%;
+  background-size: 45%;
   margin-bottom: ${({ theme }) => theme.spacing(2)};
 
   @media (max-width: 767px) {
     min-height: 254px;
-    background-size: 45%;
+    background-size: contain;
   }
 `;
 

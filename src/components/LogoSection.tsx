@@ -14,5 +14,5 @@ const Wrapper = styled.div`
   background-image: url('/images/logo.png');
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 35%;
+  background-size: contain;
 `

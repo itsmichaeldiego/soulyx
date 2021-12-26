@@ -39,10 +39,10 @@ const LogoWrapper = styled.div`
   background-image: url('/images/logo.png');
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 40vw;
+  background-size: 4;
 
   @media (max-width: 767px) {
     min-height: 296px;
-    background-size: 45%;
+    background-size: contain;
   }
 `;

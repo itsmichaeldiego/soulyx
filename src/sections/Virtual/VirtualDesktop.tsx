@@ -15,9 +15,7 @@ export function Virtual() {
     <>
       <Jumbotron>
         <FloatingText>SOULx OPENS UP A BIG DOOR INTO THE FUTURE AND NURTURES THE ECONOMIC DESTINY OF ARTISTS, HOLDERS AND COLLECTORS WITH MULTIPLE OPTIONS.</FloatingText>
-        <ImageWrapper>
-          <Image src="/images/soulx-jumbotron.svg" alt="SoulX Jumbotron" layout="fill" />
-        </ImageWrapper>
+        <Image src="/images/soulx-jumbotron.svg" alt="SoulX Jumbotron" layout="fill" />
       </Jumbotron>
       <TextBlockWrapper>
         <Title>
@@ -116,13 +114,6 @@ const FloatingText = styled.div`
   max-width: 210px;
 `;
 
-const ImageWrapper = styled.div`
-  bottom: 0;
-  height: 1260px;
-  position: absolute;
-  width: 1220px;
-`;
-
 const TextBlockWrapper = styled.article`
   display: flex;
   flex-direction: column;
@@ -155,6 +146,7 @@ const ImageColumn = styled.div`
 
 const ImageColumnsWrapper = styled.div`
   display: flex;
+  flex-wrap: wrap;
   padding-bottom: ${({ theme }) => theme.spacing(8)};
 `;
 

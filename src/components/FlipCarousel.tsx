@@ -11,18 +11,24 @@ export function FlipCarousel({ cards }: IFlipCarouselProps) {
   const scrollRef = useRef(null)
   const handleScroll = (direction: string) => {
     const { current } = scrollRef
-    if(direction ==='left') {
-      current?.scroll(-500, 0)
+    const currentOffset = current?.scrollLeft
+    const flipCard = document.getElementsByClassName('js-flip-card')[0]
+    debugger;
+    const currentSize = flipCard.offsetWidth;
+    if (direction === 'left') {
+      current?.scroll((currentOffset - currentSize), 0);
     }
-    if(direction ==='right') {
-      current?.scroll(500, 0)
+    if (direction === 'right') {
+      current?.scroll((currentOffset + currentSize), 0);
     }
   }
   return (
     <>
       <Wrapper ref={scrollRef} id="wrapper-id">
         <Box>
-          {cards.map((card, index) => <FlipCard key={card.name} card={card} index={index} />)}
+          {cards.map((card, index) => (
+            <FlipCard key={card.name} card={card} className="js-flip-card" index={index} />
+          ))}
         </Box>
       </Wrapper>
       <button onClick={() => handleScroll('left')}>Left</button>

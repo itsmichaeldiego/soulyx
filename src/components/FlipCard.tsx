@@ -19,13 +19,14 @@ export interface IFlipCard {
 type IFlipCardProps = {
   index: number;
   card: IFlipCard;
+  className?: string;
 }
 
 type IContainerProps = {
   flipped: boolean;
 }
 
-export function FlipCard({ card, index }: IFlipCardProps) {
+export function FlipCard({ card, index, ...props }: IFlipCardProps) {
   const theme = useContext(ThemeContext);
   const [flipped, setFlipped] = useState(false)
   const isMobile = useMobileMediaQuery();
@@ -33,7 +34,7 @@ export function FlipCard({ card, index }: IFlipCardProps) {
   const handleFlip = useCallback(() => setFlipped(!flipped), [flipped]);
 
   return (
-    <Wrapper onClick={handleFlip}>
+    <Wrapper onClick={handleFlip} {...props}>
       <Container flipped={flipped}>
         <Front>
           <TopSection>

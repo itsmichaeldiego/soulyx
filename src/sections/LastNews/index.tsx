@@ -98,7 +98,7 @@ const LogosWrapper = styled.div`
 
 const CardsWrapper = styled.div`
   display: flex;
-  padding: ${({ theme }) => theme.spacing(4, 0)};
+  padding: ${({ theme }) => theme.spacing(6, 0)};
   
   @media (max-width: 991px) {
     flex-direction: column;

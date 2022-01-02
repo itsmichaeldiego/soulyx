@@ -50,8 +50,9 @@ const Wrapper = styled.header`
   align-items: center;
   justify-content: space-between;
   height: ${({ theme }) => theme.sizes.header};
-  margin-bottom: ${({ theme }) => theme.spacing(6)};
+  margin-bottom: ${({ theme }) => theme.spacing(2)};
   @media (max-width: 767px) {
+    margin-bottom: ${({ theme }) => theme.spacing(6)};
     position: fixed;
     top: 0;
     left: 0;

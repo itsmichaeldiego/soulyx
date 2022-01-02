@@ -1,5 +1,6 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import styled from 'styled-components'
+import { Element, scroller } from 'react-scroll';
 
 import { Icon } from './Icon';
 import { FlipCard, IFlipCard } from './FlipCard'
@@ -11,35 +12,57 @@ type IFlipCarouselProps = {
 const FLIP_CARD_CLASSNAME = 'js-flip-card';
 
 export function FlipCarousel({ cards }: IFlipCarouselProps) {
-  const scrollRef = useRef(null)
+  const [currentCardIndex, setCurrentCardIndex] = React.useState(0);
+
   const handleScroll = (direction: string) => {
-    const { current } = scrollRef
-    const currentOffset = current?.scrollLeft
-    const flipCard = document.getElementsByClassName(FLIP_CARD_CLASSNAME)[0]
-    debugger;
-    const currentSize = flipCard.offsetWidth;
+    let cardToScroll, newIndex;
     if (direction === 'left') {
-      current?.scroll((currentOffset - currentSize), 0);
+      if (currentCardIndex - 1 >= 0) {
+        newIndex = currentCardIndex - 1;
+      } else {
+        newIndex = 0;
+      }
     }
     if (direction === 'right') {
-      current?.scroll((currentOffset + currentSize), 0);
+      if (currentCardIndex + 1 <= cards.length) {
+        newIndex = currentCardIndex + 1;
+      } else {
+        newIndex = cards.length
+      }
+    }
+    if (newIndex) {
+      debugger;
+      cardToScroll = cards[newIndex - 1]
+      scroller.scrollTo(cardToScroll.name, {
+        duration: 1000,
+        smooth: true,
+        horizontal: true,
+        containerId: 'container-id'
+      })
+      setCurrentCardIndex(newIndex);
     }
   }
+
   return (
     <>
-      <Wrapper ref={scrollRef} id="wrapper-id">
+      {/* TODO: pass container id by prop */}
+      <Wrapper id="container-id">
         <Box>
           {cards.map((card, index) => (
-            <FlipCard key={card.name} card={card} className={FLIP_CARD_CLASSNAME} index={index} />
+            <Element key={card.name} name={card.name}>
+              <FlipCard  card={card} className={FLIP_CARD_CLASSNAME} index={index} />
+            </Element>
           ))}
         </Box>
       </Wrapper>
-      <div role="button" onClick={() => handleScroll('left')}>
-        <Icon icon="arrow-left" size={46} />
-      </div>
-      <div role="button" onClick={() => handleScroll('right')}>
-        <Icon icon="arrow-right" size={46} />
-      </div>
+      <Actions>
+        <ArrowButton role="button" onClick={() => handleScroll('left')}>
+          <Icon icon="arrow-left" size={46} />
+        </ArrowButton>
+        <ArrowButton role="button" onClick={() => handleScroll('right')}>
+          <Icon icon="arrow-right" size={46} />
+        </ArrowButton>
+      </Actions>
     </>
   )
 }
@@ -54,4 +77,15 @@ const Wrapper = styled.div`
 const Box = styled.div`
   display: flex;
   min-width: min-content;
+`
+
+const Actions = styled.div`
+  display: flex;
+  > * {
+    margin: ${({ theme }) => theme.spacing(0, 2)};
+  }
+`
+
+const ArrowButton = styled.div`
+  cursor: pointer;
 `

@@ -26,7 +26,7 @@ const LogoWrapper = styled.div`
   background-image: url('/images/logo.png');
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 45%;
+  background-size: 60%;
   margin-bottom: ${({ theme }) => theme.spacing(2)};
 
   @media (max-width: 767px) {

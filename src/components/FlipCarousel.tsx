@@ -1,18 +1,21 @@
 import React, { useRef } from 'react';
 import styled from 'styled-components'
 
-import { FlipCard, IFlipCard } from '../components/FlipCard'
+import { Icon } from './Icon';
+import { FlipCard, IFlipCard } from './FlipCard'
 
 type IFlipCarouselProps = {
   cards: IFlipCard[];
 }
+
+const FLIP_CARD_CLASSNAME = 'js-flip-card';
 
 export function FlipCarousel({ cards }: IFlipCarouselProps) {
   const scrollRef = useRef(null)
   const handleScroll = (direction: string) => {
     const { current } = scrollRef
     const currentOffset = current?.scrollLeft
-    const flipCard = document.getElementsByClassName('js-flip-card')[0]
+    const flipCard = document.getElementsByClassName(FLIP_CARD_CLASSNAME)[0]
     debugger;
     const currentSize = flipCard.offsetWidth;
     if (direction === 'left') {
@@ -27,12 +30,16 @@ export function FlipCarousel({ cards }: IFlipCarouselProps) {
       <Wrapper ref={scrollRef} id="wrapper-id">
         <Box>
           {cards.map((card, index) => (
-            <FlipCard key={card.name} card={card} className="js-flip-card" index={index} />
+            <FlipCard key={card.name} card={card} className={FLIP_CARD_CLASSNAME} index={index} />
           ))}
         </Box>
       </Wrapper>
-      <button onClick={() => handleScroll('left')}>Left</button>
-      <button onClick={() => handleScroll('right')}>Right</button>
+      <div role="button" onClick={() => handleScroll('left')}>
+        <Icon icon="arrow-left" size={46} />
+      </div>
+      <div role="button" onClick={() => handleScroll('right')}>
+        <Icon icon="arrow-right" size={46} />
+      </div>
     </>
   )
 }

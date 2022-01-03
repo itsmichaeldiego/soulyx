@@ -61,7 +61,7 @@ const ImagesWrapper = styled.div`
   position: relative;
   padding: 20px 0;
 
-  @media (min-width: 1440px) {
+  @media ${({ theme }) => theme.media.desktop} {
     height: 1620px;
   }
 `;
@@ -71,7 +71,7 @@ const SoulxWrapper = styled.div`
   min-height: 960px;
   position: relative;
 
-  @media (min-width: 1440px) {
+  @media ${({ theme }) => theme.media.desktop} {
     max-width: unset;
     height: 1520px;
   }
@@ -84,7 +84,7 @@ const OverlappingImageWrapper = styled.div`
   top: 240px;
   right: 80px;
 
-  @media (min-width: 1440px) {
+  @media ${({ theme }) => theme.media.desktop} {
     width: 920px;
     min-height: 1380px;
   }
@@ -102,7 +102,7 @@ const DAOWrapper = styled.div`
   overflow: hidden;
   margin-top: -5vw;
 
-  @media (min-width: 1440px) {
+  @media ${({ theme }) => theme.media.desktop} {
     height: 500px;
   }
 `;
@@ -123,7 +123,7 @@ const AlphaLogoWrapper = styled.div`
   right: 100px;
   z-index: 2;
 
-  @media (min-width: 1440px) {
+  @media ${({ theme }) => theme.media.desktop} {
     width: 1340px;
   }
 `;
@@ -136,7 +136,7 @@ const PlusBackground = styled.div`
   left: 704px;
   z-index: 1;
 
-  @media (min-width: 1440px) {
+  @media ${({ theme }) => theme.media.desktop} {
     top: 100px;
     left: 860px;
   }

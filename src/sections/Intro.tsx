@@ -31,12 +31,12 @@ const LogoWrapper = styled.div`
   background-position: center center;
   background-size: 40%;
 
-  @media (max-width: 767px) {
+  @media ${({ theme }) => theme.media.mobile} {
     min-height: 360px;
     background-size: 45%;
   }
 
-  @media (min-width: 1440px) {
+  @media ${({ theme }) => theme.media.desktop} {
     min-height: 660px;
   }
 `;

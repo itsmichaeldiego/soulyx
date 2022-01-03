@@ -9,6 +9,12 @@ enum EHierarchies {
   tertiary = 'tertiary',
 }
 
+enum EMediaTypes {
+  mobile = 'mobile',
+  tablet = 'tablet',
+  desktop = 'desktop',
+}
+
 export interface ITheme {
   bg: { [key in EHierarchies]?: string }
   cta: { [key in EHierarchies]?: string }
@@ -17,6 +23,7 @@ export interface ITheme {
   font: { [key in EHierarchies]?: string }
   spacing: ISpacingFn
   sizes: { [key: string]: string }
+  media: { [key in EMediaTypes]?: string }
 }
 
 // colors are named using name-that-color:
@@ -32,6 +39,18 @@ export const colors: { [key: string]: string } = {
 export const fonts: { [key: string]: string } = {
   roboto: 'Roboto, sans-serif',
   parabole: 'Parabole Trial',
+};
+
+const size: { [key in EMediaTypes]: string } = {
+  mobile: '768px',
+  tablet: '991px',
+  desktop: '1440px',
+}
+
+export const media: { [key in EMediaTypes]: string } = {
+  mobile: `(max-width: ${size.mobile})`,
+  tablet: `(max-width: ${size.tablet})`,
+  desktop: `(min-width: ${size.desktop})`,
 };
 
 export const theme: ITheme = {
@@ -57,6 +76,7 @@ export const theme: ITheme = {
     primary: fonts.roboto,
     secondary: fonts.parabole,
   },
+  media,
   spacing: spacingHelper,
   sizes: {
     nav: spacingHelper(7),

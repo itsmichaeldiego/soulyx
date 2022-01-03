@@ -31,7 +31,7 @@ const Wrapper = styled.footer`
   margin-bottom: ${({ theme }) => theme.spacing(2)};
   padding: ${({ theme }) => theme.spacing(0, 4)};
 
-  @media (max-width: 767px) {
+  @media ${({ theme }) => theme.media.mobile} {
     flex-direction: column-reverse;
     padding: 0;
     margin-bottom: ${({ theme }) => theme.spacing(6)};
@@ -42,7 +42,7 @@ const FooterLink = styled.a`
   font-size: 10px;
   margin: ${({ theme }) => theme.spacing(0, 1)};
 
-  @media (max-width: 767px) {
+  @media ${({ theme }) => theme.media.mobile} {
     margin: ${({ theme }) => theme.spacing(0, 0.5)};
   }
 `;

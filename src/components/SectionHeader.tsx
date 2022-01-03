@@ -50,7 +50,7 @@ const Wrapper = styled.div`
   margin: ${({ theme }) => theme.spacing(6, 0)};
   padding: ${({ theme }) => theme.spacing(0.5, 0)};
 
-  @media (max-width: 767px) {
+  @media ${({ theme }) => theme.media.mobile} {
     margin: ${({ theme }) => theme.spacing(6, 0)};
   }
 `;
@@ -71,7 +71,7 @@ const HeaderRow = styled.div`
     margin-left: auto;
   }
 
-  @media (max-width: 767px) {
+  @media ${({ theme }) => theme.media.mobile} {
     font-size: 10px;
     &:nth-child(1) {
       flex-basis: 20%;
@@ -91,7 +91,7 @@ const RowText = styled.span`
   display: block;
   max-width: 100%;
 
-  @media (max-width: 767px) {
+  @media ${({ theme }) => theme.media.mobile} {
     max-width: 100px;
   }
 `;

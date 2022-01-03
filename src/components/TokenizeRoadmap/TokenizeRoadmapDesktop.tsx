@@ -51,7 +51,7 @@ const TableWrapper = styled.div`
   justify-content: center;
   margin: ${({ theme }) => theme.spacing(0, 5)};
 
-  @media (min-width: 1440px) {
+  @media ${({ theme }) => theme.media.desktop} {
     margin: 0 auto;
   }
 `;

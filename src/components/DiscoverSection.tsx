@@ -33,7 +33,7 @@ const Wrapper = styled.section`
   justify-content: flex-end;
   min-height: 40vh;
 
-  @media (max-width: 767px) {
+  @media ${({ theme }) => theme.media.mobile} {
     min-height: 18vh;
   }
 `;
@@ -44,7 +44,7 @@ const Item = styled.div`
   padding: ${({ theme }) => theme.spacing(4)}; 
   flex: 0 0 50%;
 
-  @media (max-width: 767px) {
+  @media ${({ theme }) => theme.media.mobile} {
     flex: 1 1 100%;
     justify-content: center;
   }
@@ -65,7 +65,7 @@ const Text = styled.div`
   margin-left: ${({ theme }) => theme.spacing(2)};
   max-width: 210px;
 
-  @media (max-width: 767px) {
+  @media ${({ theme }) => theme.media.mobile} {
     display: none;
   }
 `

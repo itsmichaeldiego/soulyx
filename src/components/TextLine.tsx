@@ -17,7 +17,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   padding: ${({ theme }) => theme.spacing(8, 6)};
 
-  @media (max-width: 767px) {
+  @media ${({ theme }) => theme.media.mobile} {
     padding: ${({ theme }) => theme.spacing(4, 0)};
   }
 `

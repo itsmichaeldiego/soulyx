@@ -29,7 +29,7 @@ const LogoWrapper = styled.div`
   background-size: 60%;
   margin-bottom: ${({ theme }) => theme.spacing(2)};
 
-  @media (max-width: 767px) {
+  @media ${({ theme }) => theme.media.mobile} {
     min-height: 254px;
     background-size: contain;
   }
@@ -43,12 +43,12 @@ const Text = styled.div`
   font-size: 12px;
   max-width: 340px;
 
-  @media (max-width: 767px) {
+  @media ${({ theme }) => theme.media.mobile} {
     padding: ${({ theme }) => theme.spacing(6, 0)};
     max-width: 200px;
   }
 
-  @media (min-width: 1440px) {
+  @media ${({ theme }) => theme.media.desktop} {
     margin: ${({ theme }) => theme.spacing(8, 28)};
   }
 `;

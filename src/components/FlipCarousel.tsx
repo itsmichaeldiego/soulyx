@@ -80,7 +80,7 @@ const Wrapper = styled.div`
   overflow-x: hidden;
   padding: ${({ theme }) => theme.spacing(12, 0)};
 
-  @media (max-width: 767px) {
+  @media ${({ theme }) => theme.media.mobile} {
     padding: ${({ theme }) => theme.spacing(6, 0)};
   }
 `

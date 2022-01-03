@@ -28,13 +28,13 @@ export function Roadmap() {
 
 const SectionWrapper = styled.div`
   // for logo to overlap right padding on mobile
-  @media (max-width: 767px) {
+  @media ${({ theme }) => theme.media.mobile} {
     margin-right: -24px;
   }
 `;
 
 const SectionContent = styled.div`
-  @media (max-width: 767px) {
+  @media ${({ theme }) => theme.media.mobile} {
     margin-right: 24px;
   }
 `;
@@ -43,12 +43,12 @@ const HeaderWrapper = styled.div`
   min-height: 624px;
   position: relative;
 
-  @media (max-width: 767px) {
+  @media ${({ theme }) => theme.media.mobile} {
     min-height: 168px;
     max-width: 240px;
   }
 
-  @media (min-width: 1440px) {
+  @media ${({ theme }) => theme.media.desktop} {
     max-width: 1268px;
   }
 `;
@@ -56,7 +56,7 @@ const HeaderWrapper = styled.div`
 const BackgroundWrapper = styled.div`
   width: 100%;
 
-  @media (max-width: 767px) {
+  @media ${({ theme }) => theme.media.mobile} {
     background-image: url('/images/logo.png');
     background-repeat: no-repeat;
     background-size: 35%;

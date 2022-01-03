@@ -96,7 +96,7 @@ const Wrapper = styled.div`
   margin: ${({ theme }) => theme.spacing(0, 2)};
   // flip properties:
   perspective: 1000px;
-  @media (max-width: 767px) {
+  @media ${({ theme }) => theme.media.mobile} {
     width: 350px;
     height: 400px;
   }
@@ -148,7 +148,7 @@ const Aside = styled.div`
 
 const BackAside = styled(Aside)`
   padding-bottom: ${({ theme }) => theme.spacing(16)};
-  @media (max-width: 767px) {
+  @media ${({ theme }) => theme.media.mobile} {
     padding-bottom: ${({ theme }) => theme.spacing(8)};
   }
 `
@@ -165,7 +165,7 @@ const Title = styled.h5`
   font-style: normal;
   font-weight: normal;
   font-size: 32px;
-  @media (max-width: 767px) {
+  @media ${({ theme }) => theme.media.mobile} {
     font-size: 16px;
     line-height: 16px;
   }
@@ -182,7 +182,7 @@ const Description = styled.div`
   font-size: 14px;
   line-height: 26px;
   font-weight: 300;
-  @media (max-width: 767px) {
+  @media ${({ theme }) => theme.media.mobile} {
     font-size: 12px;
     line-height: 14px;
   }
@@ -192,7 +192,7 @@ const ViewMoreLink = styled(Link)`
   font-size: 14px;
   line-height: 26px;
   font-weight: 300;
-  @media (max-width: 767px) {
+  @media ${({ theme }) => theme.media.mobile} {
     font-size: 12px;
     line-height: 14px;
   }
@@ -203,7 +203,7 @@ const Details = styled.div`
   flex-direction: column;
   justify-content: space-between;
   padding: ${({ theme }) => theme.spacing(10, 3, 3, 6)};
-  @media (max-width: 767px) {
+  @media ${({ theme }) => theme.media.mobile} {
     padding: ${({ theme }) => theme.spacing(2, 0, 2, 2)};
   }
 `

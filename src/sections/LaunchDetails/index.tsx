@@ -39,7 +39,7 @@ const ImageWrapper = styled.div`
   max-width: 860px;
   position: relative;
 
-  @media (max-width: 767px) {
+  @media ${({ theme }) => theme.media.mobile} {
     min-height: 168px;
     max-width: 240px;
   }
@@ -52,7 +52,7 @@ const BackgroundWrapper = styled.div`
   background-position: right -12% top 60%;
   background-size: 30%;
 
-  @media (max-width: 767px) {
+  @media ${({ theme }) => theme.media.mobile} {
     background-size: 35%;
     background-position: right -16% top 60%;
   }

@@ -88,11 +88,11 @@ const Wrapper = styled.div`
   flex-direction: column;
   margin: ${({ theme }) => theme.spacing(4, 0)};
 
-  @media (min-width: 1440px) {
+  @media ${({ theme }) => theme.media.desktop} {
     margin: 0 auto;
   }
 
-  @media (max-width: 767px) {
+  @media ${({ theme }) => theme.media.mobile} {
     position: relative;
     align-items: flex-end;
   }
@@ -128,7 +128,7 @@ const GridRow = styled.div`
     border-top: 1px dashed ${({ theme }) => theme.cta.primary};
   }
 
-  @media (max-width: 767px) {
+  @media ${({ theme }) => theme.media.mobile} {
     padding-bottom: 16px;
     padding-left: 16px;
   }
@@ -138,7 +138,7 @@ const YAxisTopLabel = styled.span`
   position: absolute;
   top: -28px;
 
-  @media (max-width: 767px) {
+  @media ${({ theme }) => theme.media.mobile} {
     left: 16px;
   }
 `;
@@ -158,7 +158,7 @@ const Bar = styled.div`
   margin-top: auto;
   width: 220px;
 
-  @media (max-width: 767px) {
+  @media ${({ theme }) => theme.media.mobile} {
     width: 242px;
   }
 `;

@@ -51,7 +51,7 @@ const Wrapper = styled.header`
   justify-content: space-between;
   height: ${({ theme }) => theme.sizes.header};
   margin-bottom: ${({ theme }) => theme.spacing(2)};
-  @media (max-width: 767px) {
+  @media ${({ theme }) => theme.media.mobile} {
     margin-bottom: ${({ theme }) => theme.spacing(6)};
     position: fixed;
     top: 0;
@@ -67,7 +67,7 @@ const Wrapper = styled.header`
 
 const HamburgerButton = styled.div`
   display: none;
-  @media (max-width: 767px) {
+  @media ${({ theme }) => theme.media.mobile} {
     display: block;
   }
 `
@@ -76,7 +76,7 @@ const Title = styled.span`
   font-size: 16px;
   line-height: 24px;
   font-weight: normal;
-  @media (max-width: 767px) {
+  @media ${({ theme }) => theme.media.mobile} {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -86,7 +86,7 @@ const Title = styled.span`
 const Actions = styled.div`
   display: flex;
   align-items: center;
-  @media (max-width: 767px) {
+  @media ${({ theme }) => theme.media.mobile} {
     display: none;
   }
 `

@@ -26,7 +26,7 @@ const Wrapper = styled.main`
   padding-left: ${({ theme }) => `calc(${theme.sizes.nav} + ${theme.spacing(2)})`};
   margin: 0 auto;
 
-  @media (max-width: 767px) {
+  @media ${({ theme }) => theme.media.mobile} {
     padding: ${({ theme }) => theme.spacing(0, 3)};
     margin-top: ${({ theme }) => theme.sizes.header};
   }

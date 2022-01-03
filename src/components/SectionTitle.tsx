@@ -23,7 +23,7 @@ const Wrapper = styled.div`
   position: relative;
   z-index: 1;
 
-  @media (max-width: 767px) {
+  @media ${({ theme }) => theme.media.mobile} {
     min-height: 280px;
   }
 `;

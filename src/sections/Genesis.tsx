@@ -41,7 +41,7 @@ const LogoWrapper = styled.div`
   background-position: center center;
   background-size: 60%;
 
-  @media (max-width: 767px) {
+  @media ${({ theme }) => theme.media.mobile} {
     min-height: 296px;
     background-size: contain;
   }

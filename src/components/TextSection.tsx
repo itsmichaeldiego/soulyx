@@ -28,7 +28,7 @@ const Wrapper = styled.div<{ align: string }>`
   ${({ align }) => `align-items: ${align};`}
   padding: 10vw 12vw;
 
-  @media (max-width: 767px) {
+  @media ${({ theme }) => theme.media.mobile} {
     padding: ${({ theme }) => theme.spacing(6, 0)};
   }
 `

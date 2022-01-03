@@ -52,11 +52,11 @@ const TableWrapper = styled.div`
   font-size: 16px;
   margin: ${({ theme }) => theme.spacing(0, 5)};
 
-  @media (min-width: 1440px) {
+  @media ${({ theme }) => theme.media.desktop} {
     margin: 0 auto;
   }
 
-  @media (max-width: 767px) {
+  @media ${({ theme }) => theme.media.mobile} {
     font-size: 14px;
     margin: 0;
     margin-right: 24px;
@@ -89,7 +89,7 @@ const TableRow = styled.div`
   }
 
 
-  @media (max-width: 767px) {
+  @media ${({ theme }) => theme.media.mobile} {
     flex-direction: column;
     padding: 28px;
   }
@@ -114,7 +114,7 @@ const TableCell = styled.div`
     flex-basis: 60%;
   }
 
-  @media (max-width: 767px) {
+  @media ${({ theme }) => theme.media.mobile} {
     padding: 0;
   
     &:first-child {

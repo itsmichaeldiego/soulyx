@@ -8,6 +8,12 @@ enum EHierarchies {
   tertiary = 'tertiary',
 }
 
+enum EMediaTypes {
+  mobile = 'mobile',
+  tablet = 'tablet',
+  desktop = 'desktop',
+}
+
 // and extend them!
 declare module 'styled-components' {
   export interface DefaultTheme {
@@ -17,5 +23,6 @@ declare module 'styled-components' {
     font: { [key in EHierarchies]?: string }
     spacing: ISpacingFn;
     sizes: { [key: string]: string }
+    media: { [key in EMediaTypes]?: string }
   }
 }

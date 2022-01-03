@@ -72,7 +72,7 @@ const TableWrapper = styled.div`
 
   margin: ${({ theme }) => theme.spacing(0, 5)};
 
-  @media (max-width: 767px) {
+  @media ${({ theme }) => theme.media.mobile} {
     margin: 0;
   }
 `;
@@ -127,7 +127,7 @@ const Question = styled.div`
     color: white;
   }
 
-  @media (max-width: 767px) {
+  @media ${({ theme }) => theme.media.mobile} {
     width: 98%;
     padding: 16px;
   }
@@ -193,7 +193,7 @@ const ToggleIcon = styled.span`
     `}
 
 
-  @media (max-width: 767px) {
+  @media ${({ theme }) => theme.media.mobile} {
     font-size: 20px;
   }
 `;

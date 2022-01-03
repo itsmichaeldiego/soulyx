@@ -30,7 +30,7 @@ const Wrapper = styled.div`
   position: relative;
   margin-left: ${({ theme }) => theme.spacing(-9)};
 
-  @media (max-width: 767px) {
+  @media ${({ theme }) => theme.media.mobile} {
     margin-left: ${({ theme }) => theme.spacing(-3)};
     margin-right: 0;
     background-position: 32% 0%;
@@ -39,7 +39,7 @@ const Wrapper = styled.div`
     padding: 48px 28px;
   }
 
-  @media (min-width: 1440px) {
+  @media ${({ theme }) => theme.media.desktop} {
     padding: ${({ theme }) => theme.spacing(10)};
   }
 `;
@@ -49,12 +49,12 @@ const ImageWrapper = styled.div`
   min-height: 200px;
   position: relative;
 
-  @media (max-width: 767px) {
+  @media ${({ theme }) => theme.media.mobile} {
     min-height: 96px;
     max-width: 329px;
   }
 
-  @media (min-width: 1440px) {
+  @media ${({ theme }) => theme.media.desktop} {
     min-height: 260px;
   }
 `;
@@ -64,7 +64,7 @@ const ButtonWrapper = styled.div`
   margin-top: ${({ theme }) => theme.spacing(5)};
   margin-bottom: ${({ theme }) => theme.spacing(105)};
 
-  @media (max-width: 767px) {
+  @media ${({ theme }) => theme.media.mobile} {
     margin-top: ${({ theme }) => theme.spacing(2.5)};
     margin-bottom: ${({ theme }) => theme.spacing(34)};
   }
@@ -75,7 +75,7 @@ const GetButton = styled(LinkButton)`
   margin: 0 auto;
   padding: ${({ theme }) => theme.spacing(2.5, 3)};
 
-  @media (max-width: 767px) {
+  @media ${({ theme }) => theme.media.mobile} {
     font-size: 16px;
     padding: ${({ theme }) => theme.spacing(2, 2.5)};
   }
@@ -87,14 +87,14 @@ const SuspendedSoulWrapper = styled.div`
   min-height: 300px;
   position: relative;
 
-  @media (max-width: 767px) {
+  @media ${({ theme }) => theme.media.mobile} {
     max-width: 340px;
     min-height: 96px;
     margin: 0;
     margin-top: -18px;
   }
 
-  @media (min-width: 1440px) {
+  @media ${({ theme }) => theme.media.desktop} {
     min-height: 400px;
   }
 `;

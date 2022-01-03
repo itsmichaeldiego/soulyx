@@ -27,7 +27,7 @@ const ImageWrapper = styled.div`
   min-height: 216px;
   position: relative;
 
-  @media (max-width: 767px) {
+  @media ${({ theme }) => theme.media.mobile} {
     margin-left: 0;
     min-height: 56px;
     max-width: 200px;

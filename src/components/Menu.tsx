@@ -76,7 +76,7 @@ const Header = styled.header`
   padding: ${({ theme }) => theme.spacing(4, 3)};
   color: ${({ theme }) => theme.text.tertiary};
   background-color: ${({ theme }) => theme.bg.secondary};
-  @media (max-width: 767px) {
+  @media ${({ theme }) => theme.media.mobile} {
     padding: ${({ theme }) => theme.spacing(4, 2)};
     height: ${({ theme }) => theme.sizes.headerMobile};
   }
@@ -87,7 +87,7 @@ const Title = styled.span`
   line-height: 24px;
   font-weight: normal;
   margin-left: ${({ theme }) => theme.spacing(3)};
-  @media (max-width: 767px) {
+  @media ${({ theme }) => theme.media.mobile} {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -105,7 +105,7 @@ const CustomSectionHeader = styled(SectionHeader)`
     color: ${({ theme }) => theme.text.primary};
     background: transparent;
   }
-  @media (max-width: 767px) {
+  @media ${({ theme }) => theme.media.mobile} {
     padding: ${({ theme }) => theme.spacing(4)};
   }
 `

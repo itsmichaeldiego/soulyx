@@ -58,11 +58,11 @@ const HeaderImage = styled.div`
   position: relative;
   z-index: 2;
 
-  @media (max-width: 767px) {
+  @media ${({ theme }) => theme.media.mobile} {
     min-height: 168px;
   }
 
-  @media (min-width: 1440px) {
+  @media ${({ theme }) => theme.media.desktop} {
     min-height: 660px;
   }
 `;
@@ -77,7 +77,7 @@ const Content = styled.div`
   > * {
     flex: 1 1 50%;
   }
-  @media (max-width: 767px) {
+  @media ${({ theme }) => theme.media.mobile} {
     display: block;
     margin-top: ${({ theme }) => theme.spacing(-4)};
     margin-left: ${({ theme }) => theme.spacing(-3)};
@@ -98,7 +98,7 @@ const TextWrapper = styled.div`
 const ImageWrapper = styled.div`
   min-height: 631px;
   position: relative;
-  @media (max-width: 767px) {
+  @media ${({ theme }) => theme.media.mobile} {
     min-height: 520px;
   }
 `;
@@ -116,7 +116,7 @@ const HandSection = styled.div`
   background-repeat: no-repeat;
   background-image: url('/images/glass-hand.png');
   background-position: 0 400px;
-  @media (max-width: 767px) {
+  @media ${({ theme }) => theme.media.mobile} {
     background-size: cover;
     background-position: 0 0;
     margin-left: ${({ theme }) => theme.spacing(-3)};
@@ -124,7 +124,7 @@ const HandSection = styled.div`
     padding: ${({ theme }) => theme.spacing(0, 3)};
   }
 
-  @media (min-width: 1440px) {
+  @media ${({ theme }) => theme.media.desktop} {
     background-size: cover;
     margin-left: ${({ theme }) => theme.spacing(-9)};
     margin-right: ${({ theme }) => theme.spacing(-3)};

@@ -56,12 +56,12 @@ const TableWrapper = styled.div`
   font-weight: 300;
   margin: ${({ theme }) => theme.spacing(0, 5)};
 
-  @media (min-width: 1440px) {
+  @media ${({ theme }) => theme.media.desktop} {
     margin: 0 auto;
   }
 
   // TODO: useMedia instead (this doesn't look too bad tbh)
-  @media (max-width: 767px) {
+  @media ${({ theme }) => theme.media.mobile} {
     display: none;
   }
 `;

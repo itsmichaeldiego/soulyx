@@ -79,6 +79,10 @@ const Wrapper = styled.div`
   display: flex;
   overflow-x: hidden;
   padding: ${({ theme }) => theme.spacing(12, 0)};
+
+  @media (max-width: 767px) {
+    padding: ${({ theme }) => theme.spacing(6, 0)};
+  }
 `
 
 const Box = styled.div`

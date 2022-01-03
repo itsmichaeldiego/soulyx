@@ -55,10 +55,18 @@ export function FlipCarousel({ cards }: IFlipCarouselProps) {
         </Box>
       </Wrapper>
       <Actions>
-        <ArrowButton role="button" onClick={() => handleScroll('left')} isDisabled={currentCardIndex === 0}>
+        <ArrowButton
+          role="button"
+          onClick={() => handleScroll('left')}
+          isDisabled={currentCardIndex === 0}
+        >
           <Icon icon="arrow-left" size={46} />
         </ArrowButton>
-        <ArrowButton role="button" onClick={() => handleScroll('right')} isDisabled={currentCardIndex === cards.length - 1}>
+        <ArrowButton
+          role="button"
+          onClick={() => handleScroll('right')}
+          isDisabled={currentCardIndex === cards.length - 1}
+        >
           <Icon icon="arrow-right" size={46} />
         </ArrowButton>
       </Actions>

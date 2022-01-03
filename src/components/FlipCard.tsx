@@ -13,7 +13,7 @@ export interface IFlipCard {
   title: string;
   description: string;
   imageUrl: string;
-  hideName?: string;
+  hideName?: boolean;
   viewmoreUrl?: string;
 }
 

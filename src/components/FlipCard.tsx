@@ -13,6 +13,7 @@ export interface IFlipCard {
   title: string;
   description: string;
   imageUrl: string;
+  hideName?: string;
   viewmoreUrl?: string;
 }
 
@@ -40,7 +41,7 @@ export function FlipCard({ card, index, ...props }: IFlipCardProps) {
           <TopSection>
             <Aside>
               <span>{getPad(index)}</span>
-              <span>{card.name}</span>
+              {!card.hideName && (<span>{card.name}</span>)}
             </Aside>
             <Mobile>
               <Image src={card.imageUrl} alt={card.name} width={150} height={231} />

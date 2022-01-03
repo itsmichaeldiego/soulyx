@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'
 import { Element, scroller } from 'react-scroll';
+import nextId from 'react-id-generator';
 
 import { Icon } from './Icon';
 import { FlipCard, IFlipCard } from './FlipCard'
@@ -13,9 +14,10 @@ const FLIP_CARD_CLASSNAME = 'js-flip-card';
 
 export function FlipCarousel({ cards }: IFlipCarouselProps) {
   const [currentCardIndex, setCurrentCardIndex] = React.useState(0);
+  const containerId = nextId('container-id');
 
   const handleScroll = (direction: string) => {
-    let cardToScroll, newIndex;
+    let cardToScroll, newIndex = 0;
     if (direction === 'left') {
       if (currentCardIndex - 1 >= 0) {
         newIndex = currentCardIndex - 1;
@@ -24,42 +26,39 @@ export function FlipCarousel({ cards }: IFlipCarouselProps) {
       }
     }
     if (direction === 'right') {
-      if (currentCardIndex + 1 <= cards.length) {
+      if (currentCardIndex + 1 < cards.length - 1) {
         newIndex = currentCardIndex + 1;
       } else {
-        newIndex = cards.length
+        newIndex = cards.length - 1
       }
     }
-    if (newIndex) {
-      debugger;
-      cardToScroll = cards[newIndex - 1]
-      scroller.scrollTo(cardToScroll.name, {
-        duration: 1000,
-        smooth: true,
-        horizontal: true,
-        containerId: 'container-id'
-      })
-      setCurrentCardIndex(newIndex);
-    }
+    cardToScroll = cards[newIndex]
+    scroller.scrollTo(cardToScroll.name, {
+      duration: 1000,
+      smooth: true,
+      horizontal: true,
+      containerId: containerId
+    })
+    setCurrentCardIndex(newIndex);
   }
 
   return (
     <>
       {/* TODO: pass container id by prop */}
-      <Wrapper id="container-id">
+      <Wrapper id={containerId}>
         <Box>
           {cards.map((card, index) => (
             <Element key={card.name} name={card.name}>
-              <FlipCard  card={card} className={FLIP_CARD_CLASSNAME} index={index} />
+              <FlipCard card={card} className={FLIP_CARD_CLASSNAME} index={index} />
             </Element>
           ))}
         </Box>
       </Wrapper>
       <Actions>
-        <ArrowButton role="button" onClick={() => handleScroll('left')}>
+        <ArrowButton role="button" onClick={() => handleScroll('left')} isDisabled={currentCardIndex === 0}>
           <Icon icon="arrow-left" size={46} />
         </ArrowButton>
-        <ArrowButton role="button" onClick={() => handleScroll('right')}>
+        <ArrowButton role="button" onClick={() => handleScroll('right')} isDisabled={currentCardIndex === cards.length - 1}>
           <Icon icon="arrow-right" size={46} />
         </ArrowButton>
       </Actions>
@@ -86,6 +85,14 @@ const Actions = styled.div`
   }
 `
 
+type IArrowButtonProps = {
+  isDisabled: boolean;
+}
+
 const ArrowButton = styled.div`
   cursor: pointer;
+  ${({ isDisabled }: IArrowButtonProps) => isDisabled && `
+    pointer-events: none;
+    opacity: 0.2;
+  `}
 `

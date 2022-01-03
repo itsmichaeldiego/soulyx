@@ -20,12 +20,12 @@ export function About() {
           <Image src="/images/astronaut-open-helmet.png" alt="Astronaut open helmet" layout="fill" />
         </ImageWrapper>
         <TextBlockWrapper>
-          <Title>About Us</Title>
+          <Title>ABOUT US</Title>
           <Text>
-            Suspended Soul made its blockchain debut at the height of the NFT revolution. With the firm conviction of being protagonists of a historic paradigm shift in the way art is created, shared and collected, as founders of Suspended Soul we decided to offer the community a boutique alternative in a market overloaded with volume. 
-            Each artist leaves their soul in their work. Suspended Soul came to honor that creative act. 
+            Suspended Soul made its blockchain debut at the height of the NFT revolution. With the firm conviction of being protagonists of a historic paradigm shift in the way art is created, shared and collected, as founders of Suspended Soul we decided to offer the community a boutique alternative in a market overloaded with volume.
+            Each artist leaves their soul in their work. Suspended Soul came to honor that creative act.
             <br /><br />
-            One auction at a time. No overlapping, no multiple bidding. Exclusive and total exposure for each work. For each artist behind their work. For every soul.  
+            One auction at a time. No overlapping, no multiple bidding. Exclusive and total exposure for each work. For each artist behind their work. For every soul.
           </Text>
         </TextBlockWrapper>
         <ImageWrapper>
@@ -89,7 +89,6 @@ const Title = styled.h5`
   font-weight: bold;
   font-size: 14px;
   line-height: 24px;
-  text-transform: uppercase;
   margin: ${({ theme }) => theme.spacing(1, 0)};
 `;
 

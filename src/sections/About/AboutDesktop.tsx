@@ -3,12 +3,12 @@ import Image from 'next/image';
 import styled from 'styled-components';
 
 import { Section } from '../../components/Section';
+import { TextSection } from '../../components/TextSection';
 
-type ITextBlockContainerProps = {
-  maxWidth: number;
-}
+import { useMobileMediaQuery } from '../../lib/mediaQueryHelper';
 
 export function About() {
+  const isMobile = useMobileMediaQuery();
   return (
     <Section>
       <SectionContainer>
@@ -20,16 +20,18 @@ export function About() {
             <Image src="/images/astronaut-open-helmet.png" alt="Astronaut" layout="fill" />
           </OverlappingImageWrapper>
         </ImagesWrapper>
-        <TextBlockWrapper>
-          <TextBlockContainer style={{ marginLeft: '10%' }} maxWidth={514}>
-            <Title>About Us</Title>
-            <Text>Suspended Soul made its blockchain debut at the height of the NFT revolution. With the firm conviction of being protagonists of a historic paradigm shift in the way art is created, shared and collected, as founders of Suspended Soul we decided to offer the community a boutique alternative in a market overloaded with volume. 
-              Each artist leaves their soul in their work. Suspended Soul came to honor that creative act. 
+        <TextSection
+          align="center"
+          title="ABOUT US"
+          text={(
+            <>
+              Suspended Soul made its blockchain debut at the height of the NFT revolution. With the firm conviction of being protagonists of a historic paradigm shift in the way art is created, shared and collected, as founders of Suspended Soul we decided to offer the community a boutique alternative in a market overloaded with volume.
+              Each artist leaves their soul in their work. Suspended Soul came to honor that creative act.
               <br /><br />
-              One auction at a time. No overlapping, no multiple bidding. Exclusive and total exposure for each work. For each artist behind their work. For every soul.  
-            </Text>
-          </TextBlockContainer>
-        </TextBlockWrapper>
+              One auction at a time. No overlapping, no multiple bidding. Exclusive and total exposure for each work. For each artist behind their work. For every soul.
+            </>
+          )}
+        />
         <DAOWrapper>
           <SideImageWrapper>
             <Image src="/images/astronaut-open-helmet-smoke.png" alt="Astronaut with Smoke" layout="fill" />
@@ -41,20 +43,16 @@ export function About() {
             <Image src="/images/+++++.svg" alt="+ background" layout="fill" />
           </PlusBackground>
         </DAOWrapper>
-        <TextBlockWrapper>
-          <TextBlockContainer maxWidth={380}>
-            <Title>SUSPENDED SOUL FOUNDATION</Title>
-            <Text>Suspended Soul Foundation was created with the aim of putting into motion a strategic plan for the crafting of the website, and to start our collective journey towards total decentralization. Among its initial governance functions are: developing the initial website setup, moving forward with the actions needed to execute the strategic plan of the site, taking care of the community treasury and creating optimal conditions to establish good functioning decentralized mechanisms. The launch of the SOULx token and our Decentralized Governance long term vision is the cornerstone towards decentralization.
-            </Text>
-          </TextBlockContainer>
-        </TextBlockWrapper>
-        <TextBlockWrapper >
-          <TextBlockContainer maxWidth={524}>
-            <Title>SUSPENDED SOUL DAO</Title>
-            <Text>We are standing at the threshold of a new era. In the near future, it will be the users themselves who will govern the platforms in which they participate. The self-determination of this community is the intrinsic value of this project. This process of property transfer starts with a slow decentralization dynamic which we are proposing. That&apos;s the step that we have been dreaming about since the beginning of it all, not only for our community, but for the entire world. Suspended Soul will be then run by a collective governance led by the SOULx token holders, a decentralized organization with the authority of taking fundamental decisions for the platform like, among other things, the community treasury&apos;s funds distribution and the voting process surrounding adjustments for the platform. Welcome to Suspended Soul DAO.
-            </Text>
-          </TextBlockContainer>
-        </TextBlockWrapper>
+        <TextSection
+          align={isMobile ? 'center' : 'flex-start'}
+          title="SUSPENDED SOUL FOUNDATION"
+          text="Suspended Soul Foundation was created with the aim of putting into motion a strategic plan for the crafting of the website, and to start our collective journey towards total decentralization. Among its initial governance functions are: developing the initial website setup, moving forward with the actions needed to execute the strategic plan of the site, taking care of the community treasury and creating optimal conditions to establish good functioning decentralized mechanisms. The launch of the SOULx token and our Decentralized Governance long term vision is the cornerstone towards decentralization."
+        />
+        <TextSection
+          align={isMobile ? 'center' : 'flex-end'}
+          title="SUSPENDED SOUL DAO"
+          text="We are standing at the threshold of a new era. In the near future, it will be the users themselves who will govern the platforms in which they participate. The self-determination of this community is the intrinsic value of this project. This process of property transfer starts with a slow decentralization dynamic which we are proposing. That&apos;s the step that we have been dreaming about since the beginning of it all, not only for our community, but for the entire world. Suspended Soul will be then run by a collective governance led by the SOULx token holders, a decentralized organization with the authority of taking fundamental decisions for the platform like, among other things, the community treasury&apos;s funds distribution and the voting process surrounding adjustments for the platform. Welcome to Suspended Soul DAO."
+        />
       </SectionContainer>
     </Section>
   );
@@ -95,54 +93,9 @@ const OverlappingImageWrapper = styled.div`
   }
 `;
 
-const TextBlockWrapper = styled.article`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: ${({ theme }) => theme.spacing(8, 0)};
-`;
 
 const SectionContainer = styled.div`
   position: relative;
-
-  @media (min-width: 1440px) {
-    & ${TextBlockWrapper}:first-of-type {
-      margin-left: 11% !important;
-    }
-    & ${TextBlockWrapper}:nth-of-type(2) {
-      margin-left: -16% !important;
-    }
-  }
-`;
-
-const TextBlockContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  max-width: 340px;
-
-  ${({ maxWidth }: ITextBlockContainerProps) =>
-    maxWidth && `
-      max-width: ${maxWidth}px;
-    `}
-
-  @media (min-width: 1440px) {
-    max-width: 540px;
-  }
-`;
-
-const Title = styled.h5`
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 24px;
-  text-transform: uppercase;
-  margin: ${({ theme }) => theme.spacing(1, 0)};
-`;
-
-const Text = styled.p`
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 28px;
-  margin: ${({ theme }) => theme.spacing(1, 0)};
 `;
 
 const DAOWrapper = styled.div`
@@ -150,6 +103,7 @@ const DAOWrapper = styled.div`
   position: relative;
   height: 644px;
   overflow: hidden;
+  margin-top: -5vw;
 
   @media (min-width: 1440px) {
     height: 500px;

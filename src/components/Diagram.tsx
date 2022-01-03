@@ -31,5 +31,6 @@ const ImageWrapper = styled.div`
   @media (max-width: 767px) {
     height: 394px;
     width: 302px;
+    margin: 0 auto;
   }
 `;

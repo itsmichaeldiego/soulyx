@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 interface ITextSectionProps {
   title: string;
-  text: string;
+  text: string | React.ReactNode;
   align?: string;
 }
 

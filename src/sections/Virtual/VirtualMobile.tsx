@@ -79,7 +79,6 @@ const Title = styled.h5`
   font-weight: bold;
   line-height: 24px;
   margin: ${({ theme }) => theme.spacing(1, 0)};
-  text-transform: uppercase;
 `;
 
 const Text = styled.p`

@@ -29,14 +29,15 @@ const LogoWrapper = styled.div`
   background-image: url('/images/logo.png');
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 40%;
+  background-size: 40vw;
 
   @media ${({ theme }) => theme.media.mobile} {
     min-height: 360px;
-    background-size: 45%;
+    background-size: 45vw;
   }
 
   @media ${({ theme }) => theme.media.desktop} {
     min-height: 660px;
+    background-size: 60vh;
   }
 `;

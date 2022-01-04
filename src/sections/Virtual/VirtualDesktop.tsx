@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Image from 'next/image';
 
 import { VIRTUAL_CARDS } from './data';
-import { marqueeLeft, marqueeRight } from '../../styles/animations';
+import { MarqueeBackgroundLeft, MarqueeBackgroundRight } from '../../components/MarqueeBackground';
 
 type IColumnImageWrapperProps = {
   height: number;
@@ -89,19 +89,13 @@ export function Virtual() {
 
 const Jumbotron = styled.div`
   background-image: url('/images/soulx-background-person.png');
-  background-position: 0% 0%;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
+  background-position: center;
   height: 1560px;
   margin-right: -24px;
   padding: ${({ theme }) => theme.spacing(8, 6)};
   position: relative;
-
-
-  @media ${({ theme }) => theme.media.desktop} {
-    background-size: cover;
-    padding: ${({ theme }) => theme.spacing(8, 6)};
-  }
 `;
 
 const FloatingText = styled.div`
@@ -119,10 +113,7 @@ const TextBlockWrapper = styled.article`
   flex-direction: column;
   margin-left: 60%;
   max-width: 346px;
-  
-  @media ${({ theme }) => theme.media.desktop} {
-    margin-top: ${({ theme }) => theme.spacing(10)};
-  }
+  margin-top: ${({ theme }) => theme.spacing(10)};
 `;
 
 const Title = styled.h5`
@@ -191,23 +182,3 @@ const TokenVirtualWrapper = styled.div`
     }
   }
 `;
-
-const MarqueeBackground = styled.div`
-  height: 515px;
-  position: relative;
-  background-image: url(${({ url }: { url: string }) => url});
-  background-repeat: no-repeat;
-  animation: ${marqueeLeft} 5s linear infinite;
-
-  @media ${({ theme }) => theme.media.desktop} {
-    height: 615px;
-  }
-`;
-
-const MarqueeBackgroundLeft = styled(MarqueeBackground)`
-  animation: ${marqueeLeft} 30s linear infinite;
-`
-
-const MarqueeBackgroundRight = styled(MarqueeBackground)`
-  animation: ${marqueeRight} 30s linear infinite;
-`

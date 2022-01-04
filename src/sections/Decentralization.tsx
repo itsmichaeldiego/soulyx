@@ -9,9 +9,9 @@ import { TextSection } from '../components/TextSection'
 export function Decentralization() {
   const isMobile = useMobileMediaQuery();
   return (
-    <>
+    <Wrapper>
       <HeaderImage>
-        <Image src="/images/decentralization.svg" alt="THRESHOLD OF DESCENTRALIZATION" layout="fill" objectPosition="top left" />
+        <Image src="/images/decentralization.svg" alt="THRESHOLD OF DESCENTRALIZATION" layout="fill" objectFit="contain" />
       </HeaderImage>
       <Content>
         <ImageWrapper>
@@ -49,21 +49,29 @@ export function Decentralization() {
           text={`A fixed emision of tokens from the start generates a scarcity effect. With time, this takes the investment into a growing curve and, as the platform expands and the interest around SOULx rises, the coin offer remains unaltered. This mechanism will allow a permanent valuation of the token and a continuous development of the Suspended Soul ecosystem.`}
         />
       </HandSection>
-    </>
+    </Wrapper>
   );
 }
 
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: ${({ theme }) => `calc(100vh - ${theme.sizes.header} - ${theme.spacing(12)})`};
+`
+
 const HeaderImage = styled.div`
-  min-height: 50vw;
-  position: relative;
   z-index: 2;
+  flex: 1;
+  position: relative;
+  min-height: 100vh;
+
 
   @media ${({ theme }) => theme.media.mobile} {
-    min-height: 168px;
+    min-height: 360px;
   }
 
   @media ${({ theme }) => theme.media.desktop} {
-    min-height: 660px;
+    min-height: 100vh;
   }
 `;
 
@@ -71,11 +79,14 @@ const Content = styled.div`
   display: flex;
   align-items: center;
   flex-direction: row-reverse;
-  margin-top: ${({ theme }) => theme.spacing(-11)};
+  margin-top: ${({ theme }) => theme.spacing(-16)};
   margin-right: -24px;
 
   > * {
     flex: 1 1 50%;
+  }
+  @media ${({ theme }) => theme.media.desktop} {
+    margin-top: -15vw;
   }
   @media ${({ theme }) => theme.media.mobile} {
     display: block;

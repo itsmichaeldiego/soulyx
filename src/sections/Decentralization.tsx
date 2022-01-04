@@ -123,21 +123,18 @@ const Text = styled.p`
 
 const HandSection = styled.div`
   position: relative;
-  background-size: contain;
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   background-image: url('/images/glass-hand.png');
-  background-position: 0 400px;
   @media ${({ theme }) => theme.media.mobile} {
-    background-size: cover;
-    background-position: 0 0;
     margin-left: ${({ theme }) => theme.spacing(-3)};
     margin-right: ${({ theme }) => theme.spacing(-3)};
     padding: ${({ theme }) => theme.spacing(0, 3)};
+    background-size: contain;
   }
 
   @media ${({ theme }) => theme.media.desktop} {
-    background-size: cover;
-    margin-left: ${({ theme }) => theme.spacing(-9)};
     margin-right: ${({ theme }) => theme.spacing(-3)};
   }
 `;

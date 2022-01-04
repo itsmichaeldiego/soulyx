@@ -6,6 +6,9 @@ import { Section } from '../../components/Section';
 import { MobileSwiper } from '../../components/Carousel/MobileSwiper';
 import { VIRTUAL_CARDS } from './data';
 
+import { MarqueeBackgroundLeft, MarqueeBackgroundRight } from '../../components/MarqueeBackground';
+
+
 export function Virtual() {
   return (
     <Section>
@@ -22,7 +25,10 @@ export function Virtual() {
             SOULx it&apos;s a ticket straight towards artistic empowerment. It&apos;s the act of sharing and bonding through art, while also celebrating it for what it is and what it could (sooner rather than later) become. It’s a whole virtual economy system built inside Suspended Soul’s own universe, with multiple and alluring diversification alternatives:
           </Text>
         </TextBlockWrapper>
-        <TokenVirtualWrapper />
+        <MarqueeWrapper>
+          <MarqueeBackgroundLeft url="/images/token-background-text.svg" />
+          <MarqueeBackgroundRight url="/images/virtual-background-text.svg" />
+        </MarqueeWrapper>
         <MobileSwiper cards={VIRTUAL_CARDS} />
       </SectionContainer>
     </Section>
@@ -43,13 +49,12 @@ const Jumbotron = styled.div`
   padding: ${({ theme }) => theme.spacing(4, 0)};
 `;
 
-const TokenVirtualWrapper = styled.div`
-  background-image: url('/images/token-virtual-background.svg');
-  background-position: 100% 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 420px;
-  margin: 0 ${({ theme }) => theme.spacing(-3, 0)};
+const MarqueeWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  margin: 0 -24px;
 `;
 
 const FloatingText = styled.div`

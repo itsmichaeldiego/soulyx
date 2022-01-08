@@ -5,9 +5,11 @@ import styled from 'styled-components';
 import { Default, Mobile, useMobileMediaQuery } from '../lib/mediaQueryHelper'
 
 import { TextSection } from '../components/TextSection'
+import { flickerAnimation } from '../styles/animations'
 
 export function Decentralization() {
   const isMobile = useMobileMediaQuery();
+
   return (
     <Wrapper>
       <HeaderImage>
@@ -123,18 +125,31 @@ const Text = styled.p`
 
 const HandSection = styled.div`
   position: relative;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url('/images/glass-hand.png');
-  @media ${({ theme }) => theme.media.mobile} {
-    margin-left: ${({ theme }) => theme.spacing(-3)};
-    margin-right: ${({ theme }) => theme.spacing(-3)};
-    padding: ${({ theme }) => theme.spacing(0, 3)};
+  z-index: 1;
+  :before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
     background-size: contain;
-  }
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('/images/glass-hand.png');
 
-  @media ${({ theme }) => theme.media.desktop} {
-    margin-right: ${({ theme }) => theme.spacing(-3)};
+    animation: ${flickerAnimation} 4s linear infinite;
+
+    @media ${({ theme }) => theme.media.mobile} {
+      margin-left: ${({ theme }) => theme.spacing(-3)};
+      margin-right: ${({ theme }) => theme.spacing(-3)};
+      padding: ${({ theme }) => theme.spacing(0, 3)};
+      background-size: cover;
+    }
+
+    @media ${({ theme }) => theme.media.desktop} {
+      margin-right: ${({ theme }) => theme.spacing(-3)};
+    }
   }
 `;

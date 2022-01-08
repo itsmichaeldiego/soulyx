@@ -1,44 +1,11 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 
-export const marqueeLeft = keyframes`
-  0% {
-    background-position: 1880px;
-  }
-
-  100% {
-    background-position: -1880px;
-  }
-`;
-
-export const marqueeRight = keyframes`
-  0% {
-    background-position: -2367px;
-  }
-
-  100% {
-    background-position: 2367px;
-  }
-`;
-
-export const marqueeLeftMobile = keyframes`
-  0% {
-    background-position: 1035px;
-  }
-
-  100% {
-    background-position: -1035px;
-  }
-`;
-
-export const marqueeRightMobile = keyframes`
-  0% {
-    background-position: -1303px;
-  }
-
-  100% {
-    background-position: 1303px;
-  }
-`;
+import {
+  marqueeLeft,
+  marqueeRight,
+  marqueeLeftMobile,
+  marqueeRightMobile,
+} from '../styles/animations';
 
 export const MarqueeBackground = styled.div`
   height: 425px;

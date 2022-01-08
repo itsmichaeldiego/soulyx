@@ -69,12 +69,6 @@ const TableWrapper = styled.div`
   border: 1px solid ${({ theme }) => theme.cta.primary};
   color: ${({ theme }) => theme.cta.primary};
   display: grid;
-
-  margin: ${({ theme }) => theme.spacing(0, 5)};
-
-  @media ${({ theme }) => theme.media.mobile} {
-    margin: 0;
-  }
 `;
 
 

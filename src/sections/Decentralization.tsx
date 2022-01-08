@@ -141,15 +141,18 @@ const HandSection = styled.div`
 
     animation: ${flickerAnimation} 4s linear infinite;
 
+    @media ${({ theme }) => theme.media.desktop} {
+      margin-right: ${({ theme }) => theme.spacing(-3)};
+    }
+
+    @media ${({ theme }) => theme.media.tablet} {
+      background-size: 120%;
+    }
+
     @media ${({ theme }) => theme.media.mobile} {
       margin-left: ${({ theme }) => theme.spacing(-3)};
       margin-right: ${({ theme }) => theme.spacing(-3)};
       padding: ${({ theme }) => theme.spacing(0, 3)};
-      background-size: cover;
-    }
-
-    @media ${({ theme }) => theme.media.desktop} {
-      margin-right: ${({ theme }) => theme.spacing(-3)};
     }
   }
 `;

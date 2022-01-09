@@ -107,6 +107,9 @@ const Wrapper = styled.nav`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  @media ${({ theme }) => theme.media.mobile} {
+    display: none;
+  }
 `
 
 const Indicators = styled.div`

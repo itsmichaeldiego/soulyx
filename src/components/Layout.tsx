@@ -3,13 +3,11 @@ import styled from 'styled-components';
 
 import { Nav } from './Nav'
 import { Header } from './Header'
-import { useMobileMediaQuery } from '../lib/mediaQueryHelper';
 
 export function Layout({ children }: React.PropsWithChildren<{}>): JSX.Element {
-  const isMobile = useMobileMediaQuery();
   return (
     <>
-      {!isMobile && <Nav />}
+      <Nav />
       <Wrapper>
         <Header />
         {children}

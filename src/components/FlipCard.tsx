@@ -93,7 +93,8 @@ const Wrapper = styled.div`
   height: 640px;
   cursor: pointer;
   background-color: transparent;
-  margin: ${({ theme }) => theme.spacing(0, 2)};
+  padding: ${({ theme }) => theme.spacing(0, 2)};
+  max-width: ${({ theme }) => `calc(100vw - ${theme.spacing(4)})`};
   // flip properties:
   perspective: 1000px;
   @media ${({ theme }) => theme.media.mobile} {

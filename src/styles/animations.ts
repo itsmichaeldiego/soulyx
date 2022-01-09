@@ -1,15 +1,9 @@
 import { keyframes } from 'styled-components';
 
-export const zoomAnimation = keyframes`
+export const flickerAnimation = keyframes`
   0%   { opacity:1; }
   50%  { opacity:.4; }
   100% { opacity:1; }
-`;
-
-export const flickerAnimation = keyframes`
-  0%   { background-size: 105% 106.5%; }
-  50%  { background-size: 100% 101%; }
-  100% { background-size: 105% 106.5%; }
 `;
 
 export const marqueeLeft = keyframes`

@@ -7,9 +7,9 @@ export const zoomAnimation = keyframes`
 `;
 
 export const flickerAnimation = keyframes`
-  0%   { background-size: 95%%; }
-  50%  { background-size: 100%; }
-  100% { background-size: 95%%; }
+  0%   { background-size: 105% 106.5%; }
+  50%  { background-size: 100% 101%; }
+  100% { background-size: 105% 106.5%; }
 `;
 
 export const marqueeLeft = keyframes`

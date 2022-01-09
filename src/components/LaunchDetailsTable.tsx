@@ -50,16 +50,10 @@ const TableWrapper = styled.div`
   color: ${({ theme }) => theme.cta.primary};
   display: grid;
   font-size: 16px;
-  margin: ${({ theme }) => theme.spacing(0, 5)};
-
-  @media ${({ theme }) => theme.media.desktop} {
-    margin: 0 auto;
-  }
 
   @media ${({ theme }) => theme.media.mobile} {
     font-size: 14px;
     margin: 0;
-    margin-right: 24px;
   }
 `;
 

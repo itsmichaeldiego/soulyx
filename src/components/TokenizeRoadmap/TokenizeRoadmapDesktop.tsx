@@ -49,11 +49,6 @@ const TableWrapper = styled.div`
   flex-direction: column;
   font-size: 12px;
   justify-content: center;
-  margin: ${({ theme }) => theme.spacing(0, 5)};
-
-  @media ${({ theme }) => theme.media.desktop} {
-    margin: 0 auto;
-  }
 `;
 
 const TableHeader = styled.div`

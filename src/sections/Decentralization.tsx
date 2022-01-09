@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { Default, Mobile, useMobileMediaQuery } from '../lib/mediaQueryHelper'
 
 import { TextSection } from '../components/TextSection'
-import { flickerAnimation } from '../styles/animations'
+import { flickerAnimation, zoomAnimation} from '../styles/animations'
 
 export function Decentralization() {
   const isMobile = useMobileMediaQuery();
@@ -139,7 +139,7 @@ const HandSection = styled.div`
     background-repeat: no-repeat;
     background-image: url('/images/glass-hand.png');
 
-    animation: ${flickerAnimation} 4s linear infinite;
+    animation: ${flickerAnimation} 4s linear infinite, ${zoomAnimation} 4s linear infinite;
 
     @media ${({ theme }) => theme.media.desktop} {
       margin-right: ${({ theme }) => theme.spacing(-3)};

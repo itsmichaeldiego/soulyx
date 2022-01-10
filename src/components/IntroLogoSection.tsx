@@ -2,6 +2,8 @@ import React from 'react';
 import Image, { ImageProps } from 'next/image';
 import styled from 'styled-components';
 
+import { LogoSection } from './LogoSection';
+
 type ILogoSectionTypes = {
   src: string;
   alt: string;
@@ -9,26 +11,11 @@ type ILogoSectionTypes = {
 
 export function IntroLogoSection({ src, alt, ...props }: ILogoSectionTypes) {
   return (
-    <Wrapper>
-      <Image src={src} alt={alt} {...props} />
-    </Wrapper>
+    <Wrapper src={src} alt={alt} />
   )
 }
 
-const Wrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  min-height: ${({ theme }) => `calc(100vh - ${theme.sizes.header})`}; 
-  flex: 1;
-  position: relative;
-  background-image: url('/images/logo.png');
-  background-repeat: no-repeat;
-  background-position: center 30%;
-  background-size: 40vw;
-
-  @media ${({ theme }) => theme.media.mobile} {
-    background-size: 45vw;
-  }
+const Wrapper = styled(LogoSection)`
+  min-height: ${({ theme }) => `calc(100vh - ${theme.sizes.header} - ${theme.spacing(12)})`}; 
+  background-size: auto ${({ theme }) => `calc(100vh - ${theme.sizes.header} - ${theme.spacing(12)})`};
 `;

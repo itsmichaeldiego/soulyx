@@ -9,26 +9,22 @@ type ILogoSectionTypes = {
 
 export function LogoSection({ src, alt, ...props }: ILogoSectionTypes) {
   return (
-    <Wrapper>
-      <Image src={src} alt={alt} {...props} />
+    <Wrapper {...props}>
+      <Image src={src} alt={alt} layout="fill" />
     </Wrapper>
   )
 }
 
 const Wrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  min-height: ${({ theme }) => `calc(100vh - ${theme.sizes.header})`}; 
-  flex: 1;
+  min-height: 100vw;
   position: relative;
   background-image: url('/images/logo.png');
   background-repeat: no-repeat;
-  background-position: center 30%;
-  background-size: 40vw;
+  background-position: center center;
+  background-size: 480px;
 
   @media ${({ theme }) => theme.media.mobile} {
-    background-size: 45vw;
+    min-height: 296px;
+    background-size: contain;
   }
 `;

@@ -7,7 +7,7 @@ type ILogoSectionTypes = {
   alt: string;
 } & ImageProps;
 
-export function LogoSection({ src, alt, ...props }: ILogoSectionTypes) {
+export function IntroLogoSection({ src, alt, ...props }: ILogoSectionTypes) {
   return (
     <Wrapper>
       <Image src={src} alt={alt} {...props} />

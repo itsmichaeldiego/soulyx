@@ -1,14 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-import Image from 'next/image';
+
 import { Footer } from '../components/Footer';
+import { LogoSection } from '../components/LogoSection';
 
 export function Thanks() {
   return (
     <SectionWrapper>
-      <LogoWrapper>
-        <Image src="/images/thanks.svg" alt="SoulX Thannks" layout="fill" />
-      </LogoWrapper>
+      <LogoSection src="/images/thanks.svg" alt="SoulX Thannks" layout="fill" />
       <Text>THANK YOU FOR COMING THIS FAR DOWN THE ROAD WITH US. HOPE YOUR DESIRE TO GROW TOGETHER MATCHES OURS, AND WE CAN WRITE THE NEXT CHAPTER TOGETHER.</Text>
       <Footer />
     </SectionWrapper>
@@ -18,21 +17,6 @@ export function Thanks() {
 const SectionWrapper = styled.div`
   display: flex;
   flex-direction: column;
-`;
-
-const LogoWrapper = styled.div`
-  min-height: 100vw;
-  position: relative;
-  background-image: url('/images/logo.png');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 60%;
-  margin-bottom: ${({ theme }) => theme.spacing(2)};
-
-  @media ${({ theme }) => theme.media.mobile} {
-    min-height: 254px;
-    background-size: contain;
-  }
 `;
 
 const Text = styled.div`

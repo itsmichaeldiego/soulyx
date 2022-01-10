@@ -1,19 +1,16 @@
 import React from 'react';
-import Image from 'next/image';
-import styled from 'styled-components';
 
-import { TextSection } from '../components/TextSection';
-import { TokenizeRoadmap } from '../components/TokenizeRoadmap';
-import { RoadmapChart } from '../components/RoadmapChart';
 import { Diagram } from '../components/Diagram';
 import { Section } from '../components/Section';
+import { LogoSection } from '../components/LogoSection';
+import { TextSection } from '../components/TextSection';
+import { RoadmapChart } from '../components/RoadmapChart';
+import { TokenizeRoadmap } from '../components/TokenizeRoadmap';
 
 export function Genesis() {
   return (
     <Section>
-      <LogoWrapper>
-        <Image src="/images/genesis.svg" alt="SoulX Genesis" layout="fill" objectFit="contain" />
-      </LogoWrapper>
+      <LogoSection src="/images/genesis.svg" alt="SoulX Genesis" layout="fill"  />
       <TextSection
         title="SOULx SUPPLY"
         text="Our total token supply consists of 235.000.000 SOULx, those of which will be divided into different percentages and destined into different holders according to our mission, as stated below."
@@ -32,17 +29,3 @@ export function Genesis() {
     </Section>
   );
 }
-
-const LogoWrapper = styled.div`
-  min-height: 100vw;
-  position: relative;
-  background-image: url('/images/logo.png');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 60%;
-
-  @media ${({ theme }) => theme.media.mobile} {
-    min-height: 296px;
-    background-size: contain;
-  }
-`;

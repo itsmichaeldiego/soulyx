@@ -134,7 +134,7 @@ const HandSection = styled.div`
     width: 100%;
     height: 100%;
     z-index: -1;
-    background-size: 100% 101%;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     background-image: url('/images/glass-hand.png');

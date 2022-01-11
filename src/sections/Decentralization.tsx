@@ -135,7 +135,7 @@ const HandSection = styled.div`
     height: 100%;
     z-index: -1;
     background-size: contain;
-    background-position: center;
+    background-position: bottom center;
     background-repeat: no-repeat;
     background-image: url('/images/glass-hand.png');
 
@@ -146,7 +146,7 @@ const HandSection = styled.div`
     }
 
     @media ${({ theme }) => theme.media.tablet} {
-      background-size: 120%;
+      background-size: cover;
     }
 
     @media ${({ theme }) => theme.media.mobile} {

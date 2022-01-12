@@ -4,5 +4,5 @@ export default function handler(
     req: NextApiRequest,
     res: NextApiResponse<string>
 ) {
-    res.status(200).text('235000000.0')
+    res.end('235000000.0')
 }

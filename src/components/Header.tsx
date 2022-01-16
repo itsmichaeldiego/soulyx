@@ -50,9 +50,7 @@ const Wrapper = styled.header`
   align-items: center;
   justify-content: space-between;
   height: ${({ theme }) => theme.sizes.header};
-  margin-bottom: ${({ theme }) => theme.spacing(2)};
   @media ${({ theme }) => theme.media.mobile} {
-    margin-bottom: ${({ theme }) => theme.spacing(6)};
     position: fixed;
     top: 0;
     left: 0;

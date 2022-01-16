@@ -6,6 +6,16 @@ export const flickerAnimation = keyframes`
   100% { opacity:1; }
 `;
 
+export const simpleMarquee = keyframes`
+  0% {
+    background-position: 100vw;
+  }
+
+  100% {
+    background-position: -100vw;
+  }
+`;
+
 export const marqueeLeft = keyframes`
   0% {
     background-position: 1880px;

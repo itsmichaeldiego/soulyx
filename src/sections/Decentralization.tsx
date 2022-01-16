@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { Default, Mobile, useMobileMediaQuery } from '../lib/mediaQueryHelper'
 
 import { TextSection } from '../components/TextSection'
-import { flickerAnimation } from '../styles/animations'
+import { flickerAnimation, simpleMarquee } from '../styles/animations'
 
 export function Decentralization() {
   const isMobile = useMobileMediaQuery();
@@ -126,6 +126,7 @@ const Text = styled.p`
 const HandSection = styled.div`
   position: relative;
   z-index: 1;
+  padding-bottom: 80px;
   :before {
     content: " ";
     position: absolute;
@@ -154,5 +155,18 @@ const HandSection = styled.div`
       margin-right: ${({ theme }) => theme.spacing(-3)};
       padding: ${({ theme }) => theme.spacing(0, 3)};
     }
+  }
+
+  :after {
+    content: " ";
+    position: absolute;
+    bottom: 62px;
+    background-position: center;
+    background-image: url('/images/soulx-suspended-text.svg');
+    width: 100vw;
+    height: 29px;
+    animation: ${simpleMarquee} 20s linear infinite;
+    margin-left: -72px;
+    margin-right: -24px;
   }
 `;

@@ -3,6 +3,7 @@ import Image from 'next/image';
 import styled from 'styled-components';
 
 import { LinkButton } from './LinkButton';
+import { AnimatedSmoke } from './AnimatedSmoke';
 
 export function GetSOULx() {
   return (
@@ -10,12 +11,13 @@ export function GetSOULx() {
       <ImageWrapper>
         <Image src="/images/get-soulx.svg" alt="Get SOULx" layout="fill" />
       </ImageWrapper>
-        <ButtonWrapper>
-          <GetButton href="https://miso.sushi.com/" text="Get SOULx" target="_blank" />
-        </ButtonWrapper>
-        <SuspendedSoulWrapper>
-          <Image src="/images/suspended-soul.svg" alt="Suspended Soul" layout="fill" />
-        </SuspendedSoulWrapper>
+      <ButtonWrapper>
+        <GetButton href="https://miso.sushi.com/" text="Get SOULx" target="_blank" />
+      </ButtonWrapper>
+      <SuspendedSoulWrapper>
+        <Image src="/images/suspended-soul.svg" alt="Suspended Soul" layout="fill" />
+      </SuspendedSoulWrapper>
+      <AnimatedSmoke />
     </Wrapper>
   );
 }
@@ -86,6 +88,8 @@ const SuspendedSoulWrapper = styled.div`
   margin-top: ${({ theme }) => theme.spacing(15)};
   min-height: 300px;
   position: relative;
+  // one more than the animated smoke
+  z-index: 5;
 
   @media ${({ theme }) => theme.media.mobile} {
     max-width: 340px;

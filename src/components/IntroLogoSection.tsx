@@ -16,6 +16,6 @@ export function IntroLogoSection({ src, alt, ...props }: ILogoSectionTypes) {
 }
 
 const Wrapper = styled(LogoSection)`
-  min-height: ${({ theme }) => `calc(100vh - ${theme.sizes.header} - ${theme.spacing(12)})`}; 
+  min-height: ${({ theme }) => `calc(100vh - ${theme.sizes.header} - ${theme.spacing(12)})`};
   background-size: auto ${({ theme }) => `calc(100vh - ${theme.sizes.header} - ${theme.spacing(12)})`};
 `;

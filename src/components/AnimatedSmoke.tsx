@@ -1,41 +1,47 @@
 import React from 'react'
 import styled from 'styled-components'
 
+const SmokeAnimation = (props: any) => (
+  <SmokeWrapper {...props}>
+    <section className="ag-smoke-block">
+    <div className="ag-smoke-1">
+      <img src="/images/smoke-1.png" /></div>
+    <div className="ag-smoke-1 ag-smoke__delay-1">
+      <img src="/images/smoke-1.png" /></div>
+    <div className="ag-smoke-1 ag-smoke__delay-2">
+      <img src="/images/smoke-1.png" /></div>
+    <div className="ag-smoke-2">
+      <img src="/images/smoke-2.png" /></div>
+    <div className="ag-smoke-2 ag-smoke__delay-1">
+      <img src="/images/smoke-2.png" /></div>
+    <div className="ag-smoke-2 ag-smoke__delay-2">
+      <img src="/images/smoke-2.png" /></div>
+    <div className="ag-smoke-3"><img src="/images/smoke-3.png" /></div>
+    <div className="ag-smoke-3 ag-smoke__delay-1">
+      <img src="/images/smoke-3.png" /></div>
+    <div className="ag-smoke-3 ag-smoke__delay-2">
+      <img src="/images/smoke-3.png" /></div>
+    <div className="ag-smoke-4"><img src="/images/smoke-4.png" /></div>
+    <div className="ag-smoke-4 ag-smoke__delay-1">
+      <img src="/images/smoke-4.png" /></div>
+    <div className="ag-smoke-4 ag-smoke__delay-2">
+      <img src="/images/smoke-4.png" /></div>
+    <div className="ag-format-container"></div>
+  </section>
+  </SmokeWrapper>
+)
+
 export function AnimatedSmoke() {
   return (
-    <Wrapper>
-      <section className="ag-smoke-block">
-      <div className="ag-smoke-1">
-        <img src="/images/smoke-1.png" /></div>
-      <div className="ag-smoke-1 ag-smoke__delay-1">
-        <img src="/images/smoke-1.png" /></div>
-      <div className="ag-smoke-1 ag-smoke__delay-2">
-        <img src="/images/smoke-1.png" /></div>
-      <div className="ag-smoke-2">
-        <img src="/images/smoke-2.png" /></div>
-      <div className="ag-smoke-2 ag-smoke__delay-1">
-        <img src="/images/smoke-2.png" /></div>
-      <div className="ag-smoke-2 ag-smoke__delay-2">
-        <img src="/images/smoke-2.png" /></div>
-      <div className="ag-smoke-3"><img src="/images/smoke-3.png" /></div>
-      <div className="ag-smoke-3 ag-smoke__delay-1">
-        <img src="/images/smoke-3.png" /></div>
-      <div className="ag-smoke-3 ag-smoke__delay-2">
-        <img src="/images/smoke-3.png" /></div>
-      <div className="ag-smoke-4"><img src="/images/smoke-4.png" /></div>
-      <div className="ag-smoke-4 ag-smoke__delay-1">
-        <img src="/images/smoke-4.png" /></div>
-      <div className="ag-smoke-4 ag-smoke__delay-2">
-        <img src="/images/smoke-4.png" /></div>
-      </section>
-      <div className="ag-format-container"></div>
-    </Wrapper>
+    <>
+      <SmokeAnimation style={{ top: "10%", transform: "rotate(180)"}} />
+      <SmokeAnimation style={{ top: "40%" }} />
+    </>
   )
 }
 
-const Wrapper = styled.div`
+const SmokeWrapper = styled.div`
   position: absolute;
-  top: 40%;
 
   .ag-format-container {
     width: 100vw;

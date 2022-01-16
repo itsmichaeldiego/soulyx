@@ -6,7 +6,7 @@ export function IntroLogoSection() {
   return (
     <Wrapper>
       <video autoPlay muted loop className="intro-video">
-        <source src="/videos/logo.webm" type="video/mp4" />
+        <source src="/videos/logo.webm" type="video/webm" />
       </video>
       <Image src="/images/soulx.svg" alt="SoulX Banner" layout="fill" />
     </Wrapper>

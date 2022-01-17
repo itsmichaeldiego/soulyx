@@ -40,7 +40,7 @@ const SectionContent = styled.div`
 `;
 
 const HeaderWrapper = styled.div`
-  min-height: 624px;
+  min-height: 80vh;
   position: relative;
 
   @media ${({ theme }) => theme.media.mobile} {

@@ -12,7 +12,7 @@ export function LaunchDetails() {
     <SectionWrapper>
       <BackgroundWrapper>
         <ImageWrapper>
-          <Image src="/images/token-launch-details.svg" alt="Token launch details" layout="fill" />
+          <Image src="/images/soulx-launch-details.svg" alt="Token launch details" layout="fill" objectPosition="top left"/>
         </ImageWrapper>
       </BackgroundWrapper>
       <ContentWrapper>
@@ -34,9 +34,9 @@ const ContentWrapper = styled.div`
 `;
 
 const ImageWrapper = styled.div`
-  min-height: 512px;
+  min-height: 80vh;
   height: 100%;
-  max-width: 860px;
+  max-width: 60vw;
   position: relative;
 
   @media ${({ theme }) => theme.media.mobile} {

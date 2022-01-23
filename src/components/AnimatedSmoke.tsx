@@ -36,7 +36,11 @@ export function AnimatedSmoke() {
 const Wrapper = styled.div`
   position: absolute;
   bottom: 0;
-  height: 50%;
+  height: 75%;
+
+  @media ${({ theme }) => theme.media.mobile} {
+    height: 50%;
+  }
 
   .ag-format-container {
     width: 100vw;

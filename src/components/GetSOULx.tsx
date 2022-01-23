@@ -8,29 +8,30 @@ import { AnimatedSmoke } from './AnimatedSmoke';
 export function GetSOULx() {
   return (
     <Wrapper>
-      <ImageWrapper>
-        <Image src="/images/get-soulx.svg" alt="Get SOULx" layout="fill" />
-      </ImageWrapper>
-      <ButtonWrapper>
-        <GetButton href="https://miso.sushi.com/" text="Get SOULx" target="_blank" />
-      </ButtonWrapper>
-      <SuspendedSoulWrapper>
-        <Image src="/images/suspended-soul.svg" alt="Suspended Soul" layout="fill" />
-      </SuspendedSoulWrapper>
+        <TitleWrapper>
+          <Image src="/images/get-soulx.svg" alt="Get SOULx" layout="fill" />
+        </TitleWrapper>
+        <ButtonWrapper>
+          <GetButton href="https://miso.sushi.com/" text="Get SOULx" target="_blank" />
+        </ButtonWrapper>
+        <SuspendedSoulWrapper>
+          <Image src="/images/suspended-soul.svg" alt="Suspended Soul" layout="fill" />
+        </SuspendedSoulWrapper>
       <AnimatedSmoke />
     </Wrapper>
   );
 }
 
 const Wrapper = styled.div`
+  height: 1820px;
+  padding: ${({ theme }) => theme.spacing(20, 0)};
+  margin-left: ${({ theme }) => theme.spacing(-9)};
+  position: relative;
+  overflow: hidden;
   background-image: url('/images/space-man-suspended-soul.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 1820px;
-  padding: ${({ theme }) => theme.spacing(20, 0)};
-  position: relative;
-  margin-left: ${({ theme }) => theme.spacing(-9)};
 
   @media ${({ theme }) => theme.media.mobile} {
     margin-left: ${({ theme }) => theme.spacing(-3)};
@@ -46,10 +47,14 @@ const Wrapper = styled.div`
   }
 `;
 
-const ImageWrapper = styled.div`
+
+const TitleWrapper = styled.div`
   max-width: 100%;
   min-height: 200px;
+  margin: 0 auto;
+  // fix for content to go over the animated smoke
   position: relative;
+  z-index: 5;
 
   @media ${({ theme }) => theme.media.mobile} {
     min-height: 96px;
@@ -65,6 +70,9 @@ const ButtonWrapper = styled.div`
   display: flex;
   margin-top: ${({ theme }) => theme.spacing(5)};
   margin-bottom: ${({ theme }) => theme.spacing(105)};
+  // fix for content to go over the animated smoke
+  position: relative;
+  z-index: 5;
 
   @media ${({ theme }) => theme.media.mobile} {
     margin-top: ${({ theme }) => theme.spacing(2.5)};
@@ -84,18 +92,17 @@ const GetButton = styled(LinkButton)`
 `;
 
 const SuspendedSoulWrapper = styled.div`
-  margin-left: ${({ theme }) => theme.spacing(5)};
-  margin-top: ${({ theme }) => theme.spacing(15)};
-  min-height: 300px;
+  // fix for content to go over the animated smoke
   position: relative;
-  // one more than the animated smoke
   z-index: 5;
+  min-height: 300px;
+  margin-left: ${({ theme }) => theme.spacing(9)};
+  margin-right: ${({ theme }) => theme.spacing(3)};
 
   @media ${({ theme }) => theme.media.mobile} {
     max-width: 340px;
     min-height: 96px;
-    margin: 0;
-    margin-top: -18px;
+    margin: 0 auto;
   }
 
   @media ${({ theme }) => theme.media.desktop} {

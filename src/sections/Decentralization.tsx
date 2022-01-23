@@ -166,7 +166,7 @@ const HandSection = styled.div`
     width: 100vw;
     height: 29px;
     animation: ${simpleMarquee} 20s linear infinite;
-    margin-left: -72px;
-    margin-right: -24px;
+    margin-left: ${({ theme }) => theme.spacing(-9)};
+    margin-right: ${({ theme }) => theme.spacing(-3)};
   }
 `;

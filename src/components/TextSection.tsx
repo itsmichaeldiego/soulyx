@@ -7,9 +7,9 @@ interface ITextSectionProps {
   align?: string;
 }
 
-export function TextSection({ title, text, align }: ITextSectionProps): JSX.Element {
+export function TextSection({ title, text, align, ...props }: ITextSectionProps): JSX.Element {
   return (
-    <Wrapper align={align || 'center'}>
+    <Wrapper align={align || 'center'} {...props}>
       <Container>
         <Title>{title}</Title>
         <Text>{text}</Text>
@@ -22,7 +22,7 @@ TextSection.defaultProps = {
   align: 'center',
 }
 
-const Wrapper = styled.div<{ align: string }>`
+const Wrapper = styled.div<{ align?: string, simple?: boolean }>`
   display: flex;
   flex-direction: column;
   ${({ align }) => `align-items: ${align};`}

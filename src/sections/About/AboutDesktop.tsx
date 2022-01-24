@@ -9,33 +9,35 @@ export function About() {
   return (
     <Section>
       <SectionContainer>
-        <ImagesWrapper>
-          <SoulxWrapper>
-            <Image src="/images/soulx-transparent.svg" alt="SOULx" layout="fill" />
-          </SoulxWrapper>
+        <SoulxWrapper>
+          <Image src="/images/soulx-transparent.svg" alt="SOULx" layout="fill" />
+        </SoulxWrapper>
+        <AstronautAndIsologoWrapper>
           <OverlappingImageWrapper>
             <Image src="/images/astronaut-open-helmet.png" alt="Astronaut" layout="fill" />
           </OverlappingImageWrapper>
-        </ImagesWrapper>
-        <TextSection
-          align="center"
-          title="ABOUT US"
-          text={(
-            <>
-              Suspended Soul made its blockchain debut at the height of the NFT revolution. With the firm conviction of being protagonists of a historic paradigm shift in the way art is created, shared and collected, as founders of Suspended Soul we decided to offer the community a boutique alternative in a market overloaded with volume.
-              Each artist leaves their soul in their work. Suspended Soul came to honor that creative act.
-              <br /><br />
-              One auction at a time. No overlapping, no multiple bidding. Exclusive and total exposure for each work. For each artist behind their work. For every soul.
-            </>
-          )}
-        />
+          <StyledTextSection
+            align="flex-start"
+            title="ABOUT US"
+            text={(
+              <>
+                Suspended Soul made its blockchain debut at the height of the NFT revolution. With the firm conviction of being protagonists of a historic paradigm shift in the way art is created, shared and collected, as founders of Suspended Soul we decided to offer the community a boutique alternative in a market overloaded with volume.
+                Each artist leaves their soul in their work. Suspended Soul came to honor that creative act.
+                <br /><br />
+                One auction at a time. No overlapping, no multiple bidding. Exclusive and total exposure for each work. For each artist behind their work. For every soul.
+              </>
+            )}
+          />
+          <IsologoWrapper>
+            <Video autoPlay muted loop>
+              <source src="/videos/isologo.webm" type="video/webm" />
+            </Video>
+          </IsologoWrapper>
+        </AstronautAndIsologoWrapper>
         <DAOWrapper>
           <SideImageWrapper>
             <Image src="/images/astronaut-open-helmet-smoke.png" alt="Astronaut with Smoke" layout="fill" />
           </SideImageWrapper>
-          <AlphaLogoWrapper>
-            <Image src="/images/soulx-logo-alpha.svg" alt="SOULx Logo" layout="fill" />
-          </AlphaLogoWrapper>
           <PlusBackground>
             <Image src="/images/+++++.svg" alt="+ background" layout="fill" />
           </PlusBackground>
@@ -55,17 +57,6 @@ export function About() {
   );
 }
 
-const ImagesWrapper = styled.div`
-  width: 100%;
-  height: 1420px;
-  position: relative;
-  padding: 20px 0;
-
-  @media ${({ theme }) => theme.media.desktop} {
-    height: 1620px;
-  }
-`;
-
 const SoulxWrapper = styled.div`
   max-width: 1160px;
   min-height: 960px;
@@ -77,12 +68,28 @@ const SoulxWrapper = styled.div`
   }
 `;
 
+const AstronautAndIsologoWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: -600px;
+  margin-left: auto;
+  width: 787px;
+  @media ${({ theme }) => theme.media.desktop} {
+    margin-top: -1100px;
+    width: 920px;
+  }
+`
+
 const OverlappingImageWrapper = styled.div`
   width: 787px;
-  min-height: 1181px;
-  position: absolute;
-  top: 240px;
-  right: 80px;
+  height: 1181px;
+  position: relative;
+
+  @media ${({ theme }) => theme.media.mobile} {
+    padding: ${({ theme }) => theme.spacing(6, 0)};
+  }
+
 
   @media ${({ theme }) => theme.media.desktop} {
     width: 920px;
@@ -100,7 +107,9 @@ const DAOWrapper = styled.div`
   position: relative;
   height: 644px;
   overflow: hidden;
-  margin-top: -5vw;
+  margin-top: -15vw;
+  margin-left: ${({ theme }) => theme.spacing(-9)};
+  margin-right: ${({ theme }) => theme.spacing(-3)};
 
   @media ${({ theme }) => theme.media.desktop} {
     height: 500px;
@@ -108,36 +117,43 @@ const DAOWrapper = styled.div`
 `;
 
 const SideImageWrapper = styled.div`
+  position: relative;
   width: 270px;
-  min-height: 417px;
-  position: absolute;
-  top: -80px;
-  left: 0;
+  max-width: 270px;
+  height: 416px;
+  max-height: 416px;
 `;
 
-const AlphaLogoWrapper = styled.div`
-  width: 967px;
-  min-height: 460px;
-  position: absolute;
-  bottom: 120px;
-  right: 100px;
+const IsologoWrapper = styled.div`
+  margin-right: auto;
+  margin-top: ${({ theme }) => theme.spacing(12)};
+  width: 36vw;
   z-index: 2;
-
-  @media ${({ theme }) => theme.media.desktop} {
-    width: 1340px;
-  }
 `;
+
+const Video = styled.video`
+  width: 100%;
+`
 
 const PlusBackground = styled.div`
   width: 1914px;
   min-height: 525px;
   position: absolute;
-  top: 232px;
-  left: 704px;
+  top: 0;
+  left: 550px;
   z-index: 1;
 
   @media ${({ theme }) => theme.media.desktop} {
-    top: 100px;
-    left: 860px;
+    top: 0;
+    left: 750px;
   }
 `;
+
+const StyledTextSection = styled(TextSection)`
+  padding: 0;
+  padding-top: ${({ theme }) => theme.spacing(12)};
+  width: 787px;
+  @media ${({ theme }) => theme.media.desktop} {
+    width: 920px;
+  }
+`

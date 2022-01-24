@@ -77,6 +77,9 @@ const AstronautAndIsologoWrapper = styled.div`
   margin-top: -600px;
   margin-left: auto;
   width: 787px;
+  @media ${({ theme }) => theme.media.tablet} {
+    width: 100%;
+  }
   @media ${({ theme }) => theme.media.desktop} {
     margin-top: -1100px;
     width: 920px;
@@ -92,6 +95,10 @@ const OverlappingImageWrapper = styled.div`
     padding: ${({ theme }) => theme.spacing(6, 0)};
   }
 
+  @media ${({ theme }) => theme.media.tablet} {
+    width: 450px;
+    height: 600px;
+  }
 
   @media ${({ theme }) => theme.media.desktop} {
     width: 920px;
@@ -159,6 +166,9 @@ const StyledTextSection = styled(TextSection)`
   padding: 0;
   padding-top: ${({ theme }) => theme.spacing(12)};
   width: 787px;
+  @media ${({ theme }) => theme.media.tablet} {
+    max-width: 100%;
+  }
   @media ${({ theme }) => theme.media.desktop} {
     width: 920px;
   }

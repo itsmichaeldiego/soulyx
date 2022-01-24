@@ -17,8 +17,10 @@ export function About() {
             <Image src="/images/soulx-background.svg" alt="SOULx background" layout="fill" />
           </LogoImageWrapper>
         </ImagesWrapper>
-        <ImageWrapper style={{ marginTop: -70 }}>
-          <Image src="/images/astronaut-open-helmet.png" alt="Astronaut open helmet" layout="fill" />
+        <ImageWrapper>
+          <ImageContainer style={{ marginTop: -70 }}>
+            <Image src="/images/astronaut-open-helmet.png" alt="Astronaut open helmet" layout="fill" />
+          </ImageContainer>
         </ImageWrapper>
         <TextSection
           align="center"
@@ -33,7 +35,9 @@ export function About() {
           )}
         />
         <ImageWrapper>
-          <Image src="/images/astronaut-open-helmet-smoke.png" alt="Astronaut with Smoke" layout="fill" />
+          <ImageContainer>
+            <Image src="/images/astronaut-open-helmet-smoke.png" alt="Astronaut with Smoke" layout="fill" />
+          </ImageContainer>
         </ImageWrapper>
         <TextSection
           align="center"
@@ -68,6 +72,11 @@ const LogoImageWrapper = styled.div`
 `;
 
 const ImageWrapper = styled.div`
+  margin: 0 auto;
+  max-width: 440px;
+`
+
+const ImageContainer = styled.div`
   max-width: 327px;
   min-height: 456px;
   position: relative;

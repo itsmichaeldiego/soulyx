@@ -34,10 +34,12 @@ export function About() {
             </Video>
           </IsologoWrapper>
         </AstronautAndIsologoWrapper>
-        <DAOWrapper>
-          <SideImageWrapper>
+        <FloatingImageWrapper>
+          <FloatingImageContainer>
             <Image src="/images/astronaut-open-helmet-smoke.png" alt="Astronaut with Smoke" layout="fill" />
-          </SideImageWrapper>
+          </FloatingImageContainer>
+        </FloatingImageWrapper>
+        <DAOWrapper>
           <PlusBackground>
             <Image src="/images/+++++.svg" alt="+ background" layout="fill" />
           </PlusBackground>
@@ -116,12 +118,21 @@ const DAOWrapper = styled.div`
   }
 `;
 
-const SideImageWrapper = styled.div`
+const FloatingImageWrapper = styled.div`
   position: relative;
+`
+
+const FloatingImageContainer = styled.div`
+  position: absolute;
+  top: -600px;
+  left: -72px;
   width: 270px;
   max-width: 270px;
   height: 416px;
   max-height: 416px;
+  @media (max-width: 1200px) {
+    top: 0;
+  }
 `;
 
 const IsologoWrapper = styled.div`
@@ -139,14 +150,9 @@ const PlusBackground = styled.div`
   width: 1914px;
   min-height: 525px;
   position: absolute;
-  top: 0;
-  left: 550px;
+  top: 2vw;
+  left: 55vw;
   z-index: 1;
-
-  @media ${({ theme }) => theme.media.desktop} {
-    top: 0;
-    left: 750px;
-  }
 `;
 
 const StyledTextSection = styled(TextSection)`

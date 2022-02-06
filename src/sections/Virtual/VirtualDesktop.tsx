@@ -26,7 +26,7 @@ export function Virtual() {
           A UNIVERSE OF POSSIBILITIES
         </Title>
         <Text>
-          {`${TOKEN_NAME} is a ticket straight towards artistic empowerment. It's a whole virtual economy system built inside Suspended Soul's own universe, with multiple and alluring diversification alternatives for both artists and collectors, creatives and spectators.`}
+          {`${TOKEN_NAME} is a ticket straight towards artistic empowerment. It’s a whole virtual economy system built inside Suspended Soul’s own universe, with multiple and alluring diversification alternatives for both artists and collectors, creatives and spectators.`}
         </Text>
       </TextBlockWrapper>
       <ImageColumnsWrapper>

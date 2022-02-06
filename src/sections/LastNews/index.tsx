@@ -38,10 +38,10 @@ export function LastNews() {
         <CardItem>
           <Card variant="primary">
             <div>
-              <CardTitle>DOWNLOAD PDF FOR INVESTORS</CardTitle>
+              <CardTitle>DISCOVER {TOKEN_NAME}</CardTitle>
               <CardText>Click here to read our extended roadmap, our mission and our project explained in detail.</CardText>
             </div>
-            <ButtonWrapper variant="primary" text="DOWNLOAD PDF" href="https://miso.sushi.com/" />
+            <ButtonWrapper variant="primary" text="READ MORE" href="https://miso.sushi.com/" target="_blank" />
           </Card>
         </CardItem>
         <CardItem>
@@ -52,7 +52,7 @@ export function LastNews() {
                 {`Open up a big door into the future and start investing on ${TOKEN_NAME} now, a new virtual economy.`}
               </CardText>
             </div>
-            <ButtonWrapper variant="secondary" text={`GET ${TOKEN_NAME}`} href="https://miso.sushi.com/" />
+            <ButtonWrapper variant="secondary" text={`GET ${TOKEN_NAME}`} href="https://miso.sushi.com/" target="_blank" />
           </Card>
         </CardItem>
       </CardsWrapper>

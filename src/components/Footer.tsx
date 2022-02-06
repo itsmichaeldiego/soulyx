@@ -5,19 +5,19 @@ export function Footer(): JSX.Element {
   return (
     <Wrapper>
       <FooterLinks>
-        <FooterLink href="https://www.notion.so/suspendedsoul/TERMS-CONDITIONS-f484b21c8122490496ea64babb500d1e">
+        <FooterLink href="https://www.notion.so/suspendedsoul/TERMS-CONDITIONS-f484b21c8122490496ea64babb500d1e" target="_blank">
           TERMS
         </FooterLink>
-        {/* <FooterLink href="https://miso.sushi.com/">COOKIES</FooterLink> */}
-        <FooterLink href="https://www.notion.so/suspendedsoul/PRIVACY-POLICY-TREATMENT-OF-PERSONAL-DATA-82c8865284d94bd7ada2bcb9cb795277">
+        {/* <FooterLink href="https://miso.sushi.com/" target="_blank">COOKIES</FooterLink> */}
+        <FooterLink href="https://www.notion.so/suspendedsoul/PRIVACY-POLICY-TREATMENT-OF-PERSONAL-DATA-82c8865284d94bd7ada2bcb9cb795277" target="_blank">
           PRIVACY
         </FooterLink>
-        {/* <FooterLink href="https://miso.sushi.com/">CREDITS</FooterLink> */}
+        {/* <FooterLink href="https://miso.sushi.com/" target="_blank">CREDITS</FooterLink> */}
       </FooterLinks>
       <MediaLinks>
-        <FooterLink href="https://twitter.com/suspendedsoul_">TWITTER</FooterLink>
-        <FooterLink href="https://discord.com/invite/D4EpbKBkpA">DISCORD</FooterLink>
-        <FooterLink href="https://instagram.com/suspendedsoul_">INSTAGRAM</FooterLink>
+        <FooterLink href="https://twitter.com/suspendedsoul_" target="_blank">TWITTER</FooterLink>
+        <FooterLink href="https://discord.com/invite/D4EpbKBkpA" target="_blank">DISCORD</FooterLink>
+        <FooterLink href="https://instagram.com/suspendedsoul_" target="_blank">INSTAGRAM</FooterLink>
       </MediaLinks>
     </Wrapper>
   );

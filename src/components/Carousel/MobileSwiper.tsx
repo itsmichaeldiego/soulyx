@@ -36,7 +36,7 @@ function Card({ card }: ICardProps) {
       <ImageWrapper>
         <Image src={card.imageUrl} alt={`${card.title} card`} layout="fill" />
       </ImageWrapper>
-      <DescriptionText>{card.descriptionShort}</DescriptionText>
+      <DescriptionText>{card.description}</DescriptionText>
     </CardWrapper>
   )
 }

@@ -44,12 +44,12 @@ export function Decentralization() {
         <TextSection
           align={isMobile ? 'center' : 'flex-end'}
           title={`${TOKEN_NAME} UTILITY`}
-          text={`NFT Access Pass: you will be able to swap ${TOKEN_NAME} for NFTs that serve as access tickets for your favorite artistic and social events. Token holders can simply buy their ${TOKEN_NAME} for all the commodities it provides, which includes: access to total experience and immersive art events happening all around the world & on different metaverses, and access to virtual and physical galleries from all around the globe, as well as access to exclusive auctions. ${TOKEN_NAME} tokens can be also used for tipping creatives in the same way as the famous "tip jars" that are being used by some websites today through apps like Venmo or Paypal. In this way, fans will be able to donate tokens as a means of compensating or rewarding their favorite creators.`}
+          text={`You will be able to swap ${TOKEN_NAME} for NFTs that’ll serve as access tickets for your favorite artistic and social events with the NFT Access Pass feature. In this way, ${TOKEN_NAME} will secure your spot at boutique immersive art events happening all around the world & on the metaverse, as well as to exclusive live auctions before anyone else. ${TOKEN_NAME} tokens can be also used for tipping creatives that you think would enjoy being a part of this decentralized artistic movement.`}
         />
         <TextSection
           align={isMobile ? 'center' : 'flex-start'}
           title="SCARCITY EFFECT: OUR ROADMAP AND VISION"
-          text={`A fixed emision of tokens from the start generates a scarcity effect. With time, this takes the investment into a growing curve and, as the platform expands and the interest around ${TOKEN_NAME} rises, the coin offer remains unaltered. This mechanism will allow a permanent valuation of the token and a continuous development of the Suspended Soul ecosystem.`}
+          text={`A fixed emision of tokens from the start generates a scarcity effect. With time, this takes the investment into a growing curve and, as the platform expands and the interest around ${TOKEN_NAME} rises, its offer remains unaltered. This mechanism will allow a permanent valuation of the token and a continuous development of the Suspended Soul ecosystem.`}
         />
       </HandSection>
     </Wrapper>

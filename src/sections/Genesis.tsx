@@ -19,12 +19,12 @@ export function Genesis() {
       <TokenizeRoadmap />
       <TextSection
         title="SUSPENDED SOUL'S ECOSYSTEM"
-        text={`The main monetary entrance of the project are the honoraries and commision fees of the sales completed through all its verticals. The net earning of each vertical will be destined to a stabilization fund with the goal of recovering ${TOKEN_NAME} from the market, so that it can easily come back to the community treasury and, from there, keep reinvesting it into artistic endeavours. This mechanism will allow a permanent valuation of the token and a continuous development of the Suspended Soul ecosystem.  `}
+        text={`The main monetary entrance of the project are the honoraries and commision fees of the art sales. The net earning of each vertical will be destined to a stabilization fund with the goal of recovering ${TOKEN_NAME} from the market so that it can easily come back to the community treasury and, from there, keep reinvesting it into artistic endeavors and artists’ patronage, allowing a permanent valuation of the token and a continuous development of the Suspended Soul ecosystem.`}
       />
       <RoadmapChart />
       <TextSection
         title="A UNIVERSE OF POSSIBILITIES"
-        text={`${TOKEN_NAME} opens a door for the future and provides options for the economic destiny of its investors. A new virtual economy created through Suspended Soul’s ecosystem, with multiple diversification alternatives.`}
+        text={`${TOKEN_NAME} opens a door for the future and provides options for the artistic & economic destiny of its investors. A new virtual economy created through Suspended Soul’s ecosystem, with multiple diversification alternatives.`}
       />
       <Diagram />
     </Section>

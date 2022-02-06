@@ -7,6 +7,8 @@ import { TOKEN_NAME } from '../../dom/token';
 import { Section } from '../../components/Section';
 import { TextSection } from '../../components/TextSection';
 
+import { DATA } from './data';
+
 export function About() {
   return (
     <Section>
@@ -26,15 +28,14 @@ export function About() {
         </ImageWrapper>
         <TextSection
           align="center"
-          title="ABOUT US"
-          text={(
+          title={DATA.title}
+          text={
             <>
-              Suspended Soul made its blockchain debut at the height of the NFT revolution. With the firm conviction of being protagonists of a historic paradigm shift in the way art is created, shared and collected, as founders of Suspended Soul we decided to offer the community a boutique alternative in a market overloaded with volume.
-              Each artist leaves their soul in their work. Suspended Soul came to honor that creative act.
-              <br /><br />
-              One auction at a time. No overlapping, no multiple bidding. Exclusive and total exposure for each work. For each artist behind their work. For every soul.
+              {`Suspended Soul made its blockchain debut at the height of the NFT revolution. With the firm conviction of being protagonists of a historic paradigm shift in the way art is created, shared and collected, as founders of Suspended Soul we decided to offer the community a boutique alternative in a market overloaded with volume. Each artist leaves their soul in their work. Suspended Soul came to honor that creative act.`}
+              <br />
+              {`One auction at a time. No overlapping, no multiple bidding. Exclusive and total exposure for each work. For each artist behind their work. For every soul.`}
             </>
-          )}
+          }
         />
         <ImageWrapper>
           <ImageContainer>

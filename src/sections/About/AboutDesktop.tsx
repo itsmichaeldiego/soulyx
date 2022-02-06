@@ -11,9 +11,9 @@ export function About() {
   return (
     <Section>
       <SectionContainer>
-        <SoulxWrapper>
+        <TokenWrapper>
           <Image src="/images/soulx-transparent.svg" alt={TOKEN_NAME} layout="fill" />
-        </SoulxWrapper>
+        </TokenWrapper>
         <AstronautAndIsologoWrapper>
           <OverlappingImageWrapper>
             <Image src="/images/astronaut-open-helmet.png" alt="Astronaut" layout="fill" />
@@ -61,7 +61,7 @@ export function About() {
   );
 }
 
-const SoulxWrapper = styled.div`
+const TokenWrapper = styled.div`
   max-width: 1160px;
   min-height: 960px;
   position: relative;

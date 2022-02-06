@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
 
-import { GetSOULx } from '../../components/GetSOULx';
+import { GetToken } from '../../components/GetToken';
 import { TextLine } from '../../components/TextLine';
 import { LaunchDetailsTable } from '../../components/LaunchDetailsTable';
 
@@ -21,7 +21,7 @@ export function LaunchDetails() {
         <LaunchDetailsTable data={LAUNCH_DETAILS_DATA} />
         <TextLine>If you have any questions, you can check out our FAQ&apos;s <FaqLink href="#faq">here</FaqLink></TextLine>
       </ContentWrapper>
-      <GetSOULx />
+      <GetToken />
     </SectionWrapper>
   );
 }

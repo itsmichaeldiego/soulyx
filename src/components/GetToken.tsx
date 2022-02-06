@@ -7,7 +7,7 @@ import { TOKEN_NAME } from '../dom/token';
 import { LinkButton } from './LinkButton';
 import { AnimatedSmoke } from './AnimatedSmoke';
 
-export function GetSOULx() {
+export function GetToken() {
   return (
     <Wrapper>
         <TitleWrapper>

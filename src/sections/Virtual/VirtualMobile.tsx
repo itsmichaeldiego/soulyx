@@ -19,7 +19,7 @@ export function Virtual() {
             {`${TOKEN_NAME} OPENS UP A BIG DOOR INTO THE FUTURE AND NURTURES THE ECONOMIC DESTINY OF ARTISTS, HOLDERS AND COLLECTORS WITH MULTIPLE OPTIONS.`}
           </FloatingText>
           <ImageWrapper>
-            <Image src="/images/soulx-jumbotron.svg" alt="SoulX Jumbotron" layout="fill" />
+            <Image src="/images/soulx-jumbotron.svg" alt={`${TOKEN_NAME} Jumbotron`} layout="fill" />
           </ImageWrapper>
         </Jumbotron>
         <TextBlockWrapper>

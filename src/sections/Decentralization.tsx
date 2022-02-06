@@ -38,8 +38,8 @@ export function Decentralization() {
       <HandSection>
         <TextSection
           align={isMobile ? 'center' : 'flex-start'}
-          title="SUSPENDED SOUL’S COMMUNITY GOVERNANCE"
-          text={`Our roadmap takes us into the democratization of decision making on every step of the platform. The ${TOKEN_NAME} tokens holders will conform and collectively govern Suspended Soul's DAO, bringing both creators and collectors the chance of proposing and voting the platform's actualizations, making sure that it becomes a public asset that directly responds to their community members. If you have an idea you’d like to see implemented, you can make yourself heard. Your voice matters. It's this community's right to decide their own ways of governance. According to an equity principle, the token holders will make decisions chasing their economic, social and cultural development, building a solid, inclusive, transparent and diverse community driven space.`}
+          title="SUSPENDED SOUL DAO: COMMUNITY GOVERNANCE"
+          text={`Our roadmap takes us into the democratization of decision making on every step of the platform. ${TOKEN_NAME} token holders will conform and collectively govern Suspended Soul DAO, bringing both creators & collectors the chance of proposing and voting all the platform's actualizations, making sure that it becomes a public asset that directly responds to its solid, inclusive, transparent and diverse community. Here your voice matters.`}
         />
         <TextSection
           align={isMobile ? 'center' : 'flex-end'}

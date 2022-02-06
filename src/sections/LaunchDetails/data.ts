@@ -3,7 +3,7 @@ import { TOKEN_NAME } from "../../dom/token";
 export const LAUNCH_DETAILS_DATA = [
   {
     name: "Date",
-    description: "December 15 at 18 UTC, during for 48 hours",
+    description: "December 15th at 18 UTC, live for 48 hours",
   },
   {
     name: "Supply",

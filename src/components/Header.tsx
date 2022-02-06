@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import styled, { ThemeContext } from 'styled-components';
 
-import { Mobile } from '../lib/mediaQueryHelper';
+import { TOKEN_NAME } from '../dom/token';
 
 import { LinkButton } from './LinkButton';
 import { Icon } from './Icon';
@@ -38,7 +38,7 @@ export function Header(): JSX.Element {
           <span>|</span>
           <span>Es</span>
         </TraductionItems> */}
-          <LinkButton href="https://miso.sushi.com/" text="Get SOULx" target="_blank" />
+          <LinkButton href="https://miso.sushi.com/" text={`Get ${TOKEN_NAME}`} target="_blank" />
         </Actions>
       </Wrapper>
     </>

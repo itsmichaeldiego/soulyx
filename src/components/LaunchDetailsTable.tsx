@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { TOKEN_NAME } from '../dom/token';
 import { useMobileMediaQuery } from '../lib/mediaQueryHelper';
 
 type ILaunchDetailsTableProps = {
@@ -27,7 +28,7 @@ export function LaunchDetailsTable({ data }: ILaunchDetailsTableProps): JSX.Elem
 
   return (
     <TableWrapper>
-      <TableHeader>SOULx LAUNCH / AUCTION DETAILS</TableHeader>
+      <TableHeader>{`${TOKEN_NAME} LAUNCH / AUCTION DETAILS`}</TableHeader>
       <TableBody>
         {visibleRows.map((entry) => (
           <TableRow key={entry.name}>

@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
 
+import { TOKEN_NAME } from '../dom/token';
 import { Default, Mobile, useMobileMediaQuery } from '../lib/mediaQueryHelper'
 
 import { TextSection } from '../components/TextSection'
@@ -38,17 +39,17 @@ export function Decentralization() {
         <TextSection
           align={isMobile ? 'center' : 'flex-start'}
           title="SUSPENDED SOUL’S COMMUNITY GOVERNANCE"
-          text="Our roadmap takes us into the democratization of decision making on every step of the platform. The SOULx tokens holders will conform and collectively govern Suspended Soul's DAO, bringing both creators and collectors the chance of proposing and voting the platform's actualizations, making sure that it becomes a public asset that directly responds to their community members. If you have an idea you’d like to see implemented, you can make yourself heard. Your voice matters. It's this community's right to decide their own ways of governance. According to an equity principle, the token holders will make decisions chasing their economic, social and cultural development, building a solid, inclusive, transparent and diverse community driven space."
+          text={`Our roadmap takes us into the democratization of decision making on every step of the platform. The ${TOKEN_NAME} tokens holders will conform and collectively govern Suspended Soul's DAO, bringing both creators and collectors the chance of proposing and voting the platform's actualizations, making sure that it becomes a public asset that directly responds to their community members. If you have an idea you’d like to see implemented, you can make yourself heard. Your voice matters. It's this community's right to decide their own ways of governance. According to an equity principle, the token holders will make decisions chasing their economic, social and cultural development, building a solid, inclusive, transparent and diverse community driven space.`}
         />
         <TextSection
           align={isMobile ? 'center' : 'flex-end'}
-          title="SOULx UTILITY"
-          text={`NFT Access Pass: you will be able to swap SOULx for NFTs that serve as access tickets for your favorite artistic and social events. Token holders can simply buy their SOULx for all the commodities it provides, which includes: access to total experience and immersive art events happening all around the world & on different metaverses, and access to virtual and physical galleries from all around the globe, as well as access to exclusive auctions. SOULx tokens can be also used for tipping creatives in the same way as the famous "tip jars" that are being used by some websites today through apps like Venmo or Paypal. In this way, fans will be able to donate tokens as a means of compensating or rewarding their favorite creators.`}
+          title={`${TOKEN_NAME} UTILITY`}
+          text={`NFT Access Pass: you will be able to swap ${TOKEN_NAME} for NFTs that serve as access tickets for your favorite artistic and social events. Token holders can simply buy their ${TOKEN_NAME} for all the commodities it provides, which includes: access to total experience and immersive art events happening all around the world & on different metaverses, and access to virtual and physical galleries from all around the globe, as well as access to exclusive auctions. ${TOKEN_NAME} tokens can be also used for tipping creatives in the same way as the famous "tip jars" that are being used by some websites today through apps like Venmo or Paypal. In this way, fans will be able to donate tokens as a means of compensating or rewarding their favorite creators.`}
         />
         <TextSection
           align={isMobile ? 'center' : 'flex-start'}
           title="SCARCITY EFFECT: OUR ROADMAP AND VISION"
-          text={`A fixed emision of tokens from the start generates a scarcity effect. With time, this takes the investment into a growing curve and, as the platform expands and the interest around SOULx rises, the coin offer remains unaltered. This mechanism will allow a permanent valuation of the token and a continuous development of the Suspended Soul ecosystem.`}
+          text={`A fixed emision of tokens from the start generates a scarcity effect. With time, this takes the investment into a growing curve and, as the platform expands and the interest around ${TOKEN_NAME} rises, the coin offer remains unaltered. This mechanism will allow a permanent valuation of the token and a continuous development of the Suspended Soul ecosystem.`}
         />
       </HandSection>
     </Wrapper>
@@ -162,7 +163,7 @@ const HandSection = styled.div`
     position: absolute;
     bottom: 62px;
     background-position: center;
-    background-image: url('/images/soulx-suspended-text.svg');
+    background-image: url('/images/${TOKEN_NAME}-suspended-text.svg');
     width: 100vw;
     height: 29px;
     animation: ${simpleMarquee} 20s linear infinite;

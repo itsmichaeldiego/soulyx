@@ -2,6 +2,8 @@ import React from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
 
+import { TOKEN_NAME } from '../dom/token';
+
 import { LinkButton } from './LinkButton';
 import { AnimatedSmoke } from './AnimatedSmoke';
 
@@ -9,10 +11,10 @@ export function GetSOULx() {
   return (
     <Wrapper>
         <TitleWrapper>
-          <Image src="/images/get-soulx.svg" alt="Get SOULx" layout="fill" />
+          <Image src="/images/get-soulx.svg" alt={`Get ${TOKEN_NAME}`} layout="fill" />
         </TitleWrapper>
         <ButtonWrapper>
-          <GetButton href="https://miso.sushi.com/" text="Get SOULx" target="_blank" />
+          <GetButton href="https://miso.sushi.com/" text={`Get ${TOKEN_NAME}`} target="_blank" />
         </ButtonWrapper>
         <SuspendedSoulWrapper>
           <Image src="/images/suspended-soul.svg" alt="Suspended Soul" layout="fill" />

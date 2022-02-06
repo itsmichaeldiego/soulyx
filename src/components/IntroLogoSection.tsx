@@ -2,13 +2,15 @@ import React from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
 
+import { TOKEN_NAME } from '../dom/token';
+
 export function IntroLogoSection() {
   return (
     <Wrapper>
       <Video autoPlay muted loop>
         <source src="/videos/logo.webm" type="video/webm" />
       </Video>
-      <Image src="/images/soulx.svg" alt="SoulX Banner" layout="fill" />
+      <Image src="/images/soulx.svg" alt={`${TOKEN_NAME} Banner`} layout="fill" />
     </Wrapper>
   )
 }

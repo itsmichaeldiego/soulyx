@@ -2,10 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
 
-import { TextLine } from '../../components/TextLine';
-import { LAUNCH_DETAILS_DATA } from './data';
-import { LaunchDetailsTable } from '../../components/LaunchDetailsTable';
 import { GetSOULx } from '../../components/GetSOULx';
+import { TextLine } from '../../components/TextLine';
+import { LaunchDetailsTable } from '../../components/LaunchDetailsTable';
+
+import { LAUNCH_DETAILS_DATA } from './data';
 
 export function LaunchDetails() {
   return (

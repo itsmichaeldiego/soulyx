@@ -1,10 +1,12 @@
+import { TOKEN_NAME } from "../../dom/token";
+
 export const VIRTUAL_CARDS = [
   {
     number: "01",
     title: "IMMERSIVE GALLERY",
     imageUrl: "/images/astronaut-helmet.png",
-    description: "$SOULx represents all of our efforts for integrating a wide prism of possible artistic experiences into one single immersive approach. One which will allow all its community members, eager to take part into an integral artistic EXPERIENCE, to dive deep into a project that will turn their yearnings and dreams into reality. It is the entrance to a rich universe full of multidisciplinary possibilities that will mash together individual and collective realities, as well as timezones and art formats.",
-    descriptionShort: "SOULx represents all of our efforts of integrating a wide prism of possible experiences into one single immersive approach. One which will allow all its community members, eager to take part into an integral artistic EXPERIENCE, to dive deep into a project that will turn their yearnings and dreams into reality.",
+    description: `${TOKEN_NAME} represents all of our efforts for integrating a wide prism of possible artistic experiences into one single immersive approach. One which will allow all its community members, eager to take part into an integral artistic EXPERIENCE, to dive deep into a project that will turn their yearnings and dreams into reality. It is the entrance to a rich universe full of multidisciplinary possibilities that will mash together individual and collective realities, as well as timezones and art formats.`,
+    descriptionShort: `${TOKEN_NAME} represents all of our efforts of integrating a wide prism of possible experiences into one single immersive approach. One which will allow all its community members, eager to take part into an integral artistic EXPERIENCE, to dive deep into a project that will turn their yearnings and dreams into reality.`,
   },
   {
     number: "02",

@@ -2,6 +2,8 @@ import React from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
 
+import { TOKEN_NAME } from '../../dom/token';
+
 import { Section } from '../../components/Section';
 import { TextSection } from '../../components/TextSection';
 
@@ -11,10 +13,10 @@ export function About() {
       <SectionContainer>
         <ImagesWrapper>
           <LogoImageWrapper>
-            <Image src="/images/soul-background.svg" alt="Soul background" layout="fill" />
+            <Image src="/images/soul-background.svg" alt={`${TOKEN_NAME} background`} layout="fill" />
           </LogoImageWrapper>
           <LogoImageWrapper>
-            <Image src="/images/soulx-background.svg" alt="SOULx background" layout="fill" />
+            <Image src="/images/soulx-background.svg" alt={`${TOKEN_NAME} background`} layout="fill" />
           </LogoImageWrapper>
         </ImagesWrapper>
         <ImageWrapper>
@@ -42,18 +44,17 @@ export function About() {
         <TextSection
           align="center"
           title="SUSPENDED SOUL FOUNDATION"
-          text="Suspended Soul Foundation was created with the aim of putting into motion a strategic plan for the crafting of the website, and to start our collective journey towards total decentralization. Among its initial governance functions are: developing the initial website setup, moving forward with the actions needed to execute the strategic plan of the site, taking care of the community treasury and creating optimal conditions to establish good functioning decentralized mechanisms. The launch of the SOULx token and our Decentralized Governance long term vision is the cornerstone towards decentralization."
+          text={`Suspended Soul Foundation was created with the aim of putting into motion a strategic plan for the crafting of the website, and to start our collective journey towards total decentralization. Among its initial governance functions are: developing the initial website setup, moving forward with the actions needed to execute the strategic plan of the site, taking care of the community treasury and creating optimal conditions to establish good functioning decentralized mechanisms. The launch of the ${TOKEN_NAME} token and our Decentralized Governance long term vision is the cornerstone towards decentralization.`}
         />
         <LogoWrapper>
           <LogoContainer>
-            <Image src="/images/logo.png" alt="SOULx logo" layout="fill" />
+            <Image src="/images/logo.png" alt={`${TOKEN_NAME} logo`} layout="fill" />
           </LogoContainer>
-          {/* // TODO: Include '+++++' background here somehow (lazy design) */}
         </LogoWrapper>
         <TextSection
           align="center"
           title="SUSPENDED SOUL DAO"
-          text="We are standing at the threshold of a new era. In the near future, it will be the users themselves who will govern the platforms in which they participate. The self-determination of this community is the intrinsic value of this project. This process of property transfer starts with a slow decentralization dynamic which we are proposing. That&apos;s the step that we have been dreaming about since the beginning of it all, not only for our community, but for the entire world. Suspended Soul will be then run by a collective governance led by the SOULx token holders, a decentralized organization with the authority of taking fundamental decisions for the platform like, among other things, the community treasury&apos;s funds distribution and the voting process surrounding adjustments for the platform. Welcome to Suspended Soul DAO."
+          text={`We are standing at the threshold of a new era. In the near future, it will be the users themselves who will govern the platforms in which they participate. The self-determination of this community is the intrinsic value of this project. This process of property transfer starts with a slow decentralization dynamic which we are proposing. That&apos;s the step that we have been dreaming about since the beginning of it all, not only for our community, but for the entire world. Suspended Soul will be then run by a collective governance led by the ${TOKEN_NAME} token holders, a decentralized organization with the authority of taking fundamental decisions for the platform like, among other things, the community treasury&apos;s funds distribution and the voting process surrounding adjustments for the platform. Welcome to Suspended Soul DAO.`}
         />
       </SectionContainer>
     </Section>

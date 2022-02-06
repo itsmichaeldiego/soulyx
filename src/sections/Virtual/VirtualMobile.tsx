@@ -2,19 +2,22 @@ import React from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
 
+import { TOKEN_NAME } from '../../dom/token';
+
 import { Section } from '../../components/Section';
 import { MobileSwiper } from '../../components/Carousel/MobileSwiper';
-import { VIRTUAL_CARDS } from './data';
-
 import { MarqueeBackgroundLeft, MarqueeBackgroundRight } from '../../components/MarqueeBackground';
 
+import { VIRTUAL_CARDS } from './data';
 
 export function Virtual() {
   return (
     <Section>
       <SectionContainer>
         <Jumbotron>
-          <FloatingText>SOULx OPENS UP A BIG DOOR INTO THE FUTURE AND NURTURES THE ECONOMIC DESTINY OF ARTISTS, HOLDERS AND COLLECTORS WITH MULTIPLE OPTIONS.</FloatingText>
+          <FloatingText>
+            {`${TOKEN_NAME} OPENS UP A BIG DOOR INTO THE FUTURE AND NURTURES THE ECONOMIC DESTINY OF ARTISTS, HOLDERS AND COLLECTORS WITH MULTIPLE OPTIONS.`}
+          </FloatingText>
           <ImageWrapper>
             <Image src="/images/soulx-jumbotron.svg" alt="SoulX Jumbotron" layout="fill" />
           </ImageWrapper>
@@ -22,7 +25,7 @@ export function Virtual() {
         <TextBlockWrapper>
           <Title>A UNIVERSE OF POSSIBILITIES</Title>
           <Text>
-            SOULx it&apos;s a ticket straight towards artistic empowerment. It&apos;s the act of sharing and bonding through art, while also celebrating it for what it is and what it could (sooner rather than later) become. It’s a whole virtual economy system built inside Suspended Soul’s own universe, with multiple and alluring diversification alternatives:
+            {`${TOKEN_NAME} it&apos;s a ticket straight towards artistic empowerment. It&apos;s the act of sharing and bonding through art, while also celebrating it for what it is and what it could (sooner rather than later) become. It’s a whole virtual economy system built inside Suspended Soul’s own universe, with multiple and alluring diversification alternatives:`}
           </Text>
         </TextBlockWrapper>
         <MarqueeWrapper>

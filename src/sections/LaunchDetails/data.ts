@@ -1,3 +1,5 @@
+import { TOKEN_NAME } from "../../dom/token";
+
 export const LAUNCH_DETAILS_DATA = [
   {
     name: "Date",
@@ -5,7 +7,7 @@ export const LAUNCH_DETAILS_DATA = [
   },
   {
     name: "Supply",
-    description: "23.500.000 $SOULx (10% of the total supply)",
+    description: `23.500.000 ${TOKEN_NAME} (10% of the total supply)`,
   },
   {
     name: "Offer currency",

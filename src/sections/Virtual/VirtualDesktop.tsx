@@ -2,8 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
 
-import { VIRTUAL_CARDS } from './data';
+import { TOKEN_NAME } from '../../dom/token';
 import { MarqueeBackgroundLeft, MarqueeBackgroundRight } from '../../components/MarqueeBackground';
+
+import { VIRTUAL_CARDS } from './data';
 
 type IColumnImageWrapperProps = {
   height: number;
@@ -14,15 +16,17 @@ export function Virtual() {
   return (
     <>
       <Jumbotron>
-        <FloatingText>SOULx OPENS UP A BIG DOOR INTO THE FUTURE AND NURTURES THE ECONOMIC DESTINY OF ARTISTS, HOLDERS AND COLLECTORS WITH MULTIPLE OPTIONS.</FloatingText>
-        <Image src="/images/soulx-jumbotron.svg" alt="SoulX Jumbotron" layout="fill" />
+        <FloatingText>
+          {`${TOKEN_NAME} OPENS UP A BIG DOOR INTO THE FUTURE AND NURTURES THE ECONOMIC DESTINY OF ARTISTS, HOLDERS AND COLLECTORS WITH MULTIPLE OPTIONS.`}
+        </FloatingText>
+        <Image src="/images/soulx-jumbotron.svg" alt={`${TOKEN_NAME} Jumbotron`} layout="fill" />
       </Jumbotron>
       <TextBlockWrapper>
         <Title>
           A UNIVERSE OF POSSIBILITIES
         </Title>
         <Text>
-          SOULx it&apos;s a ticket straight towards artistic empowerment. It&apos;s the act of sharing and bonding through art, while also celebrating it for what it is and what it could (sooner rather than later) become. It’s a whole virtual economy system built inside Suspended Soul’s own universe, with multiple and alluring diversification alternatives:
+          {`${TOKEN_NAME} it&apos;s a ticket straight towards artistic empowerment. It&apos;s the act of sharing and bonding through art, while also celebrating it for what it is and what it could (sooner rather than later) become. It’s a whole virtual economy system built inside Suspended Soul’s own universe, with multiple and alluring diversification alternatives:`}
         </Text>
       </TextBlockWrapper>
       <ImageColumnsWrapper>

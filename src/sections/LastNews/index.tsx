@@ -2,11 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
 
+import { ITheme } from '../../styles/theme';
+import { TOKEN_NAME } from '../../dom/token';
+
+import { LinkButton } from '../../components/LinkButton';
 import { FlipCarousel } from '../../components/FlipCarousel'
 
 import { CARDS } from './data';
-import { LinkButton } from '../../components/LinkButton';
-import { ITheme } from '../../styles/theme';
 
 type ICardProps = {
   theme: ITheme;
@@ -45,10 +47,12 @@ export function LastNews() {
         <CardItem>
           <Card variant="secondary">
             <div>
-              <CardTitle short>GET SOULx</CardTitle>
-              <CardText>Open up a big door into the future and start investing on $SOULx now, a new virtual economy.</CardText>
+              <CardTitle short>{`GET ${TOKEN_NAME}`}</CardTitle>
+              <CardText>
+                {`Open up a big door into the future and start investing on ${TOKEN_NAME} now, a new virtual economy.`}
+              </CardText>
             </div>
-            <ButtonWrapper variant="secondary" text="GET SOULx" href="https://miso.sushi.com/" />
+            <ButtonWrapper variant="secondary" text={`GET ${TOKEN_NAME}`} href="https://miso.sushi.com/" />
           </Card>
         </CardItem>
       </CardsWrapper>

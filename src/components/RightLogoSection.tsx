@@ -1,5 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+
+import { TOKEN_NAME } from '../dom/token';
+
 import { SectionTitle } from './SectionTitle';
 
 type IRightLogoSectionProps = {
@@ -10,7 +13,7 @@ type IRightLogoSectionProps = {
 export function RightLogoSection({ titleUrl }: IRightLogoSectionProps) {
   return (
     <Wrapper>
-      <SectionTitle imageUrl={`/images/${titleUrl}.svg`} alt="SoulX Banner" />
+      <SectionTitle imageUrl={`/images/${titleUrl}.svg`} alt={`${TOKEN_NAME} Logo`} />
     </Wrapper>
   );
 }

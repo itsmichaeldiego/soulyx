@@ -6,24 +6,25 @@ import { LogoSection } from '../components/LogoSection';
 import { TextSection } from '../components/TextSection';
 import { RoadmapChart } from '../components/RoadmapChart';
 import { TokenizeRoadmap } from '../components/TokenizeRoadmap';
+import { TOKEN_NAME } from '../dom/token';
 
 export function Genesis() {
   return (
     <Section>
-      <LogoSection src="/images/genesis.svg" alt="SoulX Genesis" layout="fill"  />
+      <LogoSection src="/images/genesis.svg" alt={`${TOKEN_NAME} Genesis`} layout="fill"  />
       <TextSection
-        title="SOULx SUPPLY"
-        text="Our total token supply consists of 235.000.000 SOULx, those of which will be divided into different percentages and destined into different holders according to our mission, as stated below."
+        title={`${TOKEN_NAME} SUPPLY`}
+        text={`Our total token supply consists of 235.000.000 ${TOKEN_NAME}, those of which will be divided into different percentages and destined into different holders according to our mission, as stated below.`}
       />
       <TokenizeRoadmap />
       <TextSection
         title="SUSPENDED SOUL'S ECOSYSTEM"
-        text="The main monetary entrance of the project are the honoraries and commision fees of the sales completed through all its verticals. The net earning of each vertical will be destined to a stabilization fund with the goal of recovering SOULx from the market, so that it can easily come back to the community treasury and, from there, keep reinvesting it into artistic endeavours. This mechanism will allow a permanent valuation of the token and a continuous development of the Suspended Soul ecosystem.  "
+        text={`The main monetary entrance of the project are the honoraries and commision fees of the sales completed through all its verticals. The net earning of each vertical will be destined to a stabilization fund with the goal of recovering ${TOKEN_NAME} from the market, so that it can easily come back to the community treasury and, from there, keep reinvesting it into artistic endeavours. This mechanism will allow a permanent valuation of the token and a continuous development of the Suspended Soul ecosystem.  `}
       />
       <RoadmapChart />
       <TextSection
         title="A UNIVERSE OF POSSIBILITIES"
-        text="SOULx opens a door for the future and provides options for the economic destiny of its investors. A new virtual economy created through Suspended Soul’s ecosystem, with multiple diversification alternatives."
+        text={`${TOKEN_NAME} opens a door for the future and provides options for the economic destiny of its investors. A new virtual economy created through Suspended Soul’s ecosystem, with multiple diversification alternatives.`}
       />
       <Diagram />
     </Section>

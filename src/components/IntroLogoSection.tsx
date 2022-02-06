@@ -8,7 +8,7 @@ export function IntroLogoSection() {
   return (
     <Wrapper>
       <Video autoPlay muted loop>
-        <source src="/videos/logo.webm" type="video/webm" />
+        <source src="https://storage.cloud.google.com/suspendedsoul/Landing/SOULYX_TOKEN.webm" type="video/webm" />
       </Video>
       <Image src="/images/soulx.svg" alt={`${TOKEN_NAME} Banner`} layout="fill" />
     </Wrapper>

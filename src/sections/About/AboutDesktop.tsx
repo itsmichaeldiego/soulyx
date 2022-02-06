@@ -40,7 +40,7 @@ export function About() {
           />
           <IsologoWrapper>
             <Video autoPlay muted loop>
-              <source src="/videos/isologo.webm" type="video/webm" />
+              <source src="https://storage.googleapis.com/suspendedsoul/Landing/LOGO_SOULXparawebm.webm" type="video/webm" />
             </Video>
           </IsologoWrapper>
         </AstronautAndIsologoWrapper>

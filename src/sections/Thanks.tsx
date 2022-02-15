@@ -10,7 +10,7 @@ export function Thanks() {
   return (
     <SectionWrapper>
       <LogoSection src="/images/thanks.svg" alt={`${TOKEN_NAME} Thanks`} layout="fill" />
-      <Text>THANK YOU FOR COMING THIS FAR DOWN THE ROAD WITH US. HOPE YOUR DESIRE TO GROW TOGETHER MATCHES OURS, AND WE CAN WRITE THE NEXT CHAPTER TOGETHER.</Text>
+      <Text>THANK YOU FOR COMING THIS FAR DOWN THE ROAD WITH US. HOPE YOUR DESIRE TO GROW TOGETHER MATCHES OURS, SO WE CAN WRITE THE NEXT CHAPTER WITH YOU.</Text>
       <Footer />
     </SectionWrapper>
   );

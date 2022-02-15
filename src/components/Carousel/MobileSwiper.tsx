@@ -44,11 +44,7 @@ function Card({ card }: ICardProps) {
 export function MobileSwiper({ cards }: IMobileSwiperProps) {
   return (
     <SwiperWrapper>
-      <Swiper
-        spaceBetween={50}
-        slidesPerView={1.2}
-        pagination={{ clickable: true }}
-      >
+      <Swiper slidesPerView={1} pagination={{ clickable: true }}>
         {cards?.map(card => (
           <SwiperSlide key={card.number}>
             <Card card={card} />
@@ -58,7 +54,7 @@ export function MobileSwiper({ cards }: IMobileSwiperProps) {
     </SwiperWrapper>
   );
 }
- 
+
 
 const SwiperWrapper = styled.div`
   margin-bottom: ${({ theme }) => theme.spacing(8)};
@@ -85,6 +81,10 @@ const SwiperWrapper = styled.div`
     height: 2px;
     width: 16px;
   }
+
+  @media ${({ theme }) => theme.media.mobile} {
+    margin-right: 0;
+  }
 `;
 
 const CardWrapper = styled.div`
@@ -92,6 +92,7 @@ const CardWrapper = styled.div`
   flex-direction: column;
   height: 740px;
   width: 300px;
+  margin: 0 auto;
 `;
 
 const TitleWrapper = styled.div`

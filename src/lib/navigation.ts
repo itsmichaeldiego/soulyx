@@ -10,6 +10,7 @@ import { Virtual } from '../sections/Virtual'
 import { LastNews } from '../sections/LastNews'
 import { Team } from '../sections/Team'
 import { LaunchDetails } from '../sections/LaunchDetails'
+import { TOKEN_NAME } from '../dom/token'
 
 
 export  interface INavItem {
@@ -34,8 +35,8 @@ export const NAV_ITEMS: INavItem[] = [
   {
     name: 'decentralization',
     displayName: 'DECENTRALIZATION',
-    headerName: 'SOULx NEW TOKEN',
-    headerDescription: 'THRESHOLD OF DESCENTRALIZATION',
+    headerName: `${TOKEN_NAME}: THE KEY TO SUSPENDED SOUL`,
+    headerDescription: 'WE ARE STANDING IN THE THRESHOLD OF DESCENTRALIZATION',
     component: Decentralization,
   },
   {
@@ -55,7 +56,7 @@ export const NAV_ITEMS: INavItem[] = [
   {
     name: 'genesis',
     displayName: 'GENESIS',
-    headerName: 'SOULx GENESIS DISTRIBUTION',
+    headerName: `${TOKEN_NAME} GENESIS DISTRIBUTION`,
     headerDescription: 'SUPPLY & DAO',
     component: Genesis,
   },
@@ -69,8 +70,8 @@ export const NAV_ITEMS: INavItem[] = [
   {
     name: 'launch',
     displayName: 'LAUNCH',
-    headerName: 'TOKEN LAUNCHING DETAILS',
-    headerDescription: 'SUSPENDED SOUL´S ROADMAP',
+    headerName: `TOKEN'S LAUNCH DETAILS`,
+    headerDescription: 'ALL YOU NEED TO KNOW',
     component: LaunchDetails,
   },
   {
@@ -91,14 +92,14 @@ export const NAV_ITEMS: INavItem[] = [
     name: 'faq',
     displayName: 'FAQ',
     headerName: 'FREQUENTLY ASKED QUESTIONS',
-    headerDescription: 'ABOUT SOULx',
+    headerDescription: `ABOUT ${TOKEN_NAME}`,
     component: FAQ,
   },
   {
     name: 'lastNews',
     displayName: 'LAST NEWS',
     headerName: 'LATEST NEWS',
-    headerDescription: 'ABOUT SOULx',
+    headerDescription: `ABOUT ${TOKEN_NAME}`,
     component: LastNews,
   },
   {

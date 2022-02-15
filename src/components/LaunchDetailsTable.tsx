@@ -28,7 +28,7 @@ export function LaunchDetailsTable({ data }: ILaunchDetailsTableProps): JSX.Elem
 
   return (
     <TableWrapper>
-      <TableHeader>{`${TOKEN_NAME} LAUNCH / AUCTION DETAILS`}</TableHeader>
+      <TableHeader>{`${TOKEN_NAME}'s LAUNCH / AUCTION DETAILS`}</TableHeader>
       <TableBody>
         {visibleRows.map((entry) => (
           <TableRow key={entry.name}>

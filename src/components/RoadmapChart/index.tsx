@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useLayoutEffect, useState } from 'react';
 import React from 'react';
 import styled from 'styled-components';
 
@@ -18,6 +18,7 @@ type Stack = {
 type IChartBarProps = {
   name: string;
   stacks: Stack[];
+  visible?: boolean;
 };
 
 type ChartEntry = {
@@ -25,23 +26,33 @@ type ChartEntry = {
   stacks: Stack[];
 };
 
-function ChartBar({ name, stacks }: IChartBarProps) {
-  return <Bar>
-    {stacks.map(({ label, color, value, fixedLabel }: Stack, index) => (
-      <StackedBar
-        key={`${name+label+index}`}
-        color={color}
-        height={value}
-        label={label}
-        fixedLabel={fixedLabel}
-      />
-    ))}
-  </Bar>
+function ChartBar({ name, stacks, visible }: IChartBarProps) {
+  return (
+    <Bar>
+      {stacks.map(({ label, color, value, fixedLabel }: Stack, index) => (
+        <StackedBar
+          key={`${name + label + index}`}
+          color={color}
+          height={value}
+          label={label}
+          visible={!!visible}
+          fixedLabel={fixedLabel}
+        />
+      ))}
+    </Bar>
+  )
 }
 
 export function RoadmapChart() {
   const isMobile = useMobileMediaQuery();
   const [visible, setVisible] = useState(!isMobile ? 'all' : '2021');
+  const [barsVisible, setBarsVisible] = useState(false);
+
+  useLayoutEffect(() => {
+    requestAnimationFrame(() => {
+      setBarsVisible(true);
+    });
+  }, []);
 
   const mappedData = (data: ChartEntry[]) => {
     if (visible === 'all') {
@@ -56,7 +67,7 @@ export function RoadmapChart() {
   const chartData = mappedData(CHART_DATA);
   const selectOptions = CHART_DATA.map(entry => entry.name);
 
-	return (
+  return (
     <Wrapper>
       <ChartWrapper>
         <GridWrapper>
@@ -71,14 +82,14 @@ export function RoadmapChart() {
         </GridWrapper>
         {chartData?.map((bar, index) => (
           <BarWrapper key={index}>
-            <ChartBar name={bar.name} stacks={bar.stacks} />
+            <ChartBar name={bar.name} stacks={bar.stacks} visible={barsVisible} />
             {!isMobile && <BarLabel>{bar.name}</BarLabel>}
           </BarWrapper>
         ))}
       </ChartWrapper>
       {isMobile && <YearSelect options={selectOptions} selected={visible} onChange={setVisible} />}
     </Wrapper>
-	);
+  );
 };
 
 const Wrapper = styled.div`

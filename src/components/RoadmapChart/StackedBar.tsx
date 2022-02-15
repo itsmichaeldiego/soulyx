@@ -5,6 +5,7 @@ type IStackedBarProps = {
   label: string;
   color: string;
   height: number;
+  visible?: boolean;
   fixedLabel?: boolean;
 };
 
@@ -21,21 +22,14 @@ type IInnerLabelProps = {
   fixedLabel?: boolean;
 };
 
-export function StackedBar({ label, color, height, fixedLabel }: IStackedBarProps) {
-  const [visible, setVisible] = useState(false);
-  useLayoutEffect(() => {
-    requestAnimationFrame(() => {
-      setVisible(true);
-    });
-  }, []);
-
+export function StackedBar({ visible, label, color, height, fixedLabel }: IStackedBarProps) {
   return (
     <StackedBarWrapper
       color={color}
       height={height}
-      visible={visible}
+      visible={!!visible}
     >
-      <InnerLabel visible={visible} shouldPosition={height > 6} fixedLabel={fixedLabel}>{label}</InnerLabel>
+      <InnerLabel visible={!!visible} shouldPosition={height > 6} fixedLabel={fixedLabel}>{label}</InnerLabel>
     </StackedBarWrapper>
   );
 }

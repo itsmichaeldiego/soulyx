@@ -17,5 +17,5 @@ export function IntroLogoSection() {
 
 const Wrapper = styled.div`
   position: relative;
-  margin: 0 ${({ theme }) => theme.spacing(15)};
+  margin: 0 5vw;
 `;

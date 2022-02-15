@@ -10,7 +10,7 @@ export function IntroLogoSection() {
       <Video autoPlay muted loop>
         <source src="https://storage.cloud.google.com/suspendedsoul/Landing/SOULYX_TOKEN.webm" type="video/webm" />
       </Video>
-      <Image src="/images/soulx.svg" alt={`${TOKEN_NAME} Banner`} layout="fill" />
+      <Image src="/images/banner.svg" alt={`${TOKEN_NAME} Banner`} layout="fill" />
     </Wrapper>
   )
 }

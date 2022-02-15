@@ -3,5 +3,4 @@ export interface IVirtualEconomyCard {
   title: string;
   imageUrl: string;
   description: string;
-  descriptionShort: string;
 }

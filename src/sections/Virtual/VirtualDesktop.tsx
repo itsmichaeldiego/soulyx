@@ -175,7 +175,6 @@ const TokenVirtualWrapper = styled.div`
   padding-bottom: 160px;
   margin-top: 60px;
   position: relative;
-  overflow: hidden;
   margin-left: -72px;
   margin-right: -24px;
 

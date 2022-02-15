@@ -13,7 +13,7 @@ export function RightLogoSection({ src, alt }: ILogoSectionTypes) {
       <ImageWrapper>
         <Image src={src} alt={alt} layout="fill" objectPosition="top left" />
       </ImageWrapper>
-      <TokenVideo />
+      <CustomTokenVideo />
     </Wrapper>
   )
 }
@@ -23,6 +23,10 @@ const Wrapper = styled.div`
   height: 100%;
   display: flex;
   margin-right: -200px;
+  @media ${({ theme }) => theme.media.mobile} {
+    margin-right: 0;
+    flex-direction: column;
+  }
 `;
 
 const ImageWrapper = styled.div`
@@ -31,14 +35,13 @@ const ImageWrapper = styled.div`
   height: 100%;
   position: relative;
   max-width: 60vw;
-
+  z-index: 1;
   @media ${({ theme }) => theme.media.mobile} {
-    min-height: 168px;
-    max-width: 240px;
+    max-width: 100%;
   }
 `
 
-export function TokenVideo({ ...props }) {
+export function CustomTokenVideo({ ...props }) {
   return (
     <TokenVideoWrapper autoPlay muted loop {...props}>
       <source src="https://storage.cloud.google.com/suspendedsoul/Landing/SOULYX_TOKEN.webm" type="video/webm" />
@@ -47,15 +50,16 @@ export function TokenVideo({ ...props }) {
 }
 
 const TokenVideoWrapper = styled.video`
-  width: 480px;
+  max-width: 480px;
+  width: 100%;
   position: absolute;
   right: -240px;
   top: 50%;
   transform: translate(-50%, -50%);
 
   @media ${({ theme }) => theme.media.tablet} {
-    right: -40px;
-    width: 240px;
-    margin: 0 auto;
+    max-width: 240px;
+    width: 100%;
+    left: 50%;
   }
 `

@@ -12,7 +12,7 @@ import { LAUNCH_DETAILS_DATA } from './data';
 export function LaunchDetails() {
   return (
     <SectionWrapper>
-      <RightLogoSection src="/images/soulx-launch-details.svg" alt="Token launch details" />
+      {/* <RightLogoSection src="/images/soulx-launch-details.svg" alt="Token launch details" /> */}
       <ContentWrapper>
         <TextLine style={{ maxWidth: 240 }}>OUR COMMUNITY&apos;S INTRINSIC VALUE</TextLine>
         <LaunchDetailsTable data={LAUNCH_DETAILS_DATA} />

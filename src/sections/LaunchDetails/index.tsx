@@ -4,6 +4,7 @@ import Image from 'next/image';
 
 import { GetToken } from '../../components/GetToken';
 import { TextLine } from '../../components/TextLine';
+import { RightLogoSection } from '../../components/RightLogoSection';
 import { LaunchDetailsTable } from '../../components/LaunchDetailsTable';
 
 import { LAUNCH_DETAILS_DATA } from './data';
@@ -11,11 +12,7 @@ import { LAUNCH_DETAILS_DATA } from './data';
 export function LaunchDetails() {
   return (
     <SectionWrapper>
-      <BackgroundWrapper>
-        <ImageWrapper>
-          <Image src="/images/soulx-launch-details.svg" alt="Token launch details" layout="fill" objectPosition="top left"/>
-        </ImageWrapper>
-      </BackgroundWrapper>
+      <RightLogoSection src="/images/soulx-launch-details.svg" alt="Token launch details" />
       <ContentWrapper>
         <TextLine style={{ maxWidth: 240 }}>OUR COMMUNITY&apos;S INTRINSIC VALUE</TextLine>
         <LaunchDetailsTable data={LAUNCH_DETAILS_DATA} />
@@ -32,31 +29,6 @@ const SectionWrapper = styled.div`
 
 const ContentWrapper = styled.div`
   padding-right: ${({ theme }) => theme.spacing(3)};
-`;
-
-const ImageWrapper = styled.div`
-  min-height: 80vh;
-  height: 100%;
-  max-width: 60vw;
-  position: relative;
-
-  @media ${({ theme }) => theme.media.mobile} {
-    min-height: 168px;
-    max-width: 240px;
-  }
-`;
-
-const BackgroundWrapper = styled.div`
-  width: 100%;
-  background-image: url('/images/logo.png');
-  background-repeat: no-repeat;
-  background-position: right -12% top 60%;
-  background-size: 30%;
-
-  @media ${({ theme }) => theme.media.mobile} {
-    background-size: 35%;
-    background-position: right -16% top 60%;
-  }
 `;
 
 const FaqLink = styled.a`

@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export function TokenVideo() {
+export function TokenVideo({ ...props }) {
   return (
-    <Wrapper autoPlay muted loop>
+    <Wrapper autoPlay muted loop {...props}>
       <source src="https://storage.cloud.google.com/suspendedsoul/Landing/SOULYX_TOKEN.webm" type="video/webm" />
     </Wrapper>
   )

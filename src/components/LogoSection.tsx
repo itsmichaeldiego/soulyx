@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import Image, { ImageProps } from 'next/image';
 
+import { TokenVideo } from './TokenVideo';
+
 type ILogoSectionTypes = {
   src: string;
   alt: string;
@@ -10,9 +12,7 @@ type ILogoSectionTypes = {
 export function LogoSection({ src, alt, ...props }: ILogoSectionTypes) {
   return (
     <Wrapper>
-      <Video autoPlay muted loop>
-        <source src="https://storage.cloud.google.com/suspendedsoul/Landing/SOULYX_TOKEN.webm" type="video/webm" />
-      </Video>
+      <TokenVideo />
       <Image src={src} alt={alt} layout="fill" />
     </Wrapper>
   )
@@ -30,9 +30,3 @@ const Wrapper = styled.div`
   }
 `;
 
-const Video = styled.video`
-  width: 100%;
-  max-height: ${({ theme }) => `calc(100vh - ${theme.sizes.header})`};
-  min-width: 100%;
-  min-height: 100%;
-`

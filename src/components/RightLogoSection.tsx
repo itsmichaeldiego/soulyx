@@ -52,4 +52,10 @@ const TokenVideoWrapper = styled.video`
   right: -240px;
   top: 50%;
   transform: translate(-50%, -50%);
+
+  @media ${({ theme }) => theme.media.tablet} {
+    right: -40px;
+    width: 240px;
+    margin: 0 auto;
+  }
 `

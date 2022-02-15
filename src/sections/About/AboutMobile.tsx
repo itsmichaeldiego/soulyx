@@ -8,6 +8,7 @@ import { Section } from '../../components/Section';
 import { TextSection } from '../../components/TextSection';
 
 import { DATA } from './data';
+import { TokenVideo } from '../../components/TokenVideo';
 
 export function About() {
   return (
@@ -47,11 +48,7 @@ export function About() {
           title="SUSPENDED SOUL FOUNDATION"
           text={`Suspended Soul Foundation was created with the aim of putting into motion a strategic plan for the crafting of the website, and to start our collective journey towards total decentralization. Among its initial governance functions are: developing the initial website setup, moving forward with the actions needed to execute the strategic plan of the site, taking care of the community treasury and creating optimal conditions to establish good functioning decentralized mechanisms. The launch of the ${TOKEN_NAME} token and our Decentralized Governance long term vision is the cornerstone towards decentralization.`}
         />
-        <LogoWrapper>
-          <LogoContainer>
-            <Image src="/images/logo.png" alt={`${TOKEN_NAME} logo`} layout="fill" />
-          </LogoContainer>
-        </LogoWrapper>
+        <TokenVideo />
         <TextSection
           align="center"
           title="SUSPENDED SOUL DAO"
@@ -86,20 +83,4 @@ const ImageContainer = styled.div`
 
 const SectionContainer = styled.div`
   position: relative;
-`;
-
-const LogoWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 280px;
-  position: relative;
-  margin-bottom: ${({ theme }) => theme.spacing(6)};
-`;
-
-const LogoContainer = styled.div`
-  position: relative;
-  height: 225px;
-  width: 225px;
-  z-index: 2;
 `;

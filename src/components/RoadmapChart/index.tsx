@@ -47,7 +47,7 @@ function ChartBar({ name, stacks, visible }: IChartBarProps) {
 export function RoadmapChart() {
   const isMobile = useMobileMediaQuery();
   const [visible, setVisible] = useState(!isMobile ? 'all' : '2021');
-  const ref = useRef()
+  const ref = useRef<any>()
   const barsVisible = useOnScreen(ref)
 
   const mappedData = (data: ChartEntry[]) => {
@@ -64,27 +64,29 @@ export function RoadmapChart() {
   const selectOptions = CHART_DATA.map(entry => entry.name);
 
   return (
-    <Wrapper ref={ref}>
-      <ChartWrapper>
-        <GridWrapper>
-          {/* We use four rows to calculate bar heights up to 40% */}
-          {Y_AXIS_LABELS.map(label => (
-            <GridRow key={label}>
-              {label}
-            </GridRow>
+    <div ref={ref}>
+      <Wrapper>
+        <ChartWrapper>
+          <GridWrapper>
+            {/* We use four rows to calculate bar heights up to 40% */}
+            {Y_AXIS_LABELS.map(label => (
+              <GridRow key={label}>
+                {label}
+              </GridRow>
+            ))}
+            {/* So 40% falls off, this is a way to display the label */}
+            <YAxisTopLabel>40%</YAxisTopLabel>
+          </GridWrapper>
+          {chartData?.map((bar, index) => (
+            <BarWrapper key={index}>
+              <ChartBar name={bar.name} stacks={bar.stacks} visible={barsVisible} />
+              {!isMobile && <BarLabel>{bar.name}</BarLabel>}
+            </BarWrapper>
           ))}
-          {/* So 40% falls off, this is a way to display the label */}
-          <YAxisTopLabel>40%</YAxisTopLabel>
-        </GridWrapper>
-        {chartData?.map((bar, index) => (
-          <BarWrapper key={index}>
-            <ChartBar name={bar.name} stacks={bar.stacks} visible={barsVisible} />
-            {!isMobile && <BarLabel>{bar.name}</BarLabel>}
-          </BarWrapper>
-        ))}
-      </ChartWrapper>
-      {isMobile && <YearSelect options={selectOptions} selected={visible} onChange={setVisible} />}
-    </Wrapper>
+        </ChartWrapper>
+        {isMobile && <YearSelect options={selectOptions} selected={visible} onChange={setVisible} />}
+      </Wrapper>
+    </div>
   );
 };
 

@@ -46,7 +46,7 @@ function ChartBar({ name, stacks, visible }: IChartBarProps) {
 
 export function RoadmapChart() {
   const isMobile = useMobileMediaQuery();
-  const [visible, setVisible] = useState(!isMobile ? 'all' : '2021');
+  const [visible, setVisible] = useState(isMobile ? '2022' : 'all');
   const ref = useRef<any>()
   const barsVisible = useOnScreen(ref)
 

@@ -40,7 +40,8 @@ const StackedBarWrapper = styled.div`
   height: 0%;
   padding-left: 12px;
   position: relative;
-  transition: height 0.5s ease-in-out;
+  transition-delay: 3s;
+  transition: height 1.5s ease-in-out;
 
   ${({ color, height, visible }: IStackedBarWrapperProps) =>
     visible && `
@@ -69,8 +70,8 @@ const StackedBarWrapper = styled.div`
 const InnerLabel = styled.div`
   line-height: 17px;
   opacity: 0;
-  transition: opacity 0.5s ease-in;
-  transition-delay: 0.5s;
+  transition: opacity 1.5s ease-in;
+  transition-delay: 1.5s;
   white-space: pre-line;
 
   ${({ shouldPosition, fixedLabel }: IInnerLabelProps) =>

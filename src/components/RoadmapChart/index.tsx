@@ -1,4 +1,4 @@
-import { useLayoutEffect, useState } from 'react';
+import { useRef, useState } from 'react';
 import React from 'react';
 import styled from 'styled-components';
 
@@ -7,6 +7,7 @@ import { useMobileMediaQuery } from '../../lib/mediaQueryHelper';
 import { YearSelect } from './YearSelect';
 import { CHART_DATA, Y_AXIS_LABELS } from './data';
 import { StackedBar } from './StackedBar';
+import useOnScreen from '../../hooks/useOnScreen';
 
 type Stack = {
   label: string;
@@ -46,13 +47,8 @@ function ChartBar({ name, stacks, visible }: IChartBarProps) {
 export function RoadmapChart() {
   const isMobile = useMobileMediaQuery();
   const [visible, setVisible] = useState(!isMobile ? 'all' : '2021');
-  const [barsVisible, setBarsVisible] = useState(false);
-
-  useLayoutEffect(() => {
-    requestAnimationFrame(() => {
-      setBarsVisible(true);
-    });
-  }, []);
+  const ref = useRef()
+  const barsVisible = useOnScreen(ref)
 
   const mappedData = (data: ChartEntry[]) => {
     if (visible === 'all') {
@@ -68,7 +64,7 @@ export function RoadmapChart() {
   const selectOptions = CHART_DATA.map(entry => entry.name);
 
   return (
-    <Wrapper>
+    <Wrapper ref={ref}>
       <ChartWrapper>
         <GridWrapper>
           {/* We use four rows to calculate bar heights up to 40% */}

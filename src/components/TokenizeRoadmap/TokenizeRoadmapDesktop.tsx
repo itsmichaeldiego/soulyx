@@ -25,7 +25,7 @@ export function TokenizeRoadmap(): JSX.Element {
           <span>15%</span><TableRowText>SEED INVESTORS</TableRowText>
         </TableRow>
         <TableRow width={10}>
-          <span>10%</span><TableRowText>IDO+LP</TableRowText>
+          <span>10%</span><TableRowText>FAIR LAUNCH AUCTIONS</TableRowText>
         </TableRow>
         <TableRow width={5}>
           <span>5%</span><TableRowText>AIRDROP</TableRowText>

@@ -22,7 +22,7 @@ const Wrapper = styled.div`
 
 const Video = styled.video`
   width: 100%;
-  max-height: ${({ theme }) => `calc(100vh - ${theme.sizes.header})`}; 
-  min-width: 100%; 
+  max-height: ${({ theme }) => `calc(100vh - ${theme.sizes.header})`};
+  min-width: 100%;
   min-height: 100%;
 `

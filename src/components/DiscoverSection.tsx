@@ -42,7 +42,7 @@ const Item = styled.div`
   display: flex;
   align-items: center;
   padding: ${({ theme }) => theme.spacing(4)}; 
-  flex: 0 0 50%;
+  flex: 1 1 50%;
 
   @media ${({ theme }) => theme.media.mobile} {
     flex: 1 1 100%;

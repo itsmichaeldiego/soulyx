@@ -38,7 +38,7 @@ export function LastNews() {
         <CardItem>
           <Card variant="primary">
             <div>
-              <CardTitle>DISCOVER {TOKEN_NAME}</CardTitle>
+              <CardTitle>DISCOVER {TOKEN_NAME}&apos;s WHITEPAPER</CardTitle>
               <CardText>Click here to read our extended roadmap, our mission and our project explained in detail.</CardText>
             </div>
             <ButtonWrapper variant="primary" text="READ MORE" href="https://miso.sushi.com/" target="_blank" />

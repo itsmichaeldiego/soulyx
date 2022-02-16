@@ -152,7 +152,6 @@ const HandSection = styled.div`
     }
 
     @media ${({ theme }) => theme.media.mobile} {
-      background-size: contain;
       margin-left: ${({ theme }) => theme.spacing(-3)};
       margin-right: ${({ theme }) => theme.spacing(-3)};
       padding: ${({ theme }) => theme.spacing(0, 3)};

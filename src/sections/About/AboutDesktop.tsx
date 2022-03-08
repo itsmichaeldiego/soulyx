@@ -6,6 +6,7 @@ import { TOKEN_NAME } from '../../dom/token';
 
 import { Section } from '../../components/Section';
 import { TextSection } from '../../components/TextSection';
+import { AnimatedInnerImage } from '../../components/AnimatedInnerImage';
 
 import { DATA } from './data';
 
@@ -17,9 +18,11 @@ export function About() {
           <Image src="/images/soulx-transparent.svg" alt={TOKEN_NAME} layout="fill" />
         </TokenWrapper>
         <AstronautAndIsologoWrapper>
-          <OverlappingImageWrapper>
-            <Image src="/images/astronaut-open-helmet.png" alt="Astronaut" layout="fill" />
-          </OverlappingImageWrapper>
+          <AnimatedInnerImage>
+            <OverlappingImageWrapper>
+              <Image src="/images/astronaut-open-helmet.png" alt="Astronaut" layout="fill" />
+            </OverlappingImageWrapper>
+          </AnimatedInnerImage>
           <StyledTextSection
             align="flex-start"
             title={DATA.title}

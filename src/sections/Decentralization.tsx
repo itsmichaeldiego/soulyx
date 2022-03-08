@@ -6,6 +6,7 @@ import { TOKEN_NAME } from '../dom/token';
 import { Default, Mobile, useMobileMediaQuery } from '../lib/mediaQueryHelper'
 
 import { TextSection } from '../components/TextSection'
+import { AnimatedInnerImage } from '../components/AnimatedInnerImage'
 import { flickerAnimation, simpleMarquee } from '../styles/animations'
 
 export function Decentralization() {
@@ -17,9 +18,11 @@ export function Decentralization() {
         <Image src="/images/decentralization.svg" alt="THRESHOLD OF DESCENTRALIZATION" layout="fill" objectFit="contain" />
       </HeaderImage>
       <Content>
-        <ImageWrapper>
+        <ImageWrapper data-scroll data-scroll-speed="2">
           <Default>
-            <Image src="/images/face-asian-low-light.png" alt="Decentralization" width="400" height="631" />
+            <AnimatedInnerImage>
+              <Image src="/images/face-asian-low-light.png" alt="Decentralization" width="400" height="631"/>
+            </AnimatedInnerImage>
           </Default>
           <Mobile>
             <Image src="/images/face-asian-low-light.png" alt="Decentralization" layout="fill" objectFit="cover" />
@@ -37,16 +40,22 @@ export function Decentralization() {
       </Content>
       <HandSection>
         <TextSection
+          data-scroll
+          data-scroll-speed="1"
           align={isMobile ? 'center' : 'flex-start'}
           title="SUSPENDED SOUL DAO: COMMUNITY GOVERNANCE"
           text={`Our roadmap takes us into the democratization of decision making on every step of the platform. ${TOKEN_NAME} token holders will conform and collectively govern Suspended Soul DAO, bringing both creators & collectors the chance of proposing and voting all the platform's actualizations, making sure that it becomes a public asset that directly responds to its solid, inclusive, transparent and diverse community. Here your voice matters.`}
         />
         <TextSection
+          data-scroll
+          data-scroll-speed="2"
           align={isMobile ? 'center' : 'flex-end'}
           title={`${TOKEN_NAME} UTILITY`}
           text={`You will be able to swap ${TOKEN_NAME} for NFTs that’ll serve as access tickets for your favorite artistic and social events with the NFT Access Pass feature. In this way, ${TOKEN_NAME} will secure your spot at boutique immersive art events happening all around the world & on the metaverse, as well as to exclusive live auctions before anyone else. ${TOKEN_NAME} tokens can be also used for tipping creatives that you think would enjoy being a part of this decentralized artistic movement.`}
         />
         <TextSection
+          data-scroll
+          data-scroll-speed="3"
           align={isMobile ? 'center' : 'flex-start'}
           title="SCARCITY EFFECT: OUR ROADMAP AND VISION"
           text={`A fixed emision of tokens from the start generates a scarcity effect. With time, this takes the investment into a growing curve and, as the platform expands and the interest around ${TOKEN_NAME} rises, its offer remains unaltered. This mechanism will allow a permanent valuation of the token and a continuous development of the Suspended Soul ecosystem.`}

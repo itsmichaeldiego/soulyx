@@ -1,16 +1,20 @@
 import React from 'react';
+import { SmoothScrollProvider } from "../components/SmoothScrollProvider";
 import styled from 'styled-components';
 
 import { Nav } from './Nav'
 import { Header } from './Header'
+
 
 export function Layout({ children }: React.PropsWithChildren<{}>): JSX.Element {
   return (
     <>
       <Nav />
       <Wrapper>
-        <Header />
-        {children}
+        <SmoothScrollProvider>
+          <Header />
+          {children}
+        </SmoothScrollProvider>
       </Wrapper>
       {/* TODO: create Footer component using footer semantic */}
     </>

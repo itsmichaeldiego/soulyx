@@ -10,7 +10,9 @@ export function Community() {
   return (
     <div className="position-relative">
       <Wrapper>
-        <SectionTitle imageUrl="/images/community.svg" alt="COMMUNITY" />
+        <SectionTitleContainer data-scroll data-scroll-speed="3">
+          <SectionTitle imageUrl="/images/community.svg" alt="COMMUNITY" />
+        </SectionTitleContainer>
       </Wrapper>
       <FloatingContent>
         <Text>
@@ -31,6 +33,11 @@ const Wrapper = styled.div`
   background-size: contain;
   height: 200vw;
   position: relative;
+`;
+
+const SectionTitleContainer = styled.div`
+  width: 100%;
+  height: 100%;
 `;
 
 const FloatingContent = styled.div`

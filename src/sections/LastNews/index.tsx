@@ -1,6 +1,9 @@
-import React from 'react';
+import React, {useRef, useEffect} from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
+if (typeof window !== 'undefined') gsap.registerPlugin(ScrollTrigger)
 
 import { ITheme } from '../../styles/theme';
 import { TOKEN_NAME } from '../../dom/token';
@@ -25,9 +28,42 @@ type ICardTitleProps = {
 }
 
 export function LastNews() {
+  const wrapperRef = useRef<any>()
+  const wrapperImageRef = useRef<any>()
+  const tl = useRef<any>()
+
+  useEffect(() => {
+    const image = wrapperImageRef?.current
+
+    setTimeout(()=>{
+      tl.current = gsap
+        .timeline({
+          defaults: { overwrite: 'auto' },
+          scrollTrigger: {
+            trigger: wrapperRef?.current,
+            scrub: true,
+            start: '0% 100%',
+            end: '100% 0',
+          },
+        })
+        .addLabel('init')
+        .fromTo(
+          image,
+          {
+            scale: 1.3,
+          },
+          {
+            scale: 1,
+          },
+          'init'
+        )
+    }, 1500)
+  }, [])
+
   return (
     <>
-      <Wrapper>
+      <Wrapper ref={wrapperRef}>
+        <WrapperImage ref={wrapperImageRef}/>
         <Title>LAST NEWS</Title>
         <FlipCarousel cards={CARDS} />
       </Wrapper>
@@ -62,18 +98,28 @@ export function LastNews() {
 
 
 const Wrapper = styled.div`
+background-color: green;
   padding: ${({ theme }) => theme.spacing(20, 5, 20, 10)};
   position: relative;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url('/images/news-door.png');
   margin-left: ${({ theme }) => theme.spacing(-9)};
   margin-right: ${({ theme }) => theme.spacing(-3)};
+  overflow: hidden;
 
   @media ${({ theme }) => theme.media.tablet} {
     margin-left: ${({ theme }) => theme.spacing(-3)};
     padding: ${({ theme }) => theme.spacing(10, 2, 10, 2)};
   }
+`;
+
+const WrapperImage = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('/images/news-door.png');
 `;
 
 const LogosWrapper = styled.div`

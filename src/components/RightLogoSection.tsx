@@ -43,9 +43,11 @@ const ImageWrapper = styled.div`
 
 export function CustomTokenVideo({ ...props }) {
   return (
-    <TokenVideoWrapper autoPlay muted loop {...props}>
-      <source src="https://storage.cloud.google.com/suspendedsoul/Landing/SOULYX_TOKEN.webm" type="video/webm" />
-    </TokenVideoWrapper>
+    <TokenVideoWrapperOuter data-scroll data-scroll-speed="4">
+      <TokenVideoWrapper autoPlay muted loop {...props}>
+        <source src="https://storage.cloud.google.com/suspendedsoul/Landing/SOULYX_TOKEN.webm" type="video/webm" />
+      </TokenVideoWrapper>
+    </TokenVideoWrapperOuter>
   )
 }
 
@@ -62,4 +64,7 @@ const TokenVideoWrapper = styled.video`
     width: 100%;
     left: 50%;
   }
+`
+const TokenVideoWrapperOuter = styled.div`
+  width: 100%;
 `

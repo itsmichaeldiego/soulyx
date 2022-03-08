@@ -3,9 +3,11 @@ import styled from 'styled-components';
 
 export function TokenVideo({ ...props }) {
   return (
-    <Wrapper autoPlay muted loop {...props}>
-      <source src="https://storage.cloud.google.com/suspendedsoul/Landing/SOULYX_TOKEN.webm" type="video/webm" />
-    </Wrapper>
+    <WrapperOuter  data-scroll data-scroll-speed="1">
+      <Wrapper autoPlay muted loop {...props}>
+        <source src="https://storage.cloud.google.com/suspendedsoul/Landing/SOULYX_TOKEN.webm" type="video/webm" />
+      </Wrapper>
+    </WrapperOuter>
   )
 }
 
@@ -14,4 +16,8 @@ const Wrapper = styled.video`
   max-height: ${({ theme }) => `calc(100vh - ${theme.sizes.header})`};
   min-width: 100%;
   min-height: 100%;
+`
+
+const WrapperOuter = styled.div`
+  width: 100%;
 `

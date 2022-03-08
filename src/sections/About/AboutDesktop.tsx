@@ -41,7 +41,7 @@ export function About() {
               </>
             )}
           />
-          <IsologoWrapper>
+          <IsologoWrapper data-scroll data-scroll-speed="4">
             <Video autoPlay muted loop>
               <source src="https://storage.googleapis.com/suspendedsoul/Landing/LOGO_SOULXparawebm.webm" type="video/webm" />
             </Video>

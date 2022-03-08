@@ -16,7 +16,7 @@ export function GetToken() {
         <ButtonWrapper>
           <GetButton href="https://miso.sushi.com/" text={`Get ${TOKEN_NAME}`} target="_blank" />
         </ButtonWrapper>
-        <SuspendedSoulWrapper>
+        <SuspendedSoulWrapper data-scroll data-scroll-speed="3">
           <Image src="/images/suspended-soul.svg" alt="Suspended Soul" layout="fill" />
         </SuspendedSoulWrapper>
       <AnimatedSmoke />

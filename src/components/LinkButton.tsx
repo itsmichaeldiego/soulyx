@@ -20,4 +20,9 @@ const Wrapper = styled.a`
   border: 1px solid ${({ theme }) => theme.cta.primary};
   border-radius: 100%;
   font-family: ${({ theme }) => theme.font.secondary};
+  &:hover,
+  &:focus {
+    background-color: ${({ theme }) => theme.cta.primary};
+    color: ${({ theme }) => theme.bg.primary};
+  }
 `

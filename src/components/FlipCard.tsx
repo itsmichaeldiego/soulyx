@@ -197,6 +197,10 @@ const ViewMoreLink = styled(Link)`
     font-size: 12px;
     line-height: 14px;
   }
+  &:hover,
+  &:focus {
+    font-weight: 500;
+  }
 `
 
 const Details = styled.div`

@@ -40,4 +40,7 @@ const SectionContent = styled.div`
 
 const FaqLink = styled.a`
   text-decoration: underline;
+  &:hover{
+    font-weight: 500;
+  }
 `;

@@ -145,6 +145,10 @@ const Card = styled.div`
     variant === 'primary' && `
       background-color: ${theme.bg.secondary};
       color: white;
+      a:hover {
+        background-color: ${theme.bg.tertiary};
+        color: ${theme.bg.secondary};
+      }
     `}
 
   ${({ theme, variant }: ICardProps) =>

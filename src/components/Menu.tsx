@@ -11,18 +11,19 @@ import { SectionHeader } from './SectionHeader';
 
 type IMenuProps = {
   onClose: () => void;
+  className: String;
 }
 
-export function Menu({ onClose }: IMenuProps) {
+export function Menu({ onClose, className }: IMenuProps) {
   const theme = useContext(ThemeContext);
   const isMobile = useMobileMediaQuery();
 
   return (
-    <Wrapper>
+    <Wrapper className={className}>
       <Header>
-        <div onClick={onClose} role="button" style={{ cursor: 'pointer' }}>
+        <IconWrapper onClick={onClose} role="button" style={{ cursor: 'pointer' }}>
           <Icon icon="arrow-left" size={26} color={theme.text.tertiary} />
-        </div>
+        </IconWrapper>
         <Title>
           Suspended Soul
         </Title>
@@ -59,7 +60,7 @@ const Wrapper = styled.div`
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 0vh;
   max-width: 100vw;
   max-height: 100vh;
   overflow: auto;
@@ -68,6 +69,10 @@ const Wrapper = styled.div`
   background-position: center;
   background-color: ${({ theme }) => theme.bg.primary};
   background-image: url('/images/glass-hand.png');
+  transition: height .75s cubic-bezier(.275,0,0,.275);
+  &.opened {
+    height: 100vh;
+  }
 `
 
 const Header = styled.header`
@@ -108,5 +113,15 @@ const CustomSectionHeader = styled(SectionHeader)`
   }
   @media ${({ theme }) => theme.media.mobile} {
     padding: ${({ theme }) => theme.spacing(4)};
+  }
+`
+
+const IconWrapper = styled.div`
+  border: 1px solid transparent;
+  border-radius: 50%;
+  padding: 0.35rem;
+  &:hover,
+  &:focus {
+    border: 1px solid ${({ theme }) => theme.text.tertiary};
   }
 `

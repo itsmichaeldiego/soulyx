@@ -36,13 +36,11 @@ export function Nav(): JSX.Element {
 
   return (
     <>
-      {menuOpen && (
-        <Menu onClose={() => setMenuOpen(false)} />
-      )}
+      <Menu className={menuOpen && 'opened'} onClose={() => setMenuOpen(false)} />
       <Wrapper>
-        <div onClick={() => setMenuOpen(true)} role="button" style={{ cursor: 'pointer' }}>
+        <IconWrapper onClick={() => setMenuOpen(true)} role="button" style={{ cursor: 'pointer' }}>
           <Icon icon="hamburger" color={theme.cta.primary} size={30} />
-        </div>
+        </IconWrapper>
         <Indicators>
           {NAV_ITEMS.map(navItem => {
             return (
@@ -137,6 +135,22 @@ const GoTopButton = styled.button`
   background: none;
   border: none;
   cursor: pointer;
+  &:hover,
+  &:focus {
+
+    svg {
+      width: 22px;
+      transform: translateX(-3px);
+    }
+
+    svg path:nth-child(1) {
+      transform: scale(1.5);
+    }
+
+    svg path:nth-child(2) {
+      display:none;
+    }
+  }
 `
 
 const GoTopText = styled.div`
@@ -145,3 +159,31 @@ const GoTopText = styled.div`
   font-size: 10px;
   line-height: 12px;
 `
+
+const IconWrapper = styled.div `
+transition: 0s;
+  &:hover,
+  &:focus {
+    transform: rotate(180deg) scaleX(-1);
+  }
+`
+
+/*
+const IconRelease = styled.div `
+border: 1px solid green;
+display: block;
+
+${IconWrapper}:hover & {
+  display: none;
+}
+`
+const IconHover = styled.div `
+border: 1px solid blue;
+display: none;
+
+${IconWrapper}:hover & {
+  display: block;
+}
+`
+*/
+

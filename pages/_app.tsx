@@ -4,6 +4,7 @@ if (!process.browser) React.useLayoutEffect = React.useEffect;
 
 import type { AppProps } from 'next/app'
 import { ThemeProvider } from "styled-components";
+import locomotiveScroll from 'locomotive-scroll' 
 
 import { GlobalStyles, theme } from '../src/styles/theme'
 import { FontFace } from '../src/styles/fontface'

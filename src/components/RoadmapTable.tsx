@@ -148,6 +148,13 @@ const ViewMoreButton = styled.button`
   padding: 0;
 
   &:hover {
-    text-decoration: underline;
+    &:after {
+      content:'';
+      display: block;
+      position: relative;
+      width: 100%;
+      height: 1px;
+      background: white;
+    }
   }
 `;

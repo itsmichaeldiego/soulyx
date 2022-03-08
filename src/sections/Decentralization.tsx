@@ -158,6 +158,7 @@ const HandSection = styled.div`
     }
   }
 
+  /*
   :after {
     content: " ";
     position: absolute;
@@ -169,5 +170,5 @@ const HandSection = styled.div`
     animation: ${simpleMarquee} 20s linear infinite;
     margin-left: ${({ theme }) => theme.spacing(-9)};
     margin-right: ${({ theme }) => theme.spacing(-3)};
-  }
+  }*/
 `;

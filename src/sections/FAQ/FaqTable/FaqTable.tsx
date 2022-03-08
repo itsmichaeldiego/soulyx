@@ -116,10 +116,12 @@ const Question = styled.div`
   width: 100%;
   z-index: 2;
 
+  /*
   &:focus, :active, :visited {
     background-color: ${({ theme }) => theme.cta.primary};
     color: white;
   }
+  */
 
   @media ${({ theme }) => theme.media.mobile} {
     width: 98%;
@@ -141,7 +143,7 @@ const Answer = styled.div`
   display: flex;
   height: 0;
   opacity: ${props => (props.expanded ? "1" : "0")};
-  transition: height 0.2s, opacity 0.2s ease-out;
+  transition: height 0s, opacity 0.2s ease-out;
   z-index: -1;
   white-space: pre-line;
   font-weight: 300;
@@ -149,7 +151,7 @@ const Answer = styled.div`
   ${({ expanded }: IExpandedProps) =>
     expanded &&
       `
-        padding: 18px;
+        padding: 25px;
         padding-top: 8px;
         height: 100%;
         z-index: 1;

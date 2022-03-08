@@ -103,6 +103,13 @@ type IArrowButtonProps = {
 
 const ArrowButton = styled.div`
   cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  padding: 0.5rem;
+  &:hover,
+  &:focus {
+    border: 1px solid ${({ theme }) => theme.text.primary};
+  }
   ${({ isDisabled }: IArrowButtonProps) => isDisabled && `
     pointer-events: none;
     opacity: 0.2;

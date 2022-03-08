@@ -41,3 +41,4 @@ Icon.defaultProps = {
   style: {},
   className: "",
 };
+

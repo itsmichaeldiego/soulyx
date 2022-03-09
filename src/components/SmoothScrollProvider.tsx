@@ -2,7 +2,7 @@ import gsap from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import React, { createContext, useEffect, useRef, useState } from "react";
 
-gsap.registerPlugin(ScrollTrigger);
+if (typeof window !== 'undefined') { gsap.registerPlugin(ScrollTrigger) }
 
 export const SmoothScrollContext = createContext({
   scroll: null

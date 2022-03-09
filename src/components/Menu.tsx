@@ -11,7 +11,7 @@ import { SectionHeader } from './SectionHeader';
 
 type IMenuProps = {
   onClose: () => void;
-  className: String;
+  className: any;
 }
 
 export function Menu({ onClose, className }: IMenuProps) {
@@ -69,7 +69,7 @@ const Wrapper = styled.div`
   background-position: center;
   background-color: ${({ theme }) => theme.bg.primary};
   background-image: url('/images/glass-hand.png');
-  transition: height .75s cubic-bezier(.275,0,0,.275);
+  transition: height .75s cubic-bezier(.75,0,0,.75);
   &.opened {
     height: 100vh;
   }
@@ -80,6 +80,7 @@ const Header = styled.header`
   align-items: center;
   height: ${({ theme }) => theme.sizes.header};
   padding: ${({ theme }) => theme.spacing(4, 3)};
+  padding-left: 17px;
   color: ${({ theme }) => theme.text.tertiary};
   background-color: ${({ theme }) => theme.bg.secondary};
   @media ${({ theme }) => theme.media.mobile} {

@@ -16,6 +16,7 @@ export const SmoothScrollProvider = ({ children }: React.PropsWithChildren<{}>) 
     if (!scroll) {
       (async () => {
         try {
+          /* @ts-ignore */
           const LocomotiveScroll = (await import("locomotive-scroll")).default;
 
           const locoScroll = new LocomotiveScroll({
@@ -62,7 +63,7 @@ export const SmoothScrollProvider = ({ children }: React.PropsWithChildren<{}>) 
     }
 
     return () => {
-      scroll && scroll.destroy();
+      // scroll && scroll.destroy();
     };
   }, [scroll]);
 

@@ -23,7 +23,7 @@ export function Header(): JSX.Element {
   return (
     <>
       {menuOpen && (
-        <Menu onClose={() => setMenuOpen(false)} />
+        <Menu className='' onClose={() => setMenuOpen(false)} />
       )}
       <Wrapper>
         <HamburgerButton onClick={() => setMenuOpen(true)} role="button" style={{ cursor: 'pointer' }}>

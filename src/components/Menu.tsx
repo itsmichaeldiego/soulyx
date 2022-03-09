@@ -19,7 +19,7 @@ export function Menu({ onClose, className }: IMenuProps) {
   const isMobile = useMobileMediaQuery();
 
   return (
-    <Wrapper className={className}>
+    <Wrapper className={className} data-scroll data-scroll-sticky data-scroll-target="#smooth-scroll">
       <Header>
         <IconWrapper onClick={onClose} role="button" style={{ cursor: 'pointer' }}>
           <Icon icon="arrow-left" size={26} color={theme.text.tertiary} />

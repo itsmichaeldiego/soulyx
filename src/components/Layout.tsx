@@ -1,4 +1,5 @@
 import React from 'react';
+import { Default, Mobile } from '../lib/mediaQueryHelper';
 import { SmoothScrollProvider } from "../components/SmoothScrollProvider";
 import styled from 'styled-components';
 
@@ -9,13 +10,13 @@ import { Header } from './Header'
 export function Layout({ children }: React.PropsWithChildren<{}>): JSX.Element {
   return (
     <>
-      <Nav />
-      <Wrapper>
-        <SmoothScrollProvider>
+      <SmoothScrollProvider>
+        <Nav />
+        <Wrapper>
           <Header />
           {children}
-        </SmoothScrollProvider>
-      </Wrapper>
+        </Wrapper>
+      </SmoothScrollProvider>
       {/* TODO: create Footer component using footer semantic */}
     </>
   )

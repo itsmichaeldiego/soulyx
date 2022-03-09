@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useContext } from 'react';
 import styled, { ThemeContext } from 'styled-components';
-import { Link, animateScroll as scroll } from 'react-scroll'
+import { Link, animateScroll } from 'react-scroll'
+import { SmoothScrollContext } from '../components/SmoothScrollProvider'
+import { useDesktopMediumMediaQuery } from '../lib/mediaQueryHelper';
 
 import { Icon } from './Icon';
 import { Menu } from './Menu';
@@ -9,11 +11,13 @@ import { NAV_ITEMS, INavItem } from '../lib/navigation';
 const getStepIndex = (steps: INavItem[], stepName: string): number => steps.findIndex((step: INavItem) => step.name === stepName)
 
 export function Nav(): JSX.Element {
-  const theme = useContext(ThemeContext);
+  const { scroll } = useContext(SmoothScrollContext)
+  const theme = useContext(ThemeContext);  
   const [_currentStep, _setCurrentStep] = useState<INavItem>(NAV_ITEMS[0])
   const [_nextStep, _setNextStep] = useState<INavItem>(NAV_ITEMS[1])
 
   const [menuOpen, setMenuOpen] = useState(false)
+  const isDesktopMedium = useDesktopMediumMediaQuery();
 
   const handleSetActive = (to: string): void => {
     const stepIndex = getStepIndex(NAV_ITEMS, to);
@@ -37,7 +41,7 @@ export function Nav(): JSX.Element {
   return (
     <>
       <Menu className={menuOpen && 'opened'} onClose={() => setMenuOpen(false)} />
-      <Wrapper>
+      <Wrapper data-scroll data-scroll-sticky data-scroll-target="#smooth-scroll">
         <IconWrapper onClick={() => setMenuOpen(true)} role="button" style={{ cursor: 'pointer' }}>
           <Icon icon="hamburger" color={theme.cta.primary} size={30} />
         </IconWrapper>
@@ -84,7 +88,17 @@ export function Nav(): JSX.Element {
             {_currentStep.displayName}
           </Link>
         </Indicators>
-        <GoTopButton onClick={() => scroll.scrollToTop()} role="button">
+        <GoTopButton
+          onClick={() => {
+            if(isDesktopMedium) {
+              /* @ts-ignore */
+              scroll.scrollTo(0)
+            } else {
+              animateScroll.scrollToTop()
+            }
+          }}
+          role="button"
+        >
           <Icon icon="chevrons-up" color={theme.cta.primary} size={12} />
           <GoTopText>ON TOP</GoTopText>
         </GoTopButton>

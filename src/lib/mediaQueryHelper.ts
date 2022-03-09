@@ -2,6 +2,8 @@ import { useMediaQuery } from 'react-responsive';
 
 export const useDesktopMediaQuery = (): boolean => useMediaQuery({ minWidth: 992 });
 
+export const useDesktopMediumMediaQuery = (): boolean => useMediaQuery({ minWidth: 1024 });
+
 export const useTabletMediaQuery = (): boolean => useMediaQuery({ minWidth: 768, maxWidth: 991 });
 
 export const useMobileMediaQuery = (): boolean => useMediaQuery({ maxWidth: 767 });
@@ -9,6 +11,14 @@ export const useMobileMediaQuery = (): boolean => useMediaQuery({ maxWidth: 767 
 export function Desktop({ children }: React.PropsWithChildren<{}>): JSX.Element | null {
   const isDesktop = useDesktopMediaQuery();
   if (!isDesktop) {
+    return null;
+  }
+  return children as JSX.Element;
+}
+
+export function DesktopMedium({ children }: React.PropsWithChildren<{}>): JSX.Element | null {
+  const isDesktopMedium = useDesktopMediumMediaQuery();
+  if (!isDesktopMedium) {
     return null;
   }
   return children as JSX.Element;

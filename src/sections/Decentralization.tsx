@@ -48,14 +48,14 @@ export function Decentralization() {
         />
         <TextSection
           data-scroll
-          data-scroll-speed="2"
+          data-scroll-speed="4"
           align={isMobile ? 'center' : 'flex-end'}
           title={`${TOKEN_NAME} UTILITY`}
           text={`You will be able to swap ${TOKEN_NAME} for NFTs that’ll serve as access tickets for your favorite artistic and social events with the NFT Access Pass feature. In this way, ${TOKEN_NAME} will secure your spot at boutique immersive art events happening all around the world & on the metaverse, as well as to exclusive live auctions before anyone else. ${TOKEN_NAME} tokens can be also used for tipping creatives that you think would enjoy being a part of this decentralized artistic movement.`}
         />
         <TextSection
           data-scroll
-          data-scroll-speed="3"
+          data-scroll-speed="4"
           align={isMobile ? 'center' : 'flex-start'}
           title="SCARCITY EFFECT: OUR ROADMAP AND VISION"
           text={`A fixed emision of tokens from the start generates a scarcity effect. With time, this takes the investment into a growing curve and, as the platform expands and the interest around ${TOKEN_NAME} rises, its offer remains unaltered. This mechanism will allow a permanent valuation of the token and a continuous development of the Suspended Soul ecosystem.`}

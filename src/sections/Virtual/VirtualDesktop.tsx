@@ -33,17 +33,20 @@ export function Virtual() {
             trigger: jumbotronRef?.current,
             scrub: true,
             start: '0% 100%',
-            end: '100% 0',
+            end: '100% 0',  
           },
+          lazy: false,
         })
         .addLabel('init')
         .fromTo(
           image,
           {
             scale: 1.3,
+            lazy: false,
           },
           {
             scale: 1,
+            lazy: false,
           },
           'init'
         )

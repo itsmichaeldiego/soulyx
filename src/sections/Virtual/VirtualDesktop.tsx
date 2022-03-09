@@ -23,34 +23,43 @@ export function Virtual() {
   const tl = useRef<any>()
 
   useEffect(() => {
-    const image = jumbotronImageRef?.current
+    ScrollTrigger.matchMedia({
+      // desktop
+      '(min-width: 1024px)': function () {
+        setTimeout(()=>{
+          const image = jumbotronImageRef?.current
+          tl.current = gsap
+            .timeline({
+              defaults: { overwrite: 'auto' },
+              scrollTrigger: {
+                trigger: jumbotronRef?.current,
+                scrub: true,
+                start: '0% 100%',
+                end: '100% 0',  
+              },
+              lazy: false,
+            })
+            .addLabel('init')
+            .fromTo(
+              image,
+              {
+                scale: 1.3,
+                lazy: false,
+              },
+              {
+                scale: 1,
+                lazy: false,
+              },
+              'init'
+            )
 
-    setTimeout(()=>{
-      tl.current = gsap
-        .timeline({
-          defaults: { overwrite: 'auto' },
-          scrollTrigger: {
-            trigger: jumbotronRef?.current,
-            scrub: true,
-            start: '0% 100%',
-            end: '100% 0',  
-          },
-          lazy: false,
-        })
-        .addLabel('init')
-        .fromTo(
-          image,
-          {
-            scale: 1.3,
-            lazy: false,
-          },
-          {
-            scale: 1,
-            lazy: false,
-          },
-          'init'
-        )
-    }, 1500)
+          return function () {
+            tl?.current?.kill()
+            gsap.set(image, { clearProps: true })
+          }
+        }, 1500)
+      },
+    })
   }, [])
 
   return (

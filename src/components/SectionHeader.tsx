@@ -1,6 +1,9 @@
-import React, { useState, useLayoutEffect } from 'react';
+import React, { useState, useLayoutEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { useMobileMediaQuery } from '../lib/mediaQueryHelper';
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
+if (typeof window !== 'undefined') { gsap.registerPlugin(ScrollTrigger) }
 
 import { Icon } from './Icon';
 
@@ -16,9 +19,43 @@ export function SectionHeader({ number, name, description, hideStar, ...props }:
   const [mounted, setMounted] = useState(false);
   const isMobile = useMobileMediaQuery();
 
+  const iconRef = useRef<any>()
+  const tl = useRef<any>()
+
   useLayoutEffect(() => {
     // This is to avoid SSR + useMedia issues
     setMounted(true);
+
+    ScrollTrigger.matchMedia({
+      // desktop
+      '(min-width: 1024px)': function () {
+        setTimeout(()=>{
+          const icon = iconRef?.current
+          if(icon) {
+            tl.current = gsap
+              .timeline({
+                defaults: { overwrite: 'auto', ease: 'none' },
+                scrollTrigger: {
+                  trigger: iconRef?.current,
+                  scrub: true,
+                  start: '0% 100%',
+                  end: '100% 0',
+                },
+              })
+              .to(
+                icon,
+                {
+                  rotation: 720,
+                }
+              )
+            return function () {
+              tl?.current?.kill()
+              gsap.set(icon, { clearProps: true })
+            }
+          }
+        }, 1500)
+      },
+    })
   }, []);
 
   if (!mounted) {
@@ -32,7 +69,9 @@ export function SectionHeader({ number, name, description, hideStar, ...props }:
       <HeaderRow><RowText>{description}</RowText></HeaderRow>
       <HeaderRow>
         {!hideStar && (
-          <Icon icon="star" size={isMobile ? 32 : 88} />
+          <div ref={iconRef}>
+            <Icon icon="star" size={isMobile ? 32 : 88} />
+          </div>
         )}
       </HeaderRow>
     </Wrapper>

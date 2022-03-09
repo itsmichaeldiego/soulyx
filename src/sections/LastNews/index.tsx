@@ -33,31 +33,40 @@ export function LastNews() {
   const tl = useRef<any>()
 
   useEffect(() => {
-    const image = wrapperImageRef?.current
+    ScrollTrigger.matchMedia({
+      // desktop
+      '(min-width: 1024px)': function () {
+        setTimeout(()=>{
+          const image = wrapperImageRef?.current
+          tl.current = gsap
+            .timeline({
+              defaults: { overwrite: 'auto' },
+              scrollTrigger: {
+                trigger: wrapperRef?.current,
+                scrub: true,
+                start: '0% 100%',
+                end: '100% 0',
+              },
+            })
+            .addLabel('init')
+            .fromTo(
+              image,
+              {
+                scale: 1.3,
+              },
+              {
+                scale: 1,
+              },
+              'init'
+            )
 
-    setTimeout(()=>{
-      tl.current = gsap
-        .timeline({
-          defaults: { overwrite: 'auto' },
-          scrollTrigger: {
-            trigger: wrapperRef?.current,
-            scrub: true,
-            start: '0% 100%',
-            end: '100% 0',
-          },
-        })
-        .addLabel('init')
-        .fromTo(
-          image,
-          {
-            scale: 1.3,
-          },
-          {
-            scale: 1,
-          },
-          'init'
-        )
-    }, 1500)
+          return function () {
+            tl?.current?.kill()
+            gsap.set(image, { clearProps: true })
+          }
+        }, 1500)
+      },
+    })
   }, [])
 
   return (

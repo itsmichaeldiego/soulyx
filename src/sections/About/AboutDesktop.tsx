@@ -163,7 +163,8 @@ const FloatingImageContainer = styled.div`
 
 const IsologoWrapper = styled.div`
   margin-right: auto;
-  margin-top: ${({ theme }) => theme.spacing(12)};
+  margin-top: ${({ theme }) => theme.spacing(32)};
+  margin-bottom: ${({ theme }) => theme.spacing(-20)};
   width: 36vw;
   z-index: 2;
 `;

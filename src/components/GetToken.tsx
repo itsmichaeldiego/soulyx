@@ -10,13 +10,13 @@ import { AnimatedSmoke } from './AnimatedSmoke';
 export function GetToken() {
   return (
     <Wrapper>
-        <TitleWrapper>
+        <TitleWrapper data-scroll data-scroll-speed="1">
           <Image src="/images/get-soulx.svg" alt={`Get ${TOKEN_NAME}`} layout="fill" />
         </TitleWrapper>
-        <ButtonWrapper>
+        <ButtonWrapper data-scroll data-scroll-speed="1">
           <GetButton href="https://miso.sushi.com/" text={`Get ${TOKEN_NAME}`} target="_blank" />
         </ButtonWrapper>
-        <SuspendedSoulWrapper data-scroll data-scroll-speed="3">
+        <SuspendedSoulWrapper data-scroll data-scroll-speed="1.5">
           <Image src="/images/suspended-soul.svg" alt="Suspended Soul" layout="fill" />
         </SuspendedSoulWrapper>
       <AnimatedSmoke />

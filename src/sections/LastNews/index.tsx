@@ -98,7 +98,6 @@ export function LastNews() {
 
 
 const Wrapper = styled.div`
-background-color: green;
   padding: ${({ theme }) => theme.spacing(20, 5, 20, 10)};
   position: relative;
   margin-left: ${({ theme }) => theme.spacing(-9)};

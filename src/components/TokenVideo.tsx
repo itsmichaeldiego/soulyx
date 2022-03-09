@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export function TokenVideo({ ...props }) {
   return (
-    <WrapperOuter  data-scroll data-scroll-speed="1">
+    <WrapperOuter  data-scroll data-scroll-speed="-2">
       <Wrapper autoPlay muted loop {...props}>
         <source src="https://storage.cloud.google.com/suspendedsoul/Landing/SOULYX_TOKEN.webm" type="video/webm" />
       </Wrapper>

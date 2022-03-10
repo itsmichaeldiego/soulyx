@@ -106,6 +106,7 @@ const ArrowButton = styled.div`
   border: 1px solid transparent;
   border-radius: 50%;
   padding: 0.5rem;
+  border: 1px dashed ${({ theme }) => theme.text.primary};
   &:hover,
   &:focus {
     border: 1px solid ${({ theme }) => theme.text.primary};

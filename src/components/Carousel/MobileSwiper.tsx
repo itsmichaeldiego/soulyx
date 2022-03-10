@@ -63,6 +63,10 @@ const SwiperWrapper = styled.div`
   overflow-y: visible;
   position: relative;
 
+  img {
+    object-fit: cover !important;
+  }
+
   .swiper {
     // Override default swiper position to use our wrapper as relative
     position: unset;

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Default, Mobile } from '../lib/mediaQueryHelper';
 import { SmoothScrollProvider } from "../components/SmoothScrollProvider";
 import styled from 'styled-components';
 

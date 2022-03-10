@@ -28,9 +28,9 @@ type ICardTitleProps = {
 }
 
 export function LastNews() {
-  const wrapperRef = useRef<any>()
-  const wrapperImageRef = useRef<any>()
-  const tl = useRef<any>()
+  const wrapperRef = useRef<HTMLDivElement>(null);
+  const wrapperImageRef = useRef<HTMLDivElement>(null);
+  const tl = useRef<any>();
 
   useEffect(() => {
     ScrollTrigger.matchMedia({

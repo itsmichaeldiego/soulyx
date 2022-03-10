@@ -19,8 +19,8 @@ export function SectionHeader({ number, name, description, hideStar, ...props }:
   const [mounted, setMounted] = useState(false);
   const isMobile = useMobileMediaQuery();
 
-  const iconRef = useRef<any>()
-  const tl = useRef<any>()
+  const iconRef = useRef<HTMLDivElement>(null);
+  const tl = useRef<any>();
 
   useLayoutEffect(() => {
     // This is to avoid SSR + useMedia issues

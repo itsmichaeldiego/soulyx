@@ -1,16 +1,34 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import styled from 'styled-components';
 import gsap from 'gsap'
 
 import useIntroEnded from '../hooks/useIntroEnded'
+import useVideoLoaded from '../hooks/useVideoLoaded';
 
 export function Preloader() {
-  const preloaderRef = useRef<any>()
+  const preloaderRef = useRef<HTMLDivElement>(null);
   /* @ts-ignore */
   const { introEnded, setIntroEnded } = useIntroEnded()
+  const { videoLoaded } = useVideoLoaded()
+  const [exitAnimation, setExitAnimation] = useState(false)
 
   useEffect(() => {
     const timer = setTimeout(() => {
+      setExitAnimation(true)
+    }, 5000)
+
+    if(videoLoaded) {
+      setTimeout(() => {
+        clearTimeout(timer)
+        setExitAnimation(true)
+      }, 2000)
+    }
+
+    return () => clearTimeout(timer)
+  },[videoLoaded])
+
+  useEffect(() => {
+    if(exitAnimation){
       gsap.to(preloaderRef.current, {
         duration: 0.3,
         delay: 1,
@@ -19,9 +37,8 @@ export function Preloader() {
           setIntroEnded(true)
         },
       })
-    }, 2500)
-    return () => clearTimeout(timer)
-  }, []);
+    }
+  }, [exitAnimation]);
 
   if (introEnded) return null
 

@@ -18,9 +18,9 @@ type IColumnImageWrapperProps = {
 };
 
 export function Virtual() {
-  const jumbotronRef = useRef<any>()
-  const jumbotronImageRef = useRef<any>()
-  const tl = useRef<any>()
+  const jumbotronRef = useRef<HTMLDivElement>(null);
+  const jumbotronImageRef = useRef<HTMLDivElement>(null);
+  const tl = useRef<any>();
 
   useEffect(() => {
     ScrollTrigger.matchMedia({

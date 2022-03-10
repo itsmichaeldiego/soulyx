@@ -11,7 +11,7 @@ export const SmoothScrollContext = createContext({
 
 export const SmoothScrollProvider = ({ children }: React.PropsWithChildren<{}>) => {
   const [scroll, setScroll] = useState(null);
-  const scrollWrapper = useRef<any>();
+  const scrollWrapper = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (!scroll) {

@@ -30,7 +30,7 @@ export function Menu({ onClose, className }: IMenuProps) {
   return (
     <Wrapper className={className} data-scroll data-scroll-sticky data-scroll-target="#smooth-scroll">
       <Header>
-        <IconWrapper onClick={onClose} role="button" style={{ cursor: 'pointer' }}>
+        <IconWrapper onClick={onClose} role="button" style={{ cursor: 'pointer' }} aria-label="Back">
           <Icon icon="arrow-left" size={26} color={theme.text.tertiary} />
         </IconWrapper>
         <Title>

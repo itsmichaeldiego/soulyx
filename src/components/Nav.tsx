@@ -89,19 +89,19 @@ export function Nav(): JSX.Element {
           <Icon icon="hamburger" color={theme.cta.primary} size={30} />
         </IconWrapper>
         <Indicators>
-          <a
+          <span
             onClick={()=>goToSection(_nextStep.name)}
             style={{ cursor: 'pointer' }}
           >
             {_nextStep.displayName}
-          </a>
+          </span>
           <Separator />
-          <a
+          <span
             onClick={()=>goToSection(_currentStep.name)}
             style={{ cursor: 'pointer' }}
           >
             {_currentStep.displayName}
-          </a>
+          </span>
         </Indicators>
         <GoTopButton
           onClick={goToTop}

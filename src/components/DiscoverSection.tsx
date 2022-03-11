@@ -58,7 +58,7 @@ const Item = styled.div`
 `;
 
 
-const CustomLink = styled.a`
+const CustomLink = styled.span`
   display: flex;
   align-items: center;
   cursor: pointer;

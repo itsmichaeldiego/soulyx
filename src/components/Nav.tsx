@@ -18,6 +18,7 @@ export function Nav(): JSX.Element {
   const theme = useContext(ThemeContext);  
   const [_currentStep, _setCurrentStep] = useState<INavItem>(NAV_ITEMS[0])
   const [_nextStep, _setNextStep] = useState<INavItem>(NAV_ITEMS[1])
+  const [_animSeparator, _setAnimSeparator] = useState<Boolean>(false)
 
   const [menuOpen, setMenuOpen] = useState(false)
 
@@ -71,6 +72,13 @@ export function Nav(): JSX.Element {
     }, 1500)
   }, []);
 
+  useEffect(()=>{
+    _setAnimSeparator(false)
+    setTimeout(()=>{
+      _setAnimSeparator(true)
+    },100)
+  },[_currentStep])
+
   useEffect(() => {
     if (menuOpen) {
       /* @ts-ignore */
@@ -89,19 +97,23 @@ export function Nav(): JSX.Element {
           <Icon icon="hamburger" color={theme.cta.primary} size={30} />
         </IconWrapper>
         <Indicators>
-          <span
-            onClick={()=>goToSection(_nextStep.name)}
-            style={{ cursor: 'pointer' }}
-          >
-            {_nextStep.displayName}
-          </span>
-          <Separator />
-          <span
-            onClick={()=>goToSection(_currentStep.name)}
-            style={{ cursor: 'pointer' }}
-          >
-            {_currentStep.displayName}
-          </span>
+          <LinkContainer style={{ textAlign: 'right' }}>
+            <span
+              onClick={()=>goToSection(_nextStep.name)}
+              style={{ cursor: 'pointer' }}
+            >
+              {_nextStep.displayName}
+            </span>
+          </LinkContainer>
+          <Separator className={_animSeparator && 'active'}/>
+          <LinkContainer>
+            <span
+              onClick={()=>goToSection(_currentStep.name)}
+              style={{ cursor: 'pointer' }}
+            >
+              {_currentStep.displayName}
+            </span>
+          </LinkContainer>
         </Indicators>
         <GoTopButton
           onClick={goToTop}
@@ -142,11 +154,31 @@ const Indicators = styled.div`
   line-height: 12px;
 `
 
+const LinkContainer = styled.div`
+  width: ${({ theme }) => theme.spacing(20)};
+`
+
 const Separator = styled.div`
   margin: ${({ theme }) => theme.spacing(2)};
-  width: ${({ theme }) => theme.spacing(4)};
+  width: 0;
   height: 1px;
   background: ${({ theme }) => theme.bg.secondary};
+  transition: width .5s ease-in-out;
+  will-change: width;
+
+  &.active {
+    width: ${({ theme }) => theme.spacing(4)};
+    animation: animSeparator .2s ease-in-out forwards;
+    @keyframes animSeparator {
+    0% {
+      width: 0;
+    }
+
+    100% {
+      width: ${({ theme }) => theme.spacing(4)};
+    }
+  }
+  }
 `
 
 const GoTopButton = styled.button`

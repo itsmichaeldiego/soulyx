@@ -39,7 +39,7 @@ export function Menu({ onClose, className }: IMenuProps) {
       </Header>
       {NAV_ITEMS.map((item, index) => {
         return (
-          <a
+          <span
             key={item.name}
             onClick={()=>{
               onClose()
@@ -53,7 +53,7 @@ export function Menu({ onClose, className }: IMenuProps) {
               description={item.headerDescription}
               hideStar
             />
-          </a>
+          </span>
         )
       })}
     </Wrapper>

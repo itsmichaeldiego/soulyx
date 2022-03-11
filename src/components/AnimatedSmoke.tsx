@@ -6,27 +6,27 @@ export function AnimatedSmoke() {
     <Wrapper>
       <section className="ag-smoke-block">
         <div className="ag-smoke-1">
-          <img src="/images/smoke-1.png" /></div>
+          <img src="/images/smoke-1.png" alt=""/></div>
         <div className="ag-smoke-1 ag-smoke__delay-1">
-          <img src="/images/smoke-1.png" /></div>
+          <img src="/images/smoke-1.png" alt=""/></div>
         <div className="ag-smoke-1 ag-smoke__delay-2">
-          <img src="/images/smoke-1.png" /></div>
+          <img src="/images/smoke-1.png" alt=""/></div>
         <div className="ag-smoke-2">
-          <img src="/images/smoke-2.png" /></div>
+          <img src="/images/smoke-2.png" alt=""/></div>
         <div className="ag-smoke-2 ag-smoke__delay-1">
-          <img src="/images/smoke-2.png" /></div>
+          <img src="/images/smoke-2.png" alt=""/></div>
         <div className="ag-smoke-2 ag-smoke__delay-2">
-          <img src="/images/smoke-2.png" /></div>
-        <div className="ag-smoke-3"><img src="/images/smoke-3.png" /></div>
+          <img src="/images/smoke-2.png" alt=""/></div>
+        <div className="ag-smoke-3"><img src="/images/smoke-3.png" alt=""/></div>
         <div className="ag-smoke-3 ag-smoke__delay-1">
-          <img src="/images/smoke-3.png" /></div>
+          <img src="/images/smoke-3.png" alt=""/></div>
         <div className="ag-smoke-3 ag-smoke__delay-2">
-          <img src="/images/smoke-3.png" /></div>
-        <div className="ag-smoke-4"><img src="/images/smoke-4.png" /></div>
+          <img src="/images/smoke-3.png" alt=""/></div>
+        <div className="ag-smoke-4"><img src="/images/smoke-4.png" alt=""/></div>
         <div className="ag-smoke-4 ag-smoke__delay-1">
-          <img src="/images/smoke-4.png" /></div>
+          <img src="/images/smoke-4.png" alt=""/></div>
         <div className="ag-smoke-4 ag-smoke__delay-2">
-          <img src="/images/smoke-4.png" /></div>
+          <img src="/images/smoke-4.png" alt=""/></div>
         <div className="ag-format-container"></div>
       </section>
     </Wrapper>

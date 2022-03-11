@@ -26,7 +26,7 @@ export function Header(): JSX.Element {
         <Menu className='' onClose={() => setMenuOpen(false)} />
       )}
       <Wrapper>
-        <HamburgerButton onClick={() => setMenuOpen(true)} role="button" style={{ cursor: 'pointer' }}>
+        <HamburgerButton onClick={() => setMenuOpen(true)} role="button" style={{ cursor: 'pointer' }} aria-label="Hamburg icon">
           <Icon icon="hamburger" color={theme.cta.primary} size={30} />
         </HamburgerButton>
         <Title>

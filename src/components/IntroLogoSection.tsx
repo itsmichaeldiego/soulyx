@@ -10,7 +10,7 @@ export function IntroLogoSection() {
   return (
     <Wrapper>
       <TokenVideo />
-      <Image src="/images/banner.svg" alt={`${TOKEN_NAME} Banner`} layout="fill" priority />
+      <Image src="/images/banner.svg" alt={`${TOKEN_NAME} Banner`} layout="fill"  objectFit="contain" priority />
     </Wrapper>
   )
 }

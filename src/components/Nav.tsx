@@ -83,7 +83,7 @@ export function Nav(): JSX.Element {
     <>
       <Menu className={menuOpen && 'opened'} onClose={() => setMenuOpen(false)} />
       <Wrapper data-scroll data-scroll-sticky data-scroll-target="#smooth-scroll">
-        <IconWrapper onClick={() => setMenuOpen(true)} role="button" style={{ cursor: 'pointer' }}>
+        <IconWrapper onClick={() => setMenuOpen(true)} role="button" style={{ cursor: 'pointer' }} aria-label="Menu toggle">
           <Icon icon="hamburger" color={theme.cta.primary} size={30} />
         </IconWrapper>
         <Indicators>
@@ -104,6 +104,7 @@ export function Nav(): JSX.Element {
         <GoTopButton
           onClick={goToTop}
           role="button"
+          aria-label="Go to top"
         >
           <Icon icon="chevrons-up" color={theme.cta.primary} size={12} />
           <GoTopText>ON TOP</GoTopText>

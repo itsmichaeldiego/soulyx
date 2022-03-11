@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react'; 
 import styled from 'styled-components';
+import { isSafari } from 'react-device-detect';
 import Image, { ImageProps } from 'next/image';
 
 type ILogoSectionTypes = {
@@ -42,10 +43,21 @@ const ImageWrapper = styled.div`
 `
 
 export function CustomTokenVideo({ ...props }) {
+  const [hasWebmSupport, setHasWebmSupport] = useState(true)
+
+  useEffect(()=>{
+    isSafari && setHasWebmSupport(false)
+  }, [])
+  
   return (
     <TokenVideoWrapperOuter data-scroll data-scroll-speed="4">
       <TokenVideoWrapper autoPlay muted loop {...props}>
-        <source src="https://storage.cloud.google.com/suspendedsoul/Landing/SOULYX_TOKEN.webm" type="video/webm" />
+        { !hasWebmSupport && (
+          <source src="/videos/Landing_SOULYX_TOKEN.mp4" type="video/mp4" />
+        ) }
+        { hasWebmSupport && (
+          <source src="https://storage.cloud.google.com/suspendedsoul/Landing/SOULYX_TOKEN.webm" data-test={ isSafari } type="video/webm" />
+        ) }
       </TokenVideoWrapper>
     </TokenVideoWrapperOuter>
   )

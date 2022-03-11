@@ -1,7 +1,6 @@
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import React, { createContext, useEffect, useRef, useState } from "react";
-import { scrollSpy } from 'react-scroll'
 
 if (typeof window !== 'undefined') { gsap.registerPlugin(ScrollTrigger) }
 
@@ -33,7 +32,6 @@ export const SmoothScrollProvider = ({ children }: React.PropsWithChildren<{}>) 
           });
 
           locoScroll.on("scroll", ScrollTrigger.update);
-          locoScroll.on("scroll", scrollSpy.update);
 
           ScrollTrigger.scrollerProxy(locoScroll.el, {
             scrollTop(value) {

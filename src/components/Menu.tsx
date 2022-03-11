@@ -109,9 +109,9 @@ const Title = styled.span`
 `
 
 const CustomSectionHeader = styled(SectionHeader)`
-  margin: 0;
+  margin: 0 !important;
   color: ${({ theme }) => theme.text.tertiary};
-  padding: ${({ theme }) => theme.spacing(5, 10)};
+  padding: ${({ theme }) => theme.spacing(5, 10)} !important;
   background-color: ${({ theme }) => theme.bg.secondary};
   cursor: pointer;
   &:hover {
@@ -119,7 +119,7 @@ const CustomSectionHeader = styled(SectionHeader)`
     background: transparent;
   }
   @media ${({ theme }) => theme.media.mobile} {
-    padding: ${({ theme }) => theme.spacing(4)};
+    padding: ${({ theme }) => theme.spacing(4)} !important;
   }
 `
 

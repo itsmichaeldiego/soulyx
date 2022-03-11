@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import styled, { ThemeContext } from 'styled-components';
+import { SmoothScrollContext } from '../components/SmoothScrollProvider'
 
 import { TOKEN_NAME } from '../dom/token';
 
@@ -9,21 +10,24 @@ import { Menu } from './Menu';
 
 export function Header(): JSX.Element {
   const theme = useContext(ThemeContext);
+  const { scroll } = useContext(SmoothScrollContext)
 
   const [menuOpen, setMenuOpen] = useState(false)
 
   useEffect(() => {
     if (menuOpen) {
-      document.body.style.overflow = 'hidden';
+      /* @ts-ignore */
+      scroll && scroll.stop()
     } else {
-      document.body.style.overflow = 'unset';
+      /* @ts-ignore */
+      scroll && scroll.start()
     }
   }, [menuOpen]);
 
   return (
     <>
       {menuOpen && (
-        <Menu className='' onClose={() => setMenuOpen(false)} />
+        <Menu className='opened' onClose={() => setMenuOpen(false)} />
       )}
       <Wrapper>
         <HamburgerButton onClick={() => setMenuOpen(true)} role="button" style={{ cursor: 'pointer' }} aria-label="Hamburg icon">

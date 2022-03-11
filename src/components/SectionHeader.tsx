@@ -12,10 +12,11 @@ type ISectionHeaderProps = {
   name: string;
   description: string;
   hideStar?: boolean;
+  animStar?: boolean;
   onClick?: () => void;
 }
 
-export function SectionHeader({ number, name, description, hideStar, ...props }: ISectionHeaderProps) {
+export function SectionHeader({ number, name, description, hideStar, animStar = false, ...props }: ISectionHeaderProps) {
   const [mounted, setMounted] = useState(false);
   const isMobile = useMobileMediaQuery();
 
@@ -29,31 +30,33 @@ export function SectionHeader({ number, name, description, hideStar, ...props }:
     ScrollTrigger.matchMedia({
       // desktop
       '(min-width: 1024px)': function () {
-        setTimeout(()=>{
-          const icon = iconRef?.current
-          if(icon) {
-            tl.current = gsap
-              .timeline({
-                defaults: { overwrite: 'auto', ease: 'none' },
-                scrollTrigger: {
-                  trigger: iconRef?.current,
-                  scrub: true,
-                  start: '0% 100%',
-                  end: '100% 0',
-                },
-              })
-              .to(
-                icon,
-                {
-                  rotation: 720,
-                }
-              )
-            return function () {
-              tl?.current?.kill()
-              gsap.set(icon, { clearProps: true })
+        if(animStar){
+          setTimeout(()=>{
+            const icon = iconRef?.current
+            if(icon) {
+              tl.current = gsap
+                .timeline({
+                  defaults: { overwrite: 'auto', ease: 'none' },
+                  scrollTrigger: {
+                    trigger: iconRef?.current,
+                    scrub: true,
+                    start: '0% 100%',
+                    end: '100% 0',
+                  },
+                })
+                .to(
+                  icon,
+                  {
+                    rotation: 720,
+                  }
+                )
+              return function () {
+                tl?.current?.kill()
+                gsap.set(icon, { clearProps: true })
+              }
             }
-          }
-        }, 1500)
+          }, 1500)
+        }
       },
     })
   }, []);

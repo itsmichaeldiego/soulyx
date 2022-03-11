@@ -18,7 +18,8 @@
     "react-scroll": "^1.8.4",
     "spacing-helper": "^4.1.6",
     "styled-components": "^5.3.3",
-    "swiper": "^7.3.1"
+    "swiper": "^7.3.1",
+    "react-device-detect": "^2.1.2"
   },
   "devDependencies": {
     "@types/node": "^17.0.21",

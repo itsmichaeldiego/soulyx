@@ -15,7 +15,7 @@ export function Preloader() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setExitAnimation(true)
-    }, 5000)
+    }, 4000)
 
     if(videoLoaded) {
       setTimeout(() => {
@@ -90,7 +90,7 @@ const SvgStyled = styled.svg`
   & path {
     stroke-dasharray: 1500;
     stroke-dashoffset: 1500;
-    animation: pathAnim 1s ease-in-out 2 forwards .5s;
+    animation: pathAnim 1.5s ease-in-out 20 forwards .5s;
   }
   
   @keyframes pathAnim {

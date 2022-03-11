@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react'; 
 import Image from 'next/image';
 import styled from 'styled-components';
+import { isSafari } from 'react-device-detect';
 
 import { TOKEN_NAME } from '../../dom/token';
 
@@ -11,6 +12,12 @@ import { AnimatedInnerImage } from '../../components/AnimatedInnerImage';
 import { DATA } from './data';
 
 export function About() {
+  const [hasWebmSupport, setHasWebmSupport] = useState(true)
+
+  useEffect(()=>{
+    isSafari && setHasWebmSupport(false)
+  }, [])
+
   return (
     <Section>
       <SectionContainer>
@@ -42,9 +49,14 @@ export function About() {
             )}
           />
           <IsologoWrapper data-scroll data-scroll-speed="4">
-            <Video autoPlay muted loop>
-              <source src="https://storage.googleapis.com/suspendedsoul/Landing/LOGO_SOULXparawebm.webm" type="video/webm" />
-            </Video>
+            { !hasWebmSupport && (
+              <Image src="/images/ssoul-logo.png" alt="Ssoul logo" width="931" height="696" />
+            ) }
+            { hasWebmSupport && (
+              <Video autoPlay muted loop>
+                <source src="https://storage.googleapis.com/suspendedsoul/Landing/LOGO_SOULXparawebm.webm" type="video/webm" />
+              </Video>
+            ) }
           </IsologoWrapper>
         </AstronautAndIsologoWrapper>
         <FloatingImageWrapper>

@@ -14,6 +14,7 @@ export function HomePage() {
               number={`${getPad(index)} - ${getPad(NAV_ITEMS.length - 1)}`}
               name={item.headerName}
               description={item.headerDescription}
+              animStar={true}
             />
           )}
           {item.component()}

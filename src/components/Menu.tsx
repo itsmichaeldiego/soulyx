@@ -109,7 +109,7 @@ const Title = styled.span`
 `
 
 const CustomSectionHeader = styled(SectionHeader)`
-  margin: 0;
+  margin: 0 !important;
   color: ${({ theme }) => theme.text.tertiary};
   padding: ${({ theme }) => theme.spacing(5, 10)};
   background-color: ${({ theme }) => theme.bg.secondary};

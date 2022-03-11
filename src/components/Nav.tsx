@@ -73,9 +73,11 @@ export function Nav(): JSX.Element {
 
   useEffect(() => {
     if (menuOpen) {
-      document.body.style.overflow = 'hidden';
+      /* @ts-ignore */
+      scroll && scroll.stop()
     } else {
-      document.body.style.overflow = 'unset';
+      /* @ts-ignore */
+      scroll && scroll.start()
     }
   }, [menuOpen]);
 

@@ -1,24 +1,31 @@
 import React, { useContext } from 'react';
 import styled, { ThemeContext } from 'styled-components';
-import { Link } from 'react-scroll';
+import { SmoothScrollContext } from './SmoothScrollProvider';
 
 import { Icon } from './Icon';
 import { NAV_ITEMS } from '../lib/navigation';
 import { useMobileMediaQuery } from '../lib/mediaQueryHelper';
 
 export function DiscoverSection({ text }: { text: string }) {
+  const { scroll } = useContext(SmoothScrollContext)
   const theme = useContext(ThemeContext);
   const isMobile = useMobileMediaQuery();
+
+  /* @ts-ignore */
+  const goToSection = event => {
+    event.preventDefault()
+    /* @ts-ignore */
+    scroll && scroll.scrollTo(
+      `[data-section-id=${NAV_ITEMS[1].name}]`,
+      { offset: isMobile ? -96 : 0 }
+    )
+  }
 
   return (
     <Wrapper>
       <Item>
-        <CustomLink 
-          to={NAV_ITEMS[1].name} 
-          spy={true}
-          smooth={true}
-          hashSpy={true}
-          offset={isMobile ? -96 : 0}
+        <CustomLink
+          onClick={goToSection}
         >
           <Icon icon="arrow-down" color={theme.cta.primary} size={26} />
           <Text>{text}</Text>
@@ -51,7 +58,7 @@ const Item = styled.div`
 `;
 
 
-const CustomLink = styled(Link)`
+const CustomLink = styled.a`
   display: flex;
   align-items: center;
   cursor: pointer;

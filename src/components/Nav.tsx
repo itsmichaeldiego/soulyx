@@ -1,23 +1,25 @@
 import React, { useState, useEffect, useContext } from 'react';
 import styled, { ThemeContext } from 'styled-components';
-import { Link, animateScroll } from 'react-scroll'
 import { SmoothScrollContext } from '../components/SmoothScrollProvider'
-import { useDesktopMediumMediaQuery } from '../lib/mediaQueryHelper';
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
+if (typeof window !== 'undefined') { gsap.registerPlugin(ScrollTrigger) }
 
 import { Icon } from './Icon';
 import { Menu } from './Menu';
 import { NAV_ITEMS, INavItem } from '../lib/navigation';
+import { useMobileMediaQuery } from '../lib/mediaQueryHelper';
 
 const getStepIndex = (steps: INavItem[], stepName: string): number => steps.findIndex((step: INavItem) => step.name === stepName)
 
 export function Nav(): JSX.Element {
   const { scroll } = useContext(SmoothScrollContext)
+  const isMobile = useMobileMediaQuery();
   const theme = useContext(ThemeContext);  
   const [_currentStep, _setCurrentStep] = useState<INavItem>(NAV_ITEMS[0])
   const [_nextStep, _setNextStep] = useState<INavItem>(NAV_ITEMS[1])
 
   const [menuOpen, setMenuOpen] = useState(false)
-  const isDesktopMedium = useDesktopMediumMediaQuery();
 
   const handleSetActive = (to: string): void => {
     const stepIndex = getStepIndex(NAV_ITEMS, to);
@@ -29,14 +31,55 @@ export function Nav(): JSX.Element {
     }
   }
 
+  const goToSection = (to: string): void => {
+    /* @ts-ignore */
+    scroll && scroll.scrollTo(
+      `[data-section-id=${to}]`,
+      { offset: isMobile ? -96 : 0 }
+    )
+  }
+
+  /* @ts-ignore */
+  const goToTop = event => {
+    event.preventDefault()
+    /* @ts-ignore */
+    scroll && scroll.scrollTo(0)
+  }
+
+  useEffect(() => {
+    setTimeout(()=>{
+      /* @ts-ignore */
+      let scrollTriggerInstances = []
+
+      NAV_ITEMS.forEach(element => {
+        let selector = '[data-section-id="' + element.name + '"]';
+
+        scrollTriggerInstances.push(
+          ScrollTrigger.create({
+            trigger: selector,
+            start: "top 5%",
+            end: "bottom 5%",
+            onEnter: ((instance:any) => {
+              handleSetActive(instance.trigger.dataset["sectionId"])
+            }),
+            onEnterBack: ((instance:any) => {
+              handleSetActive(instance.trigger.dataset["sectionId"])
+            }),
+          })
+        )
+      });
+    }, 1500)
+  }, []);
+
   useEffect(() => {
     if (menuOpen) {
-      document.body.style.overflow = 'hidden';
+      /* @ts-ignore */
+      scroll && scroll.stop()
     } else {
-      document.body.style.overflow = 'unset';
+      /* @ts-ignore */
+      scroll && scroll.start()
     }
   }, [menuOpen]);
-
 
   return (
     <>
@@ -46,57 +89,22 @@ export function Nav(): JSX.Element {
           <Icon icon="hamburger" color={theme.cta.primary} size={30} />
         </IconWrapper>
         <Indicators>
-          {NAV_ITEMS.map(navItem => {
-            return (
-              <Link
-                key={navItem.name}
-                activeClass="active"
-                to={navItem.name}
-                spy={true}
-                smooth={true}
-                hashSpy={true}
-                offset={0}
-                onSetActive={handleSetActive}
-                style={{ display: 'none' }}
-              >
-                {navItem.displayName}
-              </Link>
-            )
-          }
-          )}
-          <Link
-            activeClass="active"
-            to={_nextStep.name}
-            spy={true}
-            smooth={true}
-            hashSpy={true}
-            offset={_nextStep.offset || 0}
+          <a
+            onClick={()=>goToSection(_nextStep.name)}
             style={{ cursor: 'pointer' }}
           >
             {_nextStep.displayName}
-          </Link>
+          </a>
           <Separator />
-          <Link
-            activeClass="active"
-            to={_currentStep.name}
-            spy={true}
-            smooth={true}
-            hashSpy={true}
-            offset={_currentStep.offset || 0}
+          <a
+            onClick={()=>goToSection(_currentStep.name)}
             style={{ cursor: 'pointer' }}
           >
             {_currentStep.displayName}
-          </Link>
+          </a>
         </Indicators>
         <GoTopButton
-          onClick={() => {
-            if(isDesktopMedium) {
-              /* @ts-ignore */
-              scroll.scrollTo(0)
-            } else {
-              animateScroll.scrollToTop()
-            }
-          }}
+          onClick={goToTop}
           role="button"
         >
           <Icon icon="chevrons-up" color={theme.cta.primary} size={12} />
@@ -110,7 +118,7 @@ export function Nav(): JSX.Element {
 
 const Wrapper = styled.nav`
   position: fixed;
-  z-index: 1;
+  z-index: 999;
   left: 0;
   width: ${({ theme }) => theme.sizes.nav};
   height: 100vh;

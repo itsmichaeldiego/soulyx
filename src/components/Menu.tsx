@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import styled, { ThemeContext } from 'styled-components';
-import { Link } from 'react-scroll'
+import { SmoothScrollContext } from './SmoothScrollProvider';
 
 import { NAV_ITEMS } from '../lib/navigation';
 import { getPad } from '../lib/utils';
@@ -15,8 +15,17 @@ type IMenuProps = {
 }
 
 export function Menu({ onClose, className }: IMenuProps) {
+  const { scroll } = useContext(SmoothScrollContext)
   const theme = useContext(ThemeContext);
   const isMobile = useMobileMediaQuery();
+
+  const goToSection = (name:string): void => {
+    /* @ts-ignore */
+    scroll && scroll.scrollTo(
+      `[data-section-id=${name}]`,
+      { offset: isMobile ? -96 : 0 }
+    )
+  }
 
   return (
     <Wrapper className={className} data-scroll data-scroll-sticky data-scroll-target="#smooth-scroll">
@@ -30,15 +39,12 @@ export function Menu({ onClose, className }: IMenuProps) {
       </Header>
       {NAV_ITEMS.map((item, index) => {
         return (
-          <Link
+          <a
             key={item.name}
-            activeClass="active"
-            to={item.name}
-            spy={true}
-            smooth={true}
-            hashSpy={true}
-            offset={isMobile ? -96 : 0}
-            onClick={onClose}
+            onClick={()=>{
+              onClose()
+              goToSection(item.name)
+            }}
           >
             <CustomSectionHeader
               key={item.name}
@@ -47,7 +53,7 @@ export function Menu({ onClose, className }: IMenuProps) {
               description={item.headerDescription}
               hideStar
             />
-          </Link>
+          </a>
         )
       })}
     </Wrapper>
@@ -103,9 +109,9 @@ const Title = styled.span`
 `
 
 const CustomSectionHeader = styled(SectionHeader)`
-  margin: 0;
+  margin: 0 !important;
   color: ${({ theme }) => theme.text.tertiary};
-  padding: ${({ theme }) => theme.spacing(5, 10)};
+  padding: ${({ theme }) => theme.spacing(5, 10)} !important;
   background-color: ${({ theme }) => theme.bg.secondary};
   cursor: pointer;
   &:hover {
@@ -113,7 +119,7 @@ const CustomSectionHeader = styled(SectionHeader)`
     background: transparent;
   }
   @media ${({ theme }) => theme.media.mobile} {
-    padding: ${({ theme }) => theme.spacing(4)};
+    padding: ${({ theme }) => theme.spacing(4)} !important;
   }
 `
 

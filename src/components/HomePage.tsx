@@ -1,5 +1,4 @@
 import React from 'react'
-import { Element } from 'react-scroll'
 
 import { getPad } from '../lib/utils'
 import { NAV_ITEMS } from '../lib/navigation'
@@ -9,16 +8,17 @@ export function HomePage() {
   return (
     <>
       {NAV_ITEMS.map((item, index) => (
-        <Element key={item.name} name={item.name}>
+        <div key={item.name} data-section-id={item.name}>
           {!item.hideHeader && (
             <SectionHeader
               number={`${getPad(index)} - ${getPad(NAV_ITEMS.length - 1)}`}
               name={item.headerName}
               description={item.headerDescription}
+              animStar={true}
             />
           )}
           {item.component()}
-        </Element>
+        </div>
       ))}
     </>
   )

@@ -59,7 +59,7 @@ export function FlipCarousel({ cards }: IFlipCarouselProps) {
           role="button"
           onClick={() => handleScroll('left')}
           isDisabled={currentCardIndex === 0}
-          aria-label="Flip card"
+          aria-label="Previous items"
         >
           <Icon icon="arrow-left" size={46} />
         </ArrowButton>
@@ -67,7 +67,7 @@ export function FlipCarousel({ cards }: IFlipCarouselProps) {
           role="button"
           onClick={() => handleScroll('right')}
           isDisabled={currentCardIndex === cards.length - 1}
-          aria-label="Flip card"
+          aria-label="Next items"
         >
           <Icon icon="arrow-right" size={46} />
         </ArrowButton>

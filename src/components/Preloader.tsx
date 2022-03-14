@@ -54,6 +54,8 @@ export function Preloader() {
             c-4.6-1-9-1.3-13.8-1.3v0c-4.8,0-9.3,0.3-13.8,1.3c-14.9,2.9-28.1,11.7-40.7,29L2.1,224.3L2,224.6v1.6h34h0.5l0.3-0.4l38.8-57.6h0
             c11.2-16.6,16.4-29.1,18.3-42c0.7-4.5,1-8.7,1-13.5C94.8,108.5,94.7,104.1,94.2,99.8"
           />
+	        <path fill="none" stroke="#FF3E12" strokeWidth="2" strokeMiterlimit="10"
+           d="M94.2,99.8L94.2,99.8c3.9,0.8,7.9,1,12.3,1h0.1c4.3,0,8.6-0.2,12.4-1c-0.6,4.5-0.8,8.8-0.8,12.9c0,4,0.3,8,0.9,12l0,0c-4.1-0.8-8.1-1-12.5-1l0,0c-4.3,0-8.4,0.2-12.5,1c0.5-4,0.8-7.8,0.8-12C94.8,108.5,94.7,104.1,94.2,99.8"/>
         </SvgStyled>
       </WrapperInner>
     </Wrapper>
@@ -87,7 +89,7 @@ const WrapperInner = styled.div`
 `
 
 const SvgStyled = styled.svg`
-  & path {
+  & path:first-of-type {
     stroke-dasharray: 1500;
     stroke-dashoffset: 1500;
     animation: pathAnim 1.5s ease-in-out 20 forwards .5s;

@@ -148,7 +148,7 @@ const SpanWrapper = styled.span`
     .f4 { animation: showHide .2s forwards .6s;}
     .f5 { animation: showHide .2s forwards .8s;}
     .f6 { animation: showLast .2s forwards 1s;}
-    .f7 { animation: showLast .2s forwards 1.4s;}
+    .f7 { animation: left-right .35s forwards 1.2s;}
 
     @keyframes showHide {
       0% {opacity:0}
@@ -161,6 +161,19 @@ const SpanWrapper = styled.span`
       0% {opacity:0}
       1% {opacity:1}
       100% {opacity:1}
+    }
+
+    @keyframes left-right {
+      0% {
+        opacity: 1;
+        -webkit-clip-path: polygon(0% 0%, 0% 100%, 0% 100%, 0% 0%);
+        clip-path: polygon(0% 0%, 0% 100%, 0% 100%, 0% 0%);
+      }
+      100% {
+        opacity: 1;
+        -webkit-clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
+        clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
+      }
     }
   }
 `;

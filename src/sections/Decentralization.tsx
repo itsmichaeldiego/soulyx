@@ -167,17 +167,20 @@ const HandSection = styled.div`
     }
   }
 
-  /*
   :after {
     content: " ";
     position: absolute;
     bottom: 62px;
     background-position: center;
-    background-image: url('/images/${TOKEN_NAME}-suspended-text.svg');
+    background-image: url('/images/soulx-suspended-text.svg');
     width: 100vw;
     height: 29px;
     animation: ${simpleMarquee} 20s linear infinite;
-    margin-left: ${({ theme }) => theme.spacing(-9)};
+    margin-left: ${({ theme }) => theme.spacing(-3)};
     margin-right: ${({ theme }) => theme.spacing(-3)};
-  }*/
+
+    @media ${({ theme }) => theme.media.desktop} {
+      margin-left: ${({ theme }) => theme.spacing(-9)};
+    }
+  }
 `;

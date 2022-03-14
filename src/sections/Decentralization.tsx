@@ -170,7 +170,7 @@ const HandSection = styled.div`
   :after {
     content: " ";
     position: absolute;
-    bottom: 62px;
+    bottom: 20px;
     background-position: center;
     background-image: url('/images/soulx-suspended-text.svg');
     width: 100vw;
@@ -181,6 +181,7 @@ const HandSection = styled.div`
 
     @media ${({ theme }) => theme.media.desktop} {
       margin-left: ${({ theme }) => theme.spacing(-9)};
+      bottom: 62px;
     }
   }
 `;

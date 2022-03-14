@@ -73,7 +73,9 @@ export function LastNews() {
     <>
       <Wrapper ref={wrapperRef}>
         <WrapperImage ref={wrapperImageRef}/>
-        <Title>LAST NEWS</Title>
+        <WrapperTitle>
+          <Image src="/images/last-news.svg" alt="Last News" layout="fill" />
+        </WrapperTitle>
         <FlipCarousel cards={CARDS} />
       </Wrapper>
       <LogosWrapper>
@@ -130,6 +132,20 @@ const WrapperImage = styled.div`
   background-image: url('/images/news-door.png');
 `;
 
+const WrapperTitle = styled.div`
+  height: 100%;
+  margin-left: ${({ theme }) => theme.spacing(1)};
+  max-width: 700px;
+  min-height: 389px;
+  position: relative;
+
+  @media ${({ theme }) => theme.media.mobile} {
+    margin-left: ${({ theme }) => theme.spacing(2)};
+    min-height: 156px;
+    max-width: 220px;
+  }
+`;
+
 const LogosWrapper = styled.div`
   margin: ${({ theme }) => theme.spacing(8)};
   position: relative;
@@ -179,6 +195,7 @@ const CardItem = styled.div`
 `
 
 const Title = styled.div`
+  position: relative;
   font-size: 15vw;
   line-height: 15vw;
   font-family: ${({ theme }) => theme.font.secondary};

@@ -64,13 +64,14 @@ const TitleWrapper = styled.div`
   }
 
   @media ${({ theme }) => theme.media.desktop} {
-    min-height: 260px;
+    min-height: 330px;
+    margin-top: ${({ theme }) => theme.spacing(6)};
   }
 `;
 
 const ButtonWrapper = styled.div`
   display: flex;
-  margin-top: ${({ theme }) => theme.spacing(5)};
+  margin-top: ${({ theme }) => theme.spacing(1)};
   margin-bottom: ${({ theme }) => theme.spacing(105)};
   // fix for content to go over the animated smoke
   position: relative;

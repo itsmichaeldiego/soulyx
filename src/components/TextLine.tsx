@@ -23,6 +23,6 @@ const Wrapper = styled.div`
 `
 
 const Text = styled.span`
-  font-weight: 300;
+  font-weight: 400;
   font-size: 12px;
 `

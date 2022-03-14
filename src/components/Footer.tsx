@@ -45,10 +45,14 @@ const FooterLink = styled.a`
   @media ${({ theme }) => theme.media.mobile} {
     margin: ${({ theme }) => theme.spacing(0, 0.5)};
   }
+
+  &:hover {
+    border-bottom: 1px solid;
+  }
 `;
 
 const FooterLinks = styled.div`
-  font-weight: 300;
+  font-weight: 400;
   display: flex;
   align-items: center;
 `;

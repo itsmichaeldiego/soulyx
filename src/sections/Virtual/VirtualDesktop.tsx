@@ -69,7 +69,9 @@ export function Virtual() {
         <FloatingText data-scroll data-scroll-speed="1.8">
           {`${TOKEN_NAME} OPENS UP A BIG DOOR INTO THE FUTURE AND NURTURES THE ECONOMIC DESTINY OF ARTISTS, HOLDERS AND COLLECTORS WITH MULTIPLE OPTIONS.`}
         </FloatingText>
-        <Image src="/images/soulx-jumbotron.svg" alt={`${TOKEN_NAME} Jumbotron`} layout="fill" />
+        <ImageWrapper>
+          <Image src="/images/soulx-jumbotron.svg" alt={`${TOKEN_NAME} Jumbotron`} layout="fill" />
+        </ImageWrapper>
       </Jumbotron>
       <TextBlockWrapper>
         <Title>
@@ -180,6 +182,15 @@ const FloatingText = styled.div`
   margin-bottom: auto;
   margin-left: ${({ theme }) => theme.spacing(2)};
   max-width: 210px;
+`;
+
+const ImageWrapper = styled.div`
+  position: absolute;
+  bottom: 0;
+  width: 2773.6px;
+  max-width: 85vw;
+  padding-top: 22%;
+  margin-bottom: ${({ theme }) => theme.spacing(6)};
 `;
 
 const TextBlockWrapper = styled.article`

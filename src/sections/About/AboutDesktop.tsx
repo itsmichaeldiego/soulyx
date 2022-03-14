@@ -169,6 +169,14 @@ const FloatingImageContainer = styled.div`
   @media (max-width: 1200px) {
     top: 0;
   }
+
+  @media (min-width: 1600px) {
+    top: -900px;
+    width: 540px;
+    max-width: 540px;
+    height: 832px;
+    max-height: 832px;
+  }
 `;
 
 const IsologoWrapper = styled.div`

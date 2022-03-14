@@ -47,9 +47,12 @@ const Jumbotron = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: height: ${({ theme }) => theme.spacing(61)};
+  height: ${({ theme }) => theme.spacing(68)};
   margin: 0 ${({ theme }) => theme.spacing(-3, 0)};
   padding: ${({ theme }) => theme.spacing(4, 0)};
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
 const MarqueeWrapper = styled.div`
@@ -70,10 +73,10 @@ const FloatingText = styled.div`
 `;
 
 const ImageWrapper = styled.div`
-  margin-left: ${({ theme }) => theme.spacing(1)};
-  max-width: 360px;
-  min-height: 400px;
+  margin-left: ${({ theme }) => theme.spacing(3)};
   position: relative;
+  width: 90%;
+  padding-top: 22%;
 `;
 
 const TextBlockWrapper = styled.article`

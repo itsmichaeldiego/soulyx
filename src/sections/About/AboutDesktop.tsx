@@ -25,11 +25,9 @@ export function About() {
           <Image src="/images/soulx-transparent.svg" alt={TOKEN_NAME} layout="fill" />
         </TokenWrapper>
         <AstronautAndIsologoWrapper>
-          <AnimatedInnerImage>
-            <OverlappingImageWrapper>
-              <Image src="/images/astronaut-open-helmet.png" alt="Astronaut" layout="fill" />
-            </OverlappingImageWrapper>
-          </AnimatedInnerImage>
+          <OverlappingImageWrapper data-scroll data-scroll-speed="2">
+            <Image src="/images/astronaut-open-helmet.png" alt="Astronaut" layout="fill" />
+          </OverlappingImageWrapper>
           <StyledTextSection
             align="flex-start"
             title={DATA.title}

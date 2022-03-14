@@ -41,6 +41,7 @@ const Wrapper = styled.footer`
 const FooterLink = styled.a`
   font-size: 10px;
   margin: ${({ theme }) => theme.spacing(0, 1)};
+  border-bottom: 1px solid transparent;
 
   @media ${({ theme }) => theme.media.mobile} {
     margin: ${({ theme }) => theme.spacing(0, 0.5)};

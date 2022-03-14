@@ -15,7 +15,7 @@ export function Decentralization() {
   return (
     <Wrapper>
       <HeaderImage>
-        <Image src="/images/decentralization.svg" alt="THRESHOLD OF DESCENTRALIZATION" layout="fill" objectFit="contain" />
+        <Image src="/images/decentralization.svg" alt="THRESHOLD OF DESCENTRALIZATION" loading="eager" layout="fill" objectFit="contain" />
       </HeaderImage>
       <Content>
         <ImageWrapper data-scroll data-scroll-speed="2">

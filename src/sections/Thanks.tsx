@@ -25,7 +25,7 @@ const Text = styled.div`
   display: flex;
   flex-direction: column;
   padding: ${({ theme }) => theme.spacing(8, 6)};
-  font-weight: 300;
+  font-weight: 400;
   font-size: 12px;
   max-width: 340px;
 

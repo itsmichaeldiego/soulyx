@@ -61,7 +61,7 @@ export function FlipCarousel({ cards }: IFlipCarouselProps) {
           isDisabled={currentCardIndex === 0}
           aria-label="Previous items"
         >
-          <Icon icon="arrow-left" size={46} />
+          <Icon icon="btn-arrow-left" size={48} viewBox={'0 0 48 48'}/>
         </ArrowButton>
         <ArrowButton
           role="button"
@@ -69,7 +69,7 @@ export function FlipCarousel({ cards }: IFlipCarouselProps) {
           isDisabled={currentCardIndex === cards.length - 1}
           aria-label="Next items"
         >
-          <Icon icon="arrow-right" size={46} />
+          <Icon icon="btn-arrow-right" size={48} viewBox={'0 0 48 48'}/>
         </ArrowButton>
       </Actions>
     </>
@@ -80,7 +80,7 @@ const Wrapper = styled.div`
   flex: 1;
   display: flex;
   overflow-x: hidden;
-  padding: ${({ theme }) => theme.spacing(12, 0)};
+  padding: ${({ theme }) => theme.spacing(8, 0)};
 
   @media ${({ theme }) => theme.media.mobile} {
     padding: ${({ theme }) => theme.spacing(6, 0)};
@@ -105,16 +105,19 @@ type IArrowButtonProps = {
 
 const ArrowButton = styled.div`
   cursor: pointer;
+  width: 48px;
+  height: 48px;
   border: 1px solid transparent;
   border-radius: 50%;
-  padding: 0.5rem;
-  border: 1px dashed ${({ theme }) => theme.text.primary};
+  padding: 15px 12px;
   &:hover,
   &:focus {
-    border: 1px solid ${({ theme }) => theme.text.primary};
+    border: 1px dashed ${({ theme }) => theme.text.primary};
   }
   ${({ isDisabled }: IArrowButtonProps) => isDisabled && `
     pointer-events: none;
     opacity: 0.2;
   `}
 `
+
+

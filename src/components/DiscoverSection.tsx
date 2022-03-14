@@ -22,7 +22,7 @@ export function DiscoverSection({ text }: { text: string }) {
   }
 
   return (
-    <Wrapper>
+    <Wrapper data-scroll data-scroll-speed="4">
       <Item>
         <CustomLink
           onClick={goToSection}

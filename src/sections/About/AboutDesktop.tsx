@@ -22,7 +22,7 @@ export function About() {
     <Section>
       <SectionContainer>
         <TokenWrapper>
-          <Image src="/images/soulx-transparent.svg" alt={TOKEN_NAME} layout="fill" />
+          <Image src="/images/soulx-transparent.svg" alt={TOKEN_NAME} layout="fill" objectFit='contain' objectPosition='top' />
         </TokenWrapper>
         <AstronautAndIsologoWrapper>
           <OverlappingImageWrapper data-scroll data-scroll-speed="2">

@@ -13,13 +13,13 @@ export function LogoSection({ src, alt, ...props }: ILogoSectionTypes) {
   return (
     <Wrapper>
       <TokenVideo />
-      <Image src={src} alt={alt} layout="fill" />
+      <Image src={src} alt={alt} layout="fill" objectFit='contain' objectPosition='top'/>
     </Wrapper>
   )
 }
 
 const Wrapper = styled.div`
-  min-height: 100vw;
+  min-height: 70vw;
   display: flex;
   align-items: center;
   justify-content: center;

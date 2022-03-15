@@ -19,10 +19,6 @@ export function Thanks() {
 const SectionWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  
-  @media ${({ theme }) => theme.media.desktop} {
-    margin-top: -14vw;
-  }
 `;
 
 const Text = styled.div`

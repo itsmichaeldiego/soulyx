@@ -36,8 +36,4 @@ const StyledSection = styled.section`
   position: relative;
   min-height: ${({ theme }) => `calc(100vh - ${theme.sizes.header})`};
   height: 100%;
-  
-  @media ${({ theme }) => theme.media.desktop} {
-    margin-top: -11vw;
-  }
 `

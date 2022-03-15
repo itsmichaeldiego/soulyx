@@ -12,7 +12,7 @@ export function RightLogoSection({ src, alt }: ILogoSectionTypes) {
   return (
     <Wrapper>
       <ImageWrapper>
-        <Image src={src} alt={alt} layout="fill" objectPosition="top left" />
+        <Image src={src} alt={alt} layout="fill" objectPosition="top left" objectFit='contain' />
       </ImageWrapper>
       <CustomTokenVideo />
     </Wrapper>
@@ -32,13 +32,14 @@ const Wrapper = styled.div`
 
 const ImageWrapper = styled.div`
   width: 100%;
-  min-height: 80vh;
+  min-height: 40vw;
   height: 100%;
   position: relative;
-  max-width: 60vw;
+  min-width: 60vw;
   z-index: 1;
   @media ${({ theme }) => theme.media.mobile} {
     max-width: 100%;
+	  min-height: 60vw;
   }
 `
 

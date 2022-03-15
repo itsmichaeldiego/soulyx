@@ -93,6 +93,7 @@ const Box = styled.div`
 `
 
 const Actions = styled.div`
+  position: relative;
   display: flex;
   > * {
     margin: ${({ theme }) => theme.spacing(0, 2)};

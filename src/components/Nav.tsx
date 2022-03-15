@@ -152,6 +152,7 @@ const Indicators = styled.div`
   white-space: nowrap;
   font-size: 10px;
   line-height: 12px;
+  will-change: transform;
 `
 
 const LinkContainer = styled.div`

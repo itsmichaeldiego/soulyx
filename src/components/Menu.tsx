@@ -23,7 +23,11 @@ export function Menu({ onClose, className }: IMenuProps) {
     /* @ts-ignore */
     scroll && scroll.scrollTo(
       `[data-section-id=${name}]`,
-      { offset: isMobile ? -96 : 0 }
+      { 
+        duration: 1,
+        disableLerp: true,
+        offset: isMobile ? -96 : 0,
+      }
     )
   }
 

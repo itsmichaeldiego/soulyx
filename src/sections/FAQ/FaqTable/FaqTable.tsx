@@ -147,6 +147,7 @@ const Answer = styled.div`
   z-index: -1;
   white-space: pre-line;
   font-weight: 300;
+  line-height: 1.45;
 
   ${({ expanded }: IExpandedProps) =>
     expanded &&

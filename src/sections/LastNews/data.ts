@@ -25,7 +25,7 @@ export const CARDS: IFlipCard[] = [
     hideName: true,
   },
   {
-    name: 'awwwards',
+    name: 'awwwards news',
     title: `THE ${TOKEN_NAME} SITE APPLIED FOR THE AWWWARDS 2021`,
     description: `The new and acclaimed ${TOKEN_NAME} project applied with its landing page for the awwwards 2021. Awwwards are the Website Awards that recognize and promote the talent and effort of the leading thinkers in tech & digital talent on design, creativity and innovation on the Internet. Our team has been working passionately on this website, which represents a big leap into our project’s new phase: a digital space where we all poured our hearts and souls into, created solely for the community to dive deep into and get to know us better. Transparency and fairness are our core values, and that is why we want to share our roadmap with all of you. Suspended 
     's developers, graphic designers and creative copywriters, led by the creative, marketing and operative directors, are the great minds behind this major step, and it would be a dream to have this collective creation recognized by such a prestigious award.`,

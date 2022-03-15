@@ -79,7 +79,7 @@ export function FlipCarousel({ cards }: IFlipCarouselProps) {
 const Wrapper = styled.div`
   flex: 1;
   display: flex;
-  overflow-x: hidden;
+  overflow: hidden;
   padding: ${({ theme }) => theme.spacing(8, 0)};
 
   @media ${({ theme }) => theme.media.mobile} {

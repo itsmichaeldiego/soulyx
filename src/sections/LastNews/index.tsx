@@ -204,7 +204,7 @@ const Title = styled.div`
 const Card = styled.div`
   max-height: 464px;
   width: 32vw;
-  max-width: 640px;
+  _max-width: 640px;
   width: 44vw;
   padding: ${({ theme }) => theme.spacing(6)};
   display: flex;

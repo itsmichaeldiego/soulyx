@@ -15,4 +15,5 @@ export function Team() {
 
 const Wrapper = styled.div`
   margin-right: ${({ theme }) => theme.spacing(-3)};
+  margin-top: -5vw;
 `;

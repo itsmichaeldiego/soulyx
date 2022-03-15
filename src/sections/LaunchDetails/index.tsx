@@ -16,7 +16,9 @@ export function LaunchDetails() {
       <ContentWrapper>
         <TextLine style={{ maxWidth: 240 }}>OUR COMMUNITY&apos;S INTRINSIC VALUE</TextLine>
         <LaunchDetailsTable data={LAUNCH_DETAILS_DATA} />
-        <TextLine>If you have any questions, you can check out our FAQ&apos;s <FaqLink href="#faq">here</FaqLink></TextLine>
+        <TextLineWrapper>
+          <TextLine>If you have any questions, you can check out our FAQ&apos;s <FaqLink href="#faq">here</FaqLink></TextLine>
+        </TextLineWrapper>
       </ContentWrapper>
       <GetToken />
     </SectionWrapper>
@@ -29,6 +31,14 @@ const SectionWrapper = styled.div`
 
 const ContentWrapper = styled.div`
   padding-right: ${({ theme }) => theme.spacing(3)};
+`;
+
+const TextLineWrapper = styled.div`
+  margin-bottom: 6vw;
+  
+  @media ${({ theme }) => theme.media.desktop} {
+    margin-bottom: 12.5vw;
+  }
 `;
 
 const FaqLink = styled.a`

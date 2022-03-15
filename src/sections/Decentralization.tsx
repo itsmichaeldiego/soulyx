@@ -69,15 +69,14 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   min-height: ${({ theme }) => `calc(100vh - ${theme.sizes.header} - ${theme.spacing(12)})`};
+  margin-top: -7vw;
 `
-
 const HeaderImage = styled.div`
   z-index: 2;
   flex: 1;
   position: relative;
   min-height: 100vh;
-
-
+  
   @media ${({ theme }) => theme.media.mobile} {
     min-height: 360px;
   }
@@ -97,9 +96,11 @@ const Content = styled.div`
   > * {
     flex: 1 1 50%;
   }
+
   @media ${({ theme }) => theme.media.desktop} {
     margin-top: -15vw;
   }
+
   @media ${({ theme }) => theme.media.mobile} {
     display: block;
     margin-top: ${({ theme }) => theme.spacing(-4)};

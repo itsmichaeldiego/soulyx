@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 
 import { Diagram } from '../components/Diagram';
 import { Section } from '../components/Section';
@@ -10,7 +11,7 @@ import { TOKEN_NAME } from '../dom/token';
 
 export function Genesis() {
   return (
-    <Section>
+    <StyledSection>
       <LogoSection src="/images/genesis.svg" alt={`${TOKEN_NAME} Genesis`} layout="fill"  />
       <TextSection
         title={`${TOKEN_NAME} SUPPLY`}
@@ -27,6 +28,16 @@ export function Genesis() {
         text={`${TOKEN_NAME} opens a door for the future and provides options for the artistic & economic destiny of its investors. A new virtual economy created through Suspended Soul’s ecosystem, with multiple diversification alternatives.`}
       />
       <Diagram />
-    </Section>
+    </StyledSection>
   );
 }
+
+const StyledSection = styled.section`
+  position: relative;
+  min-height: ${({ theme }) => `calc(100vh - ${theme.sizes.header})`};
+  height: 100%;
+  
+  @media ${({ theme }) => theme.media.desktop} {
+    margin-top: -11vw;
+  }
+`

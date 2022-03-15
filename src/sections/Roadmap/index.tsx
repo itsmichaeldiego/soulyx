@@ -26,6 +26,11 @@ const SectionWrapper = styled.div`
   overflow: hidden;
   // for logo to overlap right padding on mobile
   margin-right: -24px;
+
+  @media ${({ theme }) => theme.media.desktop} {
+    margin-top: -8vw;
+  }
+  
   @media ${({ theme }) => theme.media.mobile} {
     margin-right: 0;
   }
@@ -33,6 +38,8 @@ const SectionWrapper = styled.div`
 
 const SectionContent = styled.div`
   margin-right: 24px;
+  margin-top: -8.5vw;
+
   @media ${({ theme }) => theme.media.mobile} {
     margin-right: 0;
   }

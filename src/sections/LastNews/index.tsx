@@ -129,7 +129,7 @@ const WrapperImage = styled.div`
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url('/images/news-door.png');
+  background-image: url('/images/astronaut-girl.png');
 `;
 
 const WrapperTitle = styled.div`

@@ -86,11 +86,13 @@ SectionHeader.defaultProps = {
 }
 
 const Wrapper = styled.div`
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: ${({ theme }) => theme.spacing(6, 0)};
   padding: ${({ theme }) => theme.spacing(0.5, 0)};
+  z-index: 5;
 
   @media ${({ theme }) => theme.media.mobile} {
     margin: ${({ theme }) => theme.spacing(6, 0)};

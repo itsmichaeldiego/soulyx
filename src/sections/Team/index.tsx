@@ -7,14 +7,15 @@ import { CARDS } from './data';
 
 export function Team() {
   return (
-    <StyledSection>
+    <Wrapper>
       <FlipCarousel cards={CARDS} />
-    </StyledSection>
+    </Wrapper>
   )
 }
 
-const StyledSection = styled.section`
+const Wrapper = styled.div`
+  margin-right: ${({ theme }) => theme.spacing(-3)};
   @media ${({ theme }) => theme.media.desktop} {
     margin-top: -5vw;
   }
-`
+`;

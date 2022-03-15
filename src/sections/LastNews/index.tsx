@@ -109,15 +109,18 @@ export function LastNews() {
 
 
 const Wrapper = styled.div`
-  padding: ${({ theme }) => theme.spacing(20, 5, 20, 10)};
+  padding: ${({ theme }) => theme.spacing(20, 0, 20, 10)};
   position: relative;
   margin-left: ${({ theme }) => theme.spacing(-9)};
   margin-right: ${({ theme }) => theme.spacing(-3)};
+  margin-top: ${({ theme }) => theme.spacing(-20)};
   overflow: hidden;
 
   @media ${({ theme }) => theme.media.tablet} {
+    z-index: inherit;
+    margin-top: ${({ theme }) => theme.spacing(-16)};
     margin-left: ${({ theme }) => theme.spacing(-3)};
-    padding: ${({ theme }) => theme.spacing(10, 2, 10, 2)};
+    padding: ${({ theme }) => theme.spacing(14, 0, 10, 2)};
   }
 `;
 
@@ -204,7 +207,7 @@ const Title = styled.div`
 const Card = styled.div`
   max-height: 464px;
   width: 32vw;
-  max-width: 640px;
+  _max-width: 640px;
   width: 44vw;
   padding: ${({ theme }) => theme.spacing(6)};
   display: flex;

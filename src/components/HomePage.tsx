@@ -8,16 +8,18 @@ export function HomePage() {
   return (
     <>
       {NAV_ITEMS.map((item, index) => (
-        <div key={item.name} data-section-id={item.name}>
-          {!item.hideHeader && (
-            <SectionHeader
-              number={`${getPad(index)} - ${getPad(NAV_ITEMS.length - 1)}`}
-              name={item.headerName}
-              description={item.headerDescription}
-              animStar={true}
-            />
-          )}
-          {item.component()}
+        <div key={item.name} data-scroll-section>
+          <div data-section-id={item.name}>
+            {!item.hideHeader && (
+              <SectionHeader
+                number={`${getPad(index)} - ${getPad(NAV_ITEMS.length - 1)}`}
+                name={item.headerName}
+                description={item.headerDescription}
+                animStar={true}
+              />
+            )}
+            {item.component()}
+          </div>
         </div>
       ))}
     </>

@@ -1,6 +1,6 @@
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import React, { createContext, useEffect, useRef, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 
 if (typeof window !== 'undefined') { gsap.registerPlugin(ScrollTrigger) }
 
@@ -8,9 +8,12 @@ export const SmoothScrollContext = createContext({
   scroll: null
 });
 
-export const SmoothScrollProvider = ({ children }: React.PropsWithChildren<{}>) => {
+type ISmoothScrollProviderProps = React.PropsWithChildren<{
+  scrollRefWrapper?: any;
+}>
+
+export const SmoothScrollProvider = ({ children, scrollRefWrapper }: ISmoothScrollProviderProps) => {
   const [scroll, setScroll] = useState(null);
-  const scrollWrapper = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (!scroll) {
@@ -20,7 +23,7 @@ export const SmoothScrollProvider = ({ children }: React.PropsWithChildren<{}>) 
           const LocomotiveScroll = (await import("locomotive-scroll")).default;
 
           const locoScroll = new LocomotiveScroll({
-            el: scrollWrapper.current,
+            el: scrollRefWrapper.current,
             smooth: true,
           });
 
@@ -55,7 +58,6 @@ export const SmoothScrollProvider = ({ children }: React.PropsWithChildren<{}>) 
           ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
           ScrollTrigger.refresh();
 
-
         } catch (error) {
           throw Error(`[SmoothScrollProvider]: ${error}`);
         }
@@ -70,9 +72,7 @@ export const SmoothScrollProvider = ({ children }: React.PropsWithChildren<{}>) 
 
   return (
     <SmoothScrollContext.Provider value={{ scroll }}>
-      <div id="smooth-scroll" data-scroll-container ref={scrollWrapper}>
-        {children}
-      </div>
+      {children}
     </SmoothScrollContext.Provider>
   );
 };

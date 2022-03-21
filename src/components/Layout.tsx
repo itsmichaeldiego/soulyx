@@ -1,18 +1,20 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { SmoothScrollProvider } from "../components/SmoothScrollProvider";
 import styled from 'styled-components';
 
 import { Nav } from './Nav'
 import { Header } from './Header'
 
-
 export function Layout({ children }: React.PropsWithChildren<{}>): JSX.Element {
+  const scrollWrapper =  useRef<HTMLDivElement>(null);
   return (
     <>
-      <SmoothScrollProvider>
+      <SmoothScrollProvider scrollRefWrapper={scrollWrapper}>
         <Nav />
-        <Wrapper>
-          <Header />
+        <Wrapper id="smooth-scroll" ref={scrollWrapper}>
+          <div data-scroll-section>
+            <Header />
+          </div>
           {children}
         </Wrapper>
       </SmoothScrollProvider>

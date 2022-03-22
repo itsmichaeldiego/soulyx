@@ -69,7 +69,7 @@ export function Virtual() {
         <FloatingText data-scroll data-scroll-speed="1.8">
           {`${TOKEN_NAME} OPENS UP A BIG DOOR INTO THE FUTURE AND NURTURES THE ECONOMIC DESTINY OF ARTISTS, HOLDERS AND COLLECTORS WITH MULTIPLE OPTIONS.`}
         </FloatingText>
-        <ImageWrapper>
+        <ImageWrapper  data-scroll data-scroll-speed="2">
           <Image src="/images/soulx-jumbotron.svg" alt={`${TOKEN_NAME} Jumbotron`} layout="fill" />
         </ImageWrapper>
       </Jumbotron>

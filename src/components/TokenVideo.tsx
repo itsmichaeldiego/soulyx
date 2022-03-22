@@ -21,10 +21,10 @@ export function TokenVideo({ ...props }) {
     <WrapperOuter  data-scroll data-scroll-speed="-4">
       <Wrapper autoPlay muted loop {...props} onCanPlayThrough={canplaythrough}>
         { !hasWebmSupport && (
-          <source src="/videos/Landing_SOULYX_TOKEN.mp4" type="video/mp4" />
+          <source src="/videos/SOULX1.mp4" type="video/mp4" />
         ) }
         { hasWebmSupport && (
-          <source src="https://storage.cloud.google.com/suspendedsoul/Landing/SOULYX_TOKEN.webm" data-test={ isSafari } type="video/webm" />
+          <source src="/videos/SOULX1.webm" data-test={ isSafari } type="video/webm" />
         ) }
       </Wrapper>
     </WrapperOuter>

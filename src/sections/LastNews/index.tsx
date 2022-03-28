@@ -150,7 +150,7 @@ const WrapperTitle = styled.div`
 `;
 
 const LogosWrapper = styled.div`
-  margin: ${({ theme }) => theme.spacing(8)};
+  margin: ${({ theme }) => theme.spacing(8, 4)};
   position: relative;
   height: 104px;
 

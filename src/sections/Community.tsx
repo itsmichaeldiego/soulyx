@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import styled from 'styled-components';
 
 import { TOKEN_NAME } from '../dom/token';
@@ -10,6 +11,9 @@ export function Community() {
   return (
     <div className="position-relative">
       <Wrapper>
+        <BackgroundImage>
+          <Image src="/images/community-faces.png" alt="Community faces" layout='fill' objectFit="contain" objectPosition="top"/>
+        </BackgroundImage>
         <SectionTitleContainer data-scroll data-scroll-speed="3">
           <SectionTitle imageUrl="/images/community.svg" alt="COMMUNITY" />
         </SectionTitleContainer>
@@ -28,11 +32,14 @@ export function Community() {
 }
 
 const Wrapper = styled.div`
-  background-image: url('/images/community-faces.png');
-  background-repeat: no-repeat;
-  background-size: contain;
   height: 200vw;
   position: relative;
+`;
+
+const BackgroundImage = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
 `;
 
 const SectionTitleContainer = styled.div`

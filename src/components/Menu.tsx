@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import Image from 'next/image';
 import styled, { ThemeContext } from 'styled-components';
 import { SmoothScrollContext } from './SmoothScrollProvider';
 
@@ -60,6 +61,9 @@ export function Menu({ onClose, className }: IMenuProps) {
           </span>
         )
       })}
+      <BackgroundImage>
+        <Image src="/images/glass-hand.png" alt="" layout='fill' objectFit="cover" objectPosition="center"/>
+      </BackgroundImage>
     </Wrapper>
   )
 }
@@ -74,15 +78,18 @@ const Wrapper = styled.div`
   max-width: 100vw;
   max-height: 100vh;
   overflow: auto;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   background-color: ${({ theme }) => theme.bg.primary};
-  background-image: url('/images/glass-hand.png');
   transition: height .75s cubic-bezier(.75,0,0,.75);
   &.opened {
     height: 100vh;
   }
+`
+const BackgroundImage = styled.div`
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 `
 
 const Header = styled.header`

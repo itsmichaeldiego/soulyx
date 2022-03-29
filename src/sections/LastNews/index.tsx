@@ -7,6 +7,7 @@ if (typeof window !== 'undefined') { gsap.registerPlugin(ScrollTrigger) }
 
 import { ITheme } from '../../styles/theme';
 import { TOKEN_NAME } from '../../dom/token';
+import { Default, Mobile} from '../../lib/mediaQueryHelper'
 
 import { LinkButton } from '../../components/LinkButton';
 import { FlipCarousel } from '../../components/FlipCarousel'
@@ -72,7 +73,16 @@ export function LastNews() {
   return (
     <>
       <Wrapper ref={wrapperRef}>
-        <WrapperImage ref={wrapperImageRef}/>
+        <WrapperImage>
+          <BackgroundImage  ref={wrapperImageRef}>            
+            <Default>
+              <Image src="/images/astronaut-girl.png" alt="" layout='fill' objectFit="cover" objectPosition="top" />
+            </Default>
+            <Mobile>
+              <Image src="/images/astronaut-girl.png" alt="" layout='fill' objectFit="cover" objectPosition="top left" />
+            </Mobile>
+          </BackgroundImage>
+        </WrapperImage>
         <WrapperTitle>
           <Image src="/images/last-news.svg" alt="Last News" layout="fill" />
         </WrapperTitle>
@@ -130,9 +140,12 @@ const WrapperImage = styled.div`
   left: 0;
   height: 100%;
   width: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url('/images/astronaut-girl.png');
+`;
+
+const BackgroundImage = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
 `;
 
 const WrapperTitle = styled.div`

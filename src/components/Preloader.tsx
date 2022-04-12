@@ -87,10 +87,30 @@ const WrapperInner = styled.div`
 `
 
 const SvgStyled = styled.svg`
+  animation: svgAnim 3s ease-in-out 20 forwards .5s;
+
   & path {
     stroke-dasharray: 1500;
     stroke-dashoffset: 1500;
     animation: pathAnim 1.5s ease-in-out 20 forwards .5s;
+  }
+
+  @keyframes svgAnim {
+    0% {
+      transform: scaleX(1);
+    }
+
+    50% {
+      transform: scaleX(1);
+    }
+
+    50.1% {
+      transform: scaleX(-1);
+    }
+
+    100% {
+      transform: scaleX(-1);
+    }
   }
   
   @keyframes pathAnim {

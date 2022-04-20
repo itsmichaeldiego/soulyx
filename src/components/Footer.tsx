@@ -5,7 +5,7 @@ export function Footer(): JSX.Element {
   return (
     <Wrapper>
       <FooterLinks>
-        <FooterLink href="https://www.notion.so/suspendedsoul/TERMS-CONDITIONS-f484b21c8122490496ea64babb500d1e" target="_blank">
+        <FooterLink href="https://suspendedsoul.notion.site/TERMS-CONDITIONS-SOULx-7f6954bdbff242dbbc21ef0cc4bce41e" target="_blank">
           TERMS
         </FooterLink>
         {/* <FooterLink href="https://miso.sushi.com/" target="_blank">COOKIES</FooterLink> */}

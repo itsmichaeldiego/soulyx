@@ -96,30 +96,30 @@ export const ROADMAP_TABLE_DATA = [
   {
     name: "", // "Phase 2"
     description: "Token issuance",
-    status: "Developing",
-    year: 2021,
-    quarter: "Q4",
+    status: "DONE",
+    year: 2022,
+    quarter: "Q1",
   },
   {
     name: "", // "Phase 2"
     description: "Integration to MISO platform",
-    status: "Developing",
-    year: 2021,
-    quarter: "Q4",
+    status: "DONE",
+    year: 2022,
+    quarter: "Q2",
   },
   {
     name: "", // "Phase 2"
     description: "Token launch",
-    status: "Developing",
-    year: 2021,
-    quarter: "Q4",
+    status: "DONE",
+    year: 2022,
+    quarter: "Q2",
   },
   {
     name: "", // "Phase 2"
     description: "Airdrop",
     status: "Developing",
-    year: 2021,
-    quarter: "Q4",
+    year: 2022,
+    quarter: "Q3",
   },
   // phase 3
   {
@@ -127,21 +127,21 @@ export const ROADMAP_TABLE_DATA = [
     description: "Metaverse",
     status: "Starting",
     year: 2022,
-    quarter: "Q2",
+    quarter: "Q3",
   },
   {
     name: "", // "Phase 3"
     description: "Virtual museum",
     status: "Starting",
     year: 2022,
-    quarter: "Q2",
+    quarter: "Q4",
   },
   {
     name: "", // "Phase 3"
     description: "Customized platform for every artist",
     status: "Starting",
     year: 2022,
-    quarter: "Q2",
+    quarter: "Q4",
   },
   // phase 4
   {
@@ -149,21 +149,14 @@ export const ROADMAP_TABLE_DATA = [
     description: "Metaverse",
     status: "To start",
     year: 2022,
-    quarter: "Q3",
+    quarter: "Q4",
   },
   {
     name: "", // "Phase 4"
     description: "Virtual museum",
     status: "To start",
     year: 2022,
-    quarter: "Q3",
-  },
-  {
-    name: "", // "Phase 4"
-    description: "Customized platform for every artist",
-    status: "To start",
-    year: 2022,
-    quarter: "Q3",
+    quarter: "Q4",
   },
   {
     name: "", // "Phase 4"
@@ -171,6 +164,13 @@ export const ROADMAP_TABLE_DATA = [
     status: "To start",
     year: 2022,
     quarter: "Q4",
+  },
+  {
+    name: "", // "Phase 4"
+    description: "Customized platform for every artist",
+    status: "To start",
+    year: 2023,
+    quarter: "Q1",
   },
   // phase 5
   {

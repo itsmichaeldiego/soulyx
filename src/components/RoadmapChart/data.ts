@@ -4,7 +4,7 @@ export const CHART_DATA = [
   {
     name: "2022",
     stacks: [
-      { value: calculateHeight(10), label: "FAIR LAUNCH AUCTIONS", color: "#F2B8AB" },
+      { value: calculateHeight(10), label: "INITIAL DEX OFFERING", color: "#F2B8AB" },
       { value: calculateHeight(5), label: "SEED INVESTORS", color: "#EEDBD6" },
     ]
   },

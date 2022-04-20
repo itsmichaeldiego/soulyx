@@ -3,12 +3,12 @@ import { TOKEN_NAME } from "../../dom/token";
 export const FAQ_DATA = [
   {
     question: `How can I purchase a ${TOKEN_NAME}?`,
-    answer: "1 - On the auction start date you must connect your ethereum wallet at https://miso.sushi.com/auctions/live.\n 2 - Indicate on the tab the amount of tokens you want to buy. \n3 - Sign the transaction in your ethereum wallet.\n 4 - Once the auction ends, you must make the claim to get your tokens in your wallet.",
+    answer: "1 - On the auction start date you must connect your ethereum wallet at https://app.sushi.com/miso.\n 2 - Indicate on the tab the amount of tokens you want to buy. \n3 - Sign the transaction in your ethereum wallet.\n 4 - Once the auction ends, you must make the claim to get your tokens in your wallet.",
     id: 1,
   },
   {
     question: "What are the start and end dates of the auction?",
-    answer: `The ${TOKEN_NAME} IDO will run for 3 days, starting on December 15, 2021 and ending on December 18, 2021.`,
+    answer: `The ${TOKEN_NAME} IDO will run for 3 days, starting on April 26 2022 18UTC, and ending on April 29 2022 18UTC.`,
     id: 2,
   },
   {
@@ -18,7 +18,7 @@ export const FAQ_DATA = [
   },
   {
     question: "What is the starting price and reserve price of the token auction?",
-    answer: "The starting price will be 0.000140 ETH, and it will be launched through a Dutch auction.\n The reserve price will be 0.000023 ETH. This is the minimum price at which the auction is descending. Set by the auction creator, this gives the batch of tokens a total value that it needs to reach for the auction to be successful.",
+    answer: "The starting price will be 0.000045 ETH, and it will be launched through a Dutch auction.\n The reserve price will be 0.000003 ETH. This is the minimum price at which the auction is descending. Set by the auction creator, this gives the batch of tokens a total value that it needs to reach for the auction to be successful.",
     id: 4,
   },
   {

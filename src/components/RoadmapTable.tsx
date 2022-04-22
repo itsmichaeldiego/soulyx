@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import styled from 'styled-components';
 import { TABLE_HEADERS } from '../sections/Roadmap/data';
 import { IRoadmapEntry } from '../sections/Roadmap/types';
+import { SmoothScrollContext } from './SmoothScrollProvider';
 
 type IRoadmapTableProps = {
   data: IRoadmapEntry[];
@@ -10,6 +11,7 @@ type IRoadmapTableProps = {
 const ROW_LIMIT = 5;
 
 export function RoadmapTable({ data }: IRoadmapTableProps): JSX.Element {
+  const { scroll } = useContext(SmoothScrollContext)
   const [rowLimit, setRowLimit] = useState(ROW_LIMIT);
   const [viewMore, setViewMore] = useState(true);
 
@@ -21,6 +23,9 @@ export function RoadmapTable({ data }: IRoadmapTableProps): JSX.Element {
       setRowLimit(data.length);
       setViewMore(false);
     }
+    
+    /* @ts-ignore */
+    setTimeout(() => scroll.update(), 1000)
   };
 
   const visibleRows = data?.slice(0, rowLimit);
@@ -31,8 +36,8 @@ export function RoadmapTable({ data }: IRoadmapTableProps): JSX.Element {
         {TABLE_HEADERS.map(header => <HeaderCell key={header}>{header}</HeaderCell>)}
       </TableHeader>
       <TableBody>
-        {visibleRows.map((entry) => (
-          <TableRow key={entry.name}>
+        {visibleRows.map((entry, i) => (
+          <TableRow key={i}>
             <TableCell>{entry.name}</TableCell>
             <TableCell>{entry.description}</TableCell>
             <TableCell>{entry.status}</TableCell>
@@ -54,6 +59,7 @@ const TableWrapper = styled.div`
   color: white;
   display: grid;
   font-weight: 300;
+  will-change: transform;
 
   // TODO: useMedia instead (this doesn't look too bad tbh)
   @media ${({ theme }) => theme.media.mobile} {

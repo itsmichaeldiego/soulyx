@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import styled from 'styled-components';
 import { useDesktopMediaQuery } from '../../../lib/mediaQueryHelper';
+import { SmoothScrollContext } from '../../../components/SmoothScrollProvider';
 
 type IFaqTableProps = {
   data: any[];
@@ -14,6 +15,7 @@ const ROW_LIMIT = 5;
 const VIEW_MORE_AMOUNT = 5;
 
 export function FaqTable({ data }: IFaqTableProps): JSX.Element {
+  const { scroll } = useContext(SmoothScrollContext)
   const isDesktop = useDesktopMediaQuery();
   const [rowLimit, setRowLimit] = useState(isDesktop ? 10 : ROW_LIMIT);
   const [viewMore, setViewMore] = useState(true);
@@ -27,6 +29,8 @@ export function FaqTable({ data }: IFaqTableProps): JSX.Element {
       setRowLimit(rowLimit + VIEW_MORE_AMOUNT);
       setViewMore(false);
     }
+    /* @ts-ignore */
+    setTimeout(() => scroll.update(), 1000)
   };
 
   const visibleRows = data?.slice(0, rowLimit);
@@ -40,6 +44,8 @@ export function FaqTable({ data }: IFaqTableProps): JSX.Element {
     } else {
       setSelectedQuestionIds([...selectedIds, selectedQuestionId]);
     }
+    /* @ts-ignore */
+    setTimeout(() => scroll.update(), 1000)
   };
 
   return (

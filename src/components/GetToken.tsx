@@ -3,6 +3,7 @@ import Image from 'next/image';
 import styled from 'styled-components';
 
 import { TOKEN_NAME } from '../dom/token';
+import { Default, Mobile } from '../lib/mediaQueryHelper'
 
 import { LinkButton } from './LinkButton';
 import { AnimatedSmoke } from './AnimatedSmoke';
@@ -20,6 +21,14 @@ export function GetToken() {
           <Image src="/images/suspended-soul.svg" alt="Suspended Soul" layout="fill" />
         </SuspendedSoulWrapper>
       <AnimatedSmoke />
+      <BackgroundImage>
+        <Default>
+          <Image src="/images/space-man-suspended-soul.png" alt="Community faces" layout='fill' objectFit="cover" objectPosition="center center"/>
+        </Default>
+        <Mobile>
+          <Image src="/images/space-man-suspended-soul.png" alt="Community faces" layout='fill' objectFit="cover" objectPosition="32% 0"/>
+        </Mobile>
+      </BackgroundImage>
     </Wrapper>
   );
 }
@@ -30,16 +39,10 @@ const Wrapper = styled.div`
   margin-left: ${({ theme }) => theme.spacing(-9)};
   position: relative;
   overflow: hidden;
-  background-image: url('/images/space-man-suspended-soul.png');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
 
   @media ${({ theme }) => theme.media.mobile} {
     margin-left: ${({ theme }) => theme.spacing(-3)};
     margin-right: 0;
-    background-position: 32% 0%;
-    background-size: cover;
     height: 628px;
     padding: 48px 28px;
   }
@@ -49,6 +52,13 @@ const Wrapper = styled.div`
   }
 `;
 
+const BackgroundImage = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+`;
 
 const TitleWrapper = styled.div`
   max-width: 100%;

@@ -39,6 +39,14 @@ export function Decentralization() {
         </TextWrapper>
       </Content>
       <HandSection>
+        <BackgroundImage>
+          <Default>
+            <Image src="/images/glass-hand.png" alt="" layout='fill'  objectFit='contain' objectPosition="center bottom"/>
+          </Default>
+          <Mobile>
+            <Image src="/images/glass-hand.png" alt="" layout='fill' objectFit='cover' objectPosition="center bottom"/>
+          </Mobile>
+        </BackgroundImage>
         <TextSection
           data-scroll
           data-scroll-speed="1"
@@ -138,34 +146,6 @@ const HandSection = styled.div`
   position: relative;
   z-index: 1;
   padding-bottom: 80px;
-  :before {
-    content: " ";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background-size: contain;
-    background-position: bottom center;
-    background-repeat: no-repeat;
-    background-image: url('/images/glass-hand.png');
-
-    animation: ${flickerAnimation} 4s linear infinite;
-
-    @media ${({ theme }) => theme.media.desktop} {
-      margin-right: ${({ theme }) => theme.spacing(-3)};
-    }
-
-    @media ${({ theme }) => theme.media.tablet} {
-      background-size: cover;
-    }
-
-    @media ${({ theme }) => theme.media.mobile} {
-      margin-left: ${({ theme }) => theme.spacing(-3)};
-      margin-right: ${({ theme }) => theme.spacing(-3)};
-      padding: ${({ theme }) => theme.spacing(0, 3)};
-    }
   }
 
   :after {
@@ -185,4 +165,25 @@ const HandSection = styled.div`
       bottom: 62px;
     }
   }
-`;
+`
+const BackgroundImage = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  animation: ${flickerAnimation} 4s linear infinite;
+
+    @media ${({ theme }) => theme.media.desktop} {
+      margin-right: ${({ theme }) => theme.spacing(-3)};
+    }
+
+    @media ${({ theme }) => theme.media.mobile} {
+      width: calc(100% + 48px);
+      margin-left: ${({ theme }) => theme.spacing(-3)};
+      margin-right: ${({ theme }) => theme.spacing(-3)};
+      padding: ${({ theme }) => theme.spacing(0, 3)};
+    }
+`

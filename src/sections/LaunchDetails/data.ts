@@ -3,7 +3,7 @@ import { TOKEN_NAME } from "../../dom/token";
 export const LAUNCH_DETAILS_DATA = [
   {
     name: "Date",
-    description: "December 15th at 18 UTC, live for 48 hours",
+    description: "April 26th at 18 UTC, live for 72 hours",
   },
   {
     name: "Supply",
@@ -18,23 +18,23 @@ export const LAUNCH_DETAILS_DATA = [
     description: "Dutch auction",
   },
   {
-    name: "Starting price",
-    description: "0.000140 ETH",
+    name: "Maximum price",
+    description: "0.000045 ETH",
   },
   {
-    name: "Minimum offer",
-    description: "0.000023 ETH",
+    name: "Minimum price",
+    description: "0.000003 ETH",
   },
   {
     name: "Maximum initial market capitalization",
-    description: "3290.00 ETH",
+    description: "1057.50 ETH",
   },
   {
     name: "Minimum initial market capitalization",
-    description: "540.50 ETH",
+    description: "70.50 ETH",
   },
   {
     name: "Link",
-    description: "https://miso.sushi.com/",
+    description: "https://app.sushi.com/miso",
   },
 ];

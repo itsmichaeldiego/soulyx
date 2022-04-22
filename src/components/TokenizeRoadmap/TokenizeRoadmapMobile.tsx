@@ -38,7 +38,7 @@ export function TokenizeRoadmap(): JSX.Element {
         </TableRow>
         <TableRow height={10}>
           <span>
-            FAIR LAUNCH AUCTIONS
+            INITIAL DEX OFFERING
           </span><span>10%</span>
         </TableRow>
         <TableRow height={5}>

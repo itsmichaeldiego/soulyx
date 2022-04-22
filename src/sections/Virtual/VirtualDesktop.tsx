@@ -65,7 +65,11 @@ export function Virtual() {
   return (
     <>
       <Jumbotron ref={jumbotronRef}>
-        <JumbotronImage ref={jumbotronImageRef}/>
+        <JumbotronImage>
+          <BackgroundImage ref={jumbotronImageRef}>
+            <Image src="/images/soulx-background-person.png" alt="" layout='fill' objectFit="cover" objectPosition="center bottom"/>
+          </BackgroundImage>
+          </JumbotronImage>
         <FloatingText data-scroll data-scroll-speed="1.8">
           {`${TOKEN_NAME} OPENS UP A BIG DOOR INTO THE FUTURE AND NURTURES THE ECONOMIC DESTINY OF ARTISTS, HOLDERS AND COLLECTORS WITH MULTIPLE OPTIONS.`}
         </FloatingText>
@@ -163,16 +167,18 @@ const Jumbotron = styled.div`
 
 const JumbotronImage = styled.div`
   position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
   width: 100%;
-  background-image: url('/images/soulx-background-person.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  height: 100%;
   will-change: transform;
 `
+
+const BackgroundImage = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+`;
 
 const FloatingText = styled.div`
   font-size: 12px;

@@ -109,7 +109,7 @@ export function LastNews() {
                 {`Open up a big door into the future and start investing on ${TOKEN_NAME} now, a new virtual economy.`}
               </CardText>
             </div>
-            <ButtonWrapper variant="secondary" text={`GET ${TOKEN_NAME}`} href=" https://app.sushi.com/miso" target="_blank" />
+            <ButtonWrapper variant="secondary" text={`GET ${TOKEN_NAME}`} href=" https://ethereum.sushi.com/miso/0x6727e26A7A9a5f3f1485f64a1379e73652C78355?auction=0x6727e26A7A9a5f3f1485f64a1379e73652C78355&chainId=1" target="_blank" />
           </Card>
         </CardItem>
       </CardsWrapper>

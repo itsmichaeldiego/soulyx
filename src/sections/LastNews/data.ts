@@ -11,8 +11,8 @@ export const CARDS: IFlipCard[] = [
   },
   {
     name: 'how-to-participate',
-    title: `HOW TO PARTICIPATE IN THE IDO NEXT DECEMBER 15`,
-    description: `Suspended Soul is launching an IDO via a decentralized liquidity exchange on April 26th, 2022, presenting $SOULx. Our token sales will distribute 10% of the total supply through a Dutch auction via https://app.sushi.com/es/miso. A Dutch auction is a type of auction in which the token's starting price is launched higher, and starts decreasing with time. The eventual price offered is determined once all the tokens are sold. What do you need to know to get ready?`,
+    title: `HOW TO PARTICIPATE IN THE IDO NEXT APRIL 26`,
+    description: `Suspended Soul is launching an IDO via a decentralized liquidity exchange on April 26th, 2022, presenting $SOULx. Our token sales will distribute 10% of the total supply through a Dutch auction via <a href="https://ethereum.sushi.com/miso/0x6727e26A7A9a5f3f1485f64a1379e73652C78355?auction=0x6727e26A7A9a5f3f1485f64a1379e73652C78355&chainId=1" target="_blank">https://ethereum.sushi.com/miso</a>. A Dutch auction is a type of auction in which the token's starting price is launched higher, and starts decreasing with time. The eventual price offered is determined once all the tokens are sold. What do you need to know to get ready?`,
     imageUrl: '/images/astronaut-news-3.png',
     hideName: true,
   },

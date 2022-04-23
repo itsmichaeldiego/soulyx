@@ -15,7 +15,7 @@ export function GetToken() {
           <Image src="/images/get-soulx.svg" alt={`Get ${TOKEN_NAME}`} layout="fill" />
         </TitleWrapper>
         <ButtonWrapper data-scroll data-scroll-speed="1">
-          <GetButton href="https://miso.sushi.com/" text={`Get ${TOKEN_NAME}`} target="_blank" />
+          <GetButton href="https://ethereum.sushi.com/miso/0x6727e26A7A9a5f3f1485f64a1379e73652C78355?auction=0x6727e26A7A9a5f3f1485f64a1379e73652C78355&chainId=1" text={`Get ${TOKEN_NAME}`} target="_blank" />
         </ButtonWrapper>
         <SuspendedSoulWrapper data-scroll data-scroll-speed="1.5">
           <Image src="/images/suspended-soul.svg" alt="Suspended Soul" layout="fill" />

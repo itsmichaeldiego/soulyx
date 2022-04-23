@@ -57,7 +57,7 @@ export function FaqTable({ data }: IFaqTableProps): JSX.Element {
           return (
             <TableRow key={entry.id} expanded={expanded}>
               <Question onClick={(e) => toggle(e, entry.id)} expanded={expanded}>{entry.question}<ToggleIcon expanded={expanded}>+</ToggleIcon></Question>
-              <Answer expanded={expanded}>{entry.answer}</Answer>
+              <Answer expanded={expanded} dangerouslySetInnerHTML={{ __html: entry.answer }}></Answer>
             </TableRow>
           )}
         )}

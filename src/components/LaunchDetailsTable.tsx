@@ -33,7 +33,7 @@ export function LaunchDetailsTable({ data }: ILaunchDetailsTableProps): JSX.Elem
         {visibleRows.map((entry) => (
           <TableRow key={entry.name}>
             <TableCell>{entry.name}</TableCell>
-            <TableCell>{entry.description}</TableCell>
+            <TableCell dangerouslySetInnerHTML={{ __html: entry.description }}></TableCell>
           </TableRow>  
         ))}
       </TableBody>

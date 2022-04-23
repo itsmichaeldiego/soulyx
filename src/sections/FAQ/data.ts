@@ -3,7 +3,10 @@ import { TOKEN_NAME } from "../../dom/token";
 export const FAQ_DATA = [
   {
     question: `How can I purchase a ${TOKEN_NAME}?`,
-    answer: "1 - On the auction start date you must connect your ethereum wallet at https://app.sushi.com/miso.\n 2 - Indicate on the tab the amount of tokens you want to buy. \n3 - Sign the transaction in your ethereum wallet.\n 4 - Once the auction ends, you must make the claim to get your tokens in your wallet.",
+    answer: `<div>1 - On the auction start date you must connect your ethereum wallet at <a href='https://ethereum.sushi.com/miso/0x6727e26A7A9a5f3f1485f64a1379e73652C78355?auction=0x6727e26A7A9a5f3f1485f64a1379e73652C78355&chainId=1' target="_blank">https://ethereum.sushi.com/miso</a>.
+2 - Indicate on the tab the amount of tokens you want to buy.
+3 - Sign the transaction in your ethereum wallet.
+4 - Once the auction ends, you must make the claim to get your tokens in your wallet.</div>`,
     id: 1,
   },
   {
@@ -18,7 +21,7 @@ export const FAQ_DATA = [
   },
   {
     question: "What is the starting price and reserve price of the token auction?",
-    answer: "The starting price will be 0.000045 ETH, and it will be launched through a Dutch auction.\n The reserve price will be 0.000003 ETH. This is the minimum price at which the auction is descending. Set by the auction creator, this gives the batch of tokens a total value that it needs to reach for the auction to be successful.",
+    answer: "The starting price will be 0.000065 ETH, and it will be launched through a Dutch auction.\n The reserve price will be 0.0000045 ETH. This is the minimum price at which the auction is descending. Set by the auction creator, this gives the batch of tokens a total value that it needs to reach for the auction to be successful.",
     id: 4,
   },
   {

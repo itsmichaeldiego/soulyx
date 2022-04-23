@@ -74,7 +74,7 @@ export function FlipCard({ card, index, ...props }: IFlipCardProps) {
               </Desktop>
             </BackAside>
             <Details>
-              <Description>{card.description}</Description>
+              <Description dangerouslySetInnerHTML={{ __html: card.description }}></Description>
               {card.viewmoreUrl && (
                 <ViewMoreLink href={card.viewmoreUrl} target="_blank" onClick={ev => ev.stopPropagation()}>
                   View more

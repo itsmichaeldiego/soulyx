@@ -19,22 +19,22 @@ export const LAUNCH_DETAILS_DATA = [
   },
   {
     name: "Maximum price",
-    description: "0.000045 ETH",
+    description: "0.000065 ETH",
   },
   {
     name: "Minimum price",
-    description: "0.000003 ETH",
+    description: "0.0000045 ETH",
   },
   {
     name: "Maximum initial market capitalization",
-    description: "1057.50 ETH",
+    description: "1018.33 ETH",
   },
   {
     name: "Minimum initial market capitalization",
-    description: "70.50 ETH",
+    description: "70.4999 ETH",
   },
   {
     name: "Link",
-    description: "https://app.sushi.com/miso",
+    description: "<a href='https://ethereum.sushi.com/miso/0x6727e26A7A9a5f3f1485f64a1379e73652C78355?auction=0x6727e26A7A9a5f3f1485f64a1379e73652C78355&chainId=1' target='_blank'>https://ethereum.sushi.com/miso</a>",
   },
 ];

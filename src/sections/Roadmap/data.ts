@@ -9,14 +9,14 @@ export const ROADMAP_TABLE_DATA = [
   },
   {
     name: "", // "Phase 0x"
-    description: "Concept, brand and design creation ",
+    description: "Concept, brand and design creation",
     status: "DONE",
     year: 2020,
     quarter: "Q4",
   },
   {
     name: "", // "Phase 0x"
-    description: "Contract set up on Ethereum Rinkeby test network ",
+    description: "Contract set up on Ethereum Rinkeby test network",
     status: "DONE",
     year: 2021,
     quarter: "Q1",
@@ -180,21 +180,21 @@ export const ROADMAP_TABLE_DATA = [
   // phase 5
   {
     name: "", // phase 5
-    description: "Patronage policies launch ",
+    description: "Patronage policies launch",
     status: "TO START",
     year: 2023,
     quarter: "Q1",
   },
   {
     name: "Phase 6", // "Phase 6"
-    description: "Crosschain operation test ",
+    description: "Crosschain operation test",
     status: "TO START",
     year: 2024,
     quarter: "Q1",
   },
   {
     name: "", // phase 6
-    description: "Choosing of the first multidisciplinary team, and first SS event ",
+    description: "Choosing of the first multidisciplinary team, and first SS event",
     status: "TO START",
     year: 2024,
     quarter: "Q2",

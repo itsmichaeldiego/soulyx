@@ -42,7 +42,7 @@ export function Header(): JSX.Element {
           <span>|</span>
           <span>Es</span>
         </TraductionItems> */}
-          <LinkButton href="https://miso.sushi.com/" text={`Get ${TOKEN_NAME}`} target="_blank" />
+          <LinkButton href="https://ethereum.sushi.com/miso/0x6727e26A7A9a5f3f1485f64a1379e73652C78355?auction=0x6727e26A7A9a5f3f1485f64a1379e73652C78355&chainId=1" text={`Get ${TOKEN_NAME}`} target="_blank" />
         </Actions>
       </Wrapper>
     </>

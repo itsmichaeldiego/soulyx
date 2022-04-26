@@ -48,35 +48,35 @@ export const ROADMAP_TABLE_DATA = [
     description: "First week of application",
     status: "DONE",
     year: 2021,
-    quarter: "Q4",
+    quarter: "Q2",
   },
   {
     name: "", // "Phase 1"
     description: "Creation of the first Souly token",
     status: "DONE",
     year: 2021,
-    quarter: "Q1",
+    quarter: "Q2",
   },
   {
     name: "", // "Phase 1"
     description: "First auction",
     status: "DONE",
     year: 2021,
-    quarter: "Q1",
+    quarter: "Q2",
   },
   {
     name: "", // "Phase 1"
     description: "Secondary market opening",
     status: "DONE",
     year: 2021,
-    quarter: "Q2",
+    quarter: "Q3",
   },
   {
     name: "", // "Phase 1"
     description: "First set curated by an external team. @Ykarkai and @crownandpalette",
     status: "DONE",
     year: 2021,
-    quarter: "Q2",
+    quarter: "Q3",
   },
   // phase 2
   {
@@ -84,7 +84,7 @@ export const ROADMAP_TABLE_DATA = [
     description: "Contract ERC20 testing",
     status: "DONE",
     year: 2021,
-    quarter: "Q1",
+    quarter: "Q3",
   },
   {
     name: "", // "Phase 2"
@@ -102,156 +102,124 @@ export const ROADMAP_TABLE_DATA = [
   },
   {
     name: "", // "Phase 2"
-    description: "Integration to MISO platform",
+    description: "DAO Set-up",
     status: "DONE",
     year: 2022,
-    quarter: "Q2",
+    quarter: "Q1",
   },
   {
+    name: "", // "Phase 2"
+    description: "Integration to SUSHISWAP/MISO platform",
+    status: "DEVELOPING",
+    year: 2022,
+    quarter: "Q1",
+  },{
     name: "", // "Phase 2"
     description: "Token launch",
-    status: "DONE",
+    status: "DEVELOPING",
     year: 2022,
-    quarter: "Q2",
-  },
-  {
+    quarter: "Q1",
+  },{
     name: "", // "Phase 2"
-    description: "Airdrop",
-    status: "Developing",
+    description: "Full DAO Governace",
+    status: "TO START",
     year: 2022,
-    quarter: "Q3",
+    quarter: "Q1",
   },
   // phase 3
   {
     name: "Phase 3", // "Phase 3"
     description: "Metaverse",
-    status: "Starting",
+    status: "TO START",
     year: 2022,
-    quarter: "Q3",
+    quarter: "Q2",
   },
   {
     name: "", // "Phase 3"
     description: "Virtual museum",
-    status: "Starting",
+    status: "TO START",
     year: 2022,
-    quarter: "Q4",
+    quarter: "Q2",
   },
   {
     name: "", // "Phase 3"
     description: "Customized platform for every artist",
-    status: "Starting",
+    status: "TO START",
     year: 2022,
-    quarter: "Q4",
+    quarter: "Q2",
   },
   // phase 4
   {
     name: "Phase 4", // "Phase 4"
-    description: "Metaverse",
-    status: "To start",
+    description: "Lottery, fractionated auction, collaborative auction",
+    status: "TO START",
+    year: 2022,
+    quarter: "Q3",
+  },
+  {
+    name: "", // "Phase 4"
+    description: "Site V2 launch",
+    status: "TO START",
+    year: 2022,
+    quarter: "Q3",
+  },
+  {
+    name: "", // "Phase 4"
+    description: "SS Party",
+    status: "TO START",
     year: 2022,
     quarter: "Q4",
   },
   {
-    name: "", // "Phase 4"
-    description: "Virtual museum",
-    status: "To start",
-    year: 2022,
-    quarter: "Q4",
-  },
-  {
-    name: "", // "Phase 4"
-    description: "Customized platform for every artist",
-    status: "To start",
-    year: 2022,
-    quarter: "Q4",
-  },
-  {
-    name: "", // "Phase 4"
-    description: "Customized platform for every artist",
-    status: "To start",
+    name: "Phase 5", // "Phase 5"
+    description: "Support for project builders",
+    status: "TO START",
     year: 2023,
     quarter: "Q1",
   },
   // phase 5
   {
-    name: "Phase 5", // phase 5
-    description: "DAO launch",
-    status: "To start",
-    year: 2023,
-    quarter: "Q1",
-  },
-  {
-    name: "", // phase 5
-    description: "First descentralized election of Suspended Soul Foundation's representatives",
-    status: "To start",
-    year: 2023,
-    quarter: "Q1",
-  },
-  {
-    name: "", // phase 5
-    description: "Support for project builders",
-    status: "To start",
-    year: 2023,
-    quarter: "Q1",
-  },
-  {
     name: "", // phase 5
     description: "Patronage policies launch",
-    status: "To start",
+    status: "TO START",
     year: 2023,
     quarter: "Q1",
   },
-  {
-    name: "", // phase 5
-    description: "Descentralized curatorships chosen by the community",
-    status: "To start",
-    year: 2023,
-    quarter: "Q1",
-  },
-  // phase 6
   {
     name: "Phase 6", // "Phase 6"
     description: "Crosschain operation test",
-    status: "To start",
-    year: 2023,
-    quarter: "Q1",
-  },
-  {
-    name: "", // "Phase 6"
-    description: "Choosing of the first multidisciplinary team, and first SS event",
-    status: "To start",
-    year: 2023,
-    quarter: "Q2",
-  },
-  {
-    name: "", // "Phase 6"
-    description: "Choosing of the first SS artist",
-    status: "To start",
-    year: 2023,
-    quarter: "Q2",
-  },
-  {
-    name: "", // "Phase 6"
-    description: "First Suspended Soul physical gallery",
-    status: "To start",
-    year: 2023,
-    quarter: "Q4",
-  },
-  {
-    name: "", // "Phase 6"
-    description: "Crosschain operation launch",
-    status: "To start",
-    year: 2023,
-    quarter: "Q4",
-  },
-  // phase 7
-  {
-    name: "Phase 7",
-    description: "Final phase: 100% of the strategic decisions are handed over to the community with the aim that they will take the site to the next level.",
-    status: "To start",
+    status: "TO START",
     year: 2024,
     quarter: "Q1",
   },
+  {
+    name: "", // phase 6
+    description: "Choosing of the first multidisciplinary team, and first SS event",
+    status: "TO START",
+    year: 2024,
+    quarter: "Q2",
+  },
+  {
+    name: "", // phase 6
+    description: "Choosing of the first SS artist",
+    status: "TO START",
+    year: 2024,
+    quarter: "Q2",
+  },
+  {
+    name: "", // phase 6
+    description: "Crosschain operation launch",
+    status: "TO START",
+    year: 2024,
+    quarter: "Q4",
+  },
+  {
+    name: "", // phase 6
+    description: "Airdrop",
+    status: "TO START",
+    year: 2024,
+    quarter: "Q4",
+  }
 ];
 
 export const TABLE_HEADERS = ['PHASE', 'DESCRIPTION', 'STATUS', 'YEAR', 'QUARTER'];
